@@ -1,0 +1,6 @@
+packages:
+  - sites/*
+
+nodeLinker: hoisted
+allowBuilds:
+  esbuild: true

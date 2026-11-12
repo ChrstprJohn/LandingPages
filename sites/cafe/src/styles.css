@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --ground: #f6ead7;
+  --ink: #38251d;
+  --field: #ead0aa;
+  --display: 'DM Serif Text', Georgia, serif;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+#root {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+}
+
+.frame {
+  width: min(100% - 3rem, 86rem);
+  margin-inline: auto;
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(3rem, 9vw, 9rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+header {
+  border-bottom: 1px solid var(--field);
+}
+
+footer {
+  border-top: 1px solid var(--field);
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 12% auto auto 62%;
+  width: clamp(20rem, 65vw, 68rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--field);
+  content: '';
+}
