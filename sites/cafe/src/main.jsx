@@ -3,8 +3,24 @@ import { createRoot } from 'react-dom/client'
 import './styles.css'
 
 function Home() {
+  const hero = useRef(null)
+
+  useLayoutEffect(() => {
+    const element = hero.current
+    const viewport = document.documentElement
+    let width = 0
+    const sizeHero = () => {
+      if (width === viewport.clientWidth) return
+      width = viewport.clientWidth
+      element.style.setProperty('--mobile-viewport-height', `${viewport.clientHeight}px`)
+    }
+    sizeHero()
+    window.addEventListener('resize', sizeHero)
+    return () => window.removeEventListener('resize', sizeHero)
+  }, [])
+
   return (
-    <section className="hero" aria-labelledby="hero-title">
+    <section ref={hero} className="hero" aria-labelledby="hero-title">
       <div className="hero-inner frame">
         <h1 id="hero-title" aria-label="Brew Day">
           <img src="/brew-day-headline.svg" alt="" width="1080" height="206" />
@@ -41,8 +57,37 @@ const drinks = [
 
 function Page({ id, title, layout = '', media, children }) {
   const Heading = id ? 'h2' : 'h1'
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    if (!['about-page', 'menu-page', 'contact-page'].includes(layout) || !('IntersectionObserver' in window)) return
+    const selectors = {
+      'about-page': '.page-copy :is(h1, h2, p)',
+      'menu-page': '.page-copy :is(h1, h2)',
+      'contact-page': '.page-copy',
+    }
+    const elements = sectionRef.current.querySelectorAll(selectors[layout])
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.intersectionRatio < 0.35) continue
+        entry.target.classList.add('text-revealed')
+        observer.unobserve(entry.target)
+      }
+    }, { threshold: 0.35 })
+
+    for (const element of elements) {
+      element.classList.add('text-reveal')
+      observer.observe(element)
+    }
+
+    return () => {
+      observer.disconnect()
+      for (const element of elements) element.classList.remove('text-reveal', 'text-revealed')
+    }
+  }, [layout])
+
   return (
-    <section className={`page ${layout}`} id={id}>
+    <section className={`page ${layout}`} id={id} ref={sectionRef}>
       <div className="frame page-inner">
         <div className="page-copy">
           <Heading>{title}</Heading>
@@ -91,15 +136,29 @@ function App() {
 
   useEffect(() => {
     const syncSection = () => setSection(window.location.hash.slice(1))
-    const syncScroll = () => setScrolled(window.scrollY > 0)
+    const syncScroll = () => {
+      const about = document.getElementById('about')
+      const header = document.querySelector('.site-header')
+      const mobileAbout = window.matchMedia('(max-width: 680px)').matches && about
+      if (mobileAbout) {
+        const distance = about.getBoundingClientRect().top - header.offsetHeight
+        const opacity = Math.min(1, Math.max(0, 1 - distance / (header.offsetHeight * 2)))
+        header.style.setProperty('--mobile-header-opacity', opacity)
+      } else {
+        header.style.removeProperty('--mobile-header-opacity')
+      }
+      setScrolled(window.scrollY > 0)
+    }
     syncScroll()
     window.addEventListener('hashchange', syncSection)
     window.addEventListener('scroll', syncScroll, { passive: true })
+    window.addEventListener('resize', syncScroll)
     return () => {
       window.removeEventListener('hashchange', syncSection)
       window.removeEventListener('scroll', syncScroll)
+      window.removeEventListener('resize', syncScroll)
     }
-  }, [])
+  }, [path])
 
   const currentPage = pages.find((page) => page.path === path)
   useEffect(() => {
@@ -161,7 +220,7 @@ function App() {
       <main>
         {onHome && <Home />}
         {(onHome || path === '/about') && (
-          <Page id={onHome ? 'about' : undefined} title="About Brew Day" layout="about-page" media={
+          <Page id={onHome ? 'about' : undefined} title={<>About <span>Brew Day</span></>} layout="about-page" media={
             <img className="about-photo" src="/cafe-interior.webp" alt="Morning light on a violet-tiled coffee counter" width="1200" height="900" loading="lazy" />
           }>
             <p>Brew Day is a neighborhood café for quick espressos and unhurried mornings.</p>
