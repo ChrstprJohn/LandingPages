@@ -57,7 +57,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .nav a {
-  padding: max(.4rem, .58cqw) max(.65rem, 1.65cqw);
+  padding: max(.4rem, .58cqw) clamp(.6rem, .85cqw, 1rem);
   border-radius: inherit;
   font-size: max(.72rem, 1cqw);
   letter-spacing: .12em;
@@ -317,7 +317,7 @@ main { flex: 1; }
 @media (min-width: 681px) {
   .nav {
     --nav-padding: max(.3rem, .65cqw);
-    --nav-gap: max(.2rem, .8cqw);
+    --nav-gap: clamp(.15rem, .3cqw, .375rem);
     --pill-width: calc((100% - 2 * var(--nav-padding) - 3 * var(--nav-gap)) / 4);
     position: relative;
     display: grid;
