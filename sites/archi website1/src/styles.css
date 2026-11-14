@@ -309,7 +309,7 @@ footer.section-pad{background:var(--accent);color:var(--paper);padding:56px 40px
 
 @media (max-width: 767px) {
   .contact-page {
-    --contact-grid-height: 112px;
+    --contact-grid-height: 200px;
   }
 
   .contact-portrait {
@@ -319,7 +319,7 @@ footer.section-pad{background:var(--accent);color:var(--paper);padding:56px 40px
   .contact-page .brand {
     max-inline-size: none;
     margin-inline: 24px;
-    padding-block-end: 16px;
+    padding-block: 32px 16px;
   }
 
   .about-page .inner-header {
@@ -353,7 +353,7 @@ footer.section-pad{background:var(--accent);color:var(--paper);padding:56px 40px
     gap: 20px;
     padding-block: 36px;
     align-content: start;
-    min-block-size: max(0px, calc(100svh - var(--contact-grid-height) - 40px - (100vw - 48px) * 503 / 1856));
+    min-block-size: max(0px, calc(100svh - var(--contact-grid-height) - 48px - (100vw - 48px) * 503 / 1856));
   }
 
   .contact-page .brief-section {
