@@ -18,7 +18,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .skip-link:focus { top: 1rem; }
 #root { display: grid; grid-template-columns: minmax(0, 1fr); }
 .opening-screen { position: fixed; inset: 0; z-index: 15; display: grid; place-items: center; visibility: hidden; pointer-events: none; background: #d23f32; color: var(--cream); }
-.opening-screen .brand { width: min(84vw, clamp(19rem, 42vw, 42rem)); }
+.opening-screen .brand { width: min(42vw, 110svh); }
 .storefront { grid-area: 1 / 1; width: 100%; container-type: inline-size; background: #fdfcf9; }
 .hero { position: relative; isolation: isolate; aspect-ratio: 1692 / 930; container-type: inline-size; background: #d34234; color: var(--cream); }
 .hero-flowers { position: absolute; z-index: -1; inset: 0; background: url('/hero-blooms.webp') right bottom / 100% auto no-repeat; }
@@ -101,6 +101,7 @@ h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 9.5cqw; 
 .content-page .form-note { font-size: clamp(1rem, .95vw, max(1.125rem, .95vw)); line-height: 1.8; }
 .content-page .form-note, .content-page .contact-note { color: #59604f; }
 @media (max-width: 700px) {
+ .opening-screen .brand { width: min(84vw, 110svh); }
  html { --header-height: 4.75rem; }
  html:has(.header nav.is-open) { overflow: hidden; }
  #root:has(.header nav.is-open) > .skip-link { visibility: hidden; }
