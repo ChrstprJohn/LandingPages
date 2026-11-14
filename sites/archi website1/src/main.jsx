@@ -8,6 +8,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import './styles.css'
 gsap.registerPlugin(useGSAP, ScrollTrigger, CustomEase, ScrollToPlugin)
 const referenceEase = CustomEase.create('reference', 'M0,0 C0.5,0.5 0,1 1,1')
+const carouselEase = CustomEase.create('carousel', '0.5,0,0,1')
 const projects = [
  {slug:'terracotta-apartment',name:'Terracotta Apartment',carouselName:'Archi Apartment',category:'Interiors',image:'terracotta-apartment',area:'112',rooms:'4',materials:'Oak, red travertine, linen',description:'A warm apartment composed around a red travertine island and a circular dining table. Natural oak, soft plaster and filtered daylight give everyday rituals a quiet setting.'},
  {slug:'courtyard-house',name:'Courtyard House',category:'Architecture',image:'courtyard-house',area:'185',rooms:'5',materials:'Concrete, lime plaster, steel',description:'A low courtyard house organised around an olive tree. Deep openings draw the landscape inside, while mineral walls and a terracotta door create a simple, grounded material palette.'},
@@ -121,7 +122,7 @@ const move=contextSafe(d=>{
  const raw=slide+d
  const next=(raw+featured.length)%featured.length
  const track=root.current.querySelector('.slide-track')
- gsap.to(track,{xPercent:-(raw+1)*100/6,duration:reduced()?0:.6,ease:referenceEase,onComplete:()=>{gsap.set(track,{xPercent:-(next+1)*100/6});busy.current=false}})
+ gsap.to(track,{xPercent:-(raw+1)*100/6,duration:reduced()?0:.6,ease:carouselEase,onComplete:()=>{gsap.set(track,{xPercent:-(next+1)*100/6});busy.current=false}})
  setSlide(next)
 })
 function Card({p}){return <a key={p.slug} className={`project ${filter==='Architecture'&&p.category==='Architecture'?'architecture-card':''}`} href={`/projects/${p.slug}`} onClick={navigate}><div className="project-photo"><img src={image(p)} alt={p.name} loading="lazy" width="1536" height="1024"/>{p.category==='Architecture'&&<img className="architecture-drawing" src={drawing(p)} alt="" loading="lazy" width="1536" height="1024"/>}<span className="project-open" aria-hidden="true">↗</span></div><h3>{p.name}</h3><p>{p.category}</p></a>}
