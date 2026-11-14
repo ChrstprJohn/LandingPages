@@ -20,7 +20,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 #root { display: grid; grid-template-columns: minmax(0, 1fr); }
 .storefront { grid-area: 1 / 1; width: 100%; container-type: inline-size; }
 .hero { position: relative; isolation: isolate; aspect-ratio: 1692 / 930; container-type: inline-size; background: #d34234; color: var(--cream); }
-.hero-flowers { position: absolute; z-index: -1; inset: 0; background: url('/hero-blooms.png') right bottom / 100% auto no-repeat; }
+.hero-flowers { position: absolute; z-index: -1; inset: 0; background: url('/hero-blooms.webp') right bottom / 100% auto no-repeat; }
 .header { grid-area: 1 / 1; align-self: start; position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: var(--header-padding) 5vw; color: var(--cream); }
 .header.is-scrolled, .header:focus-within { background: #d23f32; }
 .brand { display: inline-flex; flex-shrink: 0; width: 10rem; }
@@ -55,7 +55,7 @@ h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 9.5cqw; 
 }
 .collections { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); height: 26svh; padding: 3svh 5vw 2svh; gap: 2.7vw; }
 .collection { min-width: 0; }
-.collection-photo { display: block; background-image: url('/floral-sheet.png'); background-repeat: no-repeat; height: 17svh; background-size: max(200%, 51svh) auto; }
+.collection-photo { display: block; background-image: url('/floral-sheet.webp'); background-repeat: no-repeat; height: 17svh; background-size: max(200%, 51svh) auto; }
 .poppies { background-position: right top; }
 .peony { background-position: left bottom; }
 .blossom { background-position: right bottom; }
@@ -97,7 +97,7 @@ h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 9.5cqw; 
  .header nav.is-open { display: flex; flex-direction: column; justify-content: safe center; gap: clamp(.25rem, 2dvh, 1rem); text-align: center; }
  .header nav a { padding: .25em .5em; }
  .hero-flowers {
-   background-image: radial-gradient(ellipse 92% 68% at 0% 50%, rgb(174 48 36 / 85%) 22%, rgb(174 48 36 / 63%) 59%, transparent 100%), url('/hero-blooms.png');
+   background-image: radial-gradient(ellipse 92% 68% at 0% 50%, rgb(174 48 36 / 85%) 22%, rgb(174 48 36 / 63%) 59%, transparent 100%), url('/hero-blooms.webp');
    background-size: 100% 100%, cover;
    background-position: center, 88% bottom;
  }
