@@ -232,6 +232,7 @@ footer.section-pad{background:var(--accent);color:var(--paper);padding:56px 40px
     align-items: center;
     inline-size: 48px;
     writing-mode: vertical-rl;
+    white-space: nowrap;
     gap: 20px;
   }
 }
