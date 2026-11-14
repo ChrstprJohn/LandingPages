@@ -8,7 +8,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import './styles.css'
 gsap.registerPlugin(useGSAP, ScrollTrigger, CustomEase, ScrollToPlugin)
 const referenceEase = CustomEase.create('reference', 'M0,0 C0.5,0.5 0,1 1,1')
-const carouselEase = CustomEase.create('carousel', '0.5,0,0,1')
+const carouselEase = CustomEase.create('carousel', '0.5,0,0,1', { precision: 2 })
 const projects = [
  {slug:'terracotta-apartment',name:'Terracotta Apartment',carouselName:'Archi Apartment',category:'Interiors',image:'terracotta-apartment',area:'112',rooms:'4',materials:'Oak, red travertine, linen',description:'A warm apartment composed around a red travertine island and a circular dining table. Natural oak, soft plaster and filtered daylight give everyday rituals a quiet setting.'},
  {slug:'courtyard-house',name:'Courtyard House',category:'Architecture',image:'courtyard-house',area:'185',rooms:'5',materials:'Concrete, lime plaster, steel',description:'A low courtyard house organised around an olive tree. Deep openings draw the landscape inside, while mineral walls and a terracotta door create a simple, grounded material palette.'},
