@@ -225,6 +225,24 @@ footer.section-pad{background:var(--accent);color:var(--paper);padding:56px 40px
 .menu-dialog::backdrop{overflow:hidden;overscroll-behavior:contain}
 .menu-inner nav{user-select:none}
 
+@media (min-width: 768px) {
+  .slide-visual .slide-arrow {
+    inset-block-start: 0;
+    inline-size: 15vw;
+    block-size: 100%;
+    border-radius: 0;
+    background: transparent;
+    color: transparent;
+  }
+
+  .slide-visual .previous { inset-inline-start: 0; }
+  .slide-visual .next { inset-inline-end: 0; }
+  .slide-visual .slide-arrow:focus-visible {
+    color: white;
+    outline-offset: -6px;
+  }
+}
+
 @media (max-width: 767px) {
   .menu-dialog {
     block-size: clamp(516px, 74dvh, 535px);
