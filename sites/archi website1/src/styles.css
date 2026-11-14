@@ -225,6 +225,17 @@ footer.section-pad{background:var(--accent);color:var(--paper);padding:56px 40px
 .menu-dialog::backdrop{overflow:hidden;overscroll-behavior:contain}
 .menu-inner nav{user-select:none}
 
+@media (max-width: 767px) {
+  .menu-dialog .menu-socials {
+    inset: 104px 24px auto auto;
+    display: flex;
+    align-items: center;
+    inline-size: 48px;
+    writing-mode: vertical-rl;
+    gap: 20px;
+  }
+}
+
 .about-page .inner-header {
   block-size: 304px;
 }
