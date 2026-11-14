@@ -1,0 +1,48 @@
+{
+  "tool": "Built-in image_gen",
+  "purpose": "Original Arch portfolio concept imagery",
+  "initial": [
+    "Use case: photorealistic-natural. Create an original premium architectural editorial photograph for Forma Architecture portfolio. Wide landscape 3:2 photograph of a warm minimal apartment dining room, monolithic red travertine kitchen island at left, natural oak cabinetry, round dark wood dining table, sculptural ivory pendant, white plaster walls, black steel window framing, soft linen curtain, pale terrazzo floor. Restrained burnt terracotta accent, cream black natural oak palette. Quiet European contemporary interior, daylight from right, subtle film grain, straight vertical lines, realistic material imperfections, professional architectural photography. No people, no text, no logo, no watermark. Single continuous photograph, no collage.",
+    "Use case: photorealistic-natural. Original premium architectural editorial photograph for Forma Architecture portfolio. Wide landscape 3:2 photograph of sculptural low single-story courtyard house, white mineral plaster and board formed pale concrete, deep square openings, black steel glazing, warm burnt terracotta pivot door, olive tree in gravel courtyard, Mediterranean dry grasses, warm late afternoon angled light. Minimal composition, refined European contemporary architecture, straight verticals, realistic material imperfections, photographic detail, natural restrained black cream and rust palette. No people, text, logos or watermark. Single continuous photograph no collage.",
+    "Use case: photorealistic-natural. Original premium architectural editorial photograph for Forma Architecture portfolio. Wide landscape 3:2 view of intimate contemporary forest retreat interior, dark stained timber walls, giant black framed window looking at misty pine trees, low linen sofa, sculptural burnt terracotta lounge chair, black round steel coffee table, natural stone floor and quiet fireplace. Rich tactile materials, soft overcast daylight, professionally composed architectural magazine photograph, realistic detail, subtle film grain. No people text logos or watermarks. Single continuous photograph no collage."
+  ],
+  "additional": [
+    [
+      "plaster-loft",
+      "Original photorealistic architectural magazine asset for Arch Architecture & Interiors. Landscape 3:2, professional editorial composition, realistic tactile materials, soft natural light, quiet contemporary design, restrained white black warm wood stone and burnt terracotta palette. No blue tint. No people, text, logos or watermark. Single photograph, no collage. A generous minimal loft living room with curved ivory plaster wall, low oatmeal sectional sofa, charcoal monolithic fireplace, dark oak console, warm rust artwork, tall industrial black windows, pale limestone floor. Front-on wide composition."
+    ],
+    [
+      "stone-bath",
+      "Original photorealistic architectural magazine asset for Arch Architecture & Interiors. Landscape 3:2, professional editorial composition, realistic tactile materials, soft natural light, quiet contemporary design, restrained white black warm wood stone and burnt terracotta palette. No blue tint. No people, text, logos or watermark. Single photograph, no collage. Minimal residential bathroom with sculptural cream limestone freestanding bathtub, long pale travertine vanity, brushed metal taps, oak wall panel, one burnt terracotta ceramic bowl, soft light through gauzy curtain. Wide architectural view, beautifully considered proportions."
+    ],
+    [
+      "coastal-pavilion",
+      "Original photorealistic architectural magazine asset for Arch Architecture & Interiors. Landscape 3:2, professional editorial composition, realistic tactile materials, soft natural light, quiet contemporary design, restrained white black warm wood stone and burnt terracotta palette. No blue tint. No people, text, logos or watermark. Single photograph, no collage. One-story coastal modernist pavilion with a perfectly flat concrete roof, three white plaster volumes framing full-height black steel windows, weathered timber terrace on dune grasses overlooking a distant sea. Three-quarter exterior front-left view. Simple rectangular low silhouette."
+    ],
+    [
+      "garden-townhouse",
+      "Original photorealistic architectural magazine asset for Arch Architecture & Interiors. Landscape 3:2, professional editorial composition, realistic tactile materials, soft natural light, quiet contemporary design, restrained white black warm wood stone and burnt terracotta palette. No blue tint. No people, text, logos or watermark. Single photograph, no collage. A compact two-storey urban townhouse with flat roof, warm ivory brick walls, large tall dark steel windows on ground floor, three square windows upstairs, a narrow terracotta entrance door, small garden with one slender tree. Front-left three-quarter exterior view, calm streetscape."
+    ],
+    [
+      "arc-chair",
+      "Original photorealistic architectural magazine asset for Arch Architecture & Interiors. Landscape 3:2, professional editorial composition, realistic tactile materials, soft natural light, quiet contemporary design, restrained white black warm wood stone and burnt terracotta palette. No blue tint. No people, text, logos or watermark. Single photograph, no collage. A single original sculptural lounge chair designed from curved oak plywood and a thick burnt terracotta wool seat cushion. Isolated furniture editorial photograph against light gray plaster cyclorama, soft directional shadows, three-quarter view. No other furniture."
+    ],
+    [
+      "fold-pendant",
+      "Original photorealistic architectural magazine asset for Arch Architecture & Interiors. Landscape 3:2, professional editorial composition, realistic tactile materials, soft natural light, quiet contemporary design, restrained white black warm wood stone and burnt terracotta palette. No blue tint. No people, text, logos or watermark. Single photograph, no collage. A single original pendant lamp made from one folded sculptural off-white paper shade around a black cord and subtle warm light. Hanging over an empty gray plaster floor against a light gray seamless backdrop. Premium product design editorial photograph, beautiful soft shadow."
+    ],
+    [
+      "plinth-table",
+      "Original photorealistic architectural magazine asset for Arch Architecture & Interiors. Landscape 3:2, professional editorial composition, realistic tactile materials, soft natural light, quiet contemporary design, restrained white black warm wood stone and burnt terracotta palette. No blue tint. No people, text, logos or watermark. Single photograph, no collage. A single original round side table, chunky red travertine cylindrical base with thin circular charcoal stained oak top, beautifully visible natural stone veining. Isolated on pale gray seamless architectural backdrop, side three-quarter view, soft sculptural shadow. Premium furniture design editorial photograph."
+    ],
+    [
+      "coastal-pavilion-axon",
+      "Original precise architectural axonometric drawing. Low one-story coastal modernist pavilion, perfectly flat concrete roof, three white plaster volumes framing full-height black steel windows, timber terrace. Full isolated building from elevated front-left three-quarter axonometric view, no landscape except a few dune grasses near the base, generous empty margins. Fine burnt terracotta #ad4932 technical lines with pale gray surfaces and a subtle cast shadow on a perfectly uniform light gray #e7e7e4 background. No blue, text, numbers, border, people or logo. Landscape 3:2."
+    ],
+    [
+      "garden-townhouse-axon",
+      "Original precise architectural axonometric drawing. Compact two-storey flat-roof townhouse, ivory brick, large dark steel ground-floor windows, three square windows upstairs, narrow terracotta entrance door, one slender garden tree. Full isolated building from elevated front-left three-quarter axonometric view, generous margins. Fine burnt terracotta #ad4932 technical edges, pale gray surfaces, subtle cast shadow on perfectly uniform light gray #e7e7e4 background. No blue, text, numbers, border, people or logo. Landscape 3:2."
+    ]
+  ],
+  "notes": "Architectural concepts and sample project metadata are illustrative. Reference layout and timing were studied from https://www.racastudio.pl/. All displayed project photos and drawings are newly generated; no reference photography is used."
+}
