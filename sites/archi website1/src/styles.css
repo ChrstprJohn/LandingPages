@@ -226,6 +226,10 @@ footer.section-pad{background:var(--accent);color:var(--paper);padding:56px 40px
 .menu-inner nav{user-select:none}
 
 @media (max-width: 767px) {
+  .menu-dialog {
+    block-size: clamp(460px, 74dvh, 535px);
+  }
+
   .menu-dialog .menu-socials {
     inset: 104px 24px auto auto;
     display: flex;
