@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -23,8 +23,10 @@ const projects = [
 {"slug": "fold-pendant", "name": "Fold Pendant", "category": "Design", "area": "—", "rooms": "—", "materials": "Paper, steel, light", "description": "A folded paper shade that turns a simple sheet into a soft, sculptural source of light.","image":"fold-pendant"},
 {"slug": "plinth-table", "name": "Plinth Table", "category": "Design", "area": "—", "rooms": "—", "materials": "Red travertine, dark oak", "description": "A side table balancing a substantial stone base with a thin circular timber surface. Two materials, one clear form.","image":"plinth-table"}
 ]
+// Keep the unfiltered gallery mixed, with drawing studies spread through the lower rows.
+const showcaseProjects=[0,1,2,5,4,3,6,7,9,10,8,11].map(i=>projects[i])
 const featured=[projects[0],projects[1],projects[2],projects[4]]
-const drawing=p=>'/images/'+(p.slug==='courtyard-house'?'courtyard':p.slug)+'-axon.png'
+const drawing=p=>'/images/'+(p.slug==='courtyard-house'?'courtyard':p.slug)+'-axon-cutout.png'
 const image=(p)=>`/images/${p.image}.jpg`
 const path=window.location.pathname.replace(/\/$/,'')||'/'
 const project=projects.find(p=>path===`/projects/${p.slug}`)
@@ -39,12 +41,24 @@ function Logo(){return <svg viewBox="0 0 1856 503" role="img" aria-label="arch">
 </g></svg>}
 function App(){
 const root=useRef(),menu=useRef(),wipe=useRef(),busy=useRef(false),dragStart=useRef(null), suppressDragClick=useRef(false)
+const [autoplay,setAutoplay]=useState(()=>!matchMedia('(prefers-reduced-motion: reduce)').matches)
 const [heroReady,setHeroReady]=useState(false)
 const [entranceFinished,setEntranceFinished]=useState(false)
 const [slide,setSlide]=useState(0),[filter,setFilter]=useState('All'),[menuOpen,setMenuOpen]=useState(false),[plan,setPlan]=useState(0),[saved,setSaved]=useState(false)
+// Scale the desktop composition together, while allowing normal browser zoom-in and mobile reflow.
+useLayoutEffect(()=>{
+ const sizeLayout=()=>{
+  const scale=Math.max(1,document.documentElement.clientWidth/1920)
+  document.documentElement.style.setProperty('--desktop-scale',scale)
+ }
+ sizeLayout()
+ window.addEventListener('resize',sizeLayout)
+ return()=>window.removeEventListener('resize',sizeLayout)
+},[])
 const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches
 const {contextSafe}=useGSAP(()=>{
  const mm=gsap.matchMedia()
+ if(home)gsap.set('.slide-track',{x:0,xPercent:-100/6})
  const visited=sessionStorage.getItem('arch-visited')==='true'
  sessionStorage.setItem('arch-visited','true')
  mm.add('(prefers-reduced-motion: no-preference)',()=>{
@@ -61,7 +75,6 @@ const {contextSafe}=useGSAP(()=>{
    .set(wipe.current,{visibility:'hidden'})
  }else entrance.to(wipe.current,{height:0,duration:1,delay:.1,ease:referenceEase}).set(wipe.current,{visibility:'hidden'})
  if(fullMasthead){
-  if(home)gsap.set('.slide-track',{x:0,xPercent:-100/6})
   const intro=gsap.timeline({delay:visited?1:3.42})
   intro.from('.grid-lines span',{scaleY:0,transformOrigin:'top',duration:3,ease:'power1.inOut'},0)
   .from('.header-rule',{scaleX:0,transformOrigin:'left',duration:3,ease:'power1.inOut'},0)
@@ -93,7 +106,7 @@ const {contextSafe}=useGSAP(()=>{
  }
  gsap.timeline({scrollTrigger:{trigger:'footer',start:'top 90%',once:true}}).from('.footer-brand svg',{yPercent:120,opacity:0,duration:2.8,ease:referenceEase}).from('.footer-grid>*',{y:20,opacity:0,duration:.6,stagger:.15,ease:'power1.inOut'},.4)
  gsap.utils.toArray('.reveal').forEach(el=>gsap.from(el,{y:20,opacity:0,duration:.6,ease:'power1.inOut',scrollTrigger:{trigger:el,start:'top 80%',once:true}}))
- });if(reduced())gsap.set(wipe.current,{visibility:'hidden'});return()=>mm.revert()
+ });return()=>mm.revert()
 },{scope:root})
 useGSAP(()=>{gsap.utils.toArray('.filter-rule').forEach(el=>{if(!reduced())gsap.from(el,{scaleX:0,transformOrigin:'left center',duration:2.6,delay:.6,ease:'power1.inOut',scrollTrigger:{trigger:el,start:'top 95%',once:true}})});gsap.utils.toArray('.project').forEach(el=>{if(!reduced())gsap.from(el,{y:20,duration:1.1,ease:'power1.out',clearProps:'transform',scrollTrigger:{trigger:el,start:'top 95%',once:true}})});ScrollTrigger.refresh()},{scope:root,dependencies:[filter],revertOnUpdate:true})
 const navigate=contextSafe(e=>{
@@ -125,6 +138,14 @@ const move=contextSafe((d, settle=false)=>{
  gsap.to(track,{xPercent:-(raw+1)*100/6,duration:reduced()?0:.6,ease:carouselEase,onComplete:()=>{gsap.set(track,{xPercent:-(next+1)*100/6});busy.current=false}})
  setSlide(next)
 })
+useEffect(()=>{
+ if(!home||!autoplay||!heroReady||!entranceFinished)return
+ const timer=window.setInterval(()=>{
+  if(document.hidden||menu.current.open||dragStart.current||root.current.querySelector('.feature').contains(document.activeElement))return
+  move(1)
+ },5000)
+ return()=>window.clearInterval(timer)
+},[slide,autoplay,heroReady,entranceFinished])
 function startDrag(event){
  if(!event.isPrimary||event.button!==0)return
  suppressDragClick.current=false
@@ -142,7 +163,7 @@ function followDrag(event){
  }
  if(reduced())return
  const track=event.currentTarget.querySelector('.slide-track')
- const offset=gsap.utils.clamp(-100/6,100/6,dx/track.offsetWidth*100)
+ const offset=gsap.utils.clamp(-100/6,100/6,dx/track.getBoundingClientRect().width*100)
  gsap.set(track,{xPercent:-(slide+1)*100/6+offset})
 }
 function finishDrag(event){
@@ -160,8 +181,8 @@ function preventDragClick(event){
  event.preventDefault()
  event.stopPropagation()
 }
-function Card({p}){return <a key={p.slug} className={`project ${filter==='Architecture'&&p.category==='Architecture'?'architecture-card':''}`} href={`/projects/${p.slug}`} onClick={navigate}><div className="project-photo"><img src={image(p)} alt={p.name} loading="lazy" width="1536" height="1024"/>{p.category==='Architecture'&&<img className="architecture-drawing" src={drawing(p)} alt="" loading="lazy" width="1536" height="1024"/>}<span className="project-open" aria-hidden="true">↗</span></div><h3>{p.name}</h3><p>{p.category}</p></a>}
-function Work(){return <section className="projects-section" id="projects" aria-label="Projects"><div className={`filters ${filter!=='All'?'has-filter':''}`}><h2 className="visually-hidden">Selected projects</h2><span className="filter-rule" aria-hidden="true"/><div role="group" aria-label="Filter projects">{['Interiors','Architecture','Design'].map(c=><button key={c} aria-pressed={filter===c} onClick={()=>setFilter(current=>current===c?'All':c)}>{c}</button>)}<button className="reset-filter" aria-label="Show all projects" onClick={()=>setFilter('All')}>×</button></div></div><div className="project-grid">{projects.filter(p=>filter==='All'||p.category===filter).map(p=>Card({p}))}</div></section>}
+function Card({p}){return <a key={p.slug} className={`project ${p.category==='Architecture'&&(filter==='Architecture'||(filter==='All'&&['meadow-cabin','coastal-pavilion','garden-townhouse'].includes(p.slug)))?'architecture-card':''}`} href={`/projects/${p.slug}`} onClick={navigate}><div className="project-photo"><img src={image(p)} alt={p.name} loading="lazy" width="1536" height="1024"/>{p.category==='Architecture'&&<img className="architecture-drawing" src={drawing(p)} alt="" loading="lazy" width="1536" height="1024"/>}<span className="project-open" aria-hidden="true">↗</span></div><h3>{p.name}</h3><p>{p.category}</p></a>}
+function Work(){return <section className="projects-section" id="projects" aria-label="Projects"><div className={`filters ${filter!=='All'?'has-filter':''}`}><h2 className="visually-hidden">Selected projects</h2><span className="filter-rule" aria-hidden="true"/><div role="group" aria-label="Filter projects">{['Interiors','Architecture','Design'].map(c=><button key={c} aria-pressed={filter===c} onClick={()=>setFilter(current=>current===c?'All':c)}>{c}</button>)}<button className="reset-filter" aria-label="Show all projects" onClick={()=>setFilter('All')}>×</button></div></div><div className="project-grid">{(filter==='All'?showcaseProjects:projects.filter(p=>p.category===filter)).map(p=>Card({p}))}</div></section>}
 function Studio(){
  const copy=<div className="studio-copy"><p className="statement reveal">We are Arch. We create architecture and interiors with a clear purpose: simple compositions, natural materials and careful attention to the way we live.</p><p className="statement reveal">From the shape of a room to the smallest detail, we look for a quiet balance between form and everyday life.</p>{home&&<a className="line-link reveal" href="/about" onClick={navigate}>Learn more</a>}</div>
  if(home)return <section className="home-about" id="studio"><span className="section-rule" aria-hidden="true"/><h2>About studio</h2><div className="home-about-content"><div className="home-about-image reveal"><div className="portrait-window"><img src="/images/studio-portrait.jpg" alt="Illustrative portrait of a fictional architecture studio team" width="1536" height="1024" loading="lazy"/></div></div>{copy}</div></section>
@@ -170,7 +191,7 @@ function Studio(){
 function ContactCTA(){return <section className="contact section-pad"><div className="cta-grid" aria-hidden="true">{Array.from({length:8},(_,i)=><span key={i}/>)}</div><span className="cta-bottom-line" aria-hidden="true"/><div className="cta-copy"><h2>Have a project in mind? Looking<br className="desktop-break"/> for a partner for your next design,<br className="desktop-break"/> architecture, interior design project?</h2><a className="line-link" href="/contact" onClick={navigate}>Submit your brief</a></div></section>}
 return <div ref={root} className={`${home?'home-page':'inner-page'} ${project?'project-page':''} ${about?'about-page':''} ${contact?'contact-page':''} ${fullMasthead?'full-masthead':''}`}>
 <div className="page-content"><header className={fullMasthead?"masthead":"inner-header"} id="top">{fullMasthead?<><div className="grid-lines" aria-hidden="true">{Array.from({length:8},(_,i)=><span key={i}/>)}</div><a className="studio-label" href="/" onClick={navigate} aria-label="Decode Studio"><span aria-hidden="true">DECODE</span><span className="studio-label-bottom" aria-hidden="true">{Array.from("STUDIO", letter=><span key={letter}>{letter}</span>)}</span></a><div className="header-rule" aria-hidden="true"/>{home?<><h1 className="brand"><Logo/></h1><a className="scroll-brand" href="/" onClick={navigate} aria-label="Arch home"><Logo/></a></>:<div className="brand" aria-hidden="true"><Logo/></div>}</>:<a className="small-brand" href="/" onClick={navigate}><Logo/></a>}<button className="menu-toggle" aria-label="Open menu" aria-haspopup="dialog" aria-expanded={menuOpen} onClick={openMenu}><i/><i/></button>{project&&<a className="back-project" href="/projects" onClick={navigate} aria-label="Back to projects"><svg className="back-project-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-6 7 6 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>}</header>
-<main>{home&&<><section className="feature" id="slider" aria-label="Featured projects" aria-roledescription="carousel"><div className={heroReady&&entranceFinished?"slide-visual is-ready":"slide-visual is-loading"} onPointerDown={startDrag} onPointerMove={followDrag} onPointerUp={finishDrag} onPointerCancel={finishDrag} onPointerLeave={finishDrag} onLostPointerCapture={finishDrag} onClickCapture={preventDragClick}><div className="slide-track">{[featured[3],...featured,featured[0]].map((p,i)=><div className="slide-panel" key={`${p.slug}-${i}`} aria-hidden={i!==slide+1}><img className="slide-photo" src={image(p)} alt={p.name} fetchPriority={i===1?"high":"low"} loading={i===1?"eager":"lazy"} onLoad={i===1?()=>setHeroReady(true):undefined} onError={i===1?()=>setHeroReady(true):undefined} width="1536" height="1024" draggable="false"/><div className="slide-caption"><a href={`/projects/${p.slug}`} onClick={navigate} tabIndex={i===slide+1?0:-1}>{p.carouselName||p.name}</a><p>{p.category==='Interiors'?'Interior Design':p.category}</p></div></div>)}</div><a className="scroll-cue" href="#projects" onClick={scrollToProjects}>Scroll Down</a><button className="slide-arrow previous" aria-label="Previous project" onClick={()=>move(-1)}>←</button><button className="slide-arrow next" aria-label="Next project" onClick={()=>move(1)}>→</button><span className="visually-hidden" aria-live="polite">{featured[slide].carouselName||featured[slide].name}</span></div><div className="pagination" aria-label="Choose featured project">{featured.map((p,i)=><button key={p.slug} aria-label={`Show ${p.name}`} aria-current={i===slide?'true':undefined} onClick={()=>move(i-slide)}>{i+1}</button>)}</div></section>{Work()}<div className="categories-return"><a href="#projects" onClick={scrollToProjects}>Scroll up to categories</a></div>{Studio()}</>}
+<main>{home&&<><section className="feature" id="slider" aria-label="Featured projects" aria-roledescription="carousel"><div className={heroReady&&entranceFinished?"slide-visual is-ready":"slide-visual is-loading"} onPointerDown={startDrag} onPointerMove={followDrag} onPointerUp={finishDrag} onPointerCancel={finishDrag} onPointerLeave={finishDrag} onLostPointerCapture={finishDrag} onClickCapture={preventDragClick}><div className="slide-track">{[featured[3],...featured,featured[0]].map((p,i)=><div className="slide-panel" key={`${p.slug}-${i}`} aria-hidden={i!==slide+1}><img className="slide-photo" src={image(p)} alt={p.name} fetchPriority={i===1?"high":"low"} loading={i===1?"eager":"lazy"} onLoad={i===1?()=>setHeroReady(true):undefined} onError={i===1?()=>setHeroReady(true):undefined} width="1536" height="1024" draggable="false"/><div className="slide-caption"><a href={`/projects/${p.slug}`} onClick={navigate} tabIndex={i===slide+1?0:-1}>{p.carouselName||p.name}</a><p>{p.category==='Interiors'?'Interior Design':p.category}</p></div></div>)}</div><a className="scroll-cue" href="#projects" onClick={scrollToProjects}>Scroll Down</a><button className="slide-arrow previous" aria-label="Previous project" onClick={()=>move(-1)}>←</button><button className="slide-arrow next" aria-label="Next project" onClick={()=>move(1)}>→</button><span className="visually-hidden" aria-live={autoplay?'off':'polite'}>{featured[slide].carouselName||featured[slide].name}</span></div><div className="pagination" aria-label="Choose featured project">{featured.map((p,i)=><button key={p.slug} aria-label={`Show ${p.name}`} aria-current={i===slide?'true':undefined} onClick={()=>move(i-slide)}>{i+1}</button>)}<button className="autoplay-control" aria-label={autoplay?'Pause automatic slideshow':'Play automatic slideshow'} aria-pressed={!autoplay} onClick={()=>setAutoplay(value=>!value)}>{autoplay?'Ⅱ':'▶'}</button></div></section>{Work()}<div className="categories-return"><a href="#projects" onClick={scrollToProjects}>Scroll up to categories</a></div>{Studio()}</>}
 {listing&&<><h1 className="visually-hidden">Projects</h1>{Work()}</>}
 {about&&<><h1 className="visually-hidden">About Arch</h1>{Studio()}<div className="studio-image parallax"><img src={image(projects[4])} alt="A sculptural workspace concept by Arch" width="1536" height="1024"/></div><section className="about section-pad"><span className="section-rule" aria-hidden="true"/><h2 className="reveal">How we work<br/>&amp; process</h2><div><p className="statement reveal">We start with how a space will be used. Light, movement and materials guide the decisions that follow.</p>{[['Design','Objects and furniture are considered as part of the space, with a focus on proportion, craft and lasting materials.'],['Architecture','We study the site, the brief and the relationship between inside and outside. Each decision gives the building a clear purpose.'],['Interior design','From the first plan to the final finish, we develop a consistent material language around the people who use the space.']].map(([title,copy])=><div className="process-item reveal" key={title}><h3>{title}</h3><p>{copy}</p></div>)}</div></section></>}
 {project&&<article><div className="project-hero parallax"><img src={image(project)} alt={project.name} fetchPriority="high" width="1536" height="1024"/></div><a href="#description" className="project-title"><h1>{project.name}</h1><span>{project.category}</span></a><section className="project-description section-pad" id="description"><h2 className="visually-hidden">Project details</h2><div className="project-facts">{[['Status','Concept study'],['Category',project.category],['Area',project.category==='Design'?'Object study':`${project.area} m²`],['Number of rooms',project.rooms],['Design direction','Arch'],['Materials',project.materials],['Visualisation','AI-generated concept'],['Approach','Form, light & everyday life']].map(([label,value])=><div className="fact reveal" key={label}><span>{label}</span><p>{value}</p></div>)}</div><div className="plan-panel reveal"><div className="plan-heading"><h3>Spatial study</h3><button onClick={()=>window.print()}>Print project ↗</button></div><svg viewBox="0 0 480 360" role="img" aria-label="Illustrative concept floor plan"><g fill="none" stroke="currentColor" strokeWidth="5"><path d={plan===0?'M45 45H435V315H45ZM45 180H190V45M190 180V315M300 45V180H435M190 245H300V315':'M45 45H435V315H45ZM190 45V315M190 145H435M310 145V315M45 245H190'}/><path strokeWidth="1" d="M70 70H160V150H70ZM220 75H270V130H220ZM330 210H405V285H330Z"/></g><text x="45" y="345" fill="currentColor" fontSize="12">ARCH — CONCEPT PLAN</text></svg><div className="plan-tabs" aria-label="Floor plan views">{[0,1].map(i=><button aria-pressed={plan===i} onClick={()=>setPlan(i)} key={i}>{i+1}</button>)}</div></div></section><p className="project-story section-pad reveal">{project.description}</p><div className="detail-image parallax"><img src={image(project)} alt={`${project.name}, material detail`} width="1536" height="1024" loading="lazy"/></div><section className="related section-pad"><h2 className="reveal">See also other projects</h2><div className="project-grid">{projects.filter(p=>p!==project).slice(0,2).map(p=>Card({p}))}</div></section></article>}
