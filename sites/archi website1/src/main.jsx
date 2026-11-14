@@ -116,8 +116,8 @@ const openMenu=contextSafe(()=>{
  gsap.fromTo(menu.current,{yPercent:-150},{yPercent:0,duration:reduced()?0:.6,ease:referenceEase,onComplete:()=>{busy.current=false}})
 
 })
-const move=contextSafe(d=>{
- if(busy.current||d===0)return
+const move=contextSafe((d, settle=false)=>{
+ if(busy.current||(!d&&!settle))return
  busy.current=true
  const raw=slide+d
  const next=(raw+featured.length)%featured.length
@@ -128,20 +128,31 @@ const move=contextSafe(d=>{
 function startDrag(event){
  if(!event.isPrimary||event.button!==0)return
  suppressDragClick.current=false
- dragStart.current={id:event.pointerId,x:event.clientX,y:event.clientY}
+ if(busy.current)return
+ dragStart.current={id:event.pointerId,x:event.clientX,y:event.clientY,active:false}
 }
-function cancelDrag(){
- dragStart.current=null
+function followDrag(event){
+ const start=dragStart.current
+ if(start?.id!==event.pointerId)return
+ const dx=event.clientX-start.x
+ if(!start.active){
+  if(Math.abs(dx)<8||Math.abs(dx)<=Math.abs(event.clientY-start.y))return
+  start.active=true
+  event.currentTarget.setPointerCapture(event.pointerId)
+ }
+ if(reduced())return
+ const track=event.currentTarget.querySelector('.slide-track')
+ const offset=gsap.utils.clamp(-100/6,100/6,dx/track.offsetWidth*100)
+ gsap.set(track,{xPercent:-(slide+1)*100/6+offset})
 }
 function finishDrag(event){
  const start=dragStart.current
  if(start?.id!==event.pointerId)return
- cancelDrag()
- const dx=event.clientX-start.x
- const dy=event.clientY-start.y
- if(Math.abs(dx)<=50||Math.abs(dx)<=Math.abs(dy))return
+ dragStart.current=null
+ if(!start.active)return
  suppressDragClick.current=true
- move(dx<0?1:-1)
+ const dx=event.clientX-start.x
+ move(event.type==='pointerup'&&Math.abs(dx)>50?(dx<0?1:-1):0,true)
 }
 function preventDragClick(event){
  if(!suppressDragClick.current||event.detail===0)return
@@ -159,7 +170,7 @@ function Studio(){
 function ContactCTA(){return <section className="contact section-pad"><div className="cta-grid" aria-hidden="true">{Array.from({length:8},(_,i)=><span key={i}/>)}</div><span className="cta-bottom-line" aria-hidden="true"/><div className="cta-copy"><h2>Have a project in mind? Looking<br className="desktop-break"/> for a partner for your next design,<br className="desktop-break"/> architecture, interior design project?</h2><a className="line-link" href="/contact" onClick={navigate}>Submit your brief</a></div></section>}
 return <div ref={root} className={`${home?'home-page':'inner-page'} ${project?'project-page':''} ${about?'about-page':''} ${contact?'contact-page':''} ${fullMasthead?'full-masthead':''}`}>
 <div className="page-content"><header className={fullMasthead?"masthead":"inner-header"} id="top">{fullMasthead?<><div className="grid-lines" aria-hidden="true">{Array.from({length:8},(_,i)=><span key={i}/>)}</div><a className="studio-label" href="/" onClick={navigate} aria-label="Decode Studio"><span aria-hidden="true">DECODE</span><span className="studio-label-bottom" aria-hidden="true">{Array.from("STUDIO", letter=><span key={letter}>{letter}</span>)}</span></a><div className="header-rule" aria-hidden="true"/>{home?<><h1 className="brand"><Logo/></h1><a className="scroll-brand" href="/" onClick={navigate} aria-label="Arch home"><Logo/></a></>:<div className="brand" aria-hidden="true"><Logo/></div>}</>:<a className="small-brand" href="/" onClick={navigate}><Logo/></a>}<button className="menu-toggle" aria-label="Open menu" aria-haspopup="dialog" aria-expanded={menuOpen} onClick={openMenu}><i/><i/></button>{project&&<a className="back-project" href="/projects" onClick={navigate} aria-label="Back to projects"><svg className="back-project-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-6 7 6 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>}</header>
-<main>{home&&<><section className="feature" id="slider" aria-label="Featured projects" aria-roledescription="carousel"><div className={heroReady&&entranceFinished?"slide-visual is-ready":"slide-visual is-loading"} onPointerDown={startDrag} onPointerUp={finishDrag} onPointerCancel={cancelDrag} onPointerLeave={cancelDrag} onClickCapture={preventDragClick}><div className="slide-track">{[featured[3],...featured,featured[0]].map((p,i)=><div className="slide-panel" key={`${p.slug}-${i}`} aria-hidden={i!==slide+1}><img className="slide-photo" src={image(p)} alt={p.name} fetchPriority={i===1?"high":"low"} loading={i===1?"eager":"lazy"} onLoad={i===1?()=>setHeroReady(true):undefined} onError={i===1?()=>setHeroReady(true):undefined} width="1536" height="1024" draggable="false"/><div className="slide-caption"><a href={`/projects/${p.slug}`} onClick={navigate} tabIndex={i===slide+1?0:-1}>{p.carouselName||p.name}</a><p>{p.category==='Interiors'?'Interior Design':p.category}</p></div></div>)}</div><a className="scroll-cue" href="#projects" onClick={scrollToProjects}>Scroll Down</a><button className="slide-arrow previous" aria-label="Previous project" onClick={()=>move(-1)}>←</button><button className="slide-arrow next" aria-label="Next project" onClick={()=>move(1)}>→</button><span className="visually-hidden" aria-live="polite">{featured[slide].carouselName||featured[slide].name}</span></div><div className="pagination" aria-label="Choose featured project">{featured.map((p,i)=><button key={p.slug} aria-label={`Show ${p.name}`} aria-current={i===slide?'true':undefined} onClick={()=>move(i-slide)}>{i+1}</button>)}</div></section>{Work()}<div className="categories-return"><a href="#projects" onClick={scrollToProjects}>Scroll up to categories</a></div>{Studio()}</>}
+<main>{home&&<><section className="feature" id="slider" aria-label="Featured projects" aria-roledescription="carousel"><div className={heroReady&&entranceFinished?"slide-visual is-ready":"slide-visual is-loading"} onPointerDown={startDrag} onPointerMove={followDrag} onPointerUp={finishDrag} onPointerCancel={finishDrag} onPointerLeave={finishDrag} onLostPointerCapture={finishDrag} onClickCapture={preventDragClick}><div className="slide-track">{[featured[3],...featured,featured[0]].map((p,i)=><div className="slide-panel" key={`${p.slug}-${i}`} aria-hidden={i!==slide+1}><img className="slide-photo" src={image(p)} alt={p.name} fetchPriority={i===1?"high":"low"} loading={i===1?"eager":"lazy"} onLoad={i===1?()=>setHeroReady(true):undefined} onError={i===1?()=>setHeroReady(true):undefined} width="1536" height="1024" draggable="false"/><div className="slide-caption"><a href={`/projects/${p.slug}`} onClick={navigate} tabIndex={i===slide+1?0:-1}>{p.carouselName||p.name}</a><p>{p.category==='Interiors'?'Interior Design':p.category}</p></div></div>)}</div><a className="scroll-cue" href="#projects" onClick={scrollToProjects}>Scroll Down</a><button className="slide-arrow previous" aria-label="Previous project" onClick={()=>move(-1)}>←</button><button className="slide-arrow next" aria-label="Next project" onClick={()=>move(1)}>→</button><span className="visually-hidden" aria-live="polite">{featured[slide].carouselName||featured[slide].name}</span></div><div className="pagination" aria-label="Choose featured project">{featured.map((p,i)=><button key={p.slug} aria-label={`Show ${p.name}`} aria-current={i===slide?'true':undefined} onClick={()=>move(i-slide)}>{i+1}</button>)}</div></section>{Work()}<div className="categories-return"><a href="#projects" onClick={scrollToProjects}>Scroll up to categories</a></div>{Studio()}</>}
 {listing&&<><h1 className="visually-hidden">Projects</h1>{Work()}</>}
 {about&&<><h1 className="visually-hidden">About Arch</h1>{Studio()}<div className="studio-image parallax"><img src={image(projects[4])} alt="A sculptural workspace concept by Arch" width="1536" height="1024"/></div><section className="about section-pad"><span className="section-rule" aria-hidden="true"/><h2 className="reveal">How we work<br/>&amp; process</h2><div><p className="statement reveal">We start with how a space will be used. Light, movement and materials guide the decisions that follow.</p>{[['Design','Objects and furniture are considered as part of the space, with a focus on proportion, craft and lasting materials.'],['Architecture','We study the site, the brief and the relationship between inside and outside. Each decision gives the building a clear purpose.'],['Interior design','From the first plan to the final finish, we develop a consistent material language around the people who use the space.']].map(([title,copy])=><div className="process-item reveal" key={title}><h3>{title}</h3><p>{copy}</p></div>)}</div></section></>}
 {project&&<article><div className="project-hero parallax"><img src={image(project)} alt={project.name} fetchPriority="high" width="1536" height="1024"/></div><a href="#description" className="project-title"><h1>{project.name}</h1><span>{project.category}</span></a><section className="project-description section-pad" id="description"><h2 className="visually-hidden">Project details</h2><div className="project-facts">{[['Status','Concept study'],['Category',project.category],['Area',project.category==='Design'?'Object study':`${project.area} m²`],['Number of rooms',project.rooms],['Design direction','Arch'],['Materials',project.materials],['Visualisation','AI-generated concept'],['Approach','Form, light & everyday life']].map(([label,value])=><div className="fact reveal" key={label}><span>{label}</span><p>{value}</p></div>)}</div><div className="plan-panel reveal"><div className="plan-heading"><h3>Spatial study</h3><button onClick={()=>window.print()}>Print project ↗</button></div><svg viewBox="0 0 480 360" role="img" aria-label="Illustrative concept floor plan"><g fill="none" stroke="currentColor" strokeWidth="5"><path d={plan===0?'M45 45H435V315H45ZM45 180H190V45M190 180V315M300 45V180H435M190 245H300V315':'M45 45H435V315H45ZM190 45V315M190 145H435M310 145V315M45 245H190'}/><path strokeWidth="1" d="M70 70H160V150H70ZM220 75H270V130H220ZM330 210H405V285H330Z"/></g><text x="45" y="345" fill="currentColor" fontSize="12">ARCH — CONCEPT PLAN</text></svg><div className="plan-tabs" aria-label="Floor plan views">{[0,1].map(i=><button aria-pressed={plan===i} onClick={()=>setPlan(i)} key={i}>{i+1}</button>)}</div></div></section><p className="project-story section-pad reveal">{project.description}</p><div className="detail-image parallax"><img src={image(project)} alt={`${project.name}, material detail`} width="1536" height="1024" loading="lazy"/></div><section className="related section-pad"><h2 className="reveal">See also other projects</h2><div className="project-grid">{projects.filter(p=>p!==project).slice(0,2).map(p=>Card({p}))}</div></section></article>}
