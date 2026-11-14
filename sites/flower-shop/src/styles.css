@@ -65,6 +65,7 @@ h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 9.5cqw; 
 .back-to-top { display: inline-flex; align-items: center; gap: .5em; font-size: clamp(.95rem, 1vw, max(1.125rem, 1vw)); }
 .back-to-top svg { width: 1.2em; height: 1em; transform: rotate(-90deg); }
 .content-page { padding: 6vw 5vw; }
+#contact { background: #f2f1ed; }
 .content-page .section-title { font: 400 clamp(3rem, 6.5vw, max(7rem, 5.8333vw))/1 var(--serif); letter-spacing: -.04em; margin: 0 0 max(2rem, 1.6667vw); }
 .service-row h3 { font: 400 clamp(2.5rem, 4vw, max(4.5rem, 3.75vw))/1.1 var(--serif); letter-spacing: -.035em; margin: 0 0 max(1.5rem, 1.25vw); }
 .content-page p { max-width: 48ch; font-size: clamp(1.125rem, 1.35vw, max(1.4rem, 1.1667vw)); line-height: 1.65; margin: 0 0 max(1.3rem, 1.0833vw); }
