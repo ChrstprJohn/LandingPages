@@ -11,6 +11,7 @@
     <script>
       if (performance.getEntriesByType('navigation')[0]?.type === 'reload') {
         history.scrollRestoration = 'manual'
+        history.replaceState(history.state, '', '/')
       }
     </script>
   </head>
