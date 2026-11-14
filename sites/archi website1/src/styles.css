@@ -227,7 +227,7 @@ footer.section-pad{background:var(--accent);color:var(--paper);padding:56px 40px
 
 @media (max-width: 767px) {
   .menu-dialog {
-    block-size: clamp(460px, 74dvh, 535px);
+    block-size: clamp(516px, 74dvh, 535px);
   }
 
   .menu-dialog .menu-socials {
