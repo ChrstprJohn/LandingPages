@@ -84,6 +84,7 @@ header .plus,.menu-top .plus{
 
   .home-about{padding-block:20px}
   .home-about .gallery-strip img{width:150px;height:150px}
+  .home-about .pause{display:none}
   .home-about .about-statement{margin-inline:var(--g);padding:116px 0 116px}
   .home-about .about-statement>p{color:#999;margin-bottom:20px}
   .home-about .about-statement h3{font-size:20px;line-height:1.3;letter-spacing:-.05em}
