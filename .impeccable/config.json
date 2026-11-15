@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument serif",
+        "createdAt": "2026-11-14T16:24:08.427Z",
+        "reason": "Agent decided: Google Fonts import matches the supplied Lundani Studio reference typography for this faithful recreation."
+      }
+    ]
+  }
+}
