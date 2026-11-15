@@ -101,30 +101,40 @@ function Project({index:i}){
     </div><nav className="project-paging frame" aria-label="Other projects">{i>0?<a href={`/works/${slugs[i-1]}`}>&lt;Previous</a>:<span/>}{i<5&&<a href={`/works/${slugs[i+1]}`}>Next&gt;</a>}</nav></>
 }
 function App(){
-  const root=useRef(),menu=useRef(),toggle=useRef(),transition=useRef(),snapshot=useRef(),scrollReset=useRef(),menuMotion=useRef()
+  const root=useRef(),menu=useRef(),toggle=useRef(),transition=useRef(),navigation=useRef(0),scrollReset=useRef(),menuMotion=useRef()
   const [open,setOpen]=useState(false)
   const [menuVisible,setMenuVisible]=useState(false)
   const [path,setPath]=useState(()=>location.pathname.replace(/\/$/,'')||'/')
   const project=slugs.indexOf(path.split('/')[2])
   function changePage(url,push=true){
     clearTimeout(scrollReset.current)
-    transition.current?.kill()
-    snapshot.current?.remove()
-    const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches
-    if(!reduced){
-      const old=root.current.cloneNode(true)
-      old.setAttribute('aria-hidden','true')
-      old.inert=true
-      Object.assign(old.style,{position:'fixed',top:`${-scrollY}px`,left:'0',width:`${document.documentElement.clientWidth}px`,pointerEvents:'none',zIndex:'100',background:'#fff'})
-      document.body.appendChild(old)
-      snapshot.current=old
-      transition.current=gsap.to(old,{autoAlpha:0,duration:.45,ease:'power1.out',onComplete:()=>{old.remove();if(snapshot.current===old)snapshot.current=null}})
+    const id=++navigation.current
+    transition.current?.skipTransition()
+    const update=()=>{
+      if(id!==navigation.current)return
+      if(push)history.pushState({},'',url.pathname+url.search+url.hash)
+      flushSync(()=>{setOpen(false);setMenuVisible(false);setPath(url.pathname.replace(/\/$/,'')||'/')})
+      window.scrollTo({top:0,left:0,behavior:'instant'})
+      if(!push)scrollReset.current=setTimeout(()=>window.scrollTo({top:0,left:0,behavior:'instant'}),0)
     }
-    if(push)history.pushState({},'',url.pathname+url.search+url.hash)
-    flushSync(()=>{setOpen(false);setPath(url.pathname.replace(/\/$/,'')||'/')})
-    window.scrollTo({top:0,left:0,behavior:'instant'})
-    if(!push)scrollReset.current=setTimeout(()=>window.scrollTo({top:0,left:0,behavior:'instant'}),0)
+    const focusHeading=()=>{
+      if(id!==navigation.current)return
+      const heading=root.current.querySelector('main h1')
+      heading?.setAttribute('tabindex','-1')
+      heading?.focus({preventScroll:true})
+    }
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches||!document.startViewTransition){
+      update()
+      focusHeading()
+      return
+    }
+    // The reference uses a soft bottom-to-top wipe of the complete viewport.
+    const next=document.startViewTransition(update)
+    transition.current=next
+    next.ready.catch(()=>{})
+    next.finished.then(focusHeading,focusHeading)
   }
+
   function navigate(event){
     const link=event.target.closest('a[href]')
     if(!link||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||link.target==='_blank'||link.hasAttribute('download'))return
@@ -135,7 +145,7 @@ function App(){
   }
   useEffect(()=>{const previous=history.scrollRestoration;history.scrollRestoration='manual';const back=()=>changePage(new URL(location.href),false);addEventListener('popstate',back);return()=>{history.scrollRestoration=previous;removeEventListener('popstate',back)}},[])
   useEffect(()=>{if(!menuVisible)return;const previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';const escape=event=>{if(event.key==='Escape'){setOpen(false);toggle.current.focus()}if(event.key==='Tab'){const controls=[...root.current.querySelector('header').querySelectorAll('a,button')].filter(element=>element.getClientRects().length);const first=controls[0],last=controls.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}}};addEventListener('keydown',escape);return()=>{document.body.style.overflow=previousOverflow;removeEventListener('keydown',escape)}},[menuVisible])
-  useEffect(()=>()=>{transition.current?.kill();snapshot.current?.remove();clearTimeout(scrollReset.current)},[])
+  useEffect(()=>()=>{transition.current?.skipTransition();clearTimeout(scrollReset.current)},[])
   useEffect(()=>{document.title=`${project>=0?titles[project]:path==='/'?'Photography for Modern Stories':path.slice(1).replace(/^./,c=>c.toUpperCase())} — Decode Studio`},[path,project])
   useGSAP(()=>{
     const mm=gsap.matchMedia()

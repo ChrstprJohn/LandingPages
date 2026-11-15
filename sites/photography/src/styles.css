@@ -96,3 +96,13 @@ footer{padding:56px 24px max(40px,env(safe-area-inset-bottom));column-gap:20px;r
 @media(max-width:809px){footer{grid-template-columns:1fr;row-gap:22px}.footer-links{flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px 24px}.footer-links:first-child{justify-content:space-between;gap:10px}.footer-links a{min-height:36px}.footer-cta{margin-top:6px}}
 @media(max-width:809px){.footer-links,.footer-links:first-child{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:12px;row-gap:0;justify-content:initial}.footer-links a{white-space:nowrap;font-size:16px}}
 html{scrollbar-gutter:stable}
+
+/* Reference route wipe: stationary old view, feathered new view rising from below. */
+@property --route-wipe { syntax: '<number>'; inherits: false; initial-value: 0; }
+::view-transition-old(root),::view-transition-new(root){mix-blend-mode:normal;backface-visibility:hidden}
+::view-transition-old(root){animation:route-hold .2s cubic-bezier(.27,0,.51,1) both}
+::view-transition-new(root){animation:route-enter .4s cubic-bezier(.27,0,.51,1) both;mask-image:linear-gradient(360deg,#000 calc(-100% + 200% * var(--route-wipe)),transparent calc(200% * var(--route-wipe)))}
+@keyframes route-hold{from,to{opacity:1;transform:none}}
+@keyframes route-enter{from{opacity:1;transform:none;--route-wipe:0}to{opacity:1;transform:none;--route-wipe:1}}
+@media(prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+main h1[tabindex="-1"]:focus{outline:none}

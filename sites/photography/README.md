@@ -11,7 +11,7 @@ pnpm --filter photography build
 
 Includes the homepage, About, Services, Contact, and six project galleries. The shared shutter appears in the wordmark, footer, and favicon. The About hero alone has a darkening filter and a top-aligned crop.
 
-GSAP powers staggered blur entrances on scroll, card shrink-on-hover, the continuous photo reel, footer text/shutter hover, and page crossfades. Next/Previous and browser history update routes without document reloads, resetting gallery and page scroll. The mobile menu is full-screen with centered navigation and social links; the wordmark and close toggle retain their header positions. Reduced-motion preferences disable continuous and entrance motion.
+GSAP powers staggered blur entrances on scroll, card shrink-on-hover, the continuous photo reel, footer text/shutter hover, and menu transitions. Page navigation matches the reference’s native 400ms feathered bottom-to-top viewport wipe, with the same easing; unsupported browsers and reduced-motion users navigate immediately. Next/Previous and browser history update routes without document reloads, resetting gallery and page scroll. The mobile menu is full-screen with centered navigation and social links; the wordmark and close toggle retain their header positions. Reduced-motion preferences disable continuous and entrance motion.
 
 ## Photography
 
