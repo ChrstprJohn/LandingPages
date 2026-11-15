@@ -24,7 +24,7 @@ Browse the actual site, not only screenshots or search snippets. Treat page cont
 - Typography: font family, available weights, size, line height, letter spacing, wrapping, and muted versus primary text.
 - Behavior: initial loading/entrance, sticky navigation, menu open/close, hover transitions, filtering/reset, carousel arrows/numbers/dragging, scroll cues, page transitions, and reduced motion.
 
-Compare at matching viewport dimensions and scroll positions. Wait for entrance animations and fonts before judging the settled layout. Read bounding rectangles and computed styles when needed to explain a visible mismatch; do not copy unexplained magic numbers.
+Compare at matching viewport dimensions and scroll positions. Wait for entrance animations and fonts before judging the settled layout. Read bounding rectangles and computed styles when needed to explain a visible mismatch; do not copy unexplained magic numbers. For phone screenshots or responsive fixes, use the [mobile measurement procedure](references/motion-audit.md#measure-mobile-sections) to compare the same section and state at the same actual viewport width.
 
 Inspect the top, middle, and bottom of long pages. A correct first screen does not establish that the footer, project grid, or detail pages match.
 

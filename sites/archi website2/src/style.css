@@ -74,6 +74,11 @@ header .plus,.menu-top .plus{
 }
 
 @media(max-width:809px){
+  .menu[open]{display:flex;flex-direction:column}
+  .menu-top,.menu nav,.menu .social-circles{flex-shrink:0}
+  .menu nav{margin-top:auto;padding-top:16px}
+  .menu .social-circles{margin-bottom:auto;padding:56px 0 16px}
+
   .home-hero .hero-location{gap:12px}
   .home-hero .hero-bottom p{max-width:min(100%,240px);letter-spacing:-.04em}
 
