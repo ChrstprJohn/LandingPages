@@ -1,0 +1,1908 @@
+{
+  "home": {
+    "Hero": {
+      "text": [
+        "QualityConstructionSolutions",
+        "BOOK A MEETING",
+        "Building the Future, One Project at a Time",
+        "At Decode, we specialize in turning your construction ideas into reality. Whether it’s our residential projects."
+      ]
+    },
+    "About": {
+      "text": [
+        "Check our best clients & partners",
+        "750+",
+        "Satisfied clients",
+        "950+",
+        "Done Projects",
+        "Dedicated to Quality and Integrity",
+        "We build lasting relationships through careful planning, honest communication, and quality work on site.",
+        "We offer a full range of construction services tailored to each client’s needs. Whether you’re planning a renovation, a new home, or a commercial build, our team works with you from the first conversation through the final walkthrough. We keep you informed about timelines, costs, and decisions along the way so you know what to expect at every stage.",
+        "EXPLORE MORE"
+      ],
+      "images": [
+        "stock/brick-facade.jpg",
+        "ui/users-round.svg"
+      ]
+    },
+    "Services": {
+      "text": [
+        "Our Services",
+        "Architectural Design",
+        "Custom home and building design that balances your style, budget, and site — from first sketch to permit-ready plans.",
+        "Renovation & Remodeling",
+        "Kitchen, bathroom, and whole-home renovations that add space, function, and value — delivered with minimal disruption.",
+        "Commercial Build",
+        "Offices, retail, and mixed-use buildings delivered on schedule, with clear reporting and strict quality and safety control."
+      ]
+    },
+    "Why Choose Us": {
+      "text": [
+        "Why We Are the Best in the Industry",
+        "We are your partners in turning your construction ideas into reality. We offer a unique blend of experience, technical expertise, project is a success.",
+        "Quality Craftsmanship",
+        "Expertise and Experience",
+        "Client Satisfaction",
+        "Sustainable Practices"
+      ],
+      "images": [
+        "ui/circle-check.svg",
+        "stock/wood-facade.jpg"
+      ]
+    },
+    "Projects": {
+      "text": [
+        "Some of Our Selected Works",
+        "Luxury Waterfront Residence",
+        "GreenTech Headquarters",
+        "Historic Theater Renovation",
+        "Riverside Condominiums",
+        "Sustainable Community Park",
+        "GreenTech Research Center"
+      ]
+    },
+    "Pricing": {
+      "text": [
+        "Our Pricing Plans",
+        "Basic",
+        "For single-room renovations and small upgrades",
+        "$199",
+        "Per Month",
+        "What’s Included?",
+        "✦",
+        "Full project design and consultation",
+        "Material selection and sourcing",
+        "Site preparation and foundation work",
+        "Free initial consultation",
+        "Detailed project timeline & budget planning",
+        "Weekly progress updates",
+        "GET STARTED NOW",
+        "Pro",
+        "For full home builds and major remodels",
+        "$499",
+        "Project management and coordination",
+        "Structural and electrical work",
+        "Compliance with local regulations",
+        "Site assessment & feasibility studies",
+        "Scalable project management",
+        "Quality and safety inspections",
+        "Premium",
+        "For commercial and large-scale developments",
+        "$999",
+        "Design consultation and layout planning",
+        "Custom architectural design",
+        "On-site project supervisor",
+        "Sustainability & energy consultation",
+        "Post-construction cleanup",
+        "Extended warranty (12 months)"
+      ],
+      "images": []
+    },
+    "Testimonials": {
+      "text": [
+        "Real Stories from Customers",
+        "“We couldn’t be happier with our new home built by Decode. From the very beginning, the team was professional, responsive, and incredibly helpful in guiding us through the entire process.”",
+        "Andy Smith",
+        "Manhattan, NY",
+        "“They were respectful of the building’s history while implementing modern systems and finishes that made it both functional and beautiful. The project was completed with meticulous care.”",
+        "Don Fex",
+        "Queens, NY",
+        "“We’ve worked with several contractors over the years, and this was by far the smoothest experience. No surprises, just solid work. They kept us updated every step of the way and delivered top-quality results.”",
+        "Anny Merry",
+        "Hoboken, NJ",
+        "“Decode turned our outdated kitchen and two bathrooms into the best rooms in the house. Clear pricing, a tidy site every day, and they finished a week early.”",
+        "Gouts Saha",
+        "Brooklyn, NY",
+        "“From permits to final inspection, they handled everything for our new office build. Communication was excellent and the quality speaks for itself.”",
+        "William J.",
+        "Jersey City, NJ",
+        "“Our warehouse expansion had a tight deadline. Decode planned every phase around our operations, so we never had to shut down. Highly recommended.”",
+        "Miguel Leo",
+        "Newark, NJ"
+      ],
+      "images": [
+        "ui/review-quote.svg"
+      ]
+    }
+  },
+  "about": {
+    "Intro": {
+      "text": [
+        "Built on Trust. Driven by Excellence.",
+        "Integrity First",
+        "Built to Last",
+        "Innovations"
+      ],
+      "images": [
+        "stock/glass-house.jpg",
+        "stock/modern-facade.jpg",
+        "ui/shield-check.svg",
+        "ui/warehouse.svg",
+        "ui/sparkles.svg"
+      ]
+    },
+    "Commitment": {
+      "text": [
+        "Commitment to quality and durability.",
+        "We build lasting relationships, solid foundations, and spaces that stand the test of time. With decades of experience"
+      ],
+      "images": [
+        "stock/crane-apartments.jpg"
+      ]
+    },
+    "Statistics": {
+      "text": [
+        "500+",
+        "Our Happy Clients",
+        "30+",
+        "Years of Excellence",
+        "100+",
+        "Skilled Employees",
+        "Crafting Success Stats that Speak",
+        "From residential to commercial builds, we have successfully completed over 1,200 projects across various sectors, ensuring precision and timeliness every step of the way.",
+        "BOOK A MEETING"
+      ],
+      "images": []
+    },
+    "Our Story": {
+      "text": [
+        "Our Mission",
+        "Our Vision",
+        "Our Story",
+        "Building Trust, One Project at a Time",
+        "We’ve successfully managed over $200 million in construction projects, showcasing our ability to handle large-scale operations while maintaining quality and safety standards. Our team is our greatest asset, with over 100 experienced professionals."
+      ],
+      "images": [
+        "stock/riverside-construction.jpg",
+        "stock/office-tower.jpg",
+        "stock/park-pavilion.jpg"
+      ]
+    },
+    "Team": {
+      "text": [
+        "Your Trusted Partners",
+        "SEE ALL MEMBERS",
+        "Daniel Brooks",
+        "Founder & CEO",
+        "Marcus Hayes",
+        "Project Manager",
+        "Jordan Ellis",
+        "Site Engineer"
+      ]
+    },
+    "Testimonials": {
+      "text": [
+        "Real Stories from Customers",
+        "“We couldn’t be happier with our new home built by Decode. From the very beginning, the team was professional, responsive, and incredibly helpful in guiding us through the entire process.”",
+        "Andy Smith",
+        "Manhattan, NY",
+        "“They were respectful of the building’s history while implementing modern systems and finishes that made it both functional and beautiful. The project was completed with meticulous care.”",
+        "Don Fex",
+        "Queens, NY",
+        "“We’ve worked with several contractors over the years, and this was by far the smoothest experience. No surprises, just solid work. They kept us updated every step of the way and delivered top-quality results.”",
+        "Anny Merry",
+        "Hoboken, NJ",
+        "“Decode turned our outdated kitchen and two bathrooms into the best rooms in the house. Clear pricing, a tidy site every day, and they finished a week early.”",
+        "Gouts Saha",
+        "Brooklyn, NY",
+        "“From permits to final inspection, they handled everything for our new office build. Communication was excellent and the quality speaks for itself.”",
+        "William J.",
+        "Jersey City, NJ",
+        "“Our warehouse expansion had a tight deadline. Decode planned every phase around our operations, so we never had to shut down. Highly recommended.”",
+        "Miguel Leo",
+        "Newark, NJ"
+      ]
+    }
+  },
+  "services": {
+    "Benefits": {
+      "text": [
+        "The Benefits of Building with Us",
+        "BOOK A MEETING",
+        "80%",
+        "Expert Craftsmanship",
+        "70%",
+        "Timely Project Completion",
+        "45%",
+        "Sustainable Practices"
+      ],
+      "images": []
+    },
+    "Services": {
+      "text": [
+        "Our Services",
+        "Whether you’re planning a residential project or a commercial development, our team of experienced professionals is here to bring your vision to life.",
+        "Architectural Design",
+        "Custom home and building design that balances your style, budget, and site — from first sketch to permit-ready plans.",
+        "Renovation & Remodeling",
+        "Kitchen, bathroom, and whole-home renovations that add space, function, and value — delivered with minimal disruption.",
+        "Commercial Build",
+        "Offices, retail, and mixed-use buildings delivered on schedule, with clear reporting and strict quality and safety control.",
+        "Construction",
+        "End-to-end new construction — groundworks, structure, and finishing — managed by one experienced, safety-first team.",
+        "Mechanical Works",
+        "HVAC, plumbing, and building services installed and commissioned for comfort, efficiency, and long-term reliability.",
+        "Factory Design",
+        "Industrial facilities and warehouses designed around your workflow, equipment, and future expansion."
+      ]
+    },
+    "cards": {
+      "/services/architectural-design": {
+        "title": "Architectural Design",
+        "image": "ui/architectural-design.svg",
+        "description": "Custom home and building design that balances your style, budget, and site — from first sketch to permit-ready plans."
+      },
+      "/services/renovation-remodeling": {
+        "title": "Renovation & Remodeling",
+        "image": "ui/renovation-remodeling.svg",
+        "description": "Kitchen, bathroom, and whole-home renovations that add space, function, and value — delivered with minimal disruption."
+      },
+      "/services/commercial-build": {
+        "title": "Commercial Build",
+        "image": "ui/commercial-build.svg",
+        "description": "Offices, retail, and mixed-use buildings delivered on schedule, with clear reporting and strict quality and safety control."
+      },
+      "/services/construction": {
+        "title": "Construction",
+        "image": "ui/hard-hat.svg",
+        "description": "End-to-end new construction — groundworks, structure, and finishing — managed by one experienced, safety-first team."
+      },
+      "/services/mechanical-works": {
+        "title": "Mechanical Works",
+        "image": "ui/settings.svg",
+        "description": "HVAC, plumbing, and building services installed and commissioned for comfort, efficiency, and long-term reliability."
+      },
+      "/services/factory-design": {
+        "title": "Factory Design",
+        "image": "ui/factory.svg",
+        "description": "Industrial facilities and warehouses designed around your workflow, equipment, and future expansion."
+      }
+    }
+  },
+  "projects": {
+    "Projects": {
+      "text": [
+        "Built to Last.Designed for Impact",
+        "We take pride in turning blueprints into landmarks. From commercial buildings and residential developments to public infrastructure, our portfolio showcases a commitment to quality.",
+        "Luxury Waterfront Residence",
+        "GreenTech Headquarters",
+        "Historic Theater Renovation",
+        "Riverside Condominiums",
+        "Sustainable Community Park",
+        "GreenTech Research Center",
+        "The Keystone Residences",
+        "Summit Point Complex"
+      ]
+    },
+    "cards": {
+      "/projects/luxury-waterfront-residence": {
+        "title": "Luxury Waterfront Residence",
+        "image": "stock/waterfront-residence.jpg",
+        "description": ""
+      },
+      "/projects/greentech-headquarters": {
+        "title": "GreenTech Headquarters",
+        "image": "stock/glass-building.jpg",
+        "description": ""
+      },
+      "/projects/historic-theater-renovation": {
+        "title": "Historic Theater Renovation",
+        "image": "stock/concrete-pavilion.jpg",
+        "description": ""
+      },
+      "/projects/riverside-condominiums": {
+        "title": "Riverside Condominiums",
+        "image": "stock/rounded-balconies.jpg",
+        "description": ""
+      },
+      "/projects/sustainable-community-park": {
+        "title": "Sustainable Community Park",
+        "image": "stock/park-pavilion.jpg",
+        "description": ""
+      },
+      "/projects/greentech-research-center": {
+        "title": "GreenTech Research Center",
+        "image": "stock/white-concrete.jpg",
+        "description": ""
+      },
+      "/projects/the-keystone-residences": {
+        "title": "The Keystone Residences",
+        "image": "stock/geometric-residences.jpg",
+        "description": ""
+      },
+      "/projects/summit-point-complex": {
+        "title": "Summit Point Complex",
+        "image": "stock/waterfront-office.jpg",
+        "description": ""
+      }
+    }
+  },
+  "blog": {
+    "Posts": {
+      "text": [
+        "Project Stories",
+        "Explore expert tips, project highlights, and industry trends from the builders who bring visions to life.",
+        "Top 5 Things to Know Before Starting a Home Renovation",
+        "Get practical advice on budgeting, permits, timelines, and working with contractors to make your renovation stress-free.",
+        "How to Choose the Right Contractor for Your Project",
+        "Learn the key questions to ask and red flags to avoid when hiring a construction professional.",
+        "Sustainable Building Trends Shaping Construction",
+        "From green materials to energy-efficient designs, see how the construction world is going eco-friendly.",
+        "Residential vs. Commercial Construction: Key Differences",
+        "Understand how timelines, regulations, and budgets differ between residential builds and commercial projects.",
+        "A Day on Site: Behind the Scenes with Our Crew",
+        "Take a peek at what happens daily on-site, meet the team, and learn how we keep projects running smoothly and safely.",
+        "Permits & Inspections: What You Need Before You Build",
+        "A clear guide to the permits and inspections required before you start building or renovating."
+      ]
+    },
+    "cards": {
+      "/blog/top-5-things-to-know-before-starting-a-home-renovation": {
+        "title": "Top 5 Things to Know Before Starting a Home Renovation",
+        "image": "stock/modern-kitchen.jpg",
+        "description": "Get practical advice on budgeting, permits, timelines, and working with contractors to make your renovation stress-free."
+      },
+      "/blog/how-to-choose-the-right-contractor-for-your-project": {
+        "title": "How to Choose the Right Contractor for Your Project",
+        "image": "stock/architect-workspace.jpg",
+        "description": "Learn the key questions to ask and red flags to avoid when hiring a construction professional."
+      },
+      "/blog/sustainable-building-trends-shaping-construction": {
+        "title": "Sustainable Building Trends Shaping Construction",
+        "image": "stock/wood-building.jpg",
+        "description": "From green materials to energy-efficient designs, see how the construction world is going eco-friendly."
+      },
+      "/blog/residential-vs-commercial-construction-key-differences": {
+        "title": "Residential vs. Commercial Construction: Key Differences",
+        "image": "stock/glass-house.jpg",
+        "description": "Understand how timelines, regulations, and budgets differ between residential builds and commercial projects."
+      },
+      "/blog/a-day-on-site-behind-the-scenes-with-our-crew": {
+        "title": "A Day on Site: Behind the Scenes with Our Crew",
+        "image": "stock/crew-on-site.jpg",
+        "description": "Take a peek at what happens daily on-site, meet the team, and learn how we keep projects running smoothly and safely."
+      },
+      "/blog/permits-inspections-what-you-need-before-you-build": {
+        "title": "Permits & Inspections: What You Need Before You Build",
+        "image": "stock/office-planning.jpg",
+        "description": "A clear guide to the permits and inspections required before you start building or renovating."
+      }
+    }
+  },
+  "contact": {
+    "Contact": {
+      "text": [
+        "Get in Touch",
+        "Whether you’re planning a home renovation, a new build, or a commercial project, we’re here to help. Reach out today to schedule a consultation.",
+        "Call Us",
+        "+1 (838) 423-8334",
+        "Mon – Fri, 8am – 6pm",
+        "Email Us",
+        "contact@decode.example",
+        "We reply within 24 hours",
+        "Visit Our Office",
+        "741 New South Head Rd",
+        "New York, SWFW 3148 · Get directions →",
+        "Working Hours",
+        "Mon – Fri: 8am – 6pm",
+        "Saturday: 9am – 2pm",
+        "Follow Us",
+        "Send Us a Message",
+        "First name",
+        "Last name",
+        "Email address",
+        "Your message",
+        "SEND MESSAGE",
+        "Enable JavaScript to submit this form."
+      ],
+      "images": [
+        "ui/phone.svg",
+        "ui/mail.svg",
+        "ui/map-pin.svg",
+        "ui/clock.svg"
+      ]
+    }
+  },
+  "team": {
+    "Team": {
+      "text": [
+        "Your Trusted Partners",
+        "With clear goals, the right team, and a realistic budget, you can turn your vision into a reality — without the headaches.",
+        "Daniel Brooks",
+        "Founder & CEO",
+        "Marcus Hayes",
+        "Project Manager",
+        "Jordan Ellis",
+        "Site Engineer",
+        "Alex Morgan",
+        "Lead Architect",
+        "Sam Rivera",
+        "Interior Designer",
+        "Taylor Reed",
+        "Structural Engineer"
+      ],
+      "images": [
+        "stock/architect-drafting.jpg",
+        "stock/crew-on-site.jpg",
+        "stock/site-worker.jpg",
+        "stock/office-planning.jpg",
+        "stock/renovation-crew.jpg",
+        "stock/site-inspection.jpg"
+      ]
+    }
+  },
+  "details": {
+    "/blog/a-day-on-site-behind-the-scenes-with-our-crew": {
+      "body": [
+        [
+          "p",
+          "March 5, 2026"
+        ],
+        [
+          "h1",
+          "A Day on Site: Behind the Scenes with Our Crew"
+        ],
+        [
+          "img",
+          "stock/crew-on-site.jpg"
+        ],
+        [
+          "h3",
+          "Introduction"
+        ],
+        [
+          "p",
+          "Every finished building is the result of thousands of small decisions made on site. Here’s what a typical day looks like for the Decode crew."
+        ],
+        [
+          "h3",
+          "Morning Briefing"
+        ],
+        [
+          "p",
+          "Each day starts with a short safety briefing and a walk through the plan: which trades are on site, what deliveries are expected, and which areas are off-limits."
+        ],
+        [
+          "img",
+          "stock/site-coordination.jpg"
+        ],
+        [
+          "h3",
+          "Keeping Things on Track"
+        ],
+        [
+          "p",
+          "Our site managers coordinate trades, check quality as work progresses, and keep clients updated. Small issues get solved the same day, so they never turn into big delays."
+        ]
+      ],
+      "related": [
+        "/blog/top-5-things-to-know-before-starting-a-home-renovation",
+        "/blog/how-to-choose-the-right-contractor-for-your-project",
+        "/blog/sustainable-building-trends-shaping-construction"
+      ]
+    },
+    "/blog/how-to-choose-the-right-contractor-for-your-project": {
+      "body": [
+        [
+          "p",
+          "April 28, 2026"
+        ],
+        [
+          "h1",
+          "How to Choose the Right Contractor for Your Project"
+        ],
+        [
+          "img",
+          "stock/architect-workspace.jpg"
+        ],
+        [
+          "h3",
+          "Introduction"
+        ],
+        [
+          "p",
+          "The contractor you choose shapes every part of your project — the budget, the schedule, and the quality of the finished space. Taking a little extra time up front to vet your options can save you months of frustration later."
+        ],
+        [
+          "h3",
+          "Check Credentials First"
+        ],
+        [
+          "p",
+          "Start with the basics: a valid license, proper insurance, and a track record of similar projects. Ask for references from recent clients and, where possible, visit a completed job to see the workmanship for yourself."
+        ],
+        [
+          "img",
+          "stock/plans-and-tools.jpg"
+        ],
+        [
+          "h3",
+          "Ask the Right Questions"
+        ],
+        [
+          "p",
+          "How will the project be scheduled? Who will be on site each day? How are changes and unexpected costs handled? A good contractor answers clearly and puts the important details in writing."
+        ],
+        [
+          "h3",
+          "Watch for Red Flags"
+        ],
+        [
+          "p",
+          "Be cautious of unusually low bids, pressure to sign quickly, requests for large upfront payments, or vague contracts. Clear communication from the very first conversation is one of the best signs you’ve found the right partner."
+        ]
+      ],
+      "related": [
+        "/blog/top-5-things-to-know-before-starting-a-home-renovation",
+        "/blog/sustainable-building-trends-shaping-construction",
+        "/blog/residential-vs-commercial-construction-key-differences"
+      ]
+    },
+    "/blog/permits-inspections-what-you-need-before-you-build": {
+      "body": [
+        [
+          "p",
+          "February 18, 2026"
+        ],
+        [
+          "h1",
+          "Permits & Inspections: What You Need Before You Build"
+        ],
+        [
+          "img",
+          "stock/office-planning.jpg"
+        ],
+        [
+          "h3",
+          "Introduction"
+        ],
+        [
+          "p",
+          "Permits can feel like paperwork for its own sake, but they exist to make sure your building is safe, legal, and insurable. Knowing what’s required up front keeps your project moving."
+        ],
+        [
+          "h3",
+          "Which Permits You May Need"
+        ],
+        [
+          "p",
+          "Structural changes, additions, electrical, plumbing, and mechanical work usually require permits. Cosmetic updates like painting or new flooring often don’t — but always check your local rules."
+        ],
+        [
+          "img",
+          "stock/construction-crane.jpg"
+        ],
+        [
+          "h3",
+          "What Inspections Involve"
+        ],
+        [
+          "p",
+          "Inspectors visit at key stages — foundations, framing, services, and final completion — to confirm the work meets code. Your contractor should schedule these and be on site to walk the inspector through the work."
+        ]
+      ],
+      "related": [
+        "/blog/top-5-things-to-know-before-starting-a-home-renovation",
+        "/blog/how-to-choose-the-right-contractor-for-your-project",
+        "/blog/sustainable-building-trends-shaping-construction"
+      ]
+    },
+    "/blog/residential-vs-commercial-construction-key-differences": {
+      "body": [
+        [
+          "p",
+          "March 22, 2026"
+        ],
+        [
+          "h1",
+          "Residential vs. Commercial Construction: Key Differences"
+        ],
+        [
+          "img",
+          "stock/glass-house.jpg"
+        ],
+        [
+          "h3",
+          "Introduction"
+        ],
+        [
+          "p",
+          "Building a family home and delivering an office block share the same fundamentals, but the process, scale, and rules around them are very different."
+        ],
+        [
+          "h3",
+          "Regulations and Permits"
+        ],
+        [
+          "p",
+          "Commercial projects face stricter codes for fire safety, accessibility, and occupancy, along with more inspections along the way. Residential builds are simpler to permit, though local rules still apply."
+        ],
+        [
+          "img",
+          "stock/riverside-construction.jpg"
+        ],
+        [
+          "h3",
+          "Timelines and Budgets"
+        ],
+        [
+          "p",
+          "Commercial work typically involves larger teams, specialist trades, and longer schedules, with budgets to match. Residential projects move faster but are more personal — design decisions often evolve as the homeowner sees the space take shape."
+        ]
+      ],
+      "related": [
+        "/blog/top-5-things-to-know-before-starting-a-home-renovation",
+        "/blog/how-to-choose-the-right-contractor-for-your-project",
+        "/blog/sustainable-building-trends-shaping-construction"
+      ]
+    },
+    "/blog/sustainable-building-trends-shaping-construction": {
+      "body": [
+        [
+          "p",
+          "April 10, 2026"
+        ],
+        [
+          "h1",
+          "Sustainable Building Trends Shaping Construction"
+        ],
+        [
+          "img",
+          "stock/wood-building.jpg"
+        ],
+        [
+          "h3",
+          "Introduction"
+        ],
+        [
+          "p",
+          "Sustainability has moved from a nice-to-have to a core part of how buildings are designed and delivered. Clients, cities, and building codes are all pushing the industry toward smarter, lower-impact construction."
+        ],
+        [
+          "h3",
+          "Greener Materials"
+        ],
+        [
+          "p",
+          "Recycled steel, low-carbon concrete, responsibly sourced timber, and low-VOC finishes are becoming standard choices. They reduce a building’s footprint without compromising strength or durability."
+        ],
+        [
+          "img",
+          "stock/wood-facade.jpg"
+        ],
+        [
+          "h3",
+          "Energy-Efficient Design"
+        ],
+        [
+          "p",
+          "High-performance insulation, smart glazing, heat pumps, and on-site solar help buildings use less energy for their entire lifetime — lowering running costs as well as emissions."
+        ]
+      ],
+      "related": [
+        "/blog/top-5-things-to-know-before-starting-a-home-renovation",
+        "/blog/how-to-choose-the-right-contractor-for-your-project",
+        "/blog/residential-vs-commercial-construction-key-differences"
+      ]
+    },
+    "/blog/top-5-things-to-know-before-starting-a-home-renovation": {
+      "body": [
+        [
+          "p",
+          "May 12, 2026"
+        ],
+        [
+          "h1",
+          "Top 5 Things to Know Before Starting a Home Renovation"
+        ],
+        [
+          "img",
+          "stock/modern-kitchen.jpg"
+        ],
+        [
+          "h3",
+          "Introduction"
+        ],
+        [
+          "p",
+          "Renovating your home is exciting — but it can quickly become overwhelming without the right preparation. Whether you’re remodeling a kitchen, updating your bathroom, or planning a full home makeover, being informed ahead of time will save you time, stress, and money. Here are the top 5 things you should know before starting your home renovation."
+        ],
+        [
+          "p",
+          "One of the biggest renovation mistakes is underestimating the costs. Get a detailed estimate, and always plan for unexpected expenses by adding 10–20% to your budget. This will give you peace of mind if something unexpected pops up — like plumbing issues or structural repairs."
+        ],
+        [
+          "h3",
+          "Define Your Goals Clearly"
+        ],
+        [
+          "p",
+          "Before you contact a contractor or pick up a hammer, take the time to understand exactly what you want from the renovation. Are you improving functionality, boosting resale value, or creating your dream space? Clear goals will guide the design and budget process and help your contractor deliver the results you expect."
+        ],
+        [
+          "img",
+          "stock/kitchen-renovation.jpg"
+        ],
+        [
+          "h3",
+          "Know the Legal Requirements"
+        ],
+        [
+          "p",
+          "Depending on the size and scope of your renovation, you may need permits. Skipping this step could result in fines or complications when selling your home later. Your contractor should help you handle permits, but it’s smart to educate yourself on local regulations too."
+        ],
+        [
+          "p",
+          "Do your homework before hiring anyone. Look for licensed, insured professionals with good reviews and relevant experience. Ask to see past work, check references, and make sure you’re comfortable with their communication style and timeline."
+        ],
+        [
+          "h3",
+          "Prepare for Disruption"
+        ],
+        [
+          "p",
+          "Even small renovations can disrupt your daily routine. Noise, dust, and temporary loss of spaces like kitchens or bathrooms are common. Make a plan for how you’ll live around the work — whether that means eating out, staying elsewhere, or setting up a temporary kitchen."
+        ]
+      ],
+      "related": [
+        "/blog/how-to-choose-the-right-contractor-for-your-project",
+        "/blog/sustainable-building-trends-shaping-construction",
+        "/blog/residential-vs-commercial-construction-key-differences"
+      ]
+    },
+    "/projects/greentech-headquarters": {
+      "body": [
+        [
+          "img",
+          "ui/user.svg"
+        ],
+        [
+          "p",
+          "Client"
+        ],
+        [
+          "p",
+          "GreenTech Solutions Inc."
+        ],
+        [
+          "h1",
+          "GreenTech Headquarters"
+        ],
+        [
+          "img",
+          "stock/glass-building.jpg"
+        ],
+        [
+          "p",
+          "GreenTech Headquarters is a 120,000 sq ft corporate campus built for a renewable energy company that wanted its building to reflect its mission. The design prioritizes daylight, flexible workspaces, and low-carbon construction throughout."
+        ],
+        [
+          "h3",
+          "Project Overview"
+        ],
+        [
+          "p",
+          "The seven-storey building features a curved high-performance facade, a central atrium that draws natural light deep into the floor plates, and open-plan workspaces that can be reconfigured as teams grow. Biophilic design brings planting into every floor."
+        ],
+        [
+          "h3",
+          "Our Role"
+        ],
+        [
+          "p",
+          "As design-and-build contractor, we coordinated architects, MEP engineers, and sustainability consultants from concept through commissioning. Our team managed procurement of low-carbon materials and tracked embodied carbon across the entire build."
+        ],
+        [
+          "img",
+          "stock/office-tower.jpg"
+        ],
+        [
+          "h3",
+          "Key Features"
+        ],
+        [
+          "h4",
+          "LEED Platinum certification"
+        ],
+        [
+          "h4",
+          "Curved double-skin glass facade"
+        ],
+        [
+          "h4",
+          "Central daylight atrium with living plant wall"
+        ],
+        [
+          "h4",
+          "Rooftop solar array and rainwater harvesting"
+        ],
+        [
+          "h4",
+          "Flexible open-plan workspaces for 900 staff"
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "GreenTech Headquarters now uses 40% less energy than a typical office of its size and gives employees a healthier, brighter place to work — proof that sustainable buildings can also be inspiring ones."
+        ]
+      ],
+      "related": []
+    },
+    "/projects/greentech-research-center": {
+      "body": [
+        [
+          "img",
+          "ui/user.svg"
+        ],
+        [
+          "p",
+          "Client"
+        ],
+        [
+          "p",
+          "GreenTech Solutions Inc."
+        ],
+        [
+          "h1",
+          "GreenTech Research Center"
+        ],
+        [
+          "img",
+          "stock/white-concrete.jpg"
+        ],
+        [
+          "p",
+          "GreenTech Research Center is a dedicated innovation facility for GreenTech’s product development teams. The angular glass building houses laboratories, prototyping workshops, and collaboration spaces designed to accelerate clean-energy research."
+        ],
+        [
+          "h3",
+          "Project Overview"
+        ],
+        [
+          "p",
+          "A dramatic sloping glass roof floods the main research hall with daylight, while a concrete base houses specialist labs that require precise environmental control. Living green walls and an extensive green roof help regulate temperature and celebrate the client’s mission."
+        ],
+        [
+          "h3",
+          "Our Role"
+        ],
+        [
+          "p",
+          "Following our successful delivery of GreenTech Headquarters, the client engaged Decode again for this technically complex facility. We coordinated specialist lab contractors and delivered strict environmental controls for sensitive research equipment."
+        ],
+        [
+          "img",
+          "stock/concrete-exterior.jpg"
+        ],
+        [
+          "h3",
+          "Key Features"
+        ],
+        [
+          "h4",
+          "Climate-controlled research laboratories"
+        ],
+        [
+          "h4",
+          "Sloping structural glass roof over the main hall"
+        ],
+        [
+          "h4",
+          "Living green walls and extensive green roof"
+        ],
+        [
+          "h4",
+          "Heat-recovery ventilation throughout"
+        ],
+        [
+          "h4",
+          "Prototyping workshops with heavy-duty floors"
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "The Research Center gives GreenTech’s engineers a world-class environment for innovation — and strengthened a long-term partnership between our teams."
+        ]
+      ],
+      "related": []
+    },
+    "/projects/historic-theater-renovation": {
+      "body": [
+        [
+          "img",
+          "ui/user.svg"
+        ],
+        [
+          "p",
+          "Client"
+        ],
+        [
+          "p",
+          "City Arts Preservation Trust"
+        ],
+        [
+          "h1",
+          "Historic Theater Renovation"
+        ],
+        [
+          "img",
+          "stock/concrete-pavilion.jpg"
+        ],
+        [
+          "p",
+          "Historic Theater Renovation brought a 1920s performance venue back to life. Closed for over a decade, the 1,100-seat theater needed structural repairs, modern safety systems, and the careful restoration of its original decorative features."
+        ],
+        [
+          "h3",
+          "Project Overview"
+        ],
+        [
+          "p",
+          "The project balanced preservation with performance. Original plasterwork, gilding, and the proscenium arch were restored by heritage specialists, while new rigging, acoustics, accessibility upgrades, and back-of-house facilities prepared the venue for modern productions."
+        ],
+        [
+          "h3",
+          "Our Role"
+        ],
+        [
+          "p",
+          "Decode served as principal contractor, working closely with heritage consultants and the city’s preservation office. We sequenced the work so that delicate restoration and heavy structural upgrades could happen safely side by side."
+        ],
+        [
+          "img",
+          "stock/modern-facade.jpg"
+        ],
+        [
+          "h3",
+          "Key Features"
+        ],
+        [
+          "h4",
+          "Restoration of original plasterwork and gilding"
+        ],
+        [
+          "h4",
+          "Seismic strengthening of the auditorium structure"
+        ],
+        [
+          "h4",
+          "New stage rigging and theatrical lighting systems"
+        ],
+        [
+          "h4",
+          "Full accessibility upgrades, including new lifts"
+        ],
+        [
+          "h4",
+          "Modern fire protection hidden within historic fabric"
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "The theater reopened to sold-out audiences, its historic character intact and its systems ready for another century of performances. It’s one of the projects our team is proudest of."
+        ]
+      ],
+      "related": []
+    },
+    "/projects/luxury-waterfront-residence": {
+      "body": [
+        [
+          "img",
+          "ui/user.svg"
+        ],
+        [
+          "p",
+          "Client"
+        ],
+        [
+          "p",
+          "Harbor & Hale Developments"
+        ],
+        [
+          "h1",
+          "Luxury Waterfront Residence"
+        ],
+        [
+          "img",
+          "stock/waterfront-residence.jpg"
+        ],
+        [
+          "p",
+          "Luxury Waterfront Residence is a four-bedroom lakeside home designed to make the most of its setting. Floor-to-ceiling glazing, cantilevered terraces, and a carefully orientated plan bring water views into every main room while protecting privacy from the shoreline path."
+        ],
+        [
+          "h3",
+          "Project Overview"
+        ],
+        [
+          "p",
+          "The 6,200 sq ft residence sits on a sloping waterfront lot that required careful engineering. A reinforced concrete podium anchors the home into the hillside, supporting a lightweight steel and timber upper level with a signature angled roofline and a rooftop terrace."
+        ],
+        [
+          "h3",
+          "Our Role"
+        ],
+        [
+          "p",
+          "Decode delivered the project from design development through final handover. We managed geotechnical investigations, shoreline permits, and a tight construction window that avoided the lake’s seasonal restrictions — completing the home two weeks ahead of schedule."
+        ],
+        [
+          "img",
+          "stock/waterfront-house.jpg"
+        ],
+        [
+          "h3",
+          "Key Features"
+        ],
+        [
+          "h4",
+          "Cantilevered terraces with frameless glass balustrades"
+        ],
+        [
+          "h4",
+          "Floor-to-ceiling high-performance glazing"
+        ],
+        [
+          "h4",
+          "Private boat dock and waterfront lounge"
+        ],
+        [
+          "h4",
+          "Geothermal heating and cooling"
+        ],
+        [
+          "h4",
+          "Smart home lighting, security, and climate control"
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "The finished home blends seamlessly into its lakeside landscape while delivering the comfort, efficiency, and craftsmanship our client expected. It stands as a showcase of how thoughtful engineering can make a challenging site feel effortless."
+        ]
+      ],
+      "related": []
+    },
+    "/projects/riverside-condominiums": {
+      "body": [
+        [
+          "img",
+          "ui/user.svg"
+        ],
+        [
+          "p",
+          "Client"
+        ],
+        [
+          "p",
+          "Riverside Living Partners"
+        ],
+        [
+          "h1",
+          "Riverside Condominiums"
+        ],
+        [
+          "img",
+          "stock/rounded-balconies.jpg"
+        ],
+        [
+          "p",
+          "Riverside Condominiums is a 140-unit residential development on a former industrial site along the river. The project transforms an underused stretch of waterfront into a vibrant community with homes, green space, and a public riverside walk."
+        ],
+        [
+          "h3",
+          "Project Overview"
+        ],
+        [
+          "p",
+          "Two mid-rise buildings step down toward the water, giving most units river views and generous private balconies. Shared amenities include a residents’ lounge, fitness center, landscaped courtyard, and secure underground parking."
+        ],
+        [
+          "h3",
+          "Our Role"
+        ],
+        [
+          "p",
+          "We managed site remediation, flood-resilience works, and the full construction of both buildings. Careful phasing allowed the first building to be occupied while the second was completed, accelerating the client’s sales program."
+        ],
+        [
+          "img",
+          "stock/apartment-balconies.jpg"
+        ],
+        [
+          "h3",
+          "Key Features"
+        ],
+        [
+          "h4",
+          "140 one- to three-bedroom condominium units"
+        ],
+        [
+          "h4",
+          "Flood-resilient podium and raised ground floor"
+        ],
+        [
+          "h4",
+          "Public riverside walkway and landscaped courtyard"
+        ],
+        [
+          "h4",
+          "Residents’ lounge and fitness center"
+        ],
+        [
+          "h4",
+          "Underground parking with EV charging"
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "Riverside Condominiums turned a neglected industrial site into a thriving neighborhood. Residents enjoy river views and green space, and the community gained a new public waterfront to enjoy."
+        ]
+      ],
+      "related": []
+    },
+    "/projects/summit-point-complex": {
+      "body": [
+        [
+          "img",
+          "ui/user.svg"
+        ],
+        [
+          "p",
+          "Client"
+        ],
+        [
+          "p",
+          "Summit Point Holdings"
+        ],
+        [
+          "h1",
+          "Summit Point Complex"
+        ],
+        [
+          "img",
+          "stock/waterfront-office.jpg"
+        ],
+        [
+          "p",
+          "Summit Point Complex is a transformative development that combines office, retail, and green space in the heart of the business district. With 12 floors of flexible commercial space, ground-level retail, and a publicly accessible rooftop garden, it’s designed to promote urban vitality and work-life balance."
+        ],
+        [
+          "h3",
+          "Project Overview"
+        ],
+        [
+          "p",
+          "A bold exposed structural frame defines the building’s character while allowing column-free floor plates that tenants can configure freely. The rooftop garden offers planting, seating, and city views for office workers and the public alike."
+        ],
+        [
+          "h3",
+          "Our Role"
+        ],
+        [
+          "p",
+          "As the primary contractor and construction manager, we provided end-to-end services, including site analysis, design coordination, budget management, and construction execution. We worked closely with stakeholders and the city to ensure compliance, safety, and excellence at every stage."
+        ],
+        [
+          "img",
+          "stock/office-tower.jpg"
+        ],
+        [
+          "h3",
+          "Key Features"
+        ],
+        [
+          "h4",
+          "12 floors of flexible, column-free office space"
+        ],
+        [
+          "h4",
+          "Ground-floor retail and public plaza"
+        ],
+        [
+          "h4",
+          "Publicly accessible rooftop garden"
+        ],
+        [
+          "h4",
+          "Exposed structural frame architecture"
+        ],
+        [
+          "h4",
+          "High-efficiency HVAC with smart building controls"
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "Summit Point Complex has become a landmark in the district — fully leased within a year of opening and a lively place where people work, shop, and relax."
+        ]
+      ],
+      "related": []
+    },
+    "/projects/sustainable-community-park": {
+      "body": [
+        [
+          "img",
+          "ui/user.svg"
+        ],
+        [
+          "p",
+          "Client"
+        ],
+        [
+          "p",
+          "Westbrook Parks Department"
+        ],
+        [
+          "h1",
+          "Sustainable Community Park"
+        ],
+        [
+          "img",
+          "stock/park-pavilion.jpg"
+        ],
+        [
+          "p",
+          "Sustainable Community Park is a 12-acre public park built around a striking timber-and-steel pavilion. Designed with the local community, it offers green space, play areas, and an events venue built with low-impact materials."
+        ],
+        [
+          "h3",
+          "Project Overview"
+        ],
+        [
+          "p",
+          "The park’s sculptural pavilion hosts markets, performances, and community events, while surrounding landscapes include native planting, rain gardens, walking trails, and a natural play area. Every element was designed to manage stormwater on site and support biodiversity."
+        ],
+        [
+          "h3",
+          "Our Role"
+        ],
+        [
+          "p",
+          "Decode delivered the pavilion structure, landscaping infrastructure, and site-wide drainage systems. We worked with local volunteers on planting days and kept large sections of the park open throughout construction."
+        ],
+        [
+          "img",
+          "stock/urban-park.jpg"
+        ],
+        [
+          "h3",
+          "Key Features"
+        ],
+        [
+          "h4",
+          "Sculptural timber and weathering-steel pavilion"
+        ],
+        [
+          "h4",
+          "Rain gardens and on-site stormwater management"
+        ],
+        [
+          "h4",
+          "Native planting supporting local wildlife"
+        ],
+        [
+          "h4",
+          "Solar-powered lighting throughout the park"
+        ],
+        [
+          "h4",
+          "Natural play area built from reclaimed materials"
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "The park has become a favorite gathering place for the whole community — a green, resilient public space that shows how sustainable design and great architecture can go hand in hand."
+        ]
+      ],
+      "related": []
+    },
+    "/projects/the-keystone-residences": {
+      "body": [
+        [
+          "img",
+          "ui/user.svg"
+        ],
+        [
+          "p",
+          "Client"
+        ],
+        [
+          "p",
+          "Keystone Development Group"
+        ],
+        [
+          "h1",
+          "The Keystone Residences"
+        ],
+        [
+          "img",
+          "stock/geometric-residences.jpg"
+        ],
+        [
+          "p",
+          "The Keystone Residences is a luxury residential development featuring 85 high-end condominium units across two contemporary mid-rise towers. Designed with urban elegance and sustainability in mind, it offers refined living close to the city center."
+        ],
+        [
+          "h3",
+          "Project Overview"
+        ],
+        [
+          "p",
+          "Distinctive vertical fins give the towers their signature look while shading the facades from the summer sun. Inside, residents enjoy smart-home integration, premium finishes, rooftop amenities, and energy-efficient systems throughout."
+        ],
+        [
+          "h3",
+          "Our Role"
+        ],
+        [
+          "p",
+          "We handled the full design and construction process, from pre-construction planning and permitting to final execution. Our team coordinated with architects, engineers, and local agencies to ensure timely delivery and top-tier quality."
+        ],
+        [
+          "img",
+          "stock/hero-condominiums.jpg"
+        ],
+        [
+          "h3",
+          "Key Features"
+        ],
+        [
+          "h4",
+          "LEED Gold certification"
+        ],
+        [
+          "h4",
+          "Smart home-ready units"
+        ],
+        [
+          "h4",
+          "Rooftop pool and lounge"
+        ],
+        [
+          "h4",
+          "Underground parking with EV charging stations"
+        ],
+        [
+          "h4",
+          "Custom millwork and premium finishes"
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "The Keystone Residences sold out before completion. The project shows how thoughtful design, quality materials, and disciplined construction management create homes that residents are proud to own."
+        ]
+      ],
+      "related": []
+    },
+    "/services/architectural-design": {
+      "body": [
+        [
+          "img",
+          "ui/architectural-design.svg"
+        ],
+        [
+          "h1",
+          "Architectural Design"
+        ],
+        [
+          "p",
+          "Custom home and building design that balances your style, budget, and site — from first sketch to permit-ready plans."
+        ],
+        [
+          "img",
+          "stock/architect-drafting.jpg"
+        ],
+        [
+          "p",
+          "Great buildings start long before the first foundation is poured. Our architectural design team turns your ideas, lifestyle, and budget into practical, beautiful plans — balancing natural light, flow, and structure so the finished space feels right from the day you move in."
+        ],
+        [
+          "h3",
+          "What’s Included in This Service:"
+        ],
+        [
+          "h4",
+          "Site & Feasibility Review"
+        ],
+        [
+          "p",
+          "We study your lot, zoning rules, and orientation so the design makes the most of light, views, and access from the start."
+        ],
+        [
+          "h4",
+          "Concept Sketches & 3D Views"
+        ],
+        [
+          "p",
+          "Explore layouts and massing through sketches and 3D visuals, so you can see your future space before committing to it."
+        ],
+        [
+          "h4",
+          "Detailed Construction Drawings"
+        ],
+        [
+          "p",
+          "Precise plans, sections, and specifications that builders and engineers can price and construct accurately."
+        ],
+        [
+          "h4",
+          "Permit Applications"
+        ],
+        [
+          "p",
+          "We prepare and submit the drawings required for planning and building approval, and handle any revisions."
+        ],
+        [
+          "img",
+          "stock/architect-workspace.jpg"
+        ],
+        [
+          "h3",
+          "Customized to Fit Your Needs"
+        ],
+        [
+          "p",
+          "Every family and business uses space differently. We design around how you actually live and work — whether that means an open-plan family home, a light-filled studio, or a compact build on a tricky lot — while keeping materials, efficiency, and long-term maintenance in mind."
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "With Decode, design and construction speak the same language. Because our architects work alongside our builders, your plans are realistic to build, accurately priced, and ready to move straight into construction without costly redesigns."
+        ]
+      ],
+      "related": []
+    },
+    "/services/commercial-build": {
+      "body": [
+        [
+          "img",
+          "ui/commercial-build.svg"
+        ],
+        [
+          "h1",
+          "Commercial Build"
+        ],
+        [
+          "p",
+          "Offices, retail, and mixed-use buildings delivered on schedule, with clear reporting and strict quality and safety control."
+        ],
+        [
+          "img",
+          "stock/glass-building.jpg"
+        ],
+        [
+          "p",
+          "Commercial projects run on deadlines, budgets, and reputation. Decode delivers offices, retail spaces, and mixed-use developments with disciplined project management, transparent reporting, and a site team that keeps quality and safety at the center of every decision."
+        ],
+        [
+          "h3",
+          "What’s Included in This Service:"
+        ],
+        [
+          "h4",
+          "Pre-Construction Planning"
+        ],
+        [
+          "p",
+          "Cost planning, programming, and buildability reviews that reduce risk before ground is broken."
+        ],
+        [
+          "h4",
+          "Design Coordination"
+        ],
+        [
+          "p",
+          "We coordinate architects, engineers, and consultants so drawings are complete, compliant, and ready to build."
+        ],
+        [
+          "h4",
+          "Project & Site Management"
+        ],
+        [
+          "p",
+          "Experienced site managers schedule trades, control quality, and keep the project moving to programme."
+        ],
+        [
+          "h4",
+          "Handover & Compliance"
+        ],
+        [
+          "p",
+          "Commissioning, inspections, and full documentation so your building is ready to occupy on day one."
+        ],
+        [
+          "img",
+          "stock/waterfront-office.jpg"
+        ],
+        [
+          "h3",
+          "Customized to Fit Your Needs"
+        ],
+        [
+          "p",
+          "From fit-outs inside existing buildings to ground-up developments, we adapt our delivery model to your project — design-and-build, construction management, or traditional contracting — and keep you informed with regular, clear progress reports."
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "When you partner with Decode on a commercial build, you get a contractor that understands your business goals. We protect your schedule, control your costs, and hand over a building your tenants and customers will value."
+        ]
+      ],
+      "related": []
+    },
+    "/services/construction": {
+      "body": [
+        [
+          "img",
+          "ui/hard-hat.svg"
+        ],
+        [
+          "h1",
+          "Construction"
+        ],
+        [
+          "p",
+          "End-to-end new construction — groundworks, structure, and finishing — managed by one experienced, safety-first team."
+        ],
+        [
+          "img",
+          "stock/construction-crane.jpg"
+        ],
+        [
+          "p",
+          "From excavation to the final coat of paint, our construction teams build with precision and pride. We manage every stage of new construction under one roof, so you have a single point of contact, a clear programme, and complete confidence in the quality of the work."
+        ],
+        [
+          "h3",
+          "What’s Included in This Service:"
+        ],
+        [
+          "h4",
+          "Groundworks & Foundations"
+        ],
+        [
+          "p",
+          "Site preparation, excavation, and foundations engineered for your soil conditions and the loads of your building."
+        ],
+        [
+          "h4",
+          "Structural Frame"
+        ],
+        [
+          "p",
+          "Concrete, steel, or timber frames built accurately to engineering drawings and inspected at every key stage."
+        ],
+        [
+          "h4",
+          "Envelope & Services"
+        ],
+        [
+          "p",
+          "Roofing, facades, windows, and building services installed to keep your building weather-tight and efficient."
+        ],
+        [
+          "h4",
+          "Interior Fit-Out & Finishing"
+        ],
+        [
+          "p",
+          "Partitions, joinery, flooring, and finishes completed to a high standard, ready for handover."
+        ],
+        [
+          "img",
+          "stock/riverside-construction.jpg"
+        ],
+        [
+          "h3",
+          "Customized to Fit Your Needs"
+        ],
+        [
+          "p",
+          "Whether you’re building a family home, a multi-unit residence, or a community facility, we plan the build around your timeline and budget — and adjust quickly when conditions on site change, without compromising safety or quality."
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "Decode’s construction crews combine decades of hands-on experience with modern methods and strict safety standards. You get a building that is solid, compliant, and finished with the care it deserves."
+        ]
+      ],
+      "related": []
+    },
+    "/services/factory-design": {
+      "body": [
+        [
+          "img",
+          "ui/factory.svg"
+        ],
+        [
+          "h1",
+          "Factory Design"
+        ],
+        [
+          "p",
+          "Industrial facilities and warehouses designed around your workflow, equipment, and future expansion."
+        ],
+        [
+          "img",
+          "stock/warehouse.jpg"
+        ],
+        [
+          "p",
+          "A well-designed factory is a competitive advantage. We plan and build industrial facilities around how your operation actually works — material flow, equipment, safety zones, and room to grow — so your building supports productivity rather than limiting it."
+        ],
+        [
+          "h3",
+          "What’s Included in This Service:"
+        ],
+        [
+          "h4",
+          "Workflow & Layout Planning"
+        ],
+        [
+          "p",
+          "We map your production process to create efficient layouts for equipment, storage, and movement of people and goods."
+        ],
+        [
+          "h4",
+          "Structural & Steel Design"
+        ],
+        [
+          "p",
+          "Clear-span steel structures, crane beams, and heavy-duty slabs engineered for your loads and machinery."
+        ],
+        [
+          "h4",
+          "Utilities & Services"
+        ],
+        [
+          "p",
+          "Power, compressed air, ventilation, and fire protection planned and integrated from the start."
+        ],
+        [
+          "h4",
+          "Compliance & Safety"
+        ],
+        [
+          "p",
+          "Designs that meet industrial codes, fire regulations, and workplace safety requirements."
+        ],
+        [
+          "img",
+          "stock/industrial-structure.jpg"
+        ],
+        [
+          "h3",
+          "Customized to Fit Your Needs"
+        ],
+        [
+          "p",
+          "From compact workshops to large distribution centers and manufacturing plants, every facility we design is tailored to your process, site, and budget — with phased options that let you expand without disrupting production."
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "Decode combines industrial design expertise with hands-on construction experience. The result is a facility that is efficient to run, safe to work in, and ready to grow with your business."
+        ]
+      ],
+      "related": []
+    },
+    "/services/mechanical-works": {
+      "body": [
+        [
+          "img",
+          "ui/settings.svg"
+        ],
+        [
+          "h1",
+          "Mechanical Works"
+        ],
+        [
+          "p",
+          "HVAC, plumbing, and building services installed and commissioned for comfort, efficiency, and long-term reliability."
+        ],
+        [
+          "img",
+          "stock/ventilation.jpg"
+        ],
+        [
+          "p",
+          "The systems behind the walls make a building comfortable, safe, and efficient. Our mechanical works team designs, installs, and commissions heating, ventilation, air conditioning, and plumbing systems that perform reliably and keep running costs under control."
+        ],
+        [
+          "h3",
+          "What’s Included in This Service:"
+        ],
+        [
+          "h4",
+          "System Design & Sizing"
+        ],
+        [
+          "p",
+          "Load calculations and system layouts sized correctly for your building, climate, and occupancy."
+        ],
+        [
+          "h4",
+          "HVAC Installation"
+        ],
+        [
+          "p",
+          "Ductwork, air handlers, heat pumps, and rooftop units installed neatly and to manufacturer standards."
+        ],
+        [
+          "h4",
+          "Plumbing & Drainage"
+        ],
+        [
+          "p",
+          "Hot and cold water, drainage, and gas services installed and pressure-tested by licensed professionals."
+        ],
+        [
+          "h4",
+          "Testing & Commissioning"
+        ],
+        [
+          "p",
+          "Every system is balanced, tested, and documented so it performs exactly as designed from day one."
+        ],
+        [
+          "img",
+          "stock/industrial-structure.jpg"
+        ],
+        [
+          "h3",
+          "Customized to Fit Your Needs"
+        ],
+        [
+          "p",
+          "We work on new builds, renovations, and system upgrades — from replacing a single rooftop unit to fitting out an entire commercial building — and coordinate closely with other trades so services fit cleanly into the structure."
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "With Decode handling your mechanical works, you get efficient, reliable systems backed by clear maintenance guidance and a team that stands behind its installations long after handover."
+        ]
+      ],
+      "related": []
+    },
+    "/services/renovation-remodeling": {
+      "body": [
+        [
+          "img",
+          "ui/renovation-remodeling.svg"
+        ],
+        [
+          "h1",
+          "Renovation & Remodeling"
+        ],
+        [
+          "p",
+          "Kitchen, bathroom, and whole-home renovations that add space, function, and value — delivered with minimal disruption."
+        ],
+        [
+          "img",
+          "stock/interior-renovation.jpg"
+        ],
+        [
+          "p",
+          "Renovating is the fastest way to make an existing home work harder for you. Whether it’s a dated kitchen, a cramped bathroom, or a full interior refresh, we plan every phase carefully so you get more space, better function, and a finish that adds lasting value to your property."
+        ],
+        [
+          "h3",
+          "What’s Included in This Service:"
+        ],
+        [
+          "h4",
+          "In-Home Consultation"
+        ],
+        [
+          "p",
+          "We walk through your home with you, listen to what isn’t working, and agree on goals, priorities, and a realistic budget."
+        ],
+        [
+          "h4",
+          "Design & Material Selection"
+        ],
+        [
+          "p",
+          "From layouts to finishes, fixtures, and lighting, we help you choose options that look great and stand up to everyday life."
+        ],
+        [
+          "h4",
+          "Structural & Services Upgrades"
+        ],
+        [
+          "p",
+          "Wall removals, new openings, plumbing, and electrical work are handled safely by licensed trades and inspected to code."
+        ],
+        [
+          "h4",
+          "Clean, Protected Worksite"
+        ],
+        [
+          "p",
+          "Dust barriers, floor protection, and daily clean-ups keep the rest of your home livable while work is underway."
+        ],
+        [
+          "img",
+          "stock/kitchen-renovation.jpg"
+        ],
+        [
+          "h3",
+          "Customized to Fit Your Needs"
+        ],
+        [
+          "p",
+          "No two homes are the same, and neither are two renovations. We tailor the scope, schedule, and sequence of work to your household — phasing rooms so you can keep living at home, or completing everything in one efficient push when you’re away."
+        ],
+        [
+          "h3",
+          "Conclusion"
+        ],
+        [
+          "p",
+          "From the first measurement to the final walkthrough, one Decode project manager keeps your renovation on time and on budget. The result is a home that feels new, works better, and is built to last."
+        ]
+      ],
+      "related": []
+    }
+  }
+}
