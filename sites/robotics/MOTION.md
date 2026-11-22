@@ -15,6 +15,8 @@ The homepage, blog index, and four essay routes were inspected in the Codex in-a
 
 Desktop geometry was checked at 1360 and 1440 pixels, with 1600, 1800, and 2150 pixels used as zoom-out equivalents. Mobile checks covered 360 and 390 pixels. Those desktop widths are viewport approximations of browser zoom. The local essays, bios, and project descriptions use paraphrased copy.
 
+After the Decode content update, the guide index was checked at actual viewport widths of 1440, 1600, 1800, and 2150 CSS pixels. Across the outer widths, the local guide row height increased from about 32 to 47 pixels, the navigation and footer link text increased from 9.9 to 14.8 pixels, and the artwork rose from 232 to 347 pixels tall. At 2150 pixels both sites used a 347-pixel artwork height. The reference title grew more slowly at this width than the proportional local title. These checks used viewport overrides.
+
 At 390 × 844, a pointer click on Tomorrow Recycling’s More control and a pointer click on Close preserved the local background scroll position at 771 CSS pixels. Locator-based activation repositioned the page before the dialog settled. The reference and local sheets both reached Aescape, and the local Previous control wrapped from Tomorrow Recycling to The non-fiction revolution.
 
 The public reference is [Mecha Capital](https://mecha-xyz.webflow.io/).
