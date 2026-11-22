@@ -756,6 +756,12 @@ h1, .section-title, .project-title, .join-form h2 {
 
 @media (max-width: 349px) {
   :root { --hero-copy-size: calc(7.27vw + 1.09px); }
+  .blog-main.essay-index { padding-top: 61px; }
+  .essay-index .editorial-head { min-height: 179px; padding-top: 0; }
+  .essay-index .editorial-head h1 { font-size: var(--hero-copy-size); }
+  .essay-index :is(.essay-label, .essay-links li a, .essay-links li:first-child a) { min-height: 31px; }
+  .essay-index .essay-links li a { padding-block: 6px; padding-left: 30px; }
+  .essay-index .footer .footer-wordmark { margin-top: 13px; }
   .site-header .wordmark { translate: 0 -4px; }
   .menu-content { --pad: 17px; }
   .menu-grid { row-gap: 17px; }
