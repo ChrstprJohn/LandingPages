@@ -733,6 +733,13 @@ h1, .section-title, .project-title, .join-form h2 {
 }
 
 @media (480px <= width <= 767px) {
+  :root {
+    --mid-hero-size: calc(1.389vw + 25.35px);
+    --wordmark-width: calc(3.6875 * var(--mid-hero-size));
+  }
+  :is(.site-header, .menu-content) .wordmark { width: var(--wordmark-width); }
+  .hero h1 { max-width: calc(16vw + 300px); margin-top: calc(2.14vw + 14px); font-size: var(--mid-hero-size); }
+  .hero .discipline { width: calc(6 * var(--mid-hero-size)); }
   .mobile-projects { --strip-height: calc(7.2vw + 133.5px); padding-top: calc(6.1vw + 5px); }
   .mobile-project { min-height: calc(11.7vw + 273px); }
 }
