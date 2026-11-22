@@ -18,16 +18,18 @@ const number = (index) => String(index + 1).padStart(2, '0')
 const menuMask = { closed: 'inset(0 0 100% 0)', open: 'inset(0 0 0% 0)' }
 const menuMaskEase = CustomEase.create('menuMask', '0.9,0,0.1,1')
 const menuLinkEase = CustomEase.create('menuLink', '0.7,0,0.3,1')
+const decodeC = 'M57 2 L46 2 L41 7 L41 18 L46 23 L57 23'
+const foldedDecodeC = 'M57 6 L46 2 L41 7 L41 18 L46 23 L57 19'
 
 function DecodeMark({ className }) {
   return (
     <svg className={className} viewBox="0 0 118 25" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" aria-hidden="true">
       <path d="M2 2h10l5 5v11l-5 5H2Z" />
-      <g><path d="M37 2H22v21h15" /><path d="M22 12.5h12" /></g>
-      <path d="M57 2H46l-5 5v11l5 5h11" />
+      <path d="M37 2H22v21h15" /><path data-decode-e-bar="" d="M23 12.5h12" />
+      <path data-decode-c="" d={decodeC} />
       <path d="M66 2h7l5 5v11l-5 5h-7l-5-5V7Z" />
       <path d="M83 2h10l5 5v11l-5 5H83Z" />
-      <g><path d="M117 2h-14v21h14" /><path d="M103 12.5h11" /></g>
+      <path d="M117 2h-14v21h14" /><path data-decode-e-bar="" d="M104 12.5h11" />
     </svg>
   )
 }
@@ -36,18 +38,9 @@ function Logo({ href = '/', intro = false }) {
   const mark = useRef(null)
   useGSAP(() => {
     if (!intro || reducedMotion()) return
-    const letters = Array.from(mark.current.querySelector('svg').children)
-    const paths = mark.current.querySelectorAll('path')
-    const strokeLength = (_, path) => path.getTotalLength() + 3
-    const draw = gsap.timeline({ delay: 1.65 })
-    for (const [index, letter] of letters.entries()) {
-      const strokes = letter.matches('path') ? [letter] : letter.querySelectorAll('path')
-      draw.fromTo(strokes, { strokeDasharray: (index, path) => `${strokeLength(index, path)} ${strokeLength(index, path)}`, strokeDashoffset: strokeLength }, {
-        strokeDashoffset: 0, duration: 0.46, stagger: 0.07, ease: 'power2.inOut',
-      }, index * 0.08)
-    }
-    draw.to(paths, { strokeDashoffset: strokeLength, duration: 0.46, stagger: { each: 0.065, from: 'end' }, ease: 'power2.inOut' })
-      .set(paths, { clearProps: 'strokeDasharray,strokeDashoffset' })
+    gsap.timeline({ delay: 1.75, repeat: 1, yoyo: true, defaults: { duration: 0.5, ease: 'power2.inOut' } })
+      .to('[data-decode-e-bar]', { x: 3.5 }, 0)
+      .to('[data-decode-c]', { attr: { d: foldedDecodeC } }, 0)
   }, { scope: mark })
   return <a className="wordmark" href={href} aria-label="Decode home"><span ref={mark}><DecodeMark /></span></a>
 }

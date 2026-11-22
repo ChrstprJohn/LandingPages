@@ -1,7 +1,19 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+
+function createDecodeGeometry() {
+  const shape = new THREE.Shape()
+  shape.moveTo(-0.64, -0.83).lineTo(0.08, -0.83).lineTo(0.59, -0.43)
+    .lineTo(0.59, 0.43).lineTo(0.08, 0.83).lineTo(-0.64, 0.83).closePath()
+  const opening = new THREE.Path()
+  opening.moveTo(-0.31, -0.49).lineTo(-0.31, 0.49).lineTo(-0.02, 0.49)
+    .lineTo(0.26, 0.28).lineTo(0.26, -0.28).lineTo(-0.02, -0.49).closePath()
+  shape.holes.push(opening)
+  return new THREE.ExtrudeGeometry(shape, {
+    depth: 0.4, bevelEnabled: true, bevelThickness: 0.035, bevelSize: 0.035, bevelSegments: 2, steps: 1,
+  }).center()
+}
 
 export function Model({ inverted = false, compact = false }) {
   const host = useRef(null)
@@ -28,8 +40,6 @@ export function Model({ inverted = false, compact = false }) {
     const angle = { y: 0, x: 0 }
     const scrollAngle = { y: 0 }
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
-    let closed = false
-    let model
     let spin
     let scrollTurn
 
@@ -53,46 +63,24 @@ export function Model({ inverted = false, compact = false }) {
     const observer = new ResizeObserver(resize)
     observer.observe(element)
 
-    new GLTFLoader().load('/media/model.glb', ({ scene: asset }) => {
-      if (closed) {
-        asset.traverse((node) => {
-          if (node.isMesh) {
-            node.geometry.dispose()
-            node.material.dispose()
-          }
-        })
-        return
-      }
-      model = asset
-      const bounds = new THREE.Box3().setFromObject(model)
-      const size = bounds.getSize(new THREE.Vector3())
-      const scale = 1.8 / Math.max(size.x, size.y, size.z)
-      model.scale.setScalar(scale)
-      model.position.copy(bounds.getCenter(new THREE.Vector3()).multiplyScalar(-scale))
-      model.traverse((node) => {
-        if (!node.isMesh) return
-        const edge = node.name === 'Curve013_1'
-        node.material.dispose()
-        node.material = new THREE.MeshBasicMaterial({
-          color: edge ? (inverted ? '#c5f0f7' : '#111111') : (inverted ? '#911a46' : '#ffffff'),
-          side: THREE.DoubleSide,
-          transparent: !edge,
-          opacity: edge ? 1 : 0.70,
-        })
+    const geometry = createDecodeGeometry()
+    const edges = new THREE.EdgesGeometry(geometry, 28)
+    const faces = new THREE.MeshBasicMaterial({
+      color: inverted ? '#911a46' : '#ffffff', side: THREE.DoubleSide, transparent: true, opacity: 0.42, depthWrite: false,
+    })
+    const ink = new THREE.LineBasicMaterial({ color: inverted ? '#c5f0f7' : '#111111' })
+    pivot.add(new THREE.Mesh(geometry, faces), new THREE.LineSegments(edges, ink))
+    element.dataset.ready = 'true'
+    resize()
+    if (inverted && !reduced.matches) {
+      spin = gsap.to(angle, { y: Math.PI * 2, duration: 19, ease: 'none', repeat: -1, onUpdate: render })
+    }
+    if (!inverted && !reduced.matches) {
+      scrollTurn = gsap.to(scrollAngle, {
+        y: Math.PI, ease: 'none', onUpdate: render,
+        scrollTrigger: { trigger: element.closest('.site').querySelector('.hero'), start: 'top top', end: 'bottom 10%', scrub: 2 },
       })
-      pivot.add(model)
-      element.dataset.ready = 'true'
-      resize()
-      if (inverted && !reduced.matches) {
-        spin = gsap.to(angle, { y: Math.PI * 2, duration: 19, ease: 'none', repeat: -1, onUpdate: render })
-      }
-      if (!inverted && !reduced.matches) {
-        scrollTurn = gsap.to(scrollAngle, {
-          y: Math.PI, ease: 'none', onUpdate: render,
-          scrollTrigger: { trigger: element.closest('.site').querySelector('.hero'), start: 'top top', end: 'bottom 10%', scrub: 2 },
-        })
-      }
-    }, undefined, () => {})
+    }
 
     motion.current = {
       rotate: (x, y) => {
@@ -106,7 +94,6 @@ export function Model({ inverted = false, compact = false }) {
       },
     }
     return () => {
-      closed = true
       motion.current = null
       observer.disconnect()
       scrollTurn?.scrollTrigger?.kill()
@@ -114,12 +101,10 @@ export function Model({ inverted = false, compact = false }) {
       if (spin) gsap.killTweensOf(spin)
       spin?.kill()
       gsap.killTweensOf(angle)
-      model?.traverse((node) => {
-        if (node.isMesh) {
-          node.geometry.dispose()
-          node.material.dispose()
-        }
-      })
+      geometry.dispose()
+      edges.dispose()
+      faces.dispose()
+      ink.dispose()
       renderer.dispose()
       renderer.domElement.remove()
       delete element.dataset.ready
