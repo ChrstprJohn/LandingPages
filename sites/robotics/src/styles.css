@@ -678,8 +678,8 @@ h1, .section-title, .project-title, .join-form h2 {
   .project-controls button { padding: 13px; border: 1px solid var(--line); border-top: 0; text-transform: inherit; }
   .project-controls button + button { border-left: 0; }
   .project-controls button:hover { color: #fff; background: #17191c; }
-  .join-content { display: block; position: relative; }
-  .join-form { width: 100%; padding: 422px var(--pad) var(--pad); text-align: left; }
+  .join-content { --join-art-height: 50svh; display: block; position: relative; }
+  .join-form { width: 100%; padding: var(--join-art-height) var(--pad) var(--pad); text-align: left; }
   .join-form > .section-label { position: absolute; z-index: 1; top: 20px; left: var(--pad); flex-direction: row-reverse; gap: 18px; }
   .join-form .join-label-text { position: relative; padding: 5px 10px; border: 1px solid; border-radius: 99px; }
   .join-form .join-label-text::after { content: ''; position: absolute; left: 100%; top: 50%; width: 18px; border-top: 1px solid; }
@@ -687,7 +687,7 @@ h1, .section-title, .project-title, .join-form h2 {
   .join-form h2 br { display: none; }
   .join-form .contact-form { margin-top: 58px; }
   .join-form textarea { resize: none; }
-  .join-model { position: absolute; inset: 0 0 auto; height: 422px; border: 0; }
+  .join-model { position: absolute; inset: 0 0 auto; height: var(--join-art-height); border: 0; }
   .join-model-motion { width: 82%; max-width: 330px; height: 100%; }
   .join-model .model canvas { scale: 0.74 0.68; }
   .blog-main { padding-top: 68px; }
@@ -777,6 +777,11 @@ h1, .section-title, .project-title, .join-form h2 {
   .contact-section .contact-form :is(input, textarea) { padding-block: 7px; }
   .contact-section .contact-form .cta { min-height: 73px; }
   .contact-footer-art { margin-top: 73px; }
+  .join-form h2 { font-size: var(--hero-copy-size); }
+  .join-form .contact-form { margin-top: 33px; row-gap: 16px; }
+  .join-form .contact-form label { font-size: 10px; }
+  .join-form .contact-form :is(input, textarea) { padding-block: 7px; }
+  .join-form .contact-form .cta { min-height: 73px; }
   .blog-main.essay { padding-top: 61px; }
   .essay .editorial-head { min-height: 109px; padding: 0 0 24px; }
   .essay .editorial-head h1 { font-size: calc(0.875 * var(--hero-copy-size)); }
