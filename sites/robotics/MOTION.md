@@ -1,5 +1,7 @@
 # Robotics motion and layout checks
 
+Decode now uses the reference for layout and motion while presenting web development services, a studio process, and original guides. The displayed wordmark and 3D DCD geometry are Decode assets. See [photo credits](ASSET-CREDITS.md) for the web development imagery.
+
 The homepage, blog index, and four essay routes were inspected in the Codex in-app browser. Desktop and mobile screenshots were paired at the same viewport sizes wherever the comparison required static geometry.
 
 | Area | Reference behavior and local implementation | Verification |

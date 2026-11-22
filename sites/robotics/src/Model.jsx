@@ -2,17 +2,25 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
 
-function createDecodeGeometry() {
+function createD(offset) {
   const shape = new THREE.Shape()
-  shape.moveTo(-0.64, -0.83).lineTo(0.08, -0.83).lineTo(0.59, -0.43)
-    .lineTo(0.59, 0.43).lineTo(0.08, 0.83).lineTo(-0.64, 0.83).closePath()
+  shape.moveTo(offset, -0.83).lineTo(offset + 0.72, -0.83).lineTo(offset + 1.23, -0.43)
+    .lineTo(offset + 1.23, 0.43).lineTo(offset + 0.72, 0.83).lineTo(offset, 0.83).closePath()
   const opening = new THREE.Path()
-  opening.moveTo(-0.31, -0.49).lineTo(-0.31, 0.49).lineTo(-0.02, 0.49)
-    .lineTo(0.26, 0.28).lineTo(0.26, -0.28).lineTo(-0.02, -0.49).closePath()
+  opening.moveTo(offset + 0.33, -0.49).lineTo(offset + 0.33, 0.49).lineTo(offset + 0.62, 0.49)
+    .lineTo(offset + 0.9, 0.28).lineTo(offset + 0.9, -0.28).lineTo(offset + 0.62, -0.49).closePath()
   shape.holes.push(opening)
-  return new THREE.ExtrudeGeometry(shape, {
+  return shape
+}
+
+function createDecodeGeometry() {
+  const c = new THREE.Shape()
+  c.moveTo(2.66, 0.83).lineTo(1.93, 0.83).lineTo(1.49, 0.47).lineTo(1.49, -0.47)
+    .lineTo(1.93, -0.83).lineTo(2.66, -0.83).lineTo(2.66, -0.49).lineTo(2.05, -0.49)
+    .lineTo(1.82, -0.28).lineTo(1.82, 0.28).lineTo(2.05, 0.49).lineTo(2.66, 0.49).closePath()
+  return new THREE.ExtrudeGeometry([createD(0), c, createD(2.92)], {
     depth: 0.4, bevelEnabled: true, bevelThickness: 0.035, bevelSize: 0.035, bevelSegments: 2, steps: 1,
-  }).center()
+  }).center().scale(0.69, 0.69, 0.69)
 }
 
 export function Model({ inverted = false, compact = false }) {
@@ -142,7 +150,7 @@ export function Model({ inverted = false, compact = false }) {
       onPointerCancel={endDrag}
       onLostPointerCapture={endDrag}
     >
-      <span className="model-fallback">D</span>
+      <span className="model-fallback">DCD</span>
     </div>
   )
 }

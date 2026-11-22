@@ -6,7 +6,7 @@ import { SplitText } from 'gsap/SplitText'
 import { useGSAP } from '@gsap/react'
 import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
-import { essayBody, essays, projects, team } from './content'
+import { essayBody, essayMedia, essaySources, essays, projects, team } from './content'
 import { reducedMotion, useEntrance, wipeEase } from './entrance'
 import './styles.css'
 
@@ -62,7 +62,7 @@ function Cta({ children, className = '', ...props }) {
 }
 
 function Header({ home, blog, active, open, intro }) {
-  const sections = [['investments', 'Investments'], ['teams', 'Team'], ['contact', 'Contact']]
+  const sections = [['investments', 'Services'], ['teams', 'Process'], ['contact', 'Contact']]
   return (
     <header className="site-header">
       <Logo href={home ? '#top' : '/'} intro={intro} />
@@ -73,7 +73,7 @@ function Header({ home, blog, active, open, intro }) {
         <a href="/blog" className={blog ? 'active' : ''} aria-current={blog ? 'page' : undefined}><RollingText>Blog</RollingText></a>
       </nav>
       <div className="mobile-nav">
-        <button className="contact-icon" aria-label="Join the revolution" onClick={() => open('join')}>D</button>
+        <button className="contact-icon" aria-label="Start a project" onClick={() => open('join')}>D</button>
         <button className="menu-icon" aria-label="Open menu" aria-haspopup="dialog" onClick={() => open('menu')}><i /><i /><i /></button>
       </div>
     </header>
@@ -152,7 +152,7 @@ function Overlay({ kind, label, close, children }) {
 }
 
 function Menu({ home, dismiss }) {
-  const links = [['investments', 'Investments'], ['teams', 'Teams'], ['contact', 'Contact']]
+  const links = [['investments', 'Services'], ['teams', 'Process'], ['contact', 'Contact']]
   return (
     <div className="menu-content">
       <Logo href={home ? '#top' : '/'} />
@@ -171,7 +171,7 @@ function Menu({ home, dismiss }) {
           event.stopPropagation()
           dismiss('/blog')
         }}>Blog</a>
-        <Cta onClick={() => dismiss('join')}>Join the revolution</Cta>
+        <Cta onClick={() => dismiss('join')}>Start a project</Cta>
       </nav>
     </div>
   )
@@ -204,25 +204,27 @@ function FactTable({ facts }) {
   return <dl className="facts">{facts.map(([term, value]) => <div key={term}><dt>{term}</dt><dd>{value}</dd></div>)}</dl>
 }
 
-function ProjectIcons({ icon, icons = [icon, 'robotics-icon.png', 'money-icon.png'] }) {
+function ProjectIcons() {
   return <div className="project-icons" aria-hidden="true">
-    {icons.map((file) => <img key={file} src={media(file)} alt="" />)}
+    <span>⌘</span><span>↗</span><span>◇</span>
   </div>
 }
 
-function ProjectInfo({ project, heading: Heading = 'h2' }) {
+function ProjectInfo({ project, heading: Heading = 'h2', dismiss }) {
   return (
     <>
       <ul className="project-tags">{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
       <Heading className="project-title reveal">{project.lines.map((line) => <span key={line}>{line}{' '}</span>)}</Heading>
       <div className="project-info">
-        <ProjectIcons icon={project.icon} icons={project.icons} />
-        <a className="company-logo" href={project.url} aria-label={`Visit ${project.title}`}><img src={media(project.logo)} alt="" /></a>
+        <ProjectIcons />
+        <figure className="company-logo"><Media item={project.gallery[0]} /></figure>
         <div className="project-summary">
-          {project.id === 'landscaping'
-            ? <p className="summary-link"><a href={project.url}>{project.summary}</a></p>
-            : <p>{project.summary} <a href={project.url}>Read more.</a></p>}
-          <a className="website-link" href={project.url}>Website</a>
+          <p>{project.summary}</p>
+          <a className="website-link" href={project.url} onClick={(event) => {
+            if (!dismiss || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+            event.preventDefault()
+            dismiss(project.url)
+          }}>Read the guide</a>
         </div>
         <FactTable facts={project.facts} />
       </div>
@@ -299,7 +301,7 @@ function ProjectStrip({ project }) {
   )
 }
 
-function ProjectSheet({ index, change, focusHeading }) {
+function ProjectSheet({ index, change, focusHeading, dismiss }) {
   const root = useRef(null)
   const project = projects[index]
   useGSAP((context, contextSafe) => {
@@ -336,9 +338,9 @@ function ProjectSheet({ index, change, focusHeading }) {
   }, { scope: root })
   return (
     <article className="project-sheet" ref={root}>
-      <ProjectInfo project={project} heading="h2" />
+      <ProjectInfo project={project} dismiss={dismiss} />
       <Gallery project={project} prefix="sheet" />
-      <nav className="project-controls" aria-label="Other investments">
+      <nav className="project-controls" aria-label="Other services">
         <button onClick={() => change((index + projects.length - 1) % projects.length)}>Previous</button>
         <button onClick={() => change((index + 1) % projects.length)}>Next</button>
       </nav>
@@ -349,31 +351,30 @@ function ProjectSheet({ index, change, focusHeading }) {
 function Team() {
   return (
     <section id="teams" className="team-section home-section" aria-labelledby="team-title">
-      <Label>Team</Label>
-      <span className="team-tag">Decode Team</span>
-      <h2 className="section-title reveal" id="team-title">The edge isn't the thesis. It's the people executing it.</h2>
+      <Label>Process</Label>
+      <span className="team-tag">Decode Process</span>
+      <h2 className="section-title reveal" id="team-title">How we take a website from first sketch to launch.</h2>
       <div className="desktop-team">
-        {team.map(([name, role, portrait, link, bio, jobs]) => (
+        {team.map(([name, role, portrait, bio, jobs]) => (
           <article className="person" key={name}>
-            <div className="person-name"><h3>{name}</h3><p>{role}</p><a href={`https://www.linkedin.com/in/${link}`}>LinkedIn</a></div>
+            <div className="person-name"><h3>{name}</h3><p>{role}</p></div>
             <div className="person-detail">
-              <div className="person-intro"><img src={media(`${portrait}.jpg`)} alt="" loading="lazy" /><p>{bio}</p></div>
+              <div className="person-intro"><img src={media(portrait)} alt="" loading="lazy" /><p>{bio}</p></div>
               <FactTable facts={jobs} />
             </div>
           </article>
         ))}
       </div>
       <div className="mobile-team">
-        {team.map(([name, role, portrait, link, bio, jobs]) => (
+        {team.map(([name, role, portrait, bio, jobs]) => (
           <details name="team-profile" key={name}>
             <summary>
-              <img src={media(`${portrait}.jpg`)} alt="" loading="lazy" />
+              <img src={media(portrait)} alt="" loading="lazy" />
               <span><strong>{name}</strong><span>{role}</span></span>
               <span className="profile-toggle" aria-hidden="true" />
             </summary>
             <div className="mobile-profile">
               <p>{bio}</p>
-              <a className="website-link" href={`https://www.linkedin.com/in/${link}`}>LinkedIn</a>
               <FactTable facts={jobs} />
             </div>
           </details>
@@ -385,26 +386,27 @@ function Team() {
 
 function ContactForm() {
   const formId = useId()
-  const [draft, setDraft] = useState('')
-  const [offered, setOffered] = useState(false)
+  const [status, setStatus] = useState('')
 
-  const submit = (event) => {
+  const submit = async (event) => {
     event.preventDefault()
     const fields = new FormData(event.currentTarget)
     const body = `${fields.get('message')}\n\n${fields.get('name')}\n${fields.get('email')}`
-    const mail = `mailto:contact@mecha.xyz?subject=Decode%20inquiry&body=${encodeURIComponent(body)}`
-    setDraft(mail)
-    setOffered(true)
-    window.location.href = mail
+    try {
+      await navigator.clipboard.writeText(body)
+      setStatus('Inquiry copied. Paste it into the app you want to send it from.')
+    } catch {
+      setStatus('Clipboard access is unavailable. Your inquiry is still in the form.')
+    }
   }
 
   return (
-    <form className="contact-form" aria-label="Email form" onSubmit={submit}>
+    <form className="contact-form" aria-label="Project inquiry" onSubmit={submit}>
       <label htmlFor={`${formId}-name`}>Name*<input id={`${formId}-name`} name="name" autoComplete="name" placeholder="Enter Name" required /></label>
       <label htmlFor={`${formId}-email`}>Email*<input id={`${formId}-email`} name="email" type="email" autoComplete="email" placeholder="Enter Email" required /></label>
       <label className="message-field" htmlFor={`${formId}-message`}>Message<textarea id={`${formId}-message`} name="message" placeholder="Enter Message" rows={3} /></label>
-      <Cta type="submit">Send message</Cta>
-      {offered && <p className="form-note" role="status">Send the draft from your email app. <a href={draft}>Open email draft</a></p>}
+      <Cta type="submit">Copy inquiry</Cta>
+      {status && <p className="form-note" role="status">{status}</p>}
     </form>
   )
 }
@@ -413,8 +415,7 @@ function Footer({ illustrated = false }) {
   return (
     <footer className={`footer ${illustrated ? 'illustrated-footer' : ''}`}>
       <div className="footer-details">
-        <div className="footer-info"><span>Privacy policy</span><a href="mailto:contact@mecha.xyz">contact@mecha.xyz</a></div>
-        {illustrated && <img className="footer-icons" src={media('footer-icons.png')} alt="" />}
+        <div className="footer-info"><span>Decode</span><a href="/blog">Web development guides</a></div>
       </div>
       {illustrated && <DecodeMark className="footer-wordmark" />}
     </footer>
@@ -425,10 +426,9 @@ function Contact() {
   return (
     <section id="contact" className="contact-section home-section" aria-labelledby="contact-title">
       <Label>Contact</Label>
-      <img className="discipline" src={media('discipline.png')} alt="PE discipline, VC upside" />
-      <h2 id="contact-title" className="section-title reveal">Invest with us, share an opportunity, or make an inquiry.</h2>
+      <h2 id="contact-title" className="section-title reveal">Tell us what you want your next website to do.</h2>
       <ContactForm />
-      <img className="contact-footer-art" src={media('contact-art.png')} alt="" loading="lazy" />
+      <img className="contact-footer-art" src={media('web-38164328.jpg')} alt="" loading="lazy" />
       <Footer illustrated />
     </section>
   )
@@ -444,11 +444,11 @@ function Home({ open, active }) {
   }, [])
   return (
     <>
-      <aside className="home-rail" aria-label="Investment index">
+      <aside className="home-rail" aria-label="Service index">
         <div className="rail-model">{!mobile && <Suspense><Model /></Suspense>}</div>
-        <img className="rail-contact-art" src={media('contact-art.png')} alt="" />
+        <img className="rail-contact-art" src={media('web-38164328.jpg')} alt="" />
         <nav className="rail-index">
-          <a href="#investments"><span aria-hidden="true">├</span><RollingText>Investments</RollingText></a>
+          <a href="#investments"><span aria-hidden="true">├</span><RollingText>Services</RollingText></a>
           {projects.map((project, index) => (
             <a key={project.id} data-project-link={project.id} className={active === project.id ? 'active' : ''} href={`#${project.id}`}>
               <RollingText>{number(index)}</RollingText><RollingText>{project.title}</RollingText>
@@ -458,9 +458,9 @@ function Home({ open, active }) {
       </aside>
       <main className="home-main">
         <section className="hero home-section" id="top" aria-labelledby="hero-title">
-          <span className="section-label"><img className="manifesto-icon" src={media('land-chip.svg')} alt="" />Manifesto</span>
-          <img className="discipline" src={media('discipline.png')} alt="PE discipline, VC upside" />
-          <h1 id="hero-title">Robotics will knock over the global economy. Decode deploys physical automation into legacy industries</h1>
+          <span className="section-label">Decode</span>
+          <div className="discipline studio-label"><span>Web design</span><span>Development</span></div>
+          <h1 id="hero-title">Decode designs and builds websites that make it easier to find, understand, and use your business online.</h1>
           <div className="hero-mobile-model">{mobile && <Suspense><Model compact /></Suspense>}</div>
         </section>
         <div className="desktop-projects">
@@ -471,8 +471,8 @@ function Home({ open, active }) {
             </section>
           ))}
         </div>
-        <section className="mobile-projects" id="mobile-investments" aria-label="Investments">
-          <Label>Investments</Label>
+        <section className="mobile-projects" id="mobile-investments" aria-label="Services">
+          <Label>Services</Label>
           {projects.map((project, index) => <MobileProject key={project.id} project={project} index={index} open={open} />)}
         </section>
         <Team />
@@ -493,17 +493,18 @@ function EssayLinks({ entries, index = false }) {
 
 function Blog({ essay }) {
   const title = essay?.[0]
+  const source = essay && essaySources[essay[1]]
   return (
     <main className={`blog-main ${essay ? 'essay' : 'essay-index'}`} id="top">
       <div className="editorial-head">
-        {essay ? <a href="/blog" className="website-link">Back</a> : <ProjectIcons icon="recycle-icon.png" />}
-        <h1>{title || <>Essays from{' '}<br />the future</>}</h1>
+        {essay ? <a href="/blog" className="website-link">Back</a> : <ProjectIcons />}
+        <h1>{title || <>Web development{' '}<br />guides</>}</h1>
       </div>
       {essay && <article className="essay-copy">
-        {essayBody.map((paragraph, index) => <p key={paragraph}>{index === 3 ? <strong>{paragraph}</strong> : paragraph}</p>)}
-        <p className="essay-media-intro">Engineering for the physical world begins with economics, but it succeeds through the details of the operation itself. The people doing the work know where a process stops, what breaks frequently, and which failures create the largest costs. Measuring those details gives a team a starting point for changes that will hold up when it deploys them at scale.</p>
-        <figure><img src={media('essay-image.jpg')} alt="An industrial robotics installation" loading="lazy" /><figcaption>Illustration</figcaption></figure>
-        {essayBody.slice(0, 3).map((paragraph) => <p key={`closing-${paragraph}`}>{paragraph}</p>)}
+        <p>{essay[2]}</p>
+        <figure><Media item={essayMedia[essay[1]]} /></figure>
+        {essayBody[essay[1]].map(([heading, paragraph]) => <section key={heading}><h2>{heading}</h2><p>{paragraph}</p></section>)}
+        {source && <p className="essay-source">Further reading <a href={source[1]}>{source[0]}</a></p>}
       </article>}
       <EssayLinks entries={essay ? essays.slice().reverse().filter((item) => item !== essay) : essays} index={!essay} />
       <div className="blog-footer-art"><video src={media('footer-video.webm')} muted loop playsInline autoPlay={!reducedMotion()} aria-hidden="true" /></div>
@@ -541,7 +542,7 @@ export default function App() {
   useEntrance({ root, cover, counter, home, full: fullIntro, setLoading })
 
   useEffect(() => {
-    const title = essay?.[0] || (blog ? 'Essays from the future | Decode' : 'Decode | Robotics & AI Investment')
+    const title = essay ? `${essay[0]} | Decode` : blog ? 'Web Development Guides | Decode' : 'Decode | Web Design & Development'
     document.title = title
     try {
       sessionStorage.setItem('robotics-last-page', location.pathname)
@@ -794,21 +795,21 @@ export default function App() {
       {(blog || essay) && <Blog essay={essay} />}
       {!home && !blog && !essay && <main className="missing"><h1>Page not found</h1><a href="/">Back to Decode</a></main>}
       {(home || blog || essay) && <div className="footer-peek" aria-hidden="true"><DecodeMark /></div>}
-      <Cta className="sticky-cta" onClick={() => setOverlay('join')} aria-haspopup="dialog">Join the revolution</Cta>
+      <Cta className="sticky-cta" onClick={() => setOverlay('join')} aria-haspopup="dialog">Start a project</Cta>
       <div className="route-wipe" ref={wipe} aria-hidden="true" />
       {overlay === 'menu' && <Overlay key="menu" kind="menu" label="Navigation menu" close={close}>
         {(dismiss) => <Menu home={home} dismiss={dismiss} />}
       </Overlay>}
-      {overlay === 'join' && <Overlay key="join" kind="join" label="Join the revolution" close={close}>
+      {overlay === 'join' && <Overlay key="join" kind="join" label="Start a project" close={close}>
         {() => <div className="join-content">
-          <div className="join-form"><Label symbol="Ⓓ"><span className="join-label-text">Contact us</span></Label><h2>Future of robotics{' '}<br />begins here</h2>
-            <p>Invest with us or share an opportunity</p><ContactForm />
+          <div className="join-form"><Label symbol="Ⓓ"><span className="join-label-text">Project inquiry</span></Label><h2>Plan your next{' '}<br />website</h2>
+            <p>Describe the site you want to build</p><ContactForm />
           </div>
           <div className="join-model"><div className="join-model-motion"><Suspense><Model inverted /></Suspense></div></div>
         </div>}
       </Overlay>}
-      {overlay === 'project' && <Overlay key="project" kind="project" label="Investment details" close={close}>
-        {() => <ProjectSheet key={projectIndex} index={projectIndex} change={stepProject} focusHeading={projectStepped.current} />}
+      {overlay === 'project' && <Overlay key="project" kind="project" label="Service details" close={close}>
+        {(dismiss) => <ProjectSheet key={projectIndex} index={projectIndex} change={stepProject} focusHeading={projectStepped.current} dismiss={dismiss} />}
       </Overlay>}
     </div>
   )

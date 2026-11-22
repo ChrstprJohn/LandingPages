@@ -234,6 +234,11 @@ h1, .section-title, .project-title, .join-form h2 {
   margin-top: calc(18 * var(--u));
 }
 .discipline { position: absolute; bottom: var(--pad); left: var(--pad); width: calc(190 * var(--u)); height: auto; }
+.studio-label { display: flex; align-items: center; justify-content: space-between; gap: 0.8em; font-size: var(--tiny); text-transform: uppercase; }
+.studio-label span { padding: 0.45em 0.75em; border: 1px solid currentColor; white-space: nowrap; }
+.studio-label span:last-child { border-radius: 99px; }
+.project-icons span { display: grid; place-items: center; width: 1.65em; height: 1.65em; border: 1px solid currentColor; border-radius: 50%; }
+.company-logo img, .contact-footer-art { aspect-ratio: 1.7; object-fit: cover; }
 
 .desktop-project { border-top: 1px solid var(--line); }
 .project-tags {
@@ -472,6 +477,10 @@ h1, .section-title, .project-title, .join-form h2 {
 .essay .editorial-head h1 { font-size: calc(48.5 * var(--u)); line-height: 0.92; }
 .essay-copy { padding: var(--pad) 0 calc(90 * var(--u)); color: rgb(38 41 51 / 60%); font-size: calc(14 * var(--u)); line-height: 1.44; letter-spacing: 0.02em; }
 .essay-copy strong { color: #262933; font-weight: 400; }
+.essay-copy section { margin-top: 1.75em; }
+.essay-copy section h2 { margin-bottom: 0.4em; color: #262933; font-size: 1.35em; font-weight: 500; }
+.essay-source { margin-top: 1.75em; }
+.essay-source a { text-decoration: underline; }
 .essay-copy::before { content: ""; position: absolute; height: 1px; background: var(--line); left: var(--pad); right: var(--pad); margin-top: calc(-1 * var(--pad)); }
 .essay-copy p + p { margin-top: 1.5em; }
 .essay-copy figure { margin-block: calc(45 * var(--u)); }
@@ -680,7 +689,7 @@ h1, .section-title, .project-title, .join-form h2 {
   .join-form textarea { resize: none; }
   .join-model { position: absolute; inset: 0 0 auto; height: 422px; border: 0; }
   .join-model-motion { width: 82%; max-width: 330px; height: 100%; }
-  .join-model .model canvas { scale: -0.74 0.68; }
+  .join-model .model canvas { scale: 0.74 0.68; }
   .blog-main { padding-top: 68px; }
   .editorial-head { padding-top: 17px; min-height: 223px; }
   .editorial-head h1 { font-size: 32px; line-height: 1.02; }
