@@ -768,6 +768,9 @@ h1, .section-title, .project-title, .join-form h2 {
 
 @media (max-width: 349px) {
   :root { --hero-copy-size: calc(7.27vw + 1.09px); }
+  .project-sheet { padding-top: 23px; }
+  .project-sheet .project-title { font-size: calc(1.125 * var(--hero-copy-size)); margin-block: 70px 29px; }
+  .project-sheet .project-info { column-gap: 18px; }
   .team-section .section-title { max-width: 100%; font-size: var(--hero-copy-size); }
   .mobile-team { margin-top: 69px; }
   .mobile-team summary { min-height: 85px; }
