@@ -732,6 +732,11 @@ h1, .section-title, .project-title, .join-form h2 {
   .contact-section .footer { margin-top: 146px; }
 }
 
+@media (480px <= width <= 767px) {
+  .mobile-projects { --strip-height: calc(7.2vw + 133.5px); padding-top: calc(6.1vw + 5px); }
+  .mobile-project { min-height: calc(11.7vw + 273px); }
+}
+
 @media (375px <= width < 480px) {
   .project-strip { --strip-height: calc(20vw + 93px); }
 }
