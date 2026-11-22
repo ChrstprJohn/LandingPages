@@ -1,0 +1,18 @@
+# Robotics motion and layout checks
+
+The homepage, blog index, and four essay routes were inspected in the Codex in-app browser. Desktop and mobile screenshots were paired at the same viewport sizes wherever the comparison required static geometry.
+
+| Area | Reference behavior and local implementation | Verification |
+| --- | --- | --- |
+| Homepage loading | The 00–100 counter runs for 3.8 seconds. The large desktop wordmark plays its forward and reverse sequence, then shrinks into the header. Masked headline lines, navigation, model, and CTA appear in order. Mobile starts with the smaller wordmark. | Compared the running counters at 44 and 41, then checked the settled wordmark, visible title, and restored scrolling. |
+| Desktop investments | Lenis animates anchor navigation and wheel inertia. GSAP follows the hero with a half rotation of the 3D mark, shrinking and moving it up the rail. The project index pins higher as the mark leaves, with progress under the active row. The project headings reveal line by line at viewport entry. | Compared the hero, first project, Aescape, third project, team, and contact. Checked anchor landing, active rail progress, and the settled top position of the rail. |
+| Mobile investments | Each sequence of media tiles loops leftward. The detail sheet slides in, reveals its title and metrics in order, and supports Previous, Next, and Escape. | At 390px the reference tracks completed a loop in about 15 seconds. Updated the local GSAP tweens to 15 seconds and measured all three advancing at that rate. Checked all three detail states and wraparound. |
+| Team, navigation, and contact | Mobile profiles open one at a time. Full-screen overlays animate separately from the page. The email form validates the required name and email fields and opens a local mail draft. | Checked pointer and keyboard expansion, menu-to-section navigation, scroll locking, contact fields, and Escape dismissal. |
+| Blog and essays | A full-screen color wipe runs on route changes. Back and related links use real URLs. The mobile blog has a shorter heading block and a taller decorative video above the full-width wordmark. | Checked all four essay routes, route history, and the wipe. At 390 × 844, the reference and local blog heading and video started at the same positions. |
+| Footer and hover | Desktop overscroll reveals the large footer mark before it retracts. Hoverable text rolls within its row and the mobile footer renders inline. | Compared the contact and blog footer layouts. Exact overscroll and hover timing were estimated from the reference behavior. |
+
+Desktop geometry was checked at 1360 and 1440 pixels, with 1600, 1800, and 2150 pixels used as zoom-out equivalents. Mobile checks covered 360 and 390 pixels. Those desktop widths are viewport approximations of browser zoom. The local essays, bios, and project descriptions use paraphrased copy.
+
+At 390 × 844, a pointer click on Tomorrow Recycling’s More control and a pointer click on Close preserved the local background scroll position at 771 CSS pixels. Locator-based activation repositioned the page before the dialog settled. The reference and local sheets both reached Aescape, and the local Previous control wrapped from Tomorrow Recycling to The non-fiction revolution.
+
+The public reference is [Mecha Capital](https://mecha-xyz.webflow.io/).

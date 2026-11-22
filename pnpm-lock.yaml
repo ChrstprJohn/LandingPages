@@ -80,14 +80,8 @@ importers:
         specifier: ^7.3.0
         version: 7.3.8(jiti@2.7.0)(lightningcss@1.33.0)
 
-  sites/flower-shop:
+  sites/decode:
     dependencies:
-      '@gsap/react':
-        specifier: ^2.1.2
-        version: 2.1.2(gsap@3.15.1)(react@19.3.1)
-      gsap:
-        specifier: ^3.15.1
-        version: 3.15.1
       react:
         specifier: ^19.2.0
         version: 19.3.1
@@ -108,8 +102,14 @@ importers:
         specifier: ^7.3.0
         version: 7.3.8(jiti@2.7.0)(lightningcss@1.33.0)
 
-  sites/museum:
+  sites/flower-shop:
     dependencies:
+      '@gsap/react':
+        specifier: ^2.1.2
+        version: 2.1.2(gsap@3.15.1)(react@19.3.1)
+      gsap:
+        specifier: ^3.15.1
+        version: 3.15.1
       react:
         specifier: ^19.2.0
         version: 19.3.1
@@ -144,6 +144,40 @@ importers:
       react-dom:
         specifier: ^19.2.0
         version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@tailwindcss/vite':
+        specifier: ^4.1.0
+        version: 4.3.5(vite@7.3.8(jiti@2.7.0)(lightningcss@1.33.0))
+      '@vitejs/plugin-react':
+        specifier: ^5.1.0
+        version: 5.2.0(vite@7.3.8(jiti@2.7.0)(lightningcss@1.33.0))
+      tailwindcss:
+        specifier: ^4.1.0
+        version: 4.3.5
+      vite:
+        specifier: ^7.3.0
+        version: 7.3.8(jiti@2.7.0)(lightningcss@1.33.0)
+
+  sites/robotics:
+    dependencies:
+      '@gsap/react':
+        specifier: ^2.1.2
+        version: 2.1.2(gsap@3.15.1)(react@19.3.1)
+      gsap:
+        specifier: ^3.15.1
+        version: 3.15.1
+      lenis:
+        specifier: 1.3.23
+        version: 1.3.23(react@19.3.1)
+      react:
+        specifier: ^19.2.0
+        version: 19.3.1
+      react-dom:
+        specifier: ^19.2.0
+        version: 19.3.1(react@19.3.1)
+      three:
+        specifier: ^0.176.0
+        version: 0.176.0
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.1.0
@@ -767,6 +801,20 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
+  lenis@1.3.23:
+    resolution: {integrity: sha512-YxYq3TJqj9sJNv0V9SkyQHejt14xwyIwgDaaMK89Uf9SxQfIszu+gTQSSphh6BWlLTNVKvvXAGkg+Zf+oFIevg==}
+    peerDependencies:
+      '@nuxt/kit': '>=3.0.0'
+      react: '>=17.0.0'
+      vue: '>=3.0.0'
+    peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
+      react:
+        optional: true
+      vue:
+        optional: true
+
   lightningcss-android-arm64@1.33.0:
     resolution: {integrity: sha512-gEpRTalKdosp4Bb8qWtc2iOgE5SeIHlpS1up9bFq2wAyYhl1UdTObYiHe98zEM9SQvSoqQZ1IQD0JNpg3Ml5pg==}
     engines: {node: '>= 12.0.0'}
@@ -905,6 +953,9 @@ packages:
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
+
+  three@0.176.0:
+    resolution: {integrity: sha512-PWRKYWQo23ojf9oZSlRGH8K09q7nRSWx6LY/HF/UUrMdYgN9i1e2OwJYHoQjwc6HF/4lvvYLC5YC1X8UJL2ZpA==}
 
   tinyglobby@0.2.17:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
@@ -1437,6 +1488,10 @@ snapshots:
 
   json5@2.2.3: {}
 
+  lenis@1.3.23(react@19.3.1):
+    optionalDependencies:
+      react: 19.3.1
+
   lightningcss-android-arm64@1.33.0:
     optional: true
 
@@ -1560,6 +1615,8 @@ snapshots:
   tailwindcss@4.3.5: {}
 
   tapable@2.3.3: {}
+
+  three@0.176.0: {}
 
   tinyglobby@0.2.17:
     dependencies:

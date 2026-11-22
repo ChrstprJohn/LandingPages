@@ -1,0 +1,822 @@
+import { lazy, Suspense, useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { CustomEase } from 'gsap/CustomEase'
+import { SplitText } from 'gsap/SplitText'
+import { useGSAP } from '@gsap/react'
+import Lenis from 'lenis'
+import 'lenis/dist/lenis.css'
+import { essayBody, essays, projects, team } from './content'
+import { reducedMotion, useEntrance, wipeEase } from './entrance'
+import './styles.css'
+
+const Model = lazy(() => import('./Model').then(({ Model }) => ({ default: Model })))
+
+const media = (file) => `/media/${file}`
+const essayUrl = (slug) => `/blog-posts/${slug}`
+const number = (index) => String(index + 1).padStart(2, '0')
+const menuMask = { closed: 'inset(0 0 100% 0)', open: 'inset(0 0 0% 0)' }
+const menuMaskEase = CustomEase.create('menuMask', '0.9,0,0.1,1')
+const menuLinkEase = CustomEase.create('menuLink', '0.7,0,0.3,1')
+
+function DecodeMark({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 118 25" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" aria-hidden="true">
+      <path d="M2 2h10l5 5v11l-5 5H2Z" />
+      <g><path d="M37 2H22v21h15" /><path d="M22 12.5h12" /></g>
+      <path d="M57 2H46l-5 5v11l5 5h11" />
+      <path d="M66 2h7l5 5v11l-5 5h-7l-5-5V7Z" />
+      <path d="M83 2h10l5 5v11l-5 5H83Z" />
+      <g><path d="M117 2h-14v21h14" /><path d="M103 12.5h11" /></g>
+    </svg>
+  )
+}
+
+function Logo({ href = '/', intro = false }) {
+  const mark = useRef(null)
+  useGSAP(() => {
+    if (!intro || reducedMotion()) return
+    const letters = Array.from(mark.current.querySelector('svg').children)
+    const paths = mark.current.querySelectorAll('path')
+    const strokeLength = (_, path) => path.getTotalLength() + 3
+    const draw = gsap.timeline({ delay: 1.65 })
+    for (const [index, letter] of letters.entries()) {
+      const strokes = letter.matches('path') ? [letter] : letter.querySelectorAll('path')
+      draw.fromTo(strokes, { strokeDasharray: (index, path) => `${strokeLength(index, path)} ${strokeLength(index, path)}`, strokeDashoffset: strokeLength }, {
+        strokeDashoffset: 0, duration: 0.46, stagger: 0.07, ease: 'power2.inOut',
+      }, index * 0.08)
+    }
+    draw.to(paths, { strokeDashoffset: strokeLength, duration: 0.46, stagger: { each: 0.065, from: 'end' }, ease: 'power2.inOut' })
+      .set(paths, { clearProps: 'strokeDasharray,strokeDashoffset' })
+  }, { scope: mark })
+  return <a className="wordmark" href={href} aria-label="Decode home"><span ref={mark}><DecodeMark /></span></a>
+}
+
+function Connector() {
+  return <span className="connector" aria-hidden="true" />
+}
+
+function RollingText({ children }) {
+  return <span className="roll-text"><span>{children}</span><span aria-hidden="true">{children}</span></span>
+}
+
+function Label({ children, symbol = '├' }) {
+  return <span className="section-label"><span aria-hidden="true">{symbol}</span>{children}</span>
+}
+
+function Cta({ children, className = '', ...props }) {
+  return <button className={`cta ${className}`} {...props}><Connector /><RollingText>{children}</RollingText></button>
+}
+
+function Header({ home, blog, active, open, intro }) {
+  const sections = [['investments', 'Investments'], ['teams', 'Team'], ['contact', 'Contact']]
+  return (
+    <header className="site-header">
+      <Logo href={home ? '#top' : '/'} intro={intro} />
+      <nav className="desktop-nav" aria-label="Main navigation">
+        {sections.map(([id, label]) => (
+          <a key={id} className={active === id ? 'active' : ''} href={home ? `#${id}` : `/?section=${id}`}><RollingText>{label}</RollingText></a>
+        ))}
+        <a href="/blog" className={blog ? 'active' : ''} aria-current={blog ? 'page' : undefined}><RollingText>Blog</RollingText></a>
+      </nav>
+      <div className="mobile-nav">
+        <button className="contact-icon" aria-label="Join the revolution" onClick={() => open('join')}>D</button>
+        <button className="menu-icon" aria-label="Open menu" aria-haspopup="dialog" onClick={() => open('menu')}><i /><i /><i /></button>
+      </div>
+    </header>
+  )
+}
+
+function Overlay({ kind, label, close, children }) {
+  const dialog = useRef(null)
+  const surface = useRef(null)
+  const closing = useRef(false)
+  const opening = useRef(null)
+  const { contextSafe } = useGSAP(() => {
+    const element = dialog.current
+    const previousOverflow = document.body.style.overflow
+    element.showModal()
+    document.body.style.overflow = 'hidden'
+    if (!reducedMotion()) {
+      const open = gsap.timeline()
+      opening.current = open
+      if (kind === 'menu') {
+        open.fromTo(surface.current, { clipPath: menuMask.closed }, { clipPath: menuMask.open, duration: 1, ease: menuMaskEase }, 0)
+        open.from('.menu-grid > *', { y: 50, rotation: 5, duration: 0.75, stagger: 0.05, ease: menuLinkEase }, 0.3)
+      } else if (kind === 'project') {
+        open.from(element, { yPercent: 100, duration: 0.8, ease: menuMaskEase }, 0)
+      } else {
+        open.from('.join-backdrop', { yPercent: 100, duration: 0.9, ease: wipeEase }, 0)
+      }
+      if (kind === 'join') {
+        open.from('.join-model-motion', { yPercent: 68, duration: 0.85, ease: wipeEase }, 0.58)
+        open.from('.join-form > :not(form), .join-form form > *', {
+          y: 18, autoAlpha: 0, duration: 0.75, stagger: 0.065, ease: 'expo.out',
+        }, 0.57)
+      }
+    }
+    return () => {
+      element.close()
+      document.body.style.overflow = previousOverflow
+    }
+  }, { scope: dialog })
+
+  const dismiss = contextSafe((after) => {
+    if (closing.current) return
+    closing.current = true
+    if (reducedMotion()) {
+      close(after)
+      return
+    }
+    if (kind === 'menu') {
+      opening.current?.kill()
+      gsap.timeline({ onComplete: () => close(after) })
+        .to(surface.current, { clipPath: menuMask.closed, duration: 1, ease: menuMaskEase, overwrite: 'auto' }, 0)
+        .to('.menu-grid > *', { y: 50, rotation: 5, duration: 0.75, stagger: { each: 0.05, from: 'end' }, ease: menuLinkEase, overwrite: 'auto' }, 0)
+      return
+    }
+    gsap.to(dialog.current, {
+      yPercent: 100,
+      duration: 0.6,
+      ease: kind === 'project' ? menuMaskEase : wipeEase,
+      overwrite: 'auto',
+      onComplete: () => close(after),
+    })
+  })
+
+  return (
+    <dialog ref={dialog} className={`overlay overlay-${kind}`} aria-label={label} onCancel={(event) => {
+      event.preventDefault()
+      dismiss()
+    }}>
+      {kind === 'join' && <div className="join-backdrop" aria-hidden="true" />}
+      <div className="overlay-surface" ref={surface}>
+        <button className="close-overlay" autoFocus onClick={() => dismiss()}>Close <Connector /></button>
+        {children(dismiss)}
+      </div>
+    </dialog>
+  )
+}
+
+function Menu({ home, dismiss }) {
+  const links = [['investments', 'Investments'], ['teams', 'Teams'], ['contact', 'Contact']]
+  return (
+    <div className="menu-content">
+      <Logo href={home ? '#top' : '/'} />
+      <nav className="menu-grid" aria-label="Mobile navigation">
+        {links.map(([id, label]) => {
+          const href = home ? `#${id}` : `/?section=${id}`
+          return <a key={id} href={href} onClick={(event) => {
+            if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+            event.preventDefault()
+            dismiss(href)
+          }}>{label}</a>
+        })}
+        <a href="/blog" onClick={(event) => {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+          event.preventDefault()
+          event.stopPropagation()
+          dismiss('/blog')
+        }}>Blog</a>
+        <Cta onClick={() => dismiss('join')}>Join the revolution</Cta>
+      </nav>
+    </div>
+  )
+}
+
+function Media({ item }) {
+  const [file, label, poster] = item
+  if (file.endsWith('.webm')) {
+    return (
+      <video muted loop playsInline preload="none" src={media(file)}
+        poster={poster ? media(poster) : undefined} aria-label={label} />
+    )
+  }
+  return <img src={media(file)} alt={label} loading="lazy" />
+}
+
+function Gallery({ project, prefix }) {
+  return (
+    <div className={`gallery gallery-${project.id}`}>
+      {project.gallery.map((item, index) => (
+        <figure className={`frame frame-${index + 1}`} key={`${prefix}-${item[0]}`}>
+          <Media item={item} />
+        </figure>
+      ))}
+    </div>
+  )
+}
+
+function FactTable({ facts }) {
+  return <dl className="facts">{facts.map(([term, value]) => <div key={term}><dt>{term}</dt><dd>{value}</dd></div>)}</dl>
+}
+
+function ProjectIcons({ icon, icons = [icon, 'robotics-icon.png', 'money-icon.png'] }) {
+  return <div className="project-icons" aria-hidden="true">
+    {icons.map((file) => <img key={file} src={media(file)} alt="" />)}
+  </div>
+}
+
+function ProjectInfo({ project, heading: Heading = 'h2' }) {
+  return (
+    <>
+      <ul className="project-tags">{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+      <Heading className="project-title reveal">{project.lines.map((line) => <span key={line}>{line}{' '}</span>)}</Heading>
+      <div className="project-info">
+        <ProjectIcons icon={project.icon} icons={project.icons} />
+        <a className="company-logo" href={project.url} aria-label={`Visit ${project.title}`}><img src={media(project.logo)} alt="" /></a>
+        <div className="project-summary">
+          {project.id === 'landscaping'
+            ? <p className="summary-link"><a href={project.url}>{project.summary}</a></p>
+            : <p>{project.summary} <a href={project.url}>Read more.</a></p>}
+          <a className="website-link" href={project.url}>Website</a>
+        </div>
+        <FactTable facts={project.facts} />
+      </div>
+    </>
+  )
+}
+
+function MobileProject({ project, index, open }) {
+  return (
+    <article className="mobile-project">
+      <div className="mobile-project-top">
+        <span>{number(index)}</span>
+        <div><h2>{project.mobileTitle || project.title}</h2>
+          <ul>{(project.mobileTags || project.tags.slice(1)).map((tag) => <li key={tag}>{tag}</li>)}</ul>
+        </div>
+        <button onClick={() => open(index)} aria-label={`More about ${project.mobileTitle || project.title}`} aria-haspopup="dialog">More</button>
+      </div>
+      <ProjectStrip project={project} />
+    </article>
+  )
+}
+
+function ProjectStrip({ project }) {
+  const strip = useRef(null)
+  useGSAP(() => {
+    const element = strip.current
+    const mode = gsap.matchMedia(element)
+    mode.add('(max-width: 991px) and (prefers-reduced-motion: no-preference)', () => {
+      const duplicate = element.querySelector('[aria-hidden="true"]')
+      const loopWidth = () => duplicate.offsetLeft - element.firstElementChild.offsetLeft
+      const autoplay = gsap.fromTo(element, { scrollLeft: 0 }, {
+        scrollLeft: loopWidth,
+        duration: 15,
+        ease: 'none',
+        repeat: -1,
+        repeatRefresh: true,
+        paused: true,
+      })
+      const play = () => {
+        if (!element.matches(':focus-visible') && loopWidth()) {
+          autoplay.progress((element.scrollLeft % loopWidth()) / loopWidth()).play()
+        }
+      }
+      const pause = () => autoplay.pause()
+      play()
+      element.addEventListener('focusin', pause)
+      element.addEventListener('focusout', play)
+      element.addEventListener('pointerdown', pause)
+      element.addEventListener('pointerup', play)
+      element.addEventListener('pointercancel', play)
+      element.addEventListener('pointerleave', play)
+      return () => {
+        element.removeEventListener('focusin', pause)
+        element.removeEventListener('focusout', play)
+        element.removeEventListener('pointerdown', pause)
+        element.removeEventListener('pointerup', play)
+        element.removeEventListener('pointercancel', play)
+        element.removeEventListener('pointerleave', play)
+      }
+    })
+    return () => mode.revert()
+  }, { scope: strip })
+
+  return (
+    <div className="project-strip" ref={strip} tabIndex={0} role="region" aria-label={`${project.title} media`}>
+      {project.strip.concat(project.strip).map((item, index) => {
+        const position = index % project.strip.length
+        return (
+          <figure key={index} style={{ '--strip-ratio': `${project.stripWidths[position]} / 168` }}
+            aria-hidden={index >= project.strip.length ? true : undefined}><Media item={project.gallery[item]} /></figure>
+        )
+      })}
+    </div>
+  )
+}
+
+function ProjectSheet({ index, change, focusHeading }) {
+  const root = useRef(null)
+  const project = projects[index]
+  useGSAP((context, contextSafe) => {
+    root.current.closest('dialog').scrollTop = 0
+    const animate = !reducedMotion()
+    let split
+    const frame = requestAnimationFrame(contextSafe(() => {
+      const heading = root.current.querySelector('h2')
+      if (focusHeading) {
+        heading.tabIndex = -1
+        heading.focus({ preventScroll: true })
+      }
+      if (!animate) return
+      split = SplitText.create(heading, { type: 'lines', mask: 'lines' })
+      gsap.timeline()
+        .from(split.lines, { yPercent: 150, duration: 1.6, stagger: 0.1, ease: 'expo.out' }, 0.6)
+        .from('.project-tags li', { y: 10, opacity: 0, duration: 0.8, stagger: 0.06, ease: 'expo.out' }, 0.43)
+        .from('.project-info > *', { y: 18, opacity: 0, duration: 0.8, stagger: 0.06, ease: 'expo.out' }, 0.8)
+    }))
+    if (!animate) return () => cancelAnimationFrame(frame)
+    const videos = root.current.querySelectorAll('video')
+    const watcher = new IntersectionObserver((entries) => {
+      for (const { target, isIntersecting } of entries) {
+        if (isIntersecting) target.play().catch(() => {})
+        else target.pause()
+      }
+    }, { threshold: 0.25 })
+    videos.forEach((video) => watcher.observe(video))
+    return () => {
+      cancelAnimationFrame(frame)
+      split?.revert()
+      watcher.disconnect()
+    }
+  }, { scope: root })
+  return (
+    <article className="project-sheet" ref={root}>
+      <ProjectInfo project={project} heading="h2" />
+      <Gallery project={project} prefix="sheet" />
+      <nav className="project-controls" aria-label="Other investments">
+        <button onClick={() => change((index + projects.length - 1) % projects.length)}>Previous</button>
+        <button onClick={() => change((index + 1) % projects.length)}>Next</button>
+      </nav>
+    </article>
+  )
+}
+
+function Team() {
+  return (
+    <section id="teams" className="team-section home-section" aria-labelledby="team-title">
+      <Label>Team</Label>
+      <span className="team-tag">Decode Team</span>
+      <h2 className="section-title reveal" id="team-title">The edge isn't the thesis. It's the people executing it.</h2>
+      <div className="desktop-team">
+        {team.map(([name, role, portrait, link, bio, jobs]) => (
+          <article className="person" key={name}>
+            <div className="person-name"><h3>{name}</h3><p>{role}</p><a href={`https://www.linkedin.com/in/${link}`}>LinkedIn</a></div>
+            <div className="person-detail">
+              <div className="person-intro"><img src={media(`${portrait}.jpg`)} alt="" loading="lazy" /><p>{bio}</p></div>
+              <FactTable facts={jobs} />
+            </div>
+          </article>
+        ))}
+      </div>
+      <div className="mobile-team">
+        {team.map(([name, role, portrait, link, bio, jobs]) => (
+          <details name="team-profile" key={name}>
+            <summary>
+              <img src={media(`${portrait}.jpg`)} alt="" loading="lazy" />
+              <span><strong>{name}</strong><span>{role}</span></span>
+              <span className="profile-toggle" aria-hidden="true" />
+            </summary>
+            <div className="mobile-profile">
+              <p>{bio}</p>
+              <a className="website-link" href={`https://www.linkedin.com/in/${link}`}>LinkedIn</a>
+              <FactTable facts={jobs} />
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function ContactForm() {
+  const formId = useId()
+  const [draft, setDraft] = useState('')
+  const [offered, setOffered] = useState(false)
+
+  const submit = (event) => {
+    event.preventDefault()
+    const fields = new FormData(event.currentTarget)
+    const body = `${fields.get('message')}\n\n${fields.get('name')}\n${fields.get('email')}`
+    const mail = `mailto:contact@mecha.xyz?subject=Decode%20inquiry&body=${encodeURIComponent(body)}`
+    setDraft(mail)
+    setOffered(true)
+    window.location.href = mail
+  }
+
+  return (
+    <form className="contact-form" aria-label="Email form" onSubmit={submit}>
+      <label htmlFor={`${formId}-name`}>Name*<input id={`${formId}-name`} name="name" autoComplete="name" placeholder="Enter Name" required /></label>
+      <label htmlFor={`${formId}-email`}>Email*<input id={`${formId}-email`} name="email" type="email" autoComplete="email" placeholder="Enter Email" required /></label>
+      <label className="message-field" htmlFor={`${formId}-message`}>Message<textarea id={`${formId}-message`} name="message" placeholder="Enter Message" rows={3} /></label>
+      <Cta type="submit">Send message</Cta>
+      {offered && <p className="form-note" role="status">Send the draft from your email app. <a href={draft}>Open email draft</a></p>}
+    </form>
+  )
+}
+
+function Footer({ illustrated = false }) {
+  return (
+    <footer className={`footer ${illustrated ? 'illustrated-footer' : ''}`}>
+      <div className="footer-details">
+        <div className="footer-info"><span>Privacy policy</span><a href="mailto:contact@mecha.xyz">contact@mecha.xyz</a></div>
+        {illustrated && <img className="footer-icons" src={media('footer-icons.png')} alt="" />}
+      </div>
+      {illustrated && <DecodeMark className="footer-wordmark" />}
+    </footer>
+  )
+}
+
+function Contact() {
+  return (
+    <section id="contact" className="contact-section home-section" aria-labelledby="contact-title">
+      <Label>Contact</Label>
+      <img className="discipline" src={media('discipline.png')} alt="PE discipline, VC upside" />
+      <h2 id="contact-title" className="section-title reveal">Invest with us, share an opportunity, or make an inquiry.</h2>
+      <ContactForm />
+      <img className="contact-footer-art" src={media('contact-art.png')} alt="" loading="lazy" />
+      <Footer illustrated />
+    </section>
+  )
+}
+
+function Home({ open, active }) {
+  const [mobile, setMobile] = useState(() => window.matchMedia('(max-width: 991px)').matches)
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 991px)')
+    const update = () => setMobile(query.matches)
+    query.addEventListener('change', update)
+    return () => query.removeEventListener('change', update)
+  }, [])
+  return (
+    <>
+      <aside className="home-rail" aria-label="Investment index">
+        <div className="rail-model">{!mobile && <Suspense><Model /></Suspense>}</div>
+        <img className="rail-contact-art" src={media('contact-art.png')} alt="" />
+        <nav className="rail-index">
+          <a href="#investments"><span aria-hidden="true">├</span><RollingText>Investments</RollingText></a>
+          {projects.map((project, index) => (
+            <a key={project.id} data-project-link={project.id} className={active === project.id ? 'active' : ''} href={`#${project.id}`}>
+              <RollingText>{number(index)}</RollingText><RollingText>{project.title}</RollingText>
+            </a>
+          ))}
+        </nav>
+      </aside>
+      <main className="home-main">
+        <section className="hero home-section" id="top" aria-labelledby="hero-title">
+          <span className="section-label"><img className="manifesto-icon" src={media('land-chip.svg')} alt="" />Manifesto</span>
+          <img className="discipline" src={media('discipline.png')} alt="PE discipline, VC upside" />
+          <h1 id="hero-title">Robotics will knock over the global economy. Decode deploys physical automation into legacy industries</h1>
+          <div className="hero-mobile-model">{mobile && <Suspense><Model compact /></Suspense>}</div>
+        </section>
+        <div className="desktop-projects">
+          {projects.map((project) => (
+            <section className="desktop-project home-section" id={project.id} key={project.id} data-project={project.id}>
+              <ProjectInfo project={project} />
+              <Gallery project={project} prefix="desktop" />
+            </section>
+          ))}
+        </div>
+        <section className="mobile-projects" id="mobile-investments" aria-label="Investments">
+          <Label>Investments</Label>
+          {projects.map((project, index) => <MobileProject key={project.id} project={project} index={index} open={open} />)}
+        </section>
+        <Team />
+        <Contact />
+      </main>
+    </>
+  )
+}
+
+function EssayLinks({ entries, index = false }) {
+  return (
+    <div className="essay-links">
+      <div className="essay-label"><span>{index ? 'Essay list' : 'Read more'}</span>{index && <span>More</span>}</div>
+      <ul>{entries.map(([title, slug]) => <li key={slug}><a href={essayUrl(slug)}><RollingText>{title}</RollingText><span className="essay-plus" aria-hidden="true">+</span></a></li>)}</ul>
+    </div>
+  )
+}
+
+function Blog({ essay }) {
+  const title = essay?.[0]
+  return (
+    <main className={`blog-main ${essay ? 'essay' : 'essay-index'}`} id="top">
+      <div className="editorial-head">
+        {essay ? <a href="/blog" className="website-link">Back</a> : <ProjectIcons icon="recycle-icon.png" />}
+        <h1>{title || <>Essays from{' '}<br />the future</>}</h1>
+      </div>
+      {essay && <article className="essay-copy">
+        {essayBody.map((paragraph, index) => <p key={paragraph}>{index === 3 ? <strong>{paragraph}</strong> : paragraph}</p>)}
+        <p className="essay-media-intro">Engineering for the physical world begins with economics, but it succeeds through the details of the operation itself. The people doing the work know where a process stops, what breaks frequently, and which failures create the largest costs. Measuring those details gives a team a starting point for changes that will hold up when it deploys them at scale.</p>
+        <figure><img src={media('essay-image.jpg')} alt="An industrial robotics installation" loading="lazy" /><figcaption>Illustration</figcaption></figure>
+        {essayBody.slice(0, 3).map((paragraph) => <p key={`closing-${paragraph}`}>{paragraph}</p>)}
+      </article>}
+      <EssayLinks entries={essay ? essays.slice().reverse().filter((item) => item !== essay) : essays} index={!essay} />
+      <div className="blog-footer-art"><video src={media('footer-video.webm')} muted loop playsInline autoPlay={!reducedMotion()} aria-hidden="true" /></div>
+      <Footer illustrated />
+    </main>
+  )
+}
+
+export default function App() {
+  const root = useRef(null)
+  const wipe = useRef(null)
+  const scroll = useRef(null)
+  const cover = useRef(null)
+  const counter = useRef(null)
+  const navigating = useRef(false)
+  const [overlay, setOverlay] = useState(null)
+  const [active, setActive] = useState('top')
+  const [projectIndex, setProjectIndex] = useState(0)
+  const projectStepped = useRef(false)
+  const route = location.pathname.replace(/\/$/, '')
+  const essay = essays.find((entry) => essayUrl(entry[1]) === route)
+  const home = route === ''
+  const blog = route === '/blog'
+  const [fullIntro] = useState(() => {
+    if (!home || reducedMotion()) return false
+    try {
+      const last = sessionStorage.getItem('robotics-last-page')
+      return !last || last === '/'
+    } catch {
+      return true
+    }
+  })
+  const [loading, setLoading] = useState(fullIntro)
+  const navActive = projects.some(({ id }) => id === active) ? 'investments' : active
+  useEntrance({ root, cover, counter, home, full: fullIntro, setLoading })
+
+  useEffect(() => {
+    const title = essay?.[0] || (blog ? 'Essays from the future | Decode' : 'Decode | Robotics & AI Investment')
+    document.title = title
+    try {
+      sessionStorage.setItem('robotics-last-page', location.pathname)
+    } catch {
+      // Navigation still works when session storage is unavailable.
+    }
+  }, [blog, essay])
+
+  useEffect(() => {
+    if (!home || loading) return
+    const query = new URLSearchParams(location.search).get('section')
+    const section = query || location.hash.slice(1)
+    if (!['investments', 'aescape', 'landscaping', 'teams', 'contact'].includes(section)) return
+    const frame = requestAnimationFrame(() => goToSection(section, { immediate: !query, duration: 1.4 }))
+    return () => cancelAnimationFrame(frame)
+  }, [home, loading])
+
+  useLayoutEffect(() => {
+    const instance = scroll.current
+    if (!instance) return
+    if (overlay || loading) instance.stop()
+    else instance.start()
+  }, [overlay, loading])
+
+  const { contextSafe } = useGSAP(() => {
+    const mediaQuery = gsap.matchMedia(root.current)
+    mediaQuery.add({
+      desktop: '(width > 991px)',
+      mobile: '(max-width: 991px)',
+      reduced: '(prefers-reduced-motion: reduce)',
+    }, (context) => {
+      if (context.conditions.reduced) return
+      const instance = new Lenis({
+        duration: 1.8,
+        lerp: 0.05,
+        allowNestedScroll: true,
+        stopInertiaOnNavigate: true,
+      })
+      const update = (time) => instance.raf(time * 1000)
+      scroll.current = instance
+      instance.on('scroll', ScrollTrigger.update)
+      gsap.ticker.add(update)
+      if (root.current.classList.contains('is-loading') || root.current.querySelector('dialog[open]')) instance.stop()
+      const reveals = []
+      let disposed = false
+      context.add('splitHeadings', () => {
+        if (disposed) return
+        for (const element of root.current.querySelectorAll('.reveal')) {
+          if (!element.offsetWidth) continue
+          reveals.push(SplitText.create(element, {
+            type: 'lines', mask: 'lines', autoSplit: true,
+            onSplit: ({ lines }) => gsap.from(lines, {
+              yPercent: 150,
+              stagger: 0.1,
+              duration: 2,
+              ease: 'expo.out',
+              scrollTrigger: { trigger: element, start: 'top bottom', toggleActions: 'play none none reverse' },
+            }),
+          }))
+        }
+      })
+      document.fonts.ready.then(context.splitHeadings)
+      for (const frame of root.current.querySelectorAll('.desktop-project .frame')) {
+        gsap.fromTo(frame, { y: 6 }, {
+          y: -9,
+          ease: 'none',
+          scrollTrigger: { trigger: frame, start: 'top bottom', end: 'bottom top', scrub: 0.45 },
+        })
+      }
+      const videos = root.current.querySelectorAll('.desktop-project video, .project-strip video')
+      const watcher = new IntersectionObserver((entries) => {
+        for (const { target, isIntersecting } of entries) {
+          if (isIntersecting) target.play().catch(() => {})
+          else target.pause()
+        }
+      }, { threshold: 0.25 })
+      videos.forEach((video) => watcher.observe(video))
+      return () => {
+        disposed = true
+        gsap.ticker.remove(update)
+        instance.destroy()
+        scroll.current = null
+        reveals.forEach((split) => split.revert())
+        watcher.disconnect()
+        videos.forEach((video) => video.pause())
+      }
+    })
+    mediaQuery.add('(max-width: 991px)', () => {
+      const teamSection = root.current.querySelector('#teams')
+      if (!teamSection) return
+      ScrollTrigger.create({
+        trigger: teamSection,
+        start: 'top 64px',
+        end: 'bottom 64px',
+        onToggle: ({ isActive }) => setActive(isActive ? 'teams' : 'top'),
+      })
+    })
+    mediaQuery.add('(width > 991px)', () => {
+      for (const section of root.current.querySelectorAll('.home-section')) {
+        const link = root.current.querySelector(`[data-project-link="${section.id}"]`)
+        ScrollTrigger.create({
+          trigger: section,
+          start: 'top 50%',
+          end: 'bottom 50%',
+          onToggle: ({ isActive }) => { if (isActive) setActive(section.id) },
+          onUpdate: ({ progress }) => link?.style.setProperty('--project-progress', progress),
+        })
+      }
+      if (!home) return
+      gsap.to('.home-rail', {
+        '--rail-progress': 1,
+        ease: 'none',
+        duration: reducedMotion() ? 0 : 1,
+        scrollTrigger: { start: 0, end: () => window.innerHeight, scrub: 0.55 },
+      })
+      gsap.to('.home-rail', {
+        '--rail-exit': 1,
+        ease: 'none',
+        duration: reducedMotion() ? 0 : 1,
+        scrollTrigger: {
+          start: () => window.innerHeight,
+          end: () => window.innerHeight * 1.8,
+          scrub: 0.55,
+        },
+      })
+    })
+    mediaQuery.add('(width > 991px) and (prefers-reduced-motion: no-preference)', (context) => {
+      const footer = root.current.querySelector('.footer-peek')
+      const content = root.current.querySelector('main')
+      if (!footer || !content) return
+      const fall = CustomEase.create('footerFall', '0.83,0.02,0.23,0.99')
+      let distance = 0
+      let release
+      const move = context.add('liftFooter', (height, duration, ease) => {
+        gsap.to(footer, { y: -height, duration, ease, overwrite: true })
+        gsap.to(content, { y: -height, duration, ease, overwrite: true })
+      })
+      const onWheel = (event) => {
+        if (navigating.current || root.current.querySelector('dialog[open]') || root.current.classList.contains('is-loading')) return
+        const atBottom = window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 2
+        if (!atBottom || event.deltaY <= 0) {
+          if (distance) {
+            distance = 0
+            move(0, 0.35, 'power2.out')
+          }
+          return
+        }
+        distance = Math.min(1, distance + Math.min(event.deltaY, 24) * 0.000825)
+        const height = footer.offsetHeight * (1 - (1 - distance) ** 3)
+        move(height, 0.17, 'power2.out')
+        clearTimeout(release)
+        release = setTimeout(() => {
+          distance = 0
+          move(0, 0.62, fall)
+        }, 70)
+      }
+      window.addEventListener('wheel', onWheel, { passive: true })
+      return () => {
+        clearTimeout(release)
+        window.removeEventListener('wheel', onWheel)
+      }
+    })
+    const clearWipe = (event) => {
+      if (!event.persisted) return
+      navigating.current = false
+      gsap.set(wipe.current, { clearProps: 'all' })
+      gsap.set('.site-header, .home-main, .home-rail, .blog-main', { clearProps: 'transform' })
+    }
+    window.addEventListener('pageshow', clearWipe)
+    return () => {
+      mediaQuery.revert()
+      window.removeEventListener('pageshow', clearWipe)
+    }
+  }, { scope: root })
+
+  function goToSection(id, options) {
+    const mobile = window.matchMedia('(max-width: 991px)').matches
+    const section = document.getElementById(id === 'investments' && mobile ? 'mobile-investments' : id)
+    if (!section) return
+    if (!scroll.current) {
+      section.scrollIntoView({ behavior: options?.immediate ? 'instant' : 'auto' })
+      return
+    }
+    scroll.current.scrollTo(section, { duration: 1.8, force: true, ...options })
+  }
+
+  const navigate = contextSafe((href) => {
+    if (navigating.current) return
+    if (reducedMotion()) {
+      location.assign(href)
+      return
+    }
+    navigating.current = true
+    const path = new URL(href, location.href).pathname
+    const background = path === '/blog' ? '#e9e7db' : path === '/' ? '#e9edef' : '#fff'
+    gsap.set(wipe.current, { visibility: 'visible', backgroundColor: background })
+    gsap.to('.site-header, .home-main, .home-rail, .blog-main', { y: -200, duration: 1.2, ease: wipeEase, overwrite: 'auto' })
+    gsap.fromTo(wipe.current, { yPercent: 100 }, {
+      yPercent: 0, delay: 0.12, duration: 0.9, ease: wipeEase,
+      onComplete: () => location.assign(href),
+    })
+  })
+
+  const onNavigate = (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+    const link = event.target.closest('a[href]')
+    if (!link || link.target) return
+    const href = link.getAttribute('href')
+    if (home && href.startsWith('#') && href.length > 1) {
+      event.preventDefault()
+      if (location.hash !== href) history.pushState(null, '', href)
+      goToSection(href.slice(1))
+      return
+    }
+    if (!href.startsWith('/')) return
+    if (link.href === location.href) return
+    event.preventDefault()
+    navigate(link.href)
+  }
+
+  const close = (after) => {
+    setOverlay(after === 'join' ? 'join' : null)
+    if (!after || after === 'join') return
+    if (after.startsWith('#')) {
+      if (location.hash !== after) history.pushState(null, '', after)
+      requestAnimationFrame(() => goToSection(after.slice(1)))
+    } else {
+      requestAnimationFrame(() => navigate(after))
+    }
+  }
+
+  const openProject = (index) => {
+    projectStepped.current = false
+    setProjectIndex(index)
+    setOverlay('project')
+  }
+
+  const stepProject = (index) => {
+    projectStepped.current = true
+    setProjectIndex(index)
+  }
+
+  return (
+    <div ref={root} className={`site ${home ? 'is-home' : blog ? 'is-index' : 'is-essay'}${loading ? ' is-loading' : ''}`} data-active={active} onClick={onNavigate}>
+      <Header home={home} blog={blog} active={navActive} open={setOverlay} intro={fullIntro} />
+      <div className="intro-cover" ref={cover} aria-hidden="true">
+        {fullIntro && <div className="loading-counter"><span>├</span><span ref={counter}>00</span></div>}
+      </div>
+      {home && <Home open={openProject} active={active} />}
+      {(blog || essay) && <Blog essay={essay} />}
+      {!home && !blog && !essay && <main className="missing"><h1>Page not found</h1><a href="/">Back to Decode</a></main>}
+      {(home || blog || essay) && <div className="footer-peek" aria-hidden="true"><DecodeMark /></div>}
+      <Cta className="sticky-cta" onClick={() => setOverlay('join')} aria-haspopup="dialog">Join the revolution</Cta>
+      <div className="route-wipe" ref={wipe} aria-hidden="true" />
+      {overlay === 'menu' && <Overlay key="menu" kind="menu" label="Navigation menu" close={close}>
+        {(dismiss) => <Menu home={home} dismiss={dismiss} />}
+      </Overlay>}
+      {overlay === 'join' && <Overlay key="join" kind="join" label="Join the revolution" close={close}>
+        {() => <div className="join-content">
+          <div className="join-form"><Label symbol="Ⓓ"><span className="join-label-text">Contact us</span></Label><h2>Future of robotics{' '}<br />begins here</h2>
+            <p>Invest with us or share an opportunity</p><ContactForm />
+          </div>
+          <div className="join-model"><div className="join-model-motion"><Suspense><Model inverted /></Suspense></div></div>
+        </div>}
+      </Overlay>}
+      {overlay === 'project' && <Overlay key="project" kind="project" label="Investment details" close={close}>
+        {() => <ProjectSheet key={projectIndex} index={projectIndex} change={stepProject} focusHeading={projectStepped.current} />}
+      </Overlay>}
+    </div>
+  )
+}
