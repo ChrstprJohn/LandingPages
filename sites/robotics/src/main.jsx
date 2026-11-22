@@ -502,8 +502,8 @@ function Blog({ essay }) {
       </div>
       {essay && <article className="essay-copy">
         <p>{essay[2]}</p>
-        <figure><Media item={essayMedia[essay[1]]} /></figure>
         {essayBody[essay[1]].map(([heading, paragraph]) => <section key={heading}><h2>{heading}</h2><p>{paragraph}</p></section>)}
+        <figure><Media item={essayMedia[essay[1]]} /></figure>
         {source && <p className="essay-source">Further reading <a href={source[1]}>{source[0]}</a></p>}
       </article>}
       <EssayLinks entries={essay ? essays.slice().reverse().filter((item) => item !== essay) : essays} index={!essay} />

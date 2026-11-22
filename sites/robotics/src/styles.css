@@ -756,6 +756,9 @@ h1, .section-title, .project-title, .join-form h2 {
 
 @media (max-width: 349px) {
   :root { --hero-copy-size: calc(7.27vw + 1.09px); }
+  .blog-main.essay { padding-top: 61px; }
+  .essay .editorial-head { min-height: 109px; padding: 0 0 24px; }
+  .essay .editorial-head h1 { font-size: calc(0.875 * var(--hero-copy-size)); }
   .blog-main.essay-index { padding-top: 61px; }
   .essay-index .editorial-head { min-height: 179px; padding-top: 0; }
   .essay-index .editorial-head h1 { font-size: var(--hero-copy-size); }
