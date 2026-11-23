@@ -239,6 +239,13 @@ if (index >= 0 && page === "work") {
 }
 
 document.body.dataset.page = page;
+if (page === "home") {
+  const navigation = performance.getEntriesByType("navigation")[0];
+  const fromOutside = !document.referrer || new URL(document.referrer).origin !== location.origin;
+  if (navigation?.type === "reload" || (navigation?.type !== "back_forward" && fromOutside)) {
+    document.body.classList.add("home-entrance");
+  }
+}
 if (item) document.body.dataset.detail = "";
 if (page !== "home") {
   document.querySelector(`.site-header a[href="/${CSS.escape(page)}"]`)?.setAttribute("aria-current", "page");

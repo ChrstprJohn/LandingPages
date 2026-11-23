@@ -62,11 +62,17 @@ nav { display: flex; gap: 1rem; }
 .cover h1 { position: absolute; font-size: 20vw; white-space: nowrap; letter-spacing: -.079em; top: 50%; transform: translate(-.04em, -60%); }
 .portrait { width: 24.3vw; aspect-ratio: 3/4; background: #181818; }
 .cover small { position: absolute; bottom: var(--gutter); }
-.cover .portrait, .listing-photo, .about-cover > img { animation: portrait-in .7s ease-out both; }
-.cover h1, .listing-cover h1, .journal-lead h1, .about-cover h1, .project-heading, .article-lead h1 {
+.home-entrance .cover :is(h1, small) {
+  animation: home-title-in 1s cubic-bezier(.15,.62,.33,1) both;
+  animation-timing-function: linear(0, .53 22%, .78 40%, .88 54%, .94 66%, .98 80%, 1);
+}
+.home-entrance .cover small { animation-delay: .23s; }
+.listing-photo, .about-cover > img { animation: portrait-in .7s ease-out both; }
+.listing-cover h1, .journal-lead h1, .about-cover h1, .project-heading, .article-lead h1 {
   animation: title-in .7s cubic-bezier(.2,.65,.3,1) backwards;
 }
 @keyframes portrait-in { from { opacity: 0; scale: .96; } }
+@keyframes home-title-in { from { opacity: 0; translate: 0 40px; } }
 @keyframes title-in { from { opacity: 0; clip-path: inset(100% 0 0); } to { opacity: 1; clip-path: inset(0); } }
 .statement { min-height: 100svh; place-content: center; display: grid; grid-template-columns: minmax(0, 50rem); padding-bottom: 1rem; gap: 1rem; text-align: center; }
 .statement h2 { font-size: 12.8rem; line-height: 1; white-space: nowrap; }
