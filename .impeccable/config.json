@@ -8,6 +8,15 @@
         "value": "instrument serif",
         "createdAt": "2026-11-14T16:24:08.427Z",
         "reason": "Agent decided: Google Fonts import matches the supplied Lundani Studio reference typography for this faithful recreation."
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "sites/le-reve/index.html"
+        ],
+        "createdAt": "2026-11-23T12:52:36.129Z",
+        "reason": "Reference recreation: the repeated editorial banner is decorative, hidden from assistive technology, and static when reduced motion is requested."
       }
     ]
   }
