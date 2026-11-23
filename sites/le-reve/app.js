@@ -163,7 +163,7 @@ function about() {
 
 function journal() {
   return `<section class="journal-lead inset">
-    <p>An archive of creative experiments and the stories behind our work in art, design and branding.</p>
+    <p>A curated archive of insights, ideas, and creative explorations—capturing our perspective on art, design, branding, and the stories that inspire our work.</p>
     <h1>BLOG.</h1>
   </section><section class="inset" aria-label="Journal articles">${journalGrid(articles)}</section>`;
 }
