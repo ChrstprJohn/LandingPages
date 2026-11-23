@@ -359,15 +359,21 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .back { display: inline-block; margin-top: 1.5em; }
 .article-lead { padding-block: 5rem max(3rem, 3.3vw); text-align: center; }
 .article-lead h1 { margin-inline: auto; font-size: clamp(2rem, 9.15vw, 7.3125rem); letter-spacing: -.027em; line-height: 1.1; }
-.article-lead p { margin-top: max(3rem, 3.5vw); display: flex; justify-content: space-between; border-bottom: 1px solid #595959; }
+.article-lead p { margin-top: 3rem; display: flex; justify-content: space-between; border-bottom: 1px solid #595959; font-size: 1.2375rem; }
 .article-image img { height: auto; }
-.article-text { width: min(calc(100% - 2 * var(--gutter)), 37.5rem); margin: clamp(4rem, 12.5vw, 10rem) auto 0; font-size: max(1rem, 1.55vw); line-height: 1.3; letter-spacing: -.025em; }
+.article-text { width: min(calc(100% - 4 * var(--gutter)), 37.5rem); margin: clamp(3rem, 12.5vw, 10rem) auto 0; font-size: 1.2375rem; font-weight: 700; line-height: 1.3; letter-spacing: -.025em; }
 .article-text p + p { margin-top: 2rem; }
-.article-text h2 { margin: 2.5rem 0 1.25rem; font: 700 clamp(1.5rem, 2.8vw, 2.25rem)/1.1 Arial, sans-serif; text-transform: none; letter-spacing: -.04em; }
+.article-text h2 { margin: 2.5rem 0 1.25rem; font: 400 clamp(1.5rem, 2.8vw, 2.25rem)/1.1 Arial, sans-serif; text-transform: none; letter-spacing: -.04em; }
 .article-text img { height: auto; aspect-ratio: 3/2; }
-.article-quote { width: min(calc(100% - 2 * var(--gutter)), 50rem); margin: clamp(4rem, 12.5vw, 10rem) auto 0; text-align: center; }
-.article-quote blockquote { margin: 0; font: 400 clamp(1.75rem, 3.52vw, 2.8125rem)/1.1 var(--display); text-transform: uppercase; }
+.article-quote { width: min(calc(100% - 2 * var(--gutter)), 50rem); margin: clamp(3rem, 12.5vw, 10rem) auto 0; text-align: center; font-size: 1.2375rem; }
+.article-quote blockquote { margin: 0; font: 600 clamp(1.2rem, 3.52vw, 2.8125rem)/1.46 Arial, sans-serif; text-transform: uppercase; }
 .article-quote figcaption { margin-top: 1rem; color: #aaa; }
+article + .related { padding-top: clamp(6rem, 12.5vw, 10rem); }
+article + .related > h2 { padding-block: 0 clamp(2rem, 3.75vw, 3rem); font-size: clamp(3.36rem, 10.55vw, 8.4375rem); }
+@media (max-width: 640px) {
+  .article-lead h1 { font-size: 2.0625rem; }
+  .article-lead p, .article-text, .article-quote { font-size: .825rem; }
+}
 footer { position: relative; background: #eaeef4; color: var(--black); padding: 5rem var(--gutter) 1rem; font-size: 1.2375rem; }
 body[data-page="about"] footer { background: #ecf0f6; }
 body[data-page="work"]:not([data-detail]) footer,
