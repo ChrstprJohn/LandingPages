@@ -35,7 +35,7 @@ function DecodeMark({ className }) {
   )
 }
 
-function Logo({ href = '/', intro = false }) {
+function Logo({ href = '/', intro = false, onClick }) {
   const mark = useRef(null)
   const hover = useRef(null)
   useGSAP(() => {
@@ -51,7 +51,10 @@ function Logo({ href = '/', intro = false }) {
   }
   const unfold = () => hover.current?.reverse()
   return (
-    <a className="wordmark" href={href} aria-label="Decode home" onPointerEnter={fold} onPointerLeave={unfold} onFocus={fold} onBlur={unfold} onClick={fold}>
+    <a className="wordmark" href={href} aria-label="Decode home" onPointerEnter={fold} onPointerLeave={unfold} onFocus={fold} onBlur={unfold} onClick={(event) => {
+      fold(event)
+      onClick?.(event)
+    }}>
       <span ref={mark}><DecodeMark /></span>
     </a>
   )
@@ -212,24 +215,20 @@ function Overlay({ kind, label, close, children }) {
 
 function Menu({ home, dismiss }) {
   const links = [['investments', 'Services'], ['teams', 'Team'], ['contact', 'Contact']]
+  const follow = (event) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+    event.preventDefault()
+    dismiss(event.currentTarget.getAttribute('href'))
+  }
   return (
     <div className="menu-content">
-      <Logo href={home ? '#top' : '/'} />
+      <Logo href={home ? '#top' : '/'} onClick={follow} />
       <nav className="menu-grid" aria-label="Mobile navigation">
         {links.map(([id, label]) => {
           const href = home ? `#${id}` : `/?section=${id}`
-          return <a key={id} href={href} onClick={(event) => {
-            if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-            event.preventDefault()
-            dismiss(href)
-          }}>{label}</a>
+          return <a key={id} href={href} onClick={follow}>{label}</a>
         })}
-        <a href="/blog" onClick={(event) => {
-          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-          event.preventDefault()
-          event.stopPropagation()
-          dismiss('/blog')
-        }}>Blog</a>
+        <a href="/blog" onClick={follow}>Blog</a>
         <Cta onClick={() => dismiss('join')}>Start a project</Cta>
       </nav>
     </div>
