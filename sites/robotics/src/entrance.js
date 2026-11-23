@@ -18,6 +18,12 @@ export function useEntrance({ root, cover, counter, home, full, setLoading }) {
 
     let disposed = false
     let title
+    let titleResize
+    const restoreTitle = () => {
+      titleResize?.disconnect()
+      title?.revert()
+      title = undefined
+    }
     const body = document.body
     const previousOverflow = body.style.overflow
     const fonts = document.fonts.ready
@@ -28,7 +34,13 @@ export function useEntrance({ root, cover, counter, home, full, setLoading }) {
       if (heading) {
         gsap.set(heading, { visibility: 'visible' })
         title = SplitText.create(heading, { type: 'lines', mask: 'lines', linesClass: 'intro-line' })
-        timeline.from(title.lines, { yPercent: 150, stagger: 0.1, onComplete: () => title.revert() }, 0)
+        const splitWidth = heading.getBoundingClientRect().width
+        // Restore normal wrapping when the measured lines no longer fit.
+        titleResize = new ResizeObserver(([entry]) => {
+          if (Math.abs(entry.contentRect.width - splitWidth) > 1) restoreTitle()
+        })
+        titleResize.observe(heading)
+        timeline.from(title.lines, { yPercent: 150, stagger: 0.1, onComplete: restoreTitle }, 0)
       }
       timeline.fromTo('.desktop-nav a, .mobile-nav button',
         { yPercent: 120, autoAlpha: 0 },
@@ -90,7 +102,7 @@ export function useEntrance({ root, cover, counter, home, full, setLoading }) {
     return () => {
       disposed = true
       body.style.overflow = previousOverflow
-      title?.revert()
+      restoreTitle()
     }
   }, { scope: root })
 }
