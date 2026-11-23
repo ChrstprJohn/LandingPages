@@ -533,7 +533,9 @@ function Home({ open, active }) {
   return (
     <>
       <aside className="home-rail" aria-label="Service index">
-        <div className="rail-model">{!mobile && <Suspense><Model /></Suspense>}</div>
+        <div className="rail-model">
+          <div className="rail-model-reveal">{!mobile && <Suspense><Model /></Suspense>}</div>
+        </div>
         <ContactArtwork className="rail-contact-art" />
         <nav className="rail-index">
           <a href="#investments"><span aria-hidden="true">├</span><RollingText>Services</RollingText></a>

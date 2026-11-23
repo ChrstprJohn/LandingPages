@@ -50,7 +50,7 @@ export function useEntrance({ root, cover, counter, home, full, setLoading }) {
         timeline
           .from('.hero .section-label, .hero .discipline', { clipPath: 'inset(0 0 100% 0)', duration: 1.2 }, 0.3)
           .from('.hero-mobile-model', { clipPath: 'inset(0 0 100% 0)', duration: 1.2, ease: 'power2.inOut' }, 0.4)
-          .fromTo('.rail-model .model', { yPercent: 30, autoAlpha: 0 }, {
+          .fromTo('.rail-model-reveal', { yPercent: 30, autoAlpha: 0 }, {
             yPercent: 0, autoAlpha: 1, duration: 0.9, ease: 'power3.out', clearProps: 'transform,visibility,opacity',
           }, railStart)
           .fromTo('.rail-index a', { autoAlpha: 0, clipPath: 'inset(100% 0 0)' }, {
