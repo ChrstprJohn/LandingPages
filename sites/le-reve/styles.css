@@ -159,7 +159,7 @@ main > .banner { margin-inline: var(--gutter); }
   transition: opacity .3s ease, filter .45s ease;
 }
 video.is-playing { opacity: 1; }
-.project-image img, .journal-card img { transition: transform .55s ease, filter .55s ease; }
+.project-image img { transition: filter .55s ease; }
 .project-image strong {
   position: absolute;
   inset: 0;
@@ -174,10 +174,15 @@ video.is-playing { opacity: 1; }
 .project-ticker { display: flex; width: max-content; color: var(--black); background: var(--red); font-size: max(.875rem, 1.55vw); white-space: nowrap; letter-spacing: -.04em; animation: project-ticker 2.4s linear infinite paused; }
 .project-ticker > span { flex: none; padding-inline: 1rem; }
 @keyframes project-ticker { to { transform: translateX(-6.25%); } }
-.journal-card:is(:hover, :focus-visible) img { transform: scale(1.09); }
+.journal-card img {
+  transition: transform .48s cubic-bezier(.34,.01,.25,1);
+  transition-timing-function: linear(0, .04 8%, .15 16%, .31 24%, .47 32%, .64 42%, .76 53%, .86 64%, .93 75%, .97 87%, 1);
+}
+.journal-card:focus-visible img { transform: scale(1.1); }
 .project:focus-visible :is(strong, .project-teaser) { opacity: 1; }
 .project:focus-visible .project-ticker { animation-play-state: running; }
 @media (hover: hover) {
+  .journal-card:hover img { transform: scale(1.1); }
   .project-image:hover :is(strong, .project-teaser) { opacity: 1; }
   .project-image:hover .project-ticker { animation-play-state: running; }
 }
@@ -369,6 +374,7 @@ footer { background: var(--paper); color: var(--black); padding: 5vw var(--gutte
   .footer-meta { font-size: .85em; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .journal-card img { transform: none !important; }
   .craft-heading, .craft .service { position: static; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
