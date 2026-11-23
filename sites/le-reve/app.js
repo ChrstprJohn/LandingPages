@@ -75,7 +75,7 @@ const craft = `<section class="craft">
 function home() {
   return `<section class="cover">
     <div class="portrait">${photo(heroPhotos[0], "Fashion editorial portrait", true)}</div>
-    <h1 aria-label="Le Rêve">LERÊVE</h1><small>© 2025 Le Rêve® Studio</small>
+    <h1 aria-label="DECODÉ">DECODÉ</h1><small>© DECODÉ Studio</small>
   </section>
   <section class="statement inset">
     <h2><span class="statement-kicker">DEFINE YOUR</span><span class="statement-impact">IMPACT</span></h2>
@@ -83,7 +83,7 @@ function home() {
     <p>THE TIME IS NOW. LET’S BUILD.</p>
   </section>
   <section class="welcome inset">
-    <span>WELCOME TO LE RÊVE</span>
+    <span>WELCOME TO DECODÉ</span>
     ${photo("F2WaiWbXWpLO2v3c6bgU9WJ3i4.jpg", "Editorial portrait")}
     <div><h2>BUILD VALUE.</h2><div class="welcome-notes"><strong>THE ONLY<br>INVESTMENT<br>THAT LASTS</strong><p>We build brand identities and digital experiences for fashion and culture, bringing strategy and art direction together from the first idea through the final image.</p></div></div>
   </section>
@@ -92,7 +92,7 @@ function home() {
   ${craft}
   <section class="image-study">
     <div class="study-stage">
-    ${banner("LE RÊVE.")}
+    ${banner("DECODÉ.")}
     <div class="study-portraits" aria-hidden="true">${[
       ["tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "U8Vg5n0udgRw8Sxt4TAfelLsFQ.jpg", "ynnm1qlBFDLXtQVSKbo4CfPZTk.jpg"],
       ["VaVeL0jmtullQAkoQ37i7Y4er6k.jpg", "bsKPZP76FlBVKmo7uSXI3whYM.jpg", "ekKxn88e2R0im7jDV4AsFxbRg.jpg"],
@@ -127,7 +127,7 @@ function about() {
     <h1>THE<br>STUDIO.</h1>
     <div class="about-portrait">${photo("QwguGwCCrl6nE9DPClR05Lalu0.jpg", "Fashion portrait with dark sunglasses", true)}</div>
     <div class="about-intro">
-      <p>Le Rêve is an independent branding studio working across design, strategy and creative direction. We help brands express what makes them distinctive through clear ideas and considered design.</p>
+      <p>DECODÉ is an independent branding studio working across design, strategy and creative direction. We help brands express what makes them distinctive through clear ideas and considered design.</p>
       <p>We turn those ideas into visual systems that carry a consistent identity across print, campaigns and digital experiences.</p>
     </div>
   </section>
@@ -164,7 +164,7 @@ function about() {
 function journal() {
   return `<section class="journal-lead inset">
     <p>A curated archive of insights, ideas, and creative explorations—capturing our perspective on art, design, branding, and the stories that inspire our work.</p>
-    <h1>BLOG.</h1>
+    <h1>JOURNAL.</h1>
   </section><section class="inset" aria-label="Journal articles">${journalGrid(articles)}</section>`;
 }
 
@@ -249,7 +249,7 @@ if (page === "home") {
 if (item) document.body.dataset.detail = "";
 if (page !== "home") {
   document.querySelector(`.site-header a[href="/${CSS.escape(page)}"]`)?.setAttribute("aria-current", "page");
-  document.title = `${main.querySelector("h1").innerText.replace(/\n/g, " ")} — Le Rêve`;
+  document.title = `${main.querySelector("h1").innerText.replace(/\n/g, " ")} — DECODÉ`;
 }
 
 const motion = matchMedia("(prefers-reduced-motion: reduce)");
