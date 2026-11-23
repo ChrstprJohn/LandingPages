@@ -68,25 +68,26 @@ nav { display: flex; gap: 1rem; }
 }
 @keyframes portrait-in { from { opacity: 0; scale: .96; } }
 @keyframes title-in { from { opacity: 0; clip-path: inset(100% 0 0); } to { opacity: 1; clip-path: inset(0); } }
-.statement { min-height: 100svh; place-content: center; display: grid; gap: 3vw; text-align: center; }
-.statement h2 { font-size: 14vw; }
-.statement h2 span { display: block; color: white; font: 800 .58em/.95 Arial, sans-serif; letter-spacing: -.065em; }
-.statement p { color: white; font-size: 1.6em; }
+.statement { min-height: 100svh; place-content: center; display: grid; grid-template-columns: minmax(0, 50rem); padding-top: 5rem; gap: 1rem; text-align: center; }
+.statement h2 { font-size: 12.8rem; line-height: 1; white-space: nowrap; }
+.statement h2 span { display: block; color: white; font: 800 7.45rem/1 Arial, sans-serif; letter-spacing: -.065em; }
+.statement-caption { display: flex; justify-content: space-between; color: white; }
+.statement p { color: white; font-size: clamp(1rem, 3.4vw, 3.4rem); line-height: 1; letter-spacing: -.045em; }
 .welcome {
   color: var(--paper);
   display: grid;
+  align-content: start;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: 2vw;
-  padding-block: 1.8vw 5vw;
+  gap: 1.125rem 2rem;
+  padding-block: 2.4375rem 0;
   border-top: 1px solid #474747;
 }
 .welcome > span { grid-column: 1/-1; }
-.welcome img { aspect-ratio: 4/5; }
-.welcome h2 { font-size: 9.4vw; max-width: 6ch; }
-.welcome-notes { display: flex; justify-content: space-between; gap: 2em; margin-top: 13vw; }
+.welcome img { height: 50.25rem; }
+.welcome h2 { font-size: 8.4375rem; max-width: 6ch; }
+.welcome-notes { display: flex; justify-content: space-between; gap: 2em; margin-top: .625rem; }
 .welcome-notes strong { flex: none; }
-.welcome h2 { margin-bottom: .4em; }
 .welcome p, .craft p, .studio p, .about-cover p { max-width: 34em; }
 .banner {
   overflow: hidden;
@@ -97,6 +98,7 @@ nav { display: flex; gap: 1rem; }
   font-size: 8vw;
 }
 main > .banner { margin-inline: var(--gutter); }
+.welcome + .banner { margin-top: -1.1875rem; padding-block: 0; font-size: 7.3125rem; line-height: 1.1; position: relative; }
 .banner-track { display: flex; width: max-content; animation: marquee 24s linear infinite; }
 .banner-track span { padding-right: .25em; }
 @keyframes marquee { to { transform: translateX(-50%); } }
@@ -115,8 +117,32 @@ main > .banner { margin-inline: var(--gutter); }
 }
 @keyframes collage-wipe { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0); } }
 .featured > h2, .related > h2 { padding-block: 6vw 3vw; }
-.featured > h2 { text-align: center; color: white; font-size: 9.4vw; padding-bottom: .05em; }
-.featured-cue { margin: 0 auto 3vw; width: 14px; height: 13px; background: var(--red); clip-path: polygon(0 0,100% 0,50% 100%); }
+.featured > h2 { text-align: center; color: white; font-size: 8.4375rem; padding-block: 13.125rem 0; }
+.featured-cue { margin: 0 auto 1.125rem; width: 14px; height: 13px; background: var(--red); clip-path: polygon(0 0,100% 0,50% 100%); }
+@media (width < 1200px) {
+  .statement { grid-template-columns: minmax(0, 37.5rem); }
+  .statement h2 { font-size: 9.625rem; }
+  .statement h2 span { font-size: 5.5625rem; }
+  .statement p { font-size: 2.625rem; }
+  .welcome { grid-template-columns: 1fr; gap: 1.125rem; min-height: 88.375rem; }
+  .welcome > div { margin-top: .875rem; align-self: start; }
+  .welcome img { height: 56.25rem; }
+  .welcome h2 { font-size: 7.4rem; max-width: none; }
+  .welcome + .banner { margin-top: 0; font-size: 5.7rem; }
+  .featured > h2 { font-size: 7.4rem; padding-top: 13.25rem; }
+}
+@media (width < 810px) {
+  .statement { grid-template-columns: minmax(0, 16.75rem); }
+  .statement h2 { font-size: 4.3125rem; }
+  .statement h2 span { font-size: 2.5rem; }
+  .statement-caption { font-size: .825rem; }
+  .statement p { font-size: 1.1875rem; }
+  .welcome { min-height: 59.625rem; font-size: .825rem; }
+  .welcome img { height: 28.125rem; }
+  .welcome h2, .featured > h2 { font-size: 3.36rem; letter-spacing: -.025em; }
+  .welcome + .banner { font-size: 3.75rem; }
+  .featured > h2 { padding-top: 12.9375rem; }
+}
 .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .project { display: block; }
 .project:hover, .journal-card:hover { text-decoration: none; }
@@ -167,6 +193,9 @@ video.is-playing { opacity: 1; }
   :is(.listing-cover + .projects, .featured .projects) .project-image strong { opacity: 1; }
   :is(.listing-cover + .projects, .featured .projects) .project-image :is(img, video) { filter: brightness(.55); }
   :is(.listing-cover + .projects, .featured .projects) .project:is(:hover, :focus-visible) strong { opacity: 0; }
+}
+@media (640px < width < 1200px) {
+  .featured .projects .caption span { max-width: none; }
 }
 .craft { display: grid; grid-template-columns: 1fr 1fr; background: var(--paper); color: var(--black); }
 .craft-heading { position: sticky; top: 0; height: 90svh; align-self: start; display: grid; place-content: center; justify-items: center; text-align: center; background: var(--black); color: var(--paper); padding: var(--gutter); }
@@ -287,16 +316,9 @@ footer { background: var(--paper); color: var(--black); padding: 5vw var(--gutte
   .cover h1, .footer-mark { font-size: 18.8vw; }
   .cover h1 { transform: translate(-.04em, -80%); }
   .portrait { width: 150px; }
-  .statement { min-height: 112svh; padding-block: 18vw; }
   .welcome, .craft, .projects, .journal-grid, .about-cover, .project-notes { grid-template-columns: 1fr; }
-  .welcome { gap: 4vw; }
-  .welcome img { margin-top: 3vw; height: 450px; }
-  .welcome h2, .featured > h2 { max-width: none; font-size: 3.35rem; }
-  .welcome-notes { margin-top: 8vw; padding-bottom: calc(17vw + 16svh); }
   main > .banner, .image-study .banner { font-size: 13vw; }
-  .featured > h2 { padding-top: 28vw; }
   .featured { padding-bottom: 30svh; }
-  .featured-cue { margin-bottom: 5vw; }
   .project-image strong { font-size: 12vw; opacity: 1; }
   .project-image :is(img, video) { filter: brightness(.55); }
   .project:is(:hover, :focus-visible) strong { opacity: 0; }

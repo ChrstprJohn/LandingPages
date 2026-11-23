@@ -71,6 +71,7 @@ function home() {
   </section>
   <section class="statement inset">
     <h2><span>DEFINE YOUR</span>IMPACT</h2>
+    <div class="statement-caption"><span>IT</span><span>RESHAPES</span><span>PERCEPTION</span></div>
     <p>THE TIME IS NOW. LET’S BUILD.</p>
   </section>
   <section class="welcome inset">
