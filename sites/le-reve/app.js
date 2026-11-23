@@ -254,6 +254,7 @@ if (page !== "home") {
 
 const motion = matchMedia("(prefers-reduced-motion: reduce)");
 const header = document.querySelector(".site-header");
+const compactHeader = matchMedia("(max-width: 640px)");
 let scrollEdge = Math.max(0, scrollY);
 addEventListener("scroll", () => {
   const position = Math.max(0, scrollY);
@@ -262,7 +263,7 @@ addEventListener("scroll", () => {
     scrollEdge = position;
   } else if (header.classList.contains("is-scrolled-away")) {
     scrollEdge = Math.max(position, scrollEdge);
-    if (scrollEdge - position >= 128) {
+    if (!compactHeader.matches && scrollEdge - position >= 128) {
       header.classList.remove("is-scrolled-away");
       scrollEdge = position;
     }
