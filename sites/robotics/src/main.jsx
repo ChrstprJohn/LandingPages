@@ -375,7 +375,10 @@ function ProjectSheet({ index, change, focusHeading, dismiss }) {
       if (!animate) return
       split = SplitText.create(heading, { type: 'lines', mask: 'lines' })
       gsap.timeline()
-        .from(split.lines, { yPercent: 150, duration: 1.6, stagger: 0.1, ease: 'expo.out' }, 0.6)
+        .from(split.lines, {
+          yPercent: 150, duration: 1.6, stagger: 0.1, ease: 'expo.out',
+          onComplete: () => split.revert(),
+        }, 0.6)
         .from('.project-tags li', { y: 10, opacity: 0, duration: 0.8, stagger: 0.06, ease: 'expo.out' }, 0.43)
         .from('.project-info > *', { y: 18, opacity: 0, duration: 0.8, stagger: 0.06, ease: 'expo.out' }, 0.8)
     }))
