@@ -695,7 +695,8 @@ h1, .section-title, .project-title, .join-form h2 {
   .footer .footer-wordmark { display: block; width: 100%; margin-top: 40px; }
   .footer-peek { display: none; }
 
-  .menu-content { min-height: 100svh; padding: var(--pad); display: flex; flex-direction: column; justify-content: space-between; }
+  .menu-content { min-height: 100svh; padding: 0 var(--pad) var(--pad); display: flex; flex-direction: column; justify-content: space-between; }
+  .menu-content > .wordmark { display: grid; align-items: center; min-height: 61px; }
   .menu-content::after { top: 60px; bottom: auto; }
   .menu-grid { display: grid; grid-template-columns: 1fr 1fr; row-gap: 16px; }
   .menu-grid > a { min-height: 49px; padding: 13px 17px; border: 1px solid var(--line); border-top-color: transparent; }
@@ -737,6 +738,7 @@ h1, .section-title, .project-title, .join-form h2 {
   .join-model .model canvas { scale: 0.74 0.68; }
   .blog-main { padding-top: 68px; }
   .editorial-head { padding-top: 17px; min-height: 223px; }
+  .essay-index .editorial-head { min-height: 189px; border-top: 0; }
   .editorial-head h1 { font-size: 32px; line-height: 1.02; }
   .editorial-head > :is(.project-icons, .website-link) { display: none; }
   .essay .editorial-head { min-height: 174px; padding: 17px 0 45px; }
@@ -819,13 +821,11 @@ h1, .section-title, .project-title, .join-form h2 {
 }
 
 @media (400px <= width < 480px) {
-  .menu-content { --pad: 17px; }
   .menu-grid { row-gap: 17px; }
   .menu-grid .cta { min-height: 105px; }
 }
 
 @media (350px <= width < 375px) {
-  .menu-content { --pad: 17px; }
   .menu-grid { row-gap: 17px; }
   .menu-grid > a { min-height: 47px; padding-block: 11px; }
   .menu-grid .cta { min-height: 86px; }
@@ -866,13 +866,12 @@ h1, .section-title, .project-title, .join-form h2 {
   .essay .editorial-head { min-height: 109px; padding: 0 0 24px; }
   .essay .editorial-head h1 { font-size: calc(0.875 * var(--hero-copy-size)); }
   .blog-main.essay-index { padding-top: 61px; }
-  .essay-index .editorial-head { min-height: 179px; padding-top: 0; }
+  .essay-index .editorial-head { min-height: 151px; padding-top: 0; }
   .essay-index .editorial-head h1 { font-size: var(--hero-copy-size); }
   .essay-index :is(.essay-label, .essay-links li a, .essay-links li:first-child a) { min-height: 31px; }
   .essay-index .essay-links li a { padding-block: 6px; padding-left: 30px; }
   .essay-index .footer .footer-wordmark { margin-top: 13px; }
-  .site-header .wordmark { translate: 0 -4px; }
-  .menu-content { --pad: 17px; }
+  :is(.site-header, .menu-content) .wordmark { translate: 0 -4px; }
   .menu-grid { row-gap: 17px; }
   .menu-grid > a {
     display: flex;
