@@ -317,18 +317,30 @@ function rotatePortrait(portrait) {
 document.querySelectorAll(".portrait img, .listing-photo img, .footer-cover img").forEach(rotatePortrait);
 
 const scrollMotion = gsap.matchMedia();
-scrollMotion.add("(min-width: 1200px) and (hover: hover) and (prefers-reduced-motion: no-preference)", () => {
+scrollMotion.add({
+  animate: "(prefers-reduced-motion: no-preference)",
+  desktopHover: "(min-width: 1200px) and (hover: hover)",
+  hover: "(hover: hover)"
+}, ({ conditions }) => {
+  if (!conditions.animate) return;
+
+  const banners = document.querySelectorAll(".banner-track");
+  if (banners.length) gsap.to(banners, { xPercent: -50, duration: 24, ease: "none", repeat: -1 });
   const listeners = new AbortController();
   const options = { signal: listeners.signal };
 
   for (const media of document.querySelectorAll(".project-image")) {
     const card = media.closest(".project");
-    const shade = gsap.fromTo(media.querySelector("img"), { filter: "brightness(1)" }, {
+    const ticker = gsap.to(card.querySelector(".project-ticker"), {
+      xPercent: -6.25, duration: 2.4, ease: "none", paused: true, repeat: -1
+    });
+    const shade = conditions.desktopHover && gsap.fromTo(media.querySelector("img"), { filter: "brightness(1)" }, {
       filter: "brightness(0.7)", duration: .45, ease: "power2.out", paused: true
     });
     const update = () => {
-      if (media.matches(":hover") || card.matches(":focus-visible")) shade.play();
-      else shade.reverse();
+      const active = (conditions.hover && media.matches(":hover")) || card.matches(":focus-visible");
+      ticker.paused(!active);
+      if (shade) shade.reversed(!active).resume();
     };
     media.addEventListener("pointerenter", update, options);
     media.addEventListener("pointerleave", update, options);
