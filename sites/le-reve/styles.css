@@ -71,7 +71,7 @@ nav { display: flex; gap: 1rem; }
 }
 .home-entrance .cover small { animation-delay: .23s; }
 .listing-photo, .about-cover > img { animation: portrait-in .7s ease-out both; }
-.listing-cover h1, .journal-lead h1, .about-cover h1, .article-lead h1 {
+.listing-cover h1, .journal-lead h1, .about-cover h1 {
   animation: title-in .7s cubic-bezier(.2,.65,.3,1) backwards;
 }
 @keyframes portrait-in { from { opacity: 0; scale: .96; } }
