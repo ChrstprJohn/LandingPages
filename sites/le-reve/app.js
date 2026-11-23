@@ -78,7 +78,7 @@ function home() {
     <h1 aria-label="Le Rêve">LERÊVE</h1><small>© 2025 Le Rêve® Studio</small>
   </section>
   <section class="statement inset">
-    <h2><span>DEFINE YOUR</span>IMPACT</h2>
+    <h2><span class="statement-kicker">DEFINE YOUR</span><span class="statement-impact">IMPACT</span></h2>
     <div class="statement-caption"><span>IT</span><span>RESHAPES</span><span>PERCEPTION</span></div>
     <p>THE TIME IS NOW. LET’S BUILD.</p>
   </section>
@@ -336,6 +336,19 @@ if (craftScene) {
 }
 
 if (!motion.matches) {
+  const statementLayers = document.querySelectorAll(".statement h2 > span, .statement-caption, .statement > p");
+  const statementReveal = new IntersectionObserver(entries => {
+    for (const { target, isIntersecting } of entries) {
+      if (!isIntersecting) continue;
+      target.classList.remove("statement-pending");
+      statementReveal.unobserve(target);
+    }
+  }, { rootMargin: `0px 0px ${40 - Math.round(innerHeight * .1)}px 0px` });
+  for (const layer of statementLayers) {
+    if (layer.getBoundingClientRect().bottom <= 0) continue;
+    layer.classList.add("statement-pending");
+    statementReveal.observe(layer);
+  }
   const reveals = new IntersectionObserver(entries => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
@@ -346,6 +359,6 @@ if (!motion.matches) {
       reveals.unobserve(entry.target);
     }
   }, { threshold: .12 });
-  document.querySelectorAll(".statement > *, .welcome > *, .featured > h2, .craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .project-notes > *, .lookbook img")
+  document.querySelectorAll(".welcome > *, .featured > h2, .craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .project-notes > *, .lookbook img")
     .forEach(element => reveals.observe(element));
 }
