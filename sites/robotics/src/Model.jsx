@@ -82,15 +82,33 @@ export function Model({ inverted = false, compact = false }) {
     pivot.add(new THREE.Mesh(geometry, faces), new THREE.LineSegments(edges, ink))
     element.dataset.ready = 'true'
     resize()
-    if (inverted && !reduced.matches) {
-      spin = gsap.to(angle, { y: Math.PI * 2, duration: 19, ease: 'none', repeat: -1, onUpdate: render })
+    const stopMotion = () => {
+      scrollTurn?.scrollTrigger?.kill()
+      scrollTurn?.kill()
+      if (spin) gsap.killTweensOf(spin)
+      spin?.kill()
+      spin = undefined
+      scrollTurn = undefined
+      gsap.killTweensOf(angle)
     }
-    if (!inverted && !reduced.matches) {
-      scrollTurn = gsap.to(scrollAngle, {
-        y: Math.PI, ease: 'none', onUpdate: render,
-        scrollTrigger: { trigger: element.closest('.site').querySelector('.hero'), start: 'top top', end: 'bottom 10%', scrub: 0.85 },
-      })
+    const updateMotion = () => {
+      stopMotion()
+      angle.x = 0
+      angle.y = 0
+      scrollAngle.y = 0
+      render()
+      if (reduced.matches) return
+      if (inverted) {
+        spin = gsap.to(angle, { y: Math.PI * 2, duration: 19, ease: 'none', repeat: -1, onUpdate: render })
+      } else {
+        scrollTurn = gsap.to(scrollAngle, {
+          y: Math.PI, ease: 'none', onUpdate: render,
+          scrollTrigger: { trigger: element.closest('.site').querySelector('.hero'), start: 'top top', end: 'bottom 10%', scrub: 0.85 },
+        })
+      }
     }
+    updateMotion()
+    reduced.addEventListener('change', updateMotion)
 
     motion.current = {
       rotate: (x, y) => {
@@ -106,11 +124,8 @@ export function Model({ inverted = false, compact = false }) {
     return () => {
       motion.current = null
       observer.disconnect()
-      scrollTurn?.scrollTrigger?.kill()
-      scrollTurn?.kill()
-      if (spin) gsap.killTweensOf(spin)
-      spin?.kill()
-      gsap.killTweensOf(angle)
+      reduced.removeEventListener('change', updateMotion)
+      stopMotion()
       geometry.dispose()
       edges.dispose()
       faces.dispose()
