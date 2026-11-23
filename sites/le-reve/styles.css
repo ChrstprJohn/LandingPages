@@ -143,12 +143,14 @@ main > .banner { margin-inline: var(--gutter); }
 .study-portraits img + img { opacity: 0; }
 @media (width < 1200px) {
   .image-study { min-height: 250svh; }
-  .image-study .banner { font-size: 3.75rem; }
-  .image-study p { bottom: 0; left: var(--gutter); right: var(--gutter); max-width: none; font-size: .825rem; text-align: center; }
+  .study-stage { grid-template-rows: minmax(0, 1fr) auto; }
+  .image-study .banner { grid-area: 1 / 1; align-self: center; font-size: 3.75rem; }
+  .image-study p { position: static; grid-row: 2; margin: .75rem var(--gutter); max-width: none; font-size: .825rem; text-align: center; }
+  .study-portraits { position: relative; grid-area: 1 / 1; inset: auto; }
   .study-portraits > div:nth-child(n) { left: 50%; right: auto; bottom: auto; translate: -50% 0; }
   .study-portraits > div:nth-child(1) { width: min(48%, 11.2rem); top: 1rem; }
   .study-portraits > div:nth-child(2) { width: min(64%, 14.95rem); top: 36%; aspect-ratio: 1; }
-  .study-portraits > div:nth-child(3) { width: min(46%, 10.7rem); top: 70%; }
+  .study-portraits > div:nth-child(3) { width: min(46%, 10.7rem); bottom: 0; }
 }
 .featured > h2, .related > h2 { padding-block: 6vw 3vw; }
 .featured { padding-bottom: 10rem; }
