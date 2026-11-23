@@ -54,14 +54,21 @@ const services = [
 ];
 
 function serviceList(count) {
-  return `<div class="service-list">${services.slice(0, count).map(([name, text, file]) =>
-    `<div class="service">${photo(file)}<div><h3>${name}</h3><p>${text}</p></div></div>`
-  ).join("")}</div>`;
+  return services.slice(0, count).map(([name, text]) =>
+    `<div class="service"><div><h3>${name}</h3><p>${text}</p></div></div>`
+  ).join("");
 }
 
+const craftClips = ["8FyTMuJN7Jn03aPpYwKvWE1M3s.mp4", "S2v5gRBfektbkGTX6BhlteEpsQ.mp4", "mEDWEf1l4MAcdU9iPSpqJuDI.mp4"];
 const craft = `<section class="craft">
-  <div class="craft-heading"><h2>OUR <br>CRAFT</h2><p>We help brands articulate who they are and how they want to be seen.</p></div>
-  ${serviceList(3)}
+  <div class="service-list">
+    <div class="craft-heading"><h2>OUR <br>CRAFT</h2><p>We help brands articulate who they are and how they want to be seen.</p></div>
+    ${serviceList(3)}
+  </div>
+  <div class="craft-media" aria-hidden="true">
+    ${photo("QwguGwCCrl6nE9DPClR05Lalu0.jpg")}
+    ${craftClips.map(file => `<video data-src="${media(file)}" muted loop playsinline preload="none"></video>`).join("")}
+  </div>
 </section>`;
 
 function home() {
@@ -258,9 +265,13 @@ updateRotation();
 
 const videos = [...document.querySelectorAll("video[data-src]")];
 const visibleVideos = new Set();
+const craftScene = document.querySelector(".craft");
+const craftVideos = [...document.querySelectorAll(".craft-media video")];
+const wideCraft = matchMedia("(min-width: 1200px)");
 
 function syncVideo(video) {
-  const shouldPlay = visibleVideos.has(video) && !motion.matches && !document.hidden;
+  const shouldPlay = visibleVideos.has(video) && !motion.matches && !document.hidden &&
+    (!video.closest(".craft-media") || video.classList.contains("craft-visible"));
   if (shouldPlay) {
     if (!video.hasAttribute("src")) video.src = video.dataset.src;
     video.play().catch(() => {});
@@ -285,6 +296,36 @@ for (const video of videos) {
 motion.addEventListener("change", () => videos.forEach(syncVideo));
 document.addEventListener("visibilitychange", () => videos.forEach(syncVideo));
 
+if (craftScene) {
+  let framePending = false;
+  function paintCraft() {
+    framePending = false;
+    const bounds = craftScene.getBoundingClientRect();
+    const panelHeight = craftScene.querySelector(".craft-heading").offsetHeight;
+    const progress = -bounds.top / panelHeight;
+    for (const [index, video] of craftVideos.entries()) {
+      const enter = Math.max(0, Math.min(1, (progress - index - .25) * 2));
+      const next = Math.max(0, Math.min(1, (progress - index - 1.25) * 2));
+      const opacity = wideCraft.matches && !motion.matches && bounds.bottom > 0 && bounds.top < innerHeight
+        ? enter * (1 - next) : 0;
+      video.style.setProperty("--craft-opacity", opacity);
+      const wasVisible = video.classList.contains("craft-visible");
+      video.classList.toggle("craft-visible", opacity > 0);
+      if (wasVisible !== (opacity > 0)) syncVideo(video);
+    }
+  }
+  function scheduleCraft() {
+    if (framePending) return;
+    framePending = true;
+    requestAnimationFrame(paintCraft);
+  }
+  addEventListener("scroll", scheduleCraft, { passive: true });
+  addEventListener("resize", scheduleCraft);
+  wideCraft.addEventListener("change", scheduleCraft);
+  motion.addEventListener("change", scheduleCraft);
+  scheduleCraft();
+}
+
 if (!motion.matches) {
   const reveals = new IntersectionObserver(entries => {
     for (const entry of entries) {
@@ -296,6 +337,6 @@ if (!motion.matches) {
       reveals.unobserve(entry.target);
     }
   }, { threshold: .12 });
-  document.querySelectorAll(".statement > *, .welcome > *, .featured > h2, .craft-heading > *, .service, .studio > *, .studio-services li, .team-grid a, .study-portraits img, .project-notes > *, .lookbook img")
+  document.querySelectorAll(".statement > *, .welcome > *, .featured > h2, .craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .study-portraits img, .project-notes > *, .lookbook img")
     .forEach(element => reveals.observe(element));
 }
