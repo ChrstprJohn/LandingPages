@@ -478,7 +478,7 @@ h1, .section-title, .project-title, .join-form h2 {
   z-index: 1;
   font-size: calc(16 * var(--u));
 }
-.overlay-menu .overlay-surface { background: var(--ash); }
+.overlay-menu .overlay-surface { background: var(--ash); overflow: clip; }
 .overlay-join { color: var(--ice); }
 .join-backdrop { position: fixed; inset: 0; background: #911a46; }
 .join-content {
