@@ -612,10 +612,10 @@ export default function App() {
 
   useEffect(() => {
     if (!home || loading) return
-    const query = new URLSearchParams(location.search).get('section')
-    const section = query || location.hash.slice(1)
-    if (!['investments', 'aescape', 'landscaping', 'teams', 'contact'].includes(section)) return
-    const frame = requestAnimationFrame(() => goToSection(section, { immediate: !query, duration: 1.4 }))
+    const hash = location.hash.slice(1)
+    const section = hash || new URLSearchParams(location.search).get('section')
+    if (!['top', 'investments', 'aescape', 'landscaping', 'teams', 'contact'].includes(section)) return
+    const frame = requestAnimationFrame(() => goToSection(section, { immediate: Boolean(hash), duration: 1.4 }))
     return () => cancelAnimationFrame(frame)
   }, [home, loading])
 
