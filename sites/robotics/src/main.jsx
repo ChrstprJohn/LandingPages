@@ -744,7 +744,7 @@ export default function App() {
       if (!home) return
       gsap.to('.home-rail', {
         '--rail-progress': 1,
-        ease: 'none',
+        ease: 'expo.out',
         duration: reducedMotion() ? 0 : 1,
         scrollTrigger: {
           start: () => window.innerHeight * 0.45,
