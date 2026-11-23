@@ -746,7 +746,11 @@ export default function App() {
         '--rail-progress': 1,
         ease: 'none',
         duration: reducedMotion() ? 0 : 1,
-        scrollTrigger: { start: 0, end: () => window.innerHeight, scrub: 0.55 },
+        scrollTrigger: {
+          start: () => window.innerHeight * 0.45,
+          end: () => window.innerHeight,
+          scrub: 0.55,
+        },
       })
       gsap.to('.home-rail', {
         '--rail-exit': 1,
