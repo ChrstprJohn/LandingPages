@@ -813,6 +813,13 @@ h1, .section-title, .project-title, .join-form h2 {
   .menu-grid .cta { min-height: 105px; }
 }
 
+@media (350px <= width < 375px) {
+  .menu-content { --pad: 17px; }
+  .menu-grid { row-gap: 17px; }
+  .menu-grid > a { min-height: 47px; padding-block: 11px; }
+  .menu-grid .cta { min-height: 86px; }
+}
+
 @media (max-width: 374px) {
   :root {
     --hero-copy-size: calc(11.64vw - 12.75px);
