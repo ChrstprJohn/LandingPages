@@ -1,8 +1,7 @@
 import { articles, creativeDirectors, projects, projectVideos } from "./data.js";
+import { articlePath, matchRoute, projectPath } from "./routes.js";
 
-const parameters = new URLSearchParams(location.search);
-const page = parameters.get("page") || "home";
-const item = parameters.get("item");
+const { page, item, legacy } = matchRoute(location.pathname, location.search);
 const main = document.querySelector("main");
 const heroPhotos = [
   "Mw7GIckKwmixZbMJ4bVCp5dJIc.jpg",
@@ -10,11 +9,9 @@ const heroPhotos = [
   "t2z660HhKFQCyQ25z9rjWzZL24.jpg",
   "jkbYI83hLhNLSbRGqHU5NQ1mDo.jpg"
 ];
-const slug = text => text.toLowerCase().replaceAll(" ", "-");
 const media = file => `${import.meta.env.BASE_URL}editorial/${file}`;
 const photo = (file, alt = "", priority = false) =>
   `<img src="${media(file)}" alt="${alt}" ${priority ? 'fetchpriority="high"' : 'loading="lazy"'}>`;
-const path = (section, name) => `?page=${section}&amp;item=${slug(name)}`;
 
 function projectMedia(name, image, priority = false) {
   const clip = projectVideos[name];
@@ -25,7 +22,7 @@ function projectMedia(name, image, priority = false) {
 
 function projectGrid(entries) {
   return `<div class="projects">${entries.map(([name, client, image]) => `
-    <a class="project" href="${path("work", name)}">
+    <a class="project" href="${projectPath(name)}">
       <div class="project-image">${projectMedia(name, image)}<strong aria-hidden="true">${initials(name)}</strong><span class="project-teaser" aria-hidden="true">SEE MORE.</span></div>
       <div class="caption"><b>${name}</b><span>${client}</span><time>2025</time></div>
     </a>`).join("")}</div>`;
@@ -37,7 +34,7 @@ function initials(name) {
 
 function journalGrid(entries) {
   return `<div class="journal-grid">${entries.map(([name, title, image]) => `
-    <a class="journal-card" href="${path("journal", name)}">
+    <a class="journal-card" href="${articlePath(name, title)}">
       ${photo(image)}
       <div class="caption"><span>Article</span><span>A. Álvarez</span></div>
       <h2>${name}<br>${title}</h2>
@@ -152,7 +149,7 @@ function projectDetail(project, index) {
     <div><dl><dt>CREATIVE DIRECTION</dt><dd>${creativeDirectors[index]}</dd><dt>CLIENT</dt><dd>${client}</dd><dt>YEAR</dt><dd>2025</dd></dl><p>${summary}</p></div>
   </section>
   <div class="lookbook inset">${gallery.map(file => photo(file)).join("")}</div>
-  <section class="related"><h2 class="inset">NEXT UP</h2>${projectGrid([next])}<a class="back inset" href="?page=work">← All work</a></section>`;
+  <section class="related"><h2 class="inset">NEXT UP</h2>${projectGrid([next])}<a class="back inset" href="/work">← All work</a></section>`;
 }
 
 function articleDetail(article, index) {
@@ -164,12 +161,15 @@ function articleDetail(article, index) {
     <p class="article-text inset">${summary}</p>
     <div class="article-image inset">${photo(secondary, "Second editorial photograph for " + name)}</div>
   </article>
-  <section class="related inset"><h2>MORE ARTICLES.</h2>${journalGrid(related)}<a class="back" href="?page=journal">← All articles</a></section>`;
+  <section class="related inset"><h2>MORE ARTICLES.</h2>${journalGrid(related)}<a class="back" href="/journal">← All articles</a></section>`;
 }
 
 const listings = { home, work, journal, about };
 const collection = page === "work" ? projects : articles;
-const index = item ? collection.findIndex(([name]) => slug(name) === item) : -1;
+const index = item ? collection.findIndex(([name, title]) => {
+  const path = page === "work" || legacy ? projectPath(name) : articlePath(name, title);
+  return path.endsWith(`/${item}`);
+}) : -1;
 if (index >= 0 && page === "work") {
   main.innerHTML = projectDetail(collection[index], index);
 } else if (index >= 0 && page === "journal") {
@@ -177,13 +177,13 @@ if (index >= 0 && page === "work") {
 } else if (!item && Object.hasOwn(listings, page)) {
   main.innerHTML = listings[page]();
 } else {
-  main.innerHTML = '<section class="article-lead inset"><h1>PAGE NOT FOUND</h1><a href="./index.html">Return home</a></section>';
+  main.innerHTML = '<section class="article-lead inset"><h1>PAGE NOT FOUND</h1><a href="/">Return home</a></section>';
 }
 
 document.body.dataset.page = page;
 if (item) document.body.dataset.detail = "";
 if (page !== "home") {
-  document.querySelector(`.site-header a[href="?page=${CSS.escape(page)}"]`)?.setAttribute("aria-current", "page");
+  document.querySelector(`.site-header a[href="/${CSS.escape(page)}"]`)?.setAttribute("aria-current", "page");
   document.title = `${main.querySelector("h1").innerText.replace(/\n/g, " ")} — Le Rêve`;
 }
 
