@@ -44,8 +44,9 @@ function Logo({ href = '/', intro = false, onClick }) {
       .to('[data-decode-e-bar]', { x: 6 }, 0)
       .to('[data-decode-c]', { attr: { d: foldedDecodeC } }, 0)
     hover.current = fold(gsap.timeline({ paused: true, defaults: { duration: 0.38, ease: 'power2.inOut' } }))
-    if (intro) fold(gsap.timeline({ delay: 1.75, repeat: 1, yoyo: true, defaults: { duration: 0.5, ease: 'power2.inOut' } }))
-  }, { scope: mark })
+    if (intro) fold(gsap.timeline({ delay: 1.75, repeat: -1, yoyo: true, defaults: { duration: 0.5, ease: 'power2.inOut' } }))
+    return () => { hover.current = null }
+  }, { scope: mark, dependencies: [intro], revertOnUpdate: true })
   const fold = (event) => {
     if (!event.currentTarget.closest('.is-loading')) hover.current?.play()
   }
@@ -502,6 +503,7 @@ function Footer({ illustrated = false }) {
     <footer className={`footer ${illustrated ? 'illustrated-footer' : ''}`}>
       <div className="footer-details">
         <div className="footer-info"><span>Decode</span><a href="/blog">Web development guides</a></div>
+        {illustrated && <img className="footer-icons" src={media('footer-icons.png')} alt="" />}
       </div>
       {illustrated && <DecodeMark className="footer-wordmark" />}
     </footer>
@@ -628,8 +630,9 @@ export default function App() {
     }
   })
   const [loading, setLoading] = useState(fullIntro)
+  const [introClosing, setIntroClosing] = useState(false)
   const navActive = projects.some(({ id }) => id === active) ? 'investments' : active
-  useEntrance({ root, cover, counter, home, full: fullIntro, setLoading })
+  useEntrance({ root, cover, counter, home, full: fullIntro, setLoading, stopLogoLoop: () => setIntroClosing(true) })
 
   useEffect(() => {
     const title = essay ? `${essay[0]} | Decode` : blog ? 'Web Development Guides | Decode' : 'Decode | Web Design & Development'
@@ -896,7 +899,7 @@ export default function App() {
   return (
     <div ref={root} className={`site ${home ? 'is-home' : blog ? 'is-index' : 'is-essay'}${loading ? ' is-loading' : ''}`} data-active={active} onClick={onNavigate}>
       <DesktopCursor />
-      <Header home={home} blog={blog} active={navActive} open={setOverlay} intro={fullIntro} />
+      <Header home={home} blog={blog} active={navActive} open={setOverlay} intro={loading && !introClosing} />
       <div className="intro-cover" ref={cover} aria-hidden="true">
         {fullIntro && <div className="loading-counter"><span>├</span><span ref={counter}>00</span></div>}
       </div>

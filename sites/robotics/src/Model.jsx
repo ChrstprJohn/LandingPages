@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
+import { LineMaterial } from 'three/addons/lines/LineMaterial.js'
+import { LineSegments2 } from 'three/addons/lines/LineSegments2.js'
+import { LineSegmentsGeometry } from 'three/addons/lines/LineSegmentsGeometry.js'
 
 function createD(offset) {
   const shape = new THREE.Shape()
@@ -75,11 +78,33 @@ export function Model({ inverted = false, compact = false }) {
     observer.observe(element)
 
     const edges = new THREE.EdgesGeometry(geometry, 28)
+    const strokes = new LineSegmentsGeometry().setPositions(edges.attributes.position.array)
+    edges.dispose()
     const faces = new THREE.MeshBasicMaterial({
-      color: inverted ? '#911a46' : '#ffffff', side: THREE.DoubleSide, transparent: true, opacity: 0.42, depthWrite: false,
+      side: THREE.DoubleSide,
+      colorWrite: false,
+      transparent: true,
+      polygonOffset: true,
+      polygonOffsetFactor: 1,
+      polygonOffsetUnits: 1,
     })
-    const ink = new THREE.LineBasicMaterial({ color: inverted ? '#c5f0f7' : '#111111' })
-    pivot.add(new THREE.Mesh(geometry, faces), new THREE.LineSegments(edges, ink))
+    const ink = new LineMaterial({
+      color: inverted ? '#c5f0f7' : '#17191c',
+      linewidth: 1.2,
+      transparent: true,
+      opacity: 0.88,
+      depthWrite: false,
+    })
+    const hiddenInk = ink.clone()
+    hiddenInk.opacity = 0.2
+    hiddenInk.linewidth = 0.9
+    hiddenInk.depthTest = false
+    const hiddenOutline = new LineSegments2(strokes, hiddenInk)
+    const depthFaces = new THREE.Mesh(geometry, faces)
+    const outline = new LineSegments2(strokes, ink)
+    depthFaces.renderOrder = 1
+    outline.renderOrder = 2
+    pivot.add(hiddenOutline, depthFaces, outline)
     element.dataset.ready = 'true'
     resize()
     const stopMotion = () => {
@@ -127,9 +152,10 @@ export function Model({ inverted = false, compact = false }) {
       reduced.removeEventListener('change', updateMotion)
       stopMotion()
       geometry.dispose()
-      edges.dispose()
+      strokes.dispose()
       faces.dispose()
       ink.dispose()
+      hiddenInk.dispose()
       renderer.dispose()
       renderer.domElement.remove()
       delete element.dataset.ready

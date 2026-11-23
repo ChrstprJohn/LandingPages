@@ -9,7 +9,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, CustomEase, SplitText)
 export const wipeEase = CustomEase.create('decodeWipe', '0.82,0,0.18,1')
 export const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-export function useEntrance({ root, cover, counter, home, full, setLoading }) {
+export function useEntrance({ root, cover, counter, home, full, setLoading, stopLogoLoop }) {
   useGSAP((context, contextSafe) => {
     if (reducedMotion()) {
       setLoading(false)
@@ -71,6 +71,7 @@ export function useEntrance({ root, cover, counter, home, full, setLoading }) {
       const value = { percent: 0 }
       const finish = contextSafe(() => {
         if (disposed) return
+        stopLogoLoop()
         gsap.timeline({
           onComplete: () => {
             body.style.overflow = previousOverflow
