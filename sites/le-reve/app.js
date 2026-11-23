@@ -215,7 +215,7 @@ function articleDetail(article, index) {
   const related = [1, 2, 3].map(offset => articles[(index + offset) % articles.length]);
   return `<article>
     <header class="article-lead inset"><h1>${name}:<br>${title}</h1><p><span>DECODÉ</span><span>Field Notes</span></p></header>
-    <div class="article-image inset">${photo(image, "Editorial photograph for " + name, true)}</div>
+    <div class="article-image inset" style="--crop: ${journalCrops[index]}">${photo(image, "Editorial photograph for " + name, true)}</div>
     <div class="article-text">
       <p>${summary}</p>
       <p>${context}</p>
