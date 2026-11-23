@@ -527,6 +527,7 @@ function Home({ open, active }) {
     const query = window.matchMedia('(max-width: 991px)')
     const update = () => setMobile(query.matches)
     query.addEventListener('change', update)
+    update()
     return () => query.removeEventListener('change', update)
   }, [])
   return (
