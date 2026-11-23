@@ -216,13 +216,23 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .project-stamp { position: absolute; bottom: var(--gutter); left: var(--gutter); display: grid; place-items: center; width: min(17.4vw, 30svh); aspect-ratio: 2/3; }
 .project-stamp img, .project-initials { grid-area: 1/1; }
 .project-initials { color: var(--red); font-size: 8vw; }
-.project-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; padding-block: 10vw; }
-.project-notes h2 { margin-top: .4em; }
-.project-notes dt { margin-top: .8em; }
-.project-notes p { margin-top: 1.25em; }
-.lookbook { display: grid; gap: 2vw; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.lookbook img { aspect-ratio: 4/5; }
-.lookbook img:last-child:nth-child(odd) { grid-column: 1/-1; aspect-ratio: 16/10; }
+.project-notes, .lookbook, .project-next { background: var(--paper); color: var(--black); }
+.project-notes { padding-block: 9rem; }
+.project-facts { width: min(100%, 35.5rem); margin-inline: auto; font-size: max(1rem, 1.55vw); line-height: 1.3; letter-spacing: -.025em; }
+.project-facts h2 { margin-bottom: 2rem; font-size: clamp(2.2rem, 6vw, 5rem); letter-spacing: -.045em; }
+.project-facts h3, .project-fields dt { font-size: 1.17em; text-transform: uppercase; margin: 0 0 .65em; }
+.credit-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); }
+.project-fields dt { margin-top: 1.5em; }
+.project-facts > p { margin-top: 1.75em; }
+.lookbook { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.lookbook img { height: auto; aspect-ratio: 10/12; }
+.lookbook img:last-child:nth-child(odd) { grid-column: 1/-1; aspect-ratio: 5/3; }
+.project-next { text-align: center; }
+.project-next > h2 { padding: 0; font-size: clamp(3.3rem, 10.5vw, 9rem); }
+.project-next > p { margin: .55rem 0 3rem; }
+.project-next .projects { max-width: 37.5rem; margin-inline: auto; text-align: left; }
+.project-next.related .project-image { aspect-ratio: 4/3; }
+.project-next .project .caption, .project-next .project .caption span { color: var(--black); }
 .related { padding-block: 6vw; }
 .related .projects { display: block; }
 .related .project-image { aspect-ratio: 16/9; }
@@ -257,6 +267,9 @@ footer { background: var(--paper); color: var(--black); padding: 5vw var(--gutte
   }
 }
 @media (max-width: 640px) {
+  .project-notes { padding-block: 7rem 4rem; }
+  .lookbook { grid-template-columns: 1fr; }
+  .lookbook img:last-child:nth-child(odd) { aspect-ratio: 3/4; }
   .cover h1, .footer-mark { font-size: 18.8vw; }
   .cover h1 { transform: translate(-.04em, -80%); }
   .portrait { width: 150px; }

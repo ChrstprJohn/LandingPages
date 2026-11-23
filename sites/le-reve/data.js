@@ -31,3 +31,16 @@ export const creativeDirectors = [
   "S. Torres", "A. Morales", "R. Blanco", "E. Suárez", "A. Fernández",
   "E. Navarro", "F. Méndez", "V. Ramos", "L. Ramírez", "J. Cabrera"
 ];
+
+export const projectCredits = [
+  ["M. Vidal", "C. Benítez", "Luxury, high fashion, rebranding, art direction, visual identity, editorial photography"],
+  ["C. Méndez", "V. Rodríguez", "Perfumery, packaging, luxury, naming, product design, brand identity"],
+  ["A. Serrano", "J. Pereira", "B2B, editorial, digital design, sustainability, interactive content, textiles"],
+  ["N. Quintana", "F. Ortega", "Capsule collection, limited edition, campaign photography, creative direction"],
+  ["M. Silva", "L. Duarte", "Retail, pop-up, spatial design, jewelry, brand experience, visual merchandising"],
+  ["L. Duarte", "S. Rivas", "Tone of voice, verbal strategy, copywriting, concept store, style guide"],
+  ["A. Correa", "D. Silva", "Stage design, lighting, 3D mapping, event direction"],
+  ["G. Morales", "E. Castillo", "Event branding, art direction, production"],
+  ["P. Acosta", "C. Duarte", "Branding, visual design, lighting, creative direction"],
+  ["R. González", "T. Ferreira", "Street event, production, art direction, performance design"]
+];

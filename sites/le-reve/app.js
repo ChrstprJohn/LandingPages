@@ -1,4 +1,4 @@
-import { articles, creativeDirectors, projects, projectVideos } from "./data.js";
+import { articles, creativeDirectors, projectCredits, projects, projectVideos } from "./data.js";
 import { articlePath, matchRoute, projectPath } from "./routes.js";
 import { articleNotes } from "./article-notes.js";
 
@@ -159,7 +159,8 @@ function journal() {
 
 function projectDetail(project, index) {
   const [name, client, image, scope, headline, summary] = project;
-  const next = projects[(index + 1) % projects.length];
+  const next = projects[index + 1];
+  const [artDirector, naming, tags] = projectCredits[index];
   const gallery = index === 0
     ? ["1lMApZy9YiXYTwlluDR0qxMI4nI.jpg", "tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "rATMsPHebgbVFwRezzVZpEyfPK4.jpg"]
     : ["jwBg3ZJilOwnxiolnXUnfeY.jpg", "geGhsqF53nrx2i3yOzGg7oo7xlY.jpg", "x5M74ldT5CoUgBze2ZgcNz1jMH4.jpg"].filter(file => file !== image);
@@ -171,11 +172,21 @@ function projectDetail(project, index) {
     </div>
   </section>
   <section class="project-notes inset">
-    <div><p>${scope}</p><h2>${headline}</h2></div>
-    <div><dl><dt>CREATIVE DIRECTION</dt><dd>${creativeDirectors[index]}</dd><dt>CLIENT</dt><dd>${client}</dd><dt>YEAR</dt><dd>2025</dd></dl><p>${summary}</p></div>
+    <div class="project-facts">
+      <h2>${headline}.</h2>
+      <h3>Credits:</h3>
+      <dl class="credit-list">
+        <dt>Creative Direction:</dt><dd>${creativeDirectors[index]}</dd>
+        <dt>Art Direction:</dt><dd>${artDirector}</dd>
+        <dt>Brand Strategy:</dt><dd>A. Álvarez</dd>
+        <dt>Naming:</dt><dd>${naming}</dd>
+      </dl>
+      <dl class="project-fields"><dt>Client:</dt><dd>${client}</dd><dt>Year:</dt><dd>2025</dd><dt>Tags:</dt><dd>${tags}</dd></dl>
+      <p>${summary}</p>
+    </div>
   </section>
   <div class="lookbook inset">${gallery.map(file => photo(file)).join("")}</div>
-  <section class="related"><h2 class="inset">NEXT UP</h2>${projectGrid([next])}<a class="back inset" href="/work">← All work</a></section>`;
+  ${next ? `<section class="project-next related"><h2 class="inset">NEXT UP</h2><p>DISCOVER MORE</p>${projectGrid([next])}</section>` : ""}`;
 }
 
 function articleDetail(article, index) {
