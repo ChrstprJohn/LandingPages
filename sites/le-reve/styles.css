@@ -70,7 +70,7 @@ nav { display: flex; gap: 1rem; }
   animation-timing-function: linear(0, .53 22%, .78 40%, .88 54%, .94 66%, .98 80%, 1);
 }
 .home-entrance .cover small { animation-delay: .23s; }
-.listing-photo, .about-cover > img { animation: portrait-in .7s ease-out both; }
+.listing-photo { animation: portrait-in .7s ease-out both; }
 .listing-cover h1, .about-cover h1 { animation: hero-rise 1s cubic-bezier(.15,.62,.33,1) backwards; }
 .listing-cover h1 { animation-delay: .45s; }
 .about-cover h1 { animation-delay: .1s; }
@@ -80,7 +80,7 @@ nav { display: flex; gap: 1rem; }
 .statement h2 { font-size: 12.8rem; line-height: 1; white-space: nowrap; }
 .statement h2 span { display: block; }
 .statement .statement-kicker { color: white; font: 800 7.45rem/1 Arial, sans-serif; letter-spacing: -.065em; }
-:is(.statement h2 > span, .statement-caption, .statement > p, .welcome > span, .welcome > img, .welcome h2, .welcome-notes > *, .featured h2 > span):not(.editorial-pending) {
+:is(.statement h2 > span, .statement-caption, .statement > p, .welcome > span, .welcome > img, .welcome h2, .welcome-notes > *, .featured h2 > span, .about-intro):not(.editorial-pending) {
   transition: opacity .65s cubic-bezier(.22,.7,.3,1), translate .65s cubic-bezier(.22,.7,.3,1);
 }
 .editorial-pending { opacity: 0; translate: 0 40px; transition: none; }
@@ -314,6 +314,10 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .about-cover { padding-top: 5rem; display: grid; grid-template-columns: 3fr 2fr; align-items: start; gap: 3rem 0; }
 .about-cover h1 { grid-column: 1/-1; font-size: clamp(4.5rem, 15vw, 13.5rem); }
 .about-cover img { height: auto; aspect-ratio: 3/5; grid-column: 2; object-position: center; }
+@supports (animation-timeline: scroll()) {
+  .about-cover > img { animation: about-portrait-drift linear both; animation-timeline: scroll(root); animation-range: 0 1000px; }
+  @keyframes about-portrait-drift { from { translate: 0 -1px; } to { translate: 0 -27px; } }
+}
 .about-intro { grid-column: 1; grid-row: 2; align-self: end; max-width: 28em; padding: 0 2rem 2.5rem 0; }
 .about-intro p + p, .studio-copy p + p { margin-top: .8em; }
 .studio { padding-block: 2rem 5rem; display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 2.4rem 3vw; }

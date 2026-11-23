@@ -385,6 +385,7 @@ if (!motion.matches) {
   revealEditorial(".welcome > span, .welcome-notes > *", .7);
   revealEditorial(".welcome > img", wide ? .57 : .7);
   revealEditorial(".welcome h2", wide ? .7 : .9);
+  revealEditorial(".about-intro", .84);
   const reveals = new IntersectionObserver(entries => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
