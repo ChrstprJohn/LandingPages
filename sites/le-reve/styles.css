@@ -279,16 +279,10 @@ video.is-playing { opacity: 1; }
 .team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .team-grid a:nth-child(2) { grid-column: 3; }
 .team-grid a:nth-child(3) { grid-column: 2; }
-.team img { height: auto; aspect-ratio: 4/3; filter: grayscale(1); transition: filter .4s ease-in-out; }
-.team a:focus-visible img { filter: grayscale(0); }
-.team a:focus-visible .team-caption span { color: var(--red); }
+.team img { height: auto; aspect-ratio: 4/3; filter: grayscale(1); }
 .team a:hover { text-decoration: none; }
 .team-caption { display: flex; justify-content: space-between; gap: .75em; padding-top: .55em; }
-.team-caption span { color: #4d4d4d; transition: color .4s ease-in-out; }
-@media (hover: hover) {
-  .team a:hover img { filter: grayscale(0); }
-  .team a:hover .team-caption span { color: var(--red); }
-}
+.team-caption span { color: #4d4d4d; }
 .listing-cover { position: relative; min-height: 90svh; padding-top: 5rem; }
 .listing-cover p { max-width: 21em; }
 .listing-photo { position: absolute; inset: 43.5% auto auto 50%; translate: -50% -50%; width: clamp(11.5625rem, 14vw, 15rem); aspect-ratio: 3/4; }
@@ -447,6 +441,8 @@ body[data-page="journal"][data-detail] footer { background: #000; color: var(--p
 }
 @media (prefers-reduced-motion: reduce) {
   @view-transition { navigation: none; }
+  .team a:is(:hover, :focus-visible) img { filter: grayscale(0); }
+  .team a:is(:hover, :focus-visible) .team-caption span { color: var(--red); }
   .image-study { min-height: auto; }
   .study-stage { position: relative; }
   .study-portraits img + img { opacity: 0; }

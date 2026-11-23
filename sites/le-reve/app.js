@@ -359,6 +359,14 @@ scrollMotion.add({
     bindCardMotion(card, card, active => zoom.reversed(!active).resume());
   }
 
+  for (const card of document.querySelectorAll(".team-grid a")) {
+    const accent = getComputedStyle(card).getPropertyValue("--red").trim();
+    const color = gsap.timeline({ paused: true, defaults: { duration: .4, ease: "power1.inOut" } });
+    color.to(card.querySelector("img"), { filter: "grayscale(0)" });
+    color.to(card.querySelector(".team-caption span"), { color: accent }, 0);
+    bindCardMotion(card, card, active => color.reversed(!active).resume());
+  }
+
   return () => listeners.abort();
 });
 scrollMotion.add({
