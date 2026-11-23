@@ -48,6 +48,9 @@ export function Model({ inverted = false, compact = false }) {
     const angle = { y: 0, x: 0 }
     const scrollAngle = { y: 0 }
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const geometry = createDecodeGeometry()
+    geometry.computeBoundingSphere()
+    const rotationRadius = geometry.boundingSphere.radius * 1.06
     let spin
     let scrollTurn
 
@@ -58,8 +61,8 @@ export function Model({ inverted = false, compact = false }) {
     const resize = () => {
       const { clientWidth: width, clientHeight: height } = element
       if (!width || !height) return
-      const frustum = 1.48
       const aspect = width / height
+      const frustum = Math.max(1.48, rotationRadius / aspect)
       camera.left = -frustum * aspect
       camera.right = frustum * aspect
       camera.top = frustum
@@ -71,7 +74,6 @@ export function Model({ inverted = false, compact = false }) {
     const observer = new ResizeObserver(resize)
     observer.observe(element)
 
-    const geometry = createDecodeGeometry()
     const edges = new THREE.EdgesGeometry(geometry, 28)
     const faces = new THREE.MeshBasicMaterial({
       color: inverted ? '#911a46' : '#ffffff', side: THREE.DoubleSide, transparent: true, opacity: 0.42, depthWrite: false,
@@ -86,7 +88,7 @@ export function Model({ inverted = false, compact = false }) {
     if (!inverted && !reduced.matches) {
       scrollTurn = gsap.to(scrollAngle, {
         y: Math.PI, ease: 'none', onUpdate: render,
-        scrollTrigger: { trigger: element.closest('.site').querySelector('.hero'), start: 'top top', end: 'bottom 10%', scrub: 2 },
+        scrollTrigger: { trigger: element.closest('.site').querySelector('.hero'), start: 'top top', end: 'bottom 10%', scrub: 0.85 },
       })
     }
 

@@ -11,3 +11,5 @@ These stock photos are used under the [Pexels license](https://www.pexels.com/li
 - [Workspace with smartphone and laptop](https://www.pexels.com/photo/modern-workspace-with-smartphone-and-laptop-33072751/) by I'm Zion
 - [Smartphone beside a laptop](https://www.pexels.com/photo/a-smartphone-beside-a-laptop-4271621/) by alleksana
 - [Laptop and smartphone on a desk](https://www.pexels.com/photo/a-laptop-and-a-smartphone-on-a-desk-7054522/) by Kindel Media
+
+Team names, roles, and portraits come from the public Decode Studio portfolio, which presents the profiles as layout samples. [Decode Studio team](https://chrbuilds.dev/#team)

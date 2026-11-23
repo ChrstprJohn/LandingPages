@@ -8,6 +8,7 @@ import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
 import { essayBody, essayMedia, essaySources, essays, projects, team } from './content'
 import { reducedMotion, useEntrance, wipeEase } from './entrance'
+import { ContactArtwork } from './ContactArtwork'
 import './styles.css'
 
 const Model = lazy(() => import('./Model').then(({ Model }) => ({ default: Model })))
@@ -25,24 +26,35 @@ function DecodeMark({ className }) {
   return (
     <svg className={className} viewBox="0 0 118 25" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" aria-hidden="true">
       <path d="M2 2h10l5 5v11l-5 5H2Z" />
-      <path d="M37 2H22v21h15" /><path data-decode-e-bar="" d="M23 12.5h12" />
+      <path d="M37 2H24L22 4V10L23.5 12.5L22 15V21L24 23H37" /><path data-decode-e-bar="" d="M24 12.5h11" />
       <path data-decode-c="" d={decodeC} />
       <path d="M66 2h7l5 5v11l-5 5h-7l-5-5V7Z" />
       <path d="M83 2h10l5 5v11l-5 5H83Z" />
-      <path d="M117 2h-14v21h14" /><path data-decode-e-bar="" d="M104 12.5h11" />
+      <path d="M117 2H105L103 4V10L104.5 12.5L103 15V21L105 23H117M105 12.5h10" />
     </svg>
   )
 }
 
 function Logo({ href = '/', intro = false }) {
   const mark = useRef(null)
+  const hover = useRef(null)
   useGSAP(() => {
-    if (!intro || reducedMotion()) return
-    gsap.timeline({ delay: 1.75, repeat: 1, yoyo: true, defaults: { duration: 0.5, ease: 'power2.inOut' } })
+    if (reducedMotion()) return
+    const fold = (timeline) => timeline
       .to('[data-decode-e-bar]', { x: 3.5 }, 0)
       .to('[data-decode-c]', { attr: { d: foldedDecodeC } }, 0)
+    hover.current = fold(gsap.timeline({ paused: true, defaults: { duration: 0.38, ease: 'power2.inOut' } }))
+    if (intro) fold(gsap.timeline({ delay: 1.75, repeat: 1, yoyo: true, defaults: { duration: 0.5, ease: 'power2.inOut' } }))
   }, { scope: mark })
-  return <a className="wordmark" href={href} aria-label="Decode home"><span ref={mark}><DecodeMark /></span></a>
+  const fold = (event) => {
+    if (!event.currentTarget.closest('.is-loading')) hover.current?.play()
+  }
+  const unfold = () => hover.current?.reverse()
+  return (
+    <a className="wordmark" href={href} aria-label="Decode home" onPointerEnter={fold} onPointerLeave={unfold} onFocus={fold} onBlur={unfold} onClick={fold}>
+      <span ref={mark}><DecodeMark /></span>
+    </a>
+  )
 }
 
 function Connector() {
@@ -51,6 +63,53 @@ function Connector() {
 
 function RollingText({ children }) {
   return <span className="roll-text"><span>{children}</span><span aria-hidden="true">{children}</span></span>
+}
+
+function DesktopCursor() {
+  const cursor = useRef(null)
+  useGSAP(() => {
+    const mediaQuery = gsap.matchMedia()
+    mediaQuery.add('(hover: hover) and (pointer: fine) and (width > 991px) and (prefers-reduced-motion: no-preference)', () => {
+      const element = cursor.current
+      const root = document.documentElement
+      const x = gsap.quickTo(element, 'x', { duration: 0.34, ease: 'power3.out' })
+      const y = gsap.quickTo(element, 'y', { duration: 0.34, ease: 'power3.out' })
+      let visible = false
+
+      const hide = () => {
+        visible = false
+        delete root.dataset.customCursor
+      }
+      const move = (event) => {
+        if (event.pointerType !== 'mouse' || event.target.closest('input, textarea, select, [contenteditable], .model')) {
+          hide()
+          return
+        }
+        element.dataset.kind = event.target.closest('.wordmark') ? 'hand' : event.target.closest('a, button, summary') ? 'arrow' : 'square'
+        x(event.clientX, visible ? undefined : event.clientX)
+        y(event.clientY, visible ? undefined : event.clientY)
+        root.dataset.customCursor = ''
+        visible = true
+      }
+      document.addEventListener('pointermove', move, { passive: true })
+      root.addEventListener('pointerleave', hide)
+      window.addEventListener('blur', hide)
+      return () => {
+        hide()
+        document.removeEventListener('pointermove', move)
+        root.removeEventListener('pointerleave', hide)
+        window.removeEventListener('blur', hide)
+      }
+    })
+    return () => mediaQuery.revert()
+  })
+  return (
+    <span ref={cursor} className="desktop-cursor" aria-hidden="true">
+      <svg viewBox="0 0 20 24" width="20" height="24" fill="white" stroke="black" strokeLinejoin="round">
+        <path d="M7 12V3a1.5 1.5 0 0 1 3 0v7-2a1.5 1.5 0 0 1 3 0v3-1a1.5 1.5 0 0 1 3 0v2a1.5 1.5 0 0 1 3 0v4l-3 6H8l-5-7a1.7 1.7 0 0 1 2.5-2.3L7 14Z" />
+      </svg>
+    </span>
+  )
 }
 
 function Label({ children, symbol = '├' }) {
@@ -62,15 +121,15 @@ function Cta({ children, className = '', ...props }) {
 }
 
 function Header({ home, blog, active, open, intro }) {
-  const sections = [['investments', 'Services'], ['teams', 'Process'], ['contact', 'Contact']]
+  const sections = [['investments', 'Services'], ['teams', 'Team'], ['contact', 'Contact']]
   return (
     <header className="site-header">
       <Logo href={home ? '#top' : '/'} intro={intro} />
       <nav className="desktop-nav" aria-label="Main navigation">
         {sections.map(([id, label]) => (
-          <a key={id} className={active === id ? 'active' : ''} href={home ? `#${id}` : `/?section=${id}`}><RollingText>{label}</RollingText></a>
+          <a key={id} className={active === id ? 'active' : ''} href={home ? `#${id}` : `/?section=${id}`}>{label}</a>
         ))}
-        <a href="/blog" className={blog ? 'active' : ''} aria-current={blog ? 'page' : undefined}><RollingText>Blog</RollingText></a>
+        <a href="/blog" className={blog ? 'active' : ''} aria-current={blog ? 'page' : undefined}>Blog</a>
       </nav>
       <div className="mobile-nav">
         <button className="contact-icon" aria-label="Start a project" onClick={() => open('join')}>D</button>
@@ -152,7 +211,7 @@ function Overlay({ kind, label, close, children }) {
 }
 
 function Menu({ home, dismiss }) {
-  const links = [['investments', 'Services'], ['teams', 'Process'], ['contact', 'Contact']]
+  const links = [['investments', 'Services'], ['teams', 'Team'], ['contact', 'Contact']]
   return (
     <div className="menu-content">
       <Logo href={home ? '#top' : '/'} />
@@ -206,7 +265,7 @@ function FactTable({ facts }) {
 
 function ProjectIcons() {
   return <div className="project-icons" aria-hidden="true">
-    <span>⌘</span><span>↗</span><span>◇</span>
+    <img src={media('recycle-icon.png')} alt="" /><img src={media('robotics-icon.png')} alt="" /><img src={media('money-icon.png')} alt="" />
   </div>
 }
 
@@ -351,9 +410,9 @@ function ProjectSheet({ index, change, focusHeading, dismiss }) {
 function Team() {
   return (
     <section id="teams" className="team-section home-section" aria-labelledby="team-title">
-      <Label>Process</Label>
-      <span className="team-tag">Decode Process</span>
-      <h2 className="section-title reveal" id="team-title">How we take a website from first sketch to launch.</h2>
+      <Label>Team</Label>
+      <span className="team-tag">Decode Team</span>
+      <h2 className="section-title reveal" id="team-title">Meet the Decode Studio team.</h2>
       <div className="desktop-team">
         {team.map(([name, role, portrait, bio, jobs]) => (
           <article className="person" key={name}>
@@ -426,9 +485,10 @@ function Contact() {
   return (
     <section id="contact" className="contact-section home-section" aria-labelledby="contact-title">
       <Label>Contact</Label>
+      <div className="discipline studio-label"><span>Web design</span><span>Development</span></div>
       <h2 id="contact-title" className="section-title reveal">Tell us what you want your next website to do.</h2>
       <ContactForm />
-      <img className="contact-footer-art" src={media('web-38164328.jpg')} alt="" loading="lazy" />
+      <ContactArtwork className="contact-footer-art" />
       <Footer illustrated />
     </section>
   )
@@ -446,7 +506,7 @@ function Home({ open, active }) {
     <>
       <aside className="home-rail" aria-label="Service index">
         <div className="rail-model">{!mobile && <Suspense><Model /></Suspense>}</div>
-        <img className="rail-contact-art" src={media('web-38164328.jpg')} alt="" />
+        <ContactArtwork className="rail-contact-art" />
         <nav className="rail-index">
           <a href="#investments"><span aria-hidden="true">├</span><RollingText>Services</RollingText></a>
           {projects.map((project, index) => (
@@ -577,7 +637,7 @@ export default function App() {
       if (context.conditions.reduced) return
       const instance = new Lenis({
         duration: 1.8,
-        lerp: 0.05,
+        lerp: 0.04,
         allowNestedScroll: true,
         stopInertiaOnNavigate: true,
       })
@@ -670,6 +730,20 @@ export default function App() {
       })
     })
     mediaQuery.add('(width > 991px) and (prefers-reduced-motion: no-preference)', (context) => {
+      const artwork = root.current.querySelector('.rail-contact-art')
+      if (artwork) {
+        gsap.timeline({
+          defaults: { ease: 'power2.out' },
+          scrollTrigger: {
+            trigger: '#contact',
+            start: 'top 48%',
+            end: 'top top',
+            scrub: true,
+          },
+        })
+          .fromTo(artwork, { yPercent: 120 }, { yPercent: 0 }, 0)
+          .to('.sticky-cta', { yPercent: 120 }, 0)
+      }
       const footer = root.current.querySelector('.footer-peek')
       const content = root.current.querySelector('main')
       if (!footer || !content) return
@@ -787,6 +861,7 @@ export default function App() {
 
   return (
     <div ref={root} className={`site ${home ? 'is-home' : blog ? 'is-index' : 'is-essay'}${loading ? ' is-loading' : ''}`} data-active={active} onClick={onNavigate}>
+      <DesktopCursor />
       <Header home={home} blog={blog} active={navActive} open={setOverlay} intro={fullIntro} />
       <div className="intro-cover" ref={cover} aria-hidden="true">
         {fullIntro && <div className="loading-counter"><span>├</span><span ref={counter}>00</span></div>}
@@ -794,8 +869,8 @@ export default function App() {
       {home && <Home open={openProject} active={active} />}
       {(blog || essay) && <Blog essay={essay} />}
       {!home && !blog && !essay && <main className="missing"><h1>Page not found</h1><a href="/">Back to Decode</a></main>}
-      {(home || blog || essay) && <div className="footer-peek" aria-hidden="true"><DecodeMark /></div>}
-      <Cta className="sticky-cta" onClick={() => setOverlay('join')} aria-haspopup="dialog">Start a project</Cta>
+      {(home || essay) && <div className="footer-peek" aria-hidden="true"><DecodeMark /></div>}
+      <Cta className="sticky-cta" onClick={() => setOverlay('join')} aria-haspopup="dialog" inert={active === 'contact'}>Start a project</Cta>
       <div className="route-wipe" ref={wipe} aria-hidden="true" />
       {overlay === 'menu' && <Overlay key="menu" kind="menu" label="Navigation menu" close={close}>
         {(dismiss) => <Menu home={home} dismiss={dismiss} />}

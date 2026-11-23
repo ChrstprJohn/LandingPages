@@ -18,7 +18,7 @@ export const projects = [
     tags: ['strategy', 'responsive design', 'frontend development'],
     url: '/blog-posts/responsive-web-design-testing-checklist',
     summary: 'We design and build responsive marketing sites and landing pages. Start with what your visitors need to learn or do, then design the pages and interactions that help them get there.',
-    facts: [['Discovery', 'Goals and page inventory'], ['Design', 'Responsive prototype'], ['Delivery', 'Tested production build']],
+    facts: [['Discovery', 'Goals and page inventory'], ['Design', 'Responsive prototype'], ['Development', 'Reusable page components'], ['Verification', 'Keyboard and device testing'], ['Delivery', 'Tested production build']],
     gallery: [coding, devices, planning, keyboard, testing, desk],
     strip: [1, 0, 2, 3],
     stripWidths: [176, 251, 133, 228],
@@ -30,7 +30,7 @@ export const projects = [
     tags: ['core web vitals', 'technical SEO', 'site migrations'],
     url: '/blog-posts/improve-core-web-vitals',
     summary: 'We identify the bottlenecks that affect loading, interaction, and discoverability. Use a clear baseline to prioritize fixes and verify changes against the same pages and user journeys.',
-    facts: [['Performance', 'Loading and responsiveness'], ['Search', 'Crawl and index checks'], ['Release', 'Redirect verification'], ['Monitoring', 'Field data and regressions']],
+    facts: [['Baseline', 'Page and template audit'], ['Performance', 'Loading and responsiveness'], ['Search', 'Crawl and index checks'], ['Release', 'Redirect verification'], ['Monitoring', 'Field data and regressions']],
     gallery: [desk, coding, keyboard, testing, review, workspace],
     strip: [0, 1, 3, 4, 5],
     stripWidths: [177, 252, 133, 241, 241],
@@ -42,7 +42,7 @@ export const projects = [
     tags: ['content workflows', 'site maintenance', 'publishing'],
     url: '/blog-posts/when-to-choose-a-cms',
     summary: 'We help you choose a publishing setup that matches how your team works. Give editors a clear way to update content and keep releases, backups, and ongoing maintenance manageable.',
-    facts: [['Content model', 'Reusable page sections'], ['Publishing', 'Preview and review'], ['Handoff', 'Documentation and training']],
+    facts: [['Content model', 'Reusable page sections'], ['Editing', 'Roles and permissions'], ['Publishing', 'Preview and review'], ['Maintenance', 'Backups and release workflow'], ['Handoff', 'Documentation and training']],
     gallery: [workspace, planning, review, publishing],
     strip: [0, 1, 2, 3],
     stripWidths: [177, 257, 133, 228],
@@ -50,12 +50,22 @@ export const projects = [
 ]
 
 export const team = [
-  ['Discovery', 'Define the scope', planning[0], 'List the pages, audiences, and outcomes the site needs to support.', [['First step', 'Agree on priorities']]],
-  ['Design', 'Build the prototype', devices[0], 'Map the content and test the layout at phone, tablet, and desktop widths.', [['Deliverable', 'Responsive page designs']]],
-  ['Development', 'Build the website', coding[0], 'Implement the pages, navigation, forms, and the publishing workflow.', [['Deliverable', 'Working preview']]],
-  ['Testing', 'Check real user flows', testing[0], 'Run through the site on different devices, with keyboard input, and with reduced motion.', [['Deliverable', 'Verified interactions']]],
-  ['Launch', 'Prepare production', desk[0], 'Confirm metadata, links, redirects, and performance before release.', [['Deliverable', 'Launch checklist']]],
-  ['Handoff', 'Make updates manageable', review[0], 'Document the project and show editors how to publish changes safely.', [['Deliverable', 'Editing and maintenance guide']]],
+  ['Christopher John O. Picardo', 'Backend Developer', 'team-christopher.jpg',
+    'Connects the studio’s creative direction with the technical decisions behind each build, from how the site stores content to how it handles a project inquiry.', [
+      ['Project planning', 'Technical scope'], ['Application architecture', 'Data and service boundaries'], ['API design', 'Form and integration endpoints'], ['Content workflows', 'Publishing and review'], ['Release preparation', 'Deployment and handoff'],
+    ]],
+  ['Sam Leonard Barber', 'UI/UX Designer', 'team-sam.jpg',
+    'Shapes the path from a visitor’s first impression to their next action. Designs page layouts and interaction states so teams can test their ideas before development begins.', [
+      ['Site structure', 'Information architecture'], ['User journeys', 'Navigation and key flows'], ['Visual design', 'Typography and layout'], ['Prototyping', 'Interaction and responsive states'], ['Design handoff', 'Components and specifications'],
+    ]],
+  ['Marc Kevin Del Mundo', 'Frontend Developer', 'team-marc.jpg',
+    'Builds responsive pages and accessible interactions, carrying a design through to working components that people can use with a mouse, keyboard, or touch.', [
+      ['Page development', 'Responsive components'], ['Accessibility', 'Keyboard and focus behavior'], ['Motion', 'GSAP and reduced motion'], ['Performance', 'Media loading and layout stability'], ['Quality checks', 'Cross-device testing'],
+    ]],
+  ['Arlan Martin Jalop', 'Backend Developer', 'team-arlan.jpg',
+    'Works on the data, application logic, and integrations that support publishing and site operations. Focuses on clear validation and predictable behavior when something goes wrong.', [
+      ['Data modeling', 'Content and application records'], ['Business logic', 'Validation and permissions'], ['Integrations', 'Third-party service connections'], ['Reliability', 'Error handling and recovery'], ['Maintenance', 'Operational documentation'],
+    ]],
 ]
 
 export const essays = [

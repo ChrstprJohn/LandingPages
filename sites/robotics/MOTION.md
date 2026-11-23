@@ -20,3 +20,5 @@ After the Decode content update, the guide index was checked at actual viewport 
 At 390 × 844, a pointer click on Tomorrow Recycling’s More control and a pointer click on Close preserved the local background scroll position at 771 CSS pixels. Locator-based activation repositioned the page before the dialog settled. The reference and local sheets both reached Aescape, and the local Previous control wrapped from Tomorrow Recycling to The non-fiction revolution.
 
 The public reference is [Mecha Capital](https://mecha-xyz.webflow.io/).
+
+At 1440 × 900 the desktop guide index ends at the decorative artwork and has no extra scroll or footer lift. Decode now matches that composition, with the artwork starting at 668 CSS pixels. The mobile index still displays its inline footer.

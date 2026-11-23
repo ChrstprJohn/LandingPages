@@ -34,10 +34,16 @@ export function useEntrance({ root, cover, counter, home, full, setLoading }) {
         { yPercent: 120, autoAlpha: 0 },
         { yPercent: 0, autoAlpha: 1, stagger: 0.08, clearProps: 'transform,visibility,opacity' }, 0.15)
       if (home) {
+        const railStart = window.matchMedia('(width > 991px)').matches ? 0.92 : 0.4
         timeline
           .from('.hero .section-label, .hero .discipline', { clipPath: 'inset(0 0 100% 0)', duration: 1.2 }, 0.3)
-          .from('.rail-model, .hero-mobile-model', { clipPath: 'inset(0 0 100% 0)', duration: 1.2, ease: 'power2.inOut' }, 0.4)
-          .from('.rail-index a', { clipPath: 'inset(0 0 100% 0)', stagger: 0.1, duration: 1.2 }, 0.5)
+          .from('.hero-mobile-model', { clipPath: 'inset(0 0 100% 0)', duration: 1.2, ease: 'power2.inOut' }, 0.4)
+          .fromTo('.rail-model .model', { yPercent: 30, autoAlpha: 0 }, {
+            yPercent: 0, autoAlpha: 1, duration: 0.9, ease: 'power3.out', clearProps: 'transform,visibility,opacity',
+          }, railStart)
+          .fromTo('.rail-index a', { autoAlpha: 0, clipPath: 'inset(100% 0 0)' }, {
+            autoAlpha: 1, clipPath: 'inset(0% 0 0)', stagger: 0.09, duration: 0.65, clearProps: 'clipPath,visibility,opacity',
+          }, railStart)
       } else {
         timeline.from('.editorial-head > :is(.project-icons, .website-link), .essay-links li',
           { y: 24, opacity: 0, stagger: 0.08, duration: 1.1 }, 0.2)
@@ -47,6 +53,9 @@ export function useEntrance({ root, cover, counter, home, full, setLoading }) {
 
     if (full) {
       body.style.overflow = 'hidden'
+      const wordmark = root.current.querySelector('.site-header .wordmark > span')
+      const initialScale = window.matchMedia('(width > 991px)').matches ? 430 / 118 : 1
+      gsap.set(wordmark, { scale: initialScale, transformOrigin: 'top left' })
       const value = { percent: 0 }
       const finish = contextSafe(() => {
         if (disposed) return
@@ -58,11 +67,13 @@ export function useEntrance({ root, cover, counter, home, full, setLoading }) {
           },
         })
           .to('.loading-counter', { y: 32, opacity: 0, duration: 0.3, ease: 'power2.inOut' }, 0)
-          .to('.site-header .wordmark', { width: 'var(--wordmark-width)', duration: 1, ease: 'power2.inOut' }, 0)
+          .to(wordmark, { scale: 1, duration: 1, ease: 'power2.inOut', clearProps: 'transform,transformOrigin' }, 0)
           .to(cover.current, { autoAlpha: 0, duration: 0.3, ease: 'power2.inOut' }, 0.15)
-          .call(reveal, [], 0.5)
+          .call(reveal, [], 0.15)
       })
-      gsap.from('.site-header .wordmark > span', { yPercent: 100, duration: 1, delay: 0.5, ease: 'power2.inOut' })
+      gsap.fromTo(wordmark, { clipPath: 'inset(100% 0 0)' }, {
+        clipPath: 'inset(0% 0 0)', duration: 1, delay: 0.5, ease: 'power2.inOut', clearProps: 'clipPath',
+      })
       gsap.to(value, {
         percent: 100, duration: 3.8, ease: 'none',
         onUpdate: () => { counter.current.textContent = String(Math.round(value.percent)).padStart(2, '0') },
