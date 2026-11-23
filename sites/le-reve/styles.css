@@ -153,20 +153,20 @@ video.is-playing { opacity: 1; }
 .project .caption span { grid-row: 2; }
 .project .caption span { color: #b9b9b9; }
 .project .caption time { grid-row: 1; grid-column: 2; }
-.featured .projects { row-gap: 4vw; }
-.listing-cover + .projects { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-.listing-cover + .projects > .project { grid-column: span 2; }
-.listing-cover + .projects > .project:nth-child(-n + 2),
+:is(.listing-cover + .projects, .featured .projects) { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+:is(.listing-cover + .projects, .featured .projects) > .project { grid-column: span 2; }
+:is(.listing-cover + .projects, .featured .projects) > .project:nth-child(-n + 2),
 .listing-cover + .projects > .project:nth-last-child(-n + 2) { grid-column: span 3; }
-.listing-cover + .projects .caption { min-height: 35svh; align-content: start; font-size: max(.875rem, 1.55vw); padding: 1rem; }
-.listing-cover + .projects .caption span { max-width: 17em; }
+:is(.listing-cover + .projects, .featured .projects) .caption { min-height: 35svh; align-content: start; font-size: max(.875rem, 1.55vw); padding: 1rem; }
+:is(.listing-cover + .projects, .featured .projects) .caption span { max-width: 17em; }
 @media (width < 1200px) {
-  .listing-cover + .projects { grid-template-columns: minmax(0, 1fr); row-gap: 3rem; }
-  .listing-cover + .projects > .project:nth-child(n) { grid-column: auto; }
-  .listing-cover + .projects .caption { min-height: 0; padding: 1rem 1rem 0; }
-  .listing-cover + .projects .project-image strong { opacity: 1; }
-  .listing-cover + .projects .project-image :is(img, video) { filter: brightness(.55); }
-  .listing-cover + .projects .project:is(:hover, :focus-visible) strong { opacity: 0; }
+  :is(.listing-cover + .projects, .featured .projects) { grid-template-columns: minmax(0, 1fr); row-gap: 3rem; }
+  .featured .projects { row-gap: 6rem; }
+  :is(.listing-cover + .projects, .featured .projects) > .project:nth-child(n) { grid-column: auto; }
+  :is(.listing-cover + .projects, .featured .projects) .caption { min-height: 0; padding: 1rem 1rem 0; }
+  :is(.listing-cover + .projects, .featured .projects) .project-image strong { opacity: 1; }
+  :is(.listing-cover + .projects, .featured .projects) .project-image :is(img, video) { filter: brightness(.55); }
+  :is(.listing-cover + .projects, .featured .projects) .project:is(:hover, :focus-visible) strong { opacity: 0; }
 }
 .craft { display: grid; grid-template-columns: 1fr 1fr; background: var(--paper); color: var(--black); }
 .craft-heading { position: sticky; top: 0; height: 90svh; align-self: start; display: grid; place-content: center; justify-items: center; text-align: center; background: var(--black); color: var(--paper); padding: var(--gutter); }
@@ -300,7 +300,6 @@ footer { background: var(--paper); color: var(--black); padding: 5vw var(--gutte
   .project-image strong { font-size: 12vw; opacity: 1; }
   .project-image :is(img, video) { filter: brightness(.55); }
   .project:is(:hover, :focus-visible) strong { opacity: 0; }
-  .featured .projects { row-gap: 19vw; }
   .listing-photo { top: 49.5%; }
   .listing-cover h1 { position: absolute; clip-path: inset(50%); animation: none; }
   .listing-cover p, .journal-lead p { max-width: 100%; }
