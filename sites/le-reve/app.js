@@ -253,6 +253,28 @@ if (page !== "home") {
 }
 
 const motion = matchMedia("(prefers-reduced-motion: reduce)");
+const header = document.querySelector(".site-header");
+let scrollEdge = Math.max(0, scrollY);
+addEventListener("scroll", () => {
+  const position = Math.max(0, scrollY);
+  if (position <= 24) {
+    header.classList.remove("is-scrolled-away");
+    scrollEdge = position;
+  } else if (header.classList.contains("is-scrolled-away")) {
+    scrollEdge = Math.max(position, scrollEdge);
+    if (scrollEdge - position >= 128) {
+      header.classList.remove("is-scrolled-away");
+      scrollEdge = position;
+    }
+  } else {
+    scrollEdge = Math.min(position, scrollEdge);
+    if (position - scrollEdge >= 64) {
+      header.classList.add("is-scrolled-away");
+      scrollEdge = position;
+    }
+  }
+}, { passive: true });
+
 function rotatePortrait(portrait) {
   let frame = heroPhotos.findIndex(file => portrait.getAttribute("src")?.endsWith(file));
   let timer;

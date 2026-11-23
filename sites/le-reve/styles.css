@@ -30,7 +30,7 @@ body[data-page="journal"] .journal-lead h1 { color: var(--red); }
 body[data-page="journal"][data-detail] { background: var(--black); color: white; }
 body[data-page="journal"][data-detail] .site-header { color: var(--red); }
 a { color: inherit; text-decoration: none; }
-a:hover, a[aria-current] { text-decoration: underline; text-underline-offset: .25em; }
+a:hover { text-decoration: underline; text-underline-offset: .25em; }
 a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 h1, h2, p, dl, dd { margin: 0; }
@@ -50,7 +50,9 @@ small { font-size: inherit; }
   justify-content: space-between;
   padding: max(1rem, 1.11vw);
   letter-spacing: -.045em;
+  transition: opacity .35s ease-in-out;
 }
+.site-header.is-scrolled-away:not(:focus-within) { opacity: 0; pointer-events: none; }
 nav { display: flex; gap: 1rem; }
 .cover {
   position: relative;
