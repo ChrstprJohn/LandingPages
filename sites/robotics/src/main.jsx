@@ -20,7 +20,7 @@ const menuMask = { closed: 'inset(0 0 100% 0)', open: 'inset(0 0 0% 0)' }
 const menuMaskEase = CustomEase.create('menuMask', '0.9,0,0.1,1')
 const menuLinkEase = CustomEase.create('menuLink', '0.7,0,0.3,1')
 const decodeC = 'M57 2 L46 2 L41 7 L41 18 L46 23 L57 23'
-const foldedDecodeC = 'M57 6 L46 2 L41 7 L41 18 L46 23 L57 19'
+const foldedDecodeC = 'M57 6.5 L47.5 2 L41 9 L41 16 L47.5 23 L57 18.5'
 
 function DecodeMark({ className }) {
   return (
@@ -41,7 +41,7 @@ function Logo({ href = '/', intro = false }) {
   useGSAP(() => {
     if (reducedMotion()) return
     const fold = (timeline) => timeline
-      .to('[data-decode-e-bar]', { x: 3.5 }, 0)
+      .to('[data-decode-e-bar]', { x: 6 }, 0)
       .to('[data-decode-c]', { attr: { d: foldedDecodeC } }, 0)
     hover.current = fold(gsap.timeline({ paused: true, defaults: { duration: 0.38, ease: 'power2.inOut' } }))
     if (intro) fold(gsap.timeline({ delay: 1.75, repeat: 1, yoyo: true, defaults: { duration: 0.5, ease: 'power2.inOut' } }))
