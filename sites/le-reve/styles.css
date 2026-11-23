@@ -320,8 +320,8 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .studio-philosophy .studio-copy { grid-column: 2; }
 .project-hero { position: relative; min-height: 100svh; isolation: isolate; overflow: clip; padding: var(--gutter); color: white; }
 .project-hero > :is(img, video) { position: absolute; inset: 0; z-index: -1; filter: brightness(.68); object-position: center 38%; }
-.project-heading { position: absolute; top: 50%; left: 50%; right: var(--gutter); }
-.project-hero h1 { font-size: 8vw; max-width: 7ch; }
+.project-heading { position: absolute; top: calc(50% - 1rem); left: calc(50% + .5625rem); right: var(--gutter); }
+.project-hero h1 { font-size: min(7.3125rem, 9.15vw); width: min-content; min-width: min(7ch, 100%); max-width: 100%; overflow-wrap: break-word; letter-spacing: -.03em; }
 .project-heading > div { display: grid; grid-template-columns: 1fr 1fr; gap: 2vw; margin-top: .85em; }
 .project-stamp { position: absolute; bottom: var(--gutter); left: var(--gutter); display: grid; place-items: center; width: min(17.4vw, 30svh); aspect-ratio: 2/3; }
 .project-stamp img, .project-initials { grid-area: 1/1; }
@@ -329,10 +329,10 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .project-hero .project-heading time { animation-delay: .35s; }
 .project-hero .project-heading p { animation-delay: .55s; }
 .project-initials { color: var(--red); font-size: 8vw; }
-.project-notes, .lookbook, .project-next { background: var(--paper); color: var(--black); }
+.project-notes, .lookbook, .project-next { background: var(--gallery-paper); color: var(--black); }
 .project-notes { padding-block: 9rem; }
 .project-facts { width: min(100%, 35.5rem); margin-inline: auto; font-size: max(1rem, 1.55vw); line-height: 1.3; letter-spacing: -.025em; }
-.project-facts h2 { margin-bottom: 2rem; font-size: clamp(2.2rem, 6vw, 5rem); letter-spacing: -.045em; }
+.project-facts h2 { margin-bottom: 2rem; font-size: clamp(2.2rem, 6vw, 5rem); letter-spacing: -.06em; }
 .project-facts h3, .project-fields dt { font-size: 1.17em; text-transform: uppercase; margin: 0 0 .65em; }
 .credit-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); }
 .project-fields dt { margin-top: 1.5em; }
@@ -341,11 +341,15 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .lookbook img { height: auto; aspect-ratio: 10/12; }
 .lookbook img:last-child:nth-child(odd) { grid-column: 1/-1; aspect-ratio: 5/3; }
 .project-next { text-align: center; }
-.project-next > h2 { padding: 0; font-size: clamp(3.3rem, 10.5vw, 9rem); }
+.project-next > h2 { padding: 0; font-size: clamp(3.36rem, 10.55vw, 8.4375rem); letter-spacing: -.04em; }
 .project-next > p { margin: .55rem 0 3rem; }
 .project-next .projects { max-width: 37.5rem; margin-inline: auto; text-align: left; }
 .project-next.related .project-image { aspect-ratio: 4/3; }
-.project-next .project .caption, .project-next .project .caption span { color: var(--black); }
+.project-next .project .caption { color: var(--black); }
+.project-next :where(.project) .caption span { color: var(--black); }
+@media (min-width: 1200px) {
+  .project-next .caption { min-height: 35svh; align-content: start; font-size: 1.2375rem; row-gap: .4em; }
+}
 .related { padding-block: 6vw; }
 .related .projects { display: block; }
 .related .project-image { aspect-ratio: 16/9; }
@@ -427,9 +431,9 @@ body[data-page="journal"][data-detail] footer { background: #000; color: var(--p
   .about-portrait { position: relative; aspect-ratio: 3/4; overflow: clip; }
   .about-portrait img { position: absolute; inset: 0 auto auto 0; }
   .about-intro { padding: 2.5rem 0; font-size: .825rem; }
-  .project-heading { top: 49%; left: var(--gutter); }
+  .project-heading { top: 48%; left: var(--gutter); }
   .project-hero > :is(img, video) { top: -4svh; height: 145%; }
-  .project-hero h1 { max-width: 7ch; font-size: 3.05rem; }
+  .project-hero h1 { font-size: 3.12rem; }
   .project-stamp { top: 15.7%; bottom: auto; left: 50%; transform: translateX(-50%); width: 150px; }
   .project-initials { font-size: 3.6rem; }
   .studio { grid-template-columns: 1fr; gap: 2.375rem; padding-block: 5rem; }
