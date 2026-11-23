@@ -19,3 +19,15 @@ export const articles = [
   ["Neon Haze", "Building chaos with color", "WvorhB9us9zmCVV9BdHmt9NShMs.jpg", "oXFJBsROVTvQih3gyrQZFMqIdRw.jpg", "Color took the lead in this warehouse performance. Smoke and light turned the moving crowd into part of the projection."],
   ["Mirror Bloom", "The architecture of reflection", "7ENpLBH5DADzJaKJ3ZuAv76Fcas.jpg", "g4TrSmCcsdNW7t0pHK1ve1pY5g.jpg", "Fragmented mirrors transformed a courtyard into a changing study of perspective. As visitors moved through it, their reflections became part of the installation."]
 ];
+
+export const projectVideos = {
+  "Pixel Forge": "8FyTMuJN7Jn03aPpYwKvWE1M3s.mp4",
+  "Design Core": "oH0KTWptG6fP1w3BGMYyqAuk.mp4",
+  "Idea Mint": "MaMJlL3W4Bfev4T0zwOgqQbws.mp4",
+  "Light Code": "l8hH5R698HbGxymLB733qZwCJ8.mp4"
+};
+
+export const creativeDirectors = [
+  "S. Torres", "A. Morales", "R. Blanco", "E. Suárez", "A. Fernández",
+  "E. Navarro", "F. Méndez", "V. Ramos", "L. Ramírez", "J. Cabrera"
+];
