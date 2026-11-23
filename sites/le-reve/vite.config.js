@@ -14,11 +14,11 @@ export default defineConfig({
         ...projects.map(([name]) => projectPath(name)),
         ...articles.map(([name, title]) => articlePath(name, title))
       ];
-      await Promise.all(paths.map(async path => {
+      for (const path of paths) {
         const target = join(dir, path.slice(1));
         await mkdir(target, { recursive: true });
         await copyFile(join(dir, "index.html"), join(target, "index.html"));
-      }));
+      }
     }
   }]
 });
