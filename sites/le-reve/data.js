@@ -1,46 +1,21 @@
 export const projects = [
-  ["Brand Pulse", "Aethel (Legacy Luxury Couture House)", "VaVeL0jmtullQAkoQ37i7Y4er6k.jpg", "Strategic rebranding and editorial art direction", "Where heritage meets future", "A quiet identity for a couture house, built around cinematic lighting and the texture of its fabrics."],
-  ["Pixel Forge", "Éclat Parfums (Niche Perfumery Brand)", "J3m4BsOH6XPCYuuKIWUCtsiOMdw.png", "Naming, identity and packaging", "Scent storytelling", "A visual language and packaging system that give a niche fragrance collection a distinct presence."],
-  ["Frame Lab", "B2B Sustainable Fabric Sourcing Platform", "9teLjFMpKKKKUQKKA5vbgIBMps.jpg", "Digital editorial and content strategy", "The editorial voice of material", "An editorial platform that makes fabric sourcing easier to understand through images and material stories."],
-  ["Mood Craft", "Minimalist Resort Wear Fashion Brand", "QwguGwCCrl6nE9DPClR05Lalu0.jpg", "Limited-edition branding", "A collection beyond the season", "A restrained identity for resort wear designed to move between places and seasons."],
-  ["Design Core", "Avant-Garde Accessories and Designer Jewelry Brand", "J3m4BsOH6XPCYuuKIWUCtsiOMdw.png", "Brand experience and retail design", "Space as statement", "A retail concept that brings the sculptural qualities of jewelry into the space around it."],
-  ["Color Tribe", "The Curated Edit (Multi-Brand Concept Store)", "wLV5KyoD8k6EgBRIoC0IOK1Lrmk.jpg", "Verbal strategy and content", "A language for curation", "A distinct editorial voice for a concept store with a changing roster of designers."],
-  ["Photo Grid", "Noir", "IwPc55au32d0TM7VdbuuFwa4jI.jpg", "Immersive live performance", "Value in the details", "A visual system for live performance that carries through from the stage to the photographic record."],
-  ["Idea Mint", "Territorio", "tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "City music festival", "A point of view on style", "A flexible campaign identity drawn from the city and its creative community."],
-  ["Light Code", "Pulse", "O1NAT0hwgGZBCqv95S4Hll1Hc.jpg", "Night jam session series", "The art of presentation", "An identity that captures the energy of an intimate night of live music."],
-  ["Story Box", "Origen", "t2z660HhKFQCyQ25z9rjWzZL24.jpg", "Street music parade", "A stage for emerging talent", "A visual framework that gives different performers room to tell their own stories."]
+  ["Night Form", "Tailoring campaign concept", "suit.jpg", "Campaign strategy and art direction", "The shape of a shadow", "A study in black tailoring. Hard side light picks out the lapel, shoulder and cuff so the cut does most of the talking."],
+  ["Still Air", "Fragrance identity concept", "fragrance.jpg", "Identity and packaging", "A quieter shelf presence", "A glass bottle, a paper wrap and a single typographic register give this imagined fragrance line room to build a family of scents."],
+  ["Soft Structure", "Textile editorial concept", "silk.jpg", "Image direction and editorial", "Cut from a single idea", "Fabric takes the lead. A tight set of crops brings folds, drape and reflected light into the same visual system."],
+  ["Off Season", "Outerwear lookbook concept", "outerwear.jpg", "Lookbook and digital direction", "Clothes between seasons", "A capsule shown in motion and in layers, with enough space around each outfit to see how the pieces fit together."],
+  ["Small Objects", "Jewelry campaign concept", "jewelry.jpg", "Campaign art direction", "Weight at a small scale", "Close portraits let the placement of each piece shape the composition. The color palette follows the materials in the jewelry."],
+  ["After Hours", "Accessories editorial concept", "bag.jpg", "Editorial styling and art direction", "A bag after dark", "Warm walls and dark tailoring create a setting where the line of a handle and the gloss of leather read clearly."],
+  ["Cut on the Bias", "Occasionwear campaign concept", "tulle.jpg", "Campaign identity", "A study in movement", "A high-contrast campaign idea built around the way a dress changes shape as the wearer turns."],
+  ["Dress Code", "Independent fashion editorial", "tailoring.jpg", "Styling and image direction", "The jacket sets the pace", "Repeated angles track how the same jacket changes with posture, layering and the distance of the camera."],
+  ["Second Skin", "Layering editorial concept", "layers.jpg", "Creative direction and layout", "Texture up close", "The editorial moves from silhouette to close-up, giving fur, denim and metal a different visual rhythm on each spread."],
+  ["White Room", "Formalwear campaign concept", "white-suit.jpg", "Campaign and digital direction", "A suit in full light", "Pale tailoring against a simple backdrop brings seams and proportions to the foreground."]
 ];
 
 export const articles = [
-  ["Dune Sonic", "Soundscapes in the desert", "8zFWLstcBYbIYN56wrEC5yJlgs.jpg", "XeA2FmML2k4qbbFDasB6MqOcwY.jpg", "On a solar-powered stage among the dunes, wind and silence became part of the score. The desert changed how performers listened to one another and how the audience experienced the space between notes."],
-  ["Silver Frame", "When a concert becomes cinema", "K0UfIFyPOZlb50yu9kzAywKXE.jpg", "GDYopuoQcFfcqqaoHhIMm18hfuw.jpg", "A concert built with the pacing of a film. Light cues and moments of silence gave the performance its structure and brought the audience closer to the performers."],
-  ["Terminal Echo", "Reclaiming noise from the past", "S8u78UMVr9LdA53aR4XYRnxZw.jpg", "uUhOm91HWdl3lHFnykBT1iHwdP8.jpg", "An abandoned railway terminal became an instrument for a night. The music leaned into the building’s natural echoes, making its history audible through rhythm and distortion."],
-  ["Sonar ID", "The sound of identity", "osEZntn2ymWDXz0ckiEK7G9j08.jpg", "OeAVNbNg9LgXlyEYoMY8wvOidM.jpg", "An installation translated heartbeats, gestures and breath into live sound. Each visitor heard a composition shaped by their own movements."],
-  ["Neon Haze", "Building chaos with color", "WvorhB9us9zmCVV9BdHmt9NShMs.jpg", "oXFJBsROVTvQih3gyrQZFMqIdRw.jpg", "Color took the lead in this warehouse performance. Smoke and light turned the moving crowd into part of the projection."],
-  ["Mirror Bloom", "The architecture of reflection", "7ENpLBH5DADzJaKJ3ZuAv76Fcas.jpg", "g4TrSmCcsdNW7t0pHK1ve1pY5g.jpg", "Fragmented mirrors transformed a courtyard into a changing study of perspective. As visitors moved through it, their reflections became part of the installation."]
-];
-
-export const projectVideos = {
-  "Pixel Forge": "8FyTMuJN7Jn03aPpYwKvWE1M3s.mp4",
-  "Design Core": "oH0KTWptG6fP1w3BGMYyqAuk.mp4",
-  "Idea Mint": "MaMJlL3W4Bfev4T0zwOgqQbws.mp4",
-  "Light Code": "l8hH5R698HbGxymLB733qZwCJ8.mp4"
-};
-
-export const creativeDirectors = [
-  "S. Torres", "A. Morales", "R. Blanco", "E. Suárez", "A. Fernández",
-  "E. Navarro", "F. Méndez", "V. Ramos", "L. Ramírez", "J. Cabrera"
-];
-
-export const projectCredits = [
-  ["M. Vidal", "C. Benítez", "Luxury, high fashion, rebranding, art direction, visual identity, editorial photography"],
-  ["C. Méndez", "V. Rodríguez", "Perfumery, packaging, luxury, naming, product design, brand identity"],
-  ["A. Serrano", "J. Pereira", "B2B, editorial, digital design, sustainability, interactive content, textiles"],
-  ["N. Quintana", "F. Ortega", "Capsule collection, limited edition, campaign photography, creative direction"],
-  ["M. Silva", "L. Duarte", "Retail, pop-up, spatial design, jewelry, brand experience, visual merchandising"],
-  ["L. Duarte", "S. Rivas", "Tone of voice, verbal strategy, copywriting, concept store, style guide"],
-  ["A. Correa", "D. Silva", "Stage design, lighting, 3D mapping, event direction"],
-  ["G. Morales", "E. Castillo", "Event branding, art direction, production"],
-  ["P. Acosta", "C. Duarte", "Branding, visual design, lighting, creative direction"],
-  ["R. González", "T. Ferreira", "Street event, production, art direction, performance design"]
+  ["On the Bias", "Photographing a dress in motion", "tulle.jpg", "silk.jpg", "A garment often reveals its construction between poses. Shooting the turn gives folds and seams a chance to do something they can’t do on a hanger.", "We start with a natural movement such as a step or a turn, then work out which camera height reveals the cloth best.", "What should the camera follow?", "Follow the movement through the hem first. Once the cloth is moving predictably, adjust the light and framing to describe its shape."],
+  ["The Dark Jacket", "A study in black tailoring", "pinstripe.jpg", "suit.jpg", "Two black jackets can read as very different colors under the same light. The finish of the fabric and the direction of the weave both affect what the camera sees.", "A side light catches the raised edge of a lapel, while a large fill can keep the front panel readable.", "Where should the detail sit?", "Check the shoulder and collar first. A narrow strip of light in the right place preserves their shape without flattening the rest of the picture."],
+  ["Room for Scent", "How fragrance becomes an image", "fragrance.jpg", "glass.jpg", "A fragrance image has to suggest temperature, texture and time through the things a viewer can actually see.", "The placement of a bottle, the angle of its shadow and the surface beneath it can hint at an opening note before the copy begins.", "What belongs in the frame?", "Give each prop a job. If a material describes the light or a note in the fragrance, keep it. Leave room for the glass itself to carry the image."],
+  ["At the Collar", "Framing jewelry on the body", "jewelry.jpg", "portrait.jpg", "Jewelry changes with the person wearing it. A chain follows the shoulder in one frame and catches light across the collarbone in the next.", "Start with a portrait crop so the wearer’s posture guides the frame. Move closer only after you know which details matter.", "How do you hold onto the shape?", "Watch the small spaces between the piece and the body. Keeping those spaces readable makes an earring or pendant easier to see."],
+  ["Between Seasons", "Building an outerwear lookbook", "outerwear.jpg", "coat.jpg", "A useful outerwear image shows how a garment sits over other clothes. That means photographing an outfit as a whole before moving close enough to see seams and fastenings.", "Plan one frame that shows proportion, one that shows movement and one that shows how the layers meet.", "What should repeat between looks?", "Keep the viewing height and distance consistent. Readers can compare how each garment fits while the clothes, setting and movement still vary."],
+  ["Available Light", "Working with shadow in portraits", "light-study.jpg", "formal.jpg", "Window light gives the portrait a different shape as the sitter turns. A small change in posture can bring out a cheekbone or send an entire sleeve into shade.", "Find a starting exposure that keeps detail at the edge of the shadow. Then move the sitter before reaching for another light.", "When is a shadow doing enough?", "Look at what it leaves visible. If the outline and the garment’s key features still read, the darker area can give the frame depth."]
 ];

@@ -1,32 +1,24 @@
-import { articles, creativeDirectors, projectCredits, projects, projectVideos } from "./data.js";
-import { articlePath, matchRoute, projectPath } from "./routes.js";
-import { articleNotes } from "./article-notes.js";
+import { articles, projects } from "./data.js";
+import { articlePath, matchRoute, previousDetailPaths, projectPath } from "./routes.js";
 
 const { page, item, legacy } = matchRoute(location.pathname, location.search);
 const main = document.querySelector("main");
 const heroPhotos = [
-  "Mw7GIckKwmixZbMJ4bVCp5dJIc.jpg",
-  "ynnm1qlBFDLXtQVSKbo4CfPZTk.jpg",
-  "t2z660HhKFQCyQ25z9rjWzZL24.jpg",
-  "jkbYI83hLhNLSbRGqHU5NQ1mDo.jpg"
+  "cover.jpg",
+  "formal.jpg",
+  "portrait.jpg",
+  "white-suit.jpg"
 ];
 const media = file => `${import.meta.env.BASE_URL}editorial/${file}`;
 const photo = (file, alt = "", priority = false) =>
   `<img src="${media(file)}" alt="${alt}" ${priority ? 'fetchpriority="high"' : 'loading="lazy"'}>`;
 
-function projectMedia(name, image, priority = false) {
-  const clip = projectVideos[name];
-  return photo(image, "", priority) + (clip
-    ? `<video data-src="${media(clip)}" muted loop playsinline preload="none" aria-hidden="true"></video>`
-    : "");
-}
-
 function projectGrid(entries) {
   const ticker = '<span>SEE MORE.</span>'.repeat(16);
   return `<div class="projects">${entries.map(([name, client, image]) => `
     <a class="project" href="${projectPath(name)}">
-      <div class="project-image">${projectMedia(name, image)}<strong aria-hidden="true">${initials(name)}</strong><span class="project-teaser" aria-hidden="true"><span class="project-ticker">${ticker}</span></span></div>
-      <div class="caption"><b>${name}</b><span>${client}</span><time>2025</time></div>
+      <div class="project-image">${photo(image)}<strong aria-hidden="true">${initials(name)}</strong><span class="project-teaser" aria-hidden="true"><span class="project-ticker">${ticker}</span></span></div>
+      <div class="caption"><b>${name}</b><span>${client}</span><time datetime="2026">2026</time></div>
     </a>`).join("")}</div>`;
 }
 
@@ -41,17 +33,17 @@ function journalGrid(entries) {
     const [name, title, image, , summary] = entry;
     return `<a class="journal-card" href="${articlePath(name, title)}" aria-label="${name}: ${title}">
       <div class="journal-image" style="--crop: ${journalCrops[articles.indexOf(entry)]}">${photo(image)}</div>
-      <div class="caption"><span>Article</span><span>A. Álvarez</span></div>
+      <div class="caption"><span>Article</span><span>DECODÉ</span></div>
       <p>${summary}</p>
     </a>`;
   }).join("")}</div>`;
 }
 
 const services = [
-  ["BRAND STRATEGY", "Positioning, audience research, naming and messaging.", "tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg"],
-  ["BRAND GUIDELINES", "Visual and verbal systems for consistent work across every channel.", "9teLjFMpKKKKUQKKA5vbgIBMps.jpg"],
-  ["CREATIVE DIRECTION", "Art direction for campaigns, editorials and product launches.", "5poLw8E1YUAHA8zxFjTXUebil8.jpg"],
-  ["REBRAND LAB", "A new identity built around the parts of a brand worth keeping.", "QwguGwCCrl6nE9DPClR05Lalu0.jpg"]
+  ["BRAND STRATEGY", "Positioning, audience research, naming and messaging."],
+  ["BRAND GUIDELINES", "Visual and verbal systems for consistent work across every channel."],
+  ["CREATIVE DIRECTION", "Art direction for campaigns, editorials and product launches."],
+  ["REBRAND LAB", "A new identity built around the parts of a brand worth keeping."]
 ];
 
 function serviceList(count) {
@@ -60,15 +52,15 @@ function serviceList(count) {
   ).join("");
 }
 
-const craftClips = ["8FyTMuJN7Jn03aPpYwKvWE1M3s.mp4", "S2v5gRBfektbkGTX6BhlteEpsQ.mp4", "mEDWEf1l4MAcdU9iPSpqJuDI.mp4"];
+const craftPhotos = ["fragrance.jpg", "tailoring.jpg", "tulle.jpg"];
 const craft = `<section class="craft">
   <div class="service-list">
-    <div class="craft-heading"><h2>OUR <br>CRAFT</h2><p>We help brands articulate who they are and how they want to be seen.</p></div>
+    <div class="craft-heading"><h2>OUR <br>CRAFT</h2><p>We work across the brief, the shoot and the finished page.</p></div>
     ${serviceList(3)}
   </div>
   <div class="craft-media" aria-hidden="true">
-    ${photo("QwguGwCCrl6nE9DPClR05Lalu0.jpg")}
-    ${craftClips.map(file => `<video data-src="${media(file)}" muted loop playsinline preload="none"></video>`).join("")}
+    ${photo("coat.jpg")}
+    ${craftPhotos.map(file => photo(file)).join("")}
   </div>
 </section>`;
 
@@ -78,27 +70,27 @@ function home() {
     <h1 aria-label="DECODÉ">DECODÉ</h1><small>© DECODÉ Studio</small>
   </section>
   <section class="statement inset">
-    <h2><span class="statement-kicker">DEFINE YOUR</span><span class="statement-impact">IMPACT</span></h2>
-    <div class="statement-caption"><span>IT</span><span>RESHAPES</span><span>PERCEPTION</span></div>
-    <p>THE TIME IS NOW. LET’S BUILD.</p>
+    <h2><span class="statement-kicker">READ THE</span><span class="statement-impact">DETAILS</span></h2>
+    <div class="statement-caption"><span>FORM</span><span>LIGHT</span><span>MATERIAL</span></div>
+    <p>FASHION. FRAGRANCE. OBJECTS.</p>
   </section>
   <section class="welcome inset">
-    <span>WELCOME TO DECODÉ</span>
-    ${photo("F2WaiWbXWpLO2v3c6bgU9WJ3i4.jpg", "Editorial portrait")}
-    <div><h2>BUILD VALUE.</h2><div class="welcome-notes"><strong>THE ONLY<br>INVESTMENT<br>THAT LASTS</strong><p>We build brand identities and digital experiences for fashion and culture, bringing strategy and art direction together from the first idea through the final image.</p></div></div>
+    <span>DECODÉ STUDIO</span>
+    ${photo("light-study.jpg", "Editorial portrait")}
+    <div><h2>IN FOCUS.</h2><div class="welcome-notes"><strong>CUT<br>TEXTURE<br>ATTITUDE</strong><p>We develop campaigns, lookbooks and visual identities for fashion, fragrance and accessories. The work starts with how the object is made and how it sits in an image.</p></div></div>
   </section>
-  ${banner("LEGACY.")}
+  ${banner("FORM.")}
   <section class="featured"><h2 class="inset"><span>FEATURED</span></h2><div class="featured-cue" aria-hidden="true"></div>${projectGrid(projects.slice(0, 5))}</section>
   ${craft}
   <section class="image-study">
     <div class="study-stage">
     ${banner("DECODÉ.")}
     <div class="study-portraits" aria-hidden="true">${[
-      ["tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "U8Vg5n0udgRw8Sxt4TAfelLsFQ.jpg", "ynnm1qlBFDLXtQVSKbo4CfPZTk.jpg"],
-      ["VaVeL0jmtullQAkoQ37i7Y4er6k.jpg", "bsKPZP76FlBVKmo7uSXI3whYM.jpg", "ekKxn88e2R0im7jDV4AsFxbRg.jpg"],
-      ["O1NAT0hwgGZBCqv95S4Hll1Hc.jpg", "U8oqYyQiEJdpCRBBHLATMsFPpk.jpg", "geGhsqF53nrx2i3yOzGg7oo7xlY.jpg"]
+      ["outerwear.jpg", "pinstripe.jpg", "formal.jpg"],
+      ["suit.jpg", "fragrance.jpg", "glass.jpg"],
+      ["layers.jpg", "tulle.jpg", "jewelry.jpg"]
     ].map(files => `<div>${files.map(file => photo(file)).join("")}</div>`).join("")}</div>
-    <p>We create brand identities and digital experiences, starting with research into the brand and the people it needs to reach. We turn those findings into a visual system that works across campaigns, print, and the web.</p>
+    <p>An ongoing study of garments, gestures and the way materials respond to light.</p>
     </div>
   </section>`;
 }
@@ -110,31 +102,31 @@ function banner(label) {
 
 function work() {
   return `<section class="listing-cover inset">
-    <p>A selection of recent projects in design, strategy and creative direction, from couture and perfume to retail and live performance.</p>
-    <div class="listing-photo">${photo(heroPhotos[0], "", true)}<span>COMING SOON</span></div>
+    <p>A portfolio of self-initiated campaign, lookbook and identity concepts across fashion, fragrance and accessories.</p>
+    <div class="listing-photo">${photo(heroPhotos[0], "", true)}<span>EDITORIAL ARCHIVE</span></div>
     <h1>WORK.<sup class="listing-count" data-count="[${projects.length}]" aria-hidden="true"></sup></h1>
   </section>${projectGrid(projects)}`;
 }
 
 function about() {
-  const team = [
-    ["Liam Carter", "CEO", "rMnwMUYWUnFID701bDGgSGSyLU.jpg"],
-    ["Sofia Alvarez", "Creative Director", "p402G0oqkIq7x6IoTAINQdreVk.jpg"],
-    ["Ethan Rivera", "Project Manager", "KwPNxiylHGqLEPGMz0nL3VhNus.jpg"],
-    ["Mia Thompson", "Senior Designer", "sxSo19CpPfWA6SQeIU3lMCWfu8.jpg"]
+  const disciplines = [
+    ["Campaigns", "Image direction", "pinstripe.jpg", 0],
+    ["Fragrance", "Identity and packaging", "fragrance.jpg", 1],
+    ["Collections", "Lookbooks and styling", "outerwear.jpg", 3],
+    ["Objects", "Editorial photography", "jewelry.jpg", 4]
   ];
   return `<section class="about-cover inset">
     <h1>THE<br>STUDIO.</h1>
-    <div class="about-portrait">${photo("QwguGwCCrl6nE9DPClR05Lalu0.jpg", "Fashion portrait with dark sunglasses", true)}</div>
+    <div class="about-portrait">${photo("coat.jpg", "Model wearing a dark coat", true)}</div>
     <div class="about-intro">
-      <p>DECODÉ is an independent branding studio working across design, strategy and creative direction. We help brands express what makes them distinctive through clear ideas and considered design.</p>
-      <p>We turn those ideas into visual systems that carry a consistent identity across print, campaigns and digital experiences.</p>
+      <p>DECODÉ is an independent creative studio for fashion, fragrance and objects. We work across identity, campaigns and editorial photography.</p>
+      <p>A project can start with a garment, a scent or a collection. We develop an image language that holds together across a lookbook, a launch and the web.</p>
     </div>
   </section>
   <section class="studio inset">
     <h2>WHO WE ARE</h2>
     <p class="studio-lead">WE CREATE DISTINCTIVE IDENTITIES GROUNDED IN STRATEGY AND EXPRESSED THROUGH DESIGN.</p>
-    ${photo("5poLw8E1YUAHA8zxFjTXUebil8.jpg", "Editorial portrait in a red and white jacket")}
+    ${photo("tailoring.jpg", "Model in a pinstripe blazer")}
     <div class="studio-copy">
       <p>We work with founders and growing brands to shape how their ideas look, sound and feel across campaigns, products and digital experiences.</p>
       <p>We give each identity a character that reflects the people behind it and the audience it needs to reach.</p>
@@ -143,56 +135,63 @@ function about() {
   <section class="studio studio-philosophy inset">
     <h2>OUR PHILOSOPHY</h2>
     <p class="studio-lead">WE BUILD IDENTITIES AROUND PURPOSE SO THEY CAN ENDURE AS TASTES CHANGE.</p>
-    ${photo("tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "Fashion editorial with two models")}
+    ${photo("outerwear.jpg", "Outerwear fashion editorial")}
     <div class="studio-copy">
       <p>Research gives our work direction. Photography, typography and art direction give each brand its own character.</p>
       <p>We balance intuition with research to create a visual language that stays coherent as the business grows.</p>
     </div>
   </section>
   <section class="studio-services inset">
-    ${photo("9teLjFMpKKKKUQKKA5vbgIBMps.jpg")}
+    ${photo("silk.jpg")}
     <h2>OUR SERVICES</h2>
     <p class="studio-lead">WE TRANSLATE BRAND STRATEGY INTO A VISUAL IDENTITY WITH A CLEAR PURPOSE.</p>
     <ol>${services.map(([name, text], index) => `<li><span aria-hidden="true">[0${index + 1}]</span><h3>${name}</h3><p>${text}</p></li>`).join("")}</ol>
   </section>
-  <section class="team inset"><h2>OUR TEAM</h2><p class="studio-lead">STRATEGISTS AND DESIGNERS WORKING TOGETHER TO SHAPE HOW BRANDS LOOK, SOUND AND FEEL.</p>
-  <div class="team-grid">${team.map(([name, role, file]) =>
-    `<a href="https://www.linkedin.com/company/ler%C3%AAve/">${photo(file)}<div class="team-caption"><strong>${name}</strong><span>${role}</span></div></a>`
+  <section class="team inset"><h2>IN PRACTICE</h2><p class="studio-lead">CAMPAIGNS, COLLECTIONS AND OBJECTS THROUGH THE STUDIO’S LENS.</p>
+  <div class="team-grid">${disciplines.map(([name, role, file, projectIndex]) =>
+    `<a href="${projectPath(projects[projectIndex][0])}">${photo(file)}<div class="team-caption"><strong>${name}</strong><span>${role}</span></div></a>`
   ).join("")}</div></section>`;
 }
 
 function journal() {
   return `<section class="journal-lead inset">
-    <p>A curated archive of insights, ideas, and creative explorations—capturing our perspective on art, design, branding, and the stories that inspire our work.</p>
-    <h1>JOURNAL.</h1>
+    <p>Field notes on making fashion images, from the drape of a dress to the shadow cast by a bottle.</p>
+    <h1>BLOG.</h1>
   </section><section class="inset" aria-label="Journal articles">${journalGrid(articles)}</section>`;
 }
 
 function projectDetail(project, index) {
   const [name, client, image, scope, headline, summary] = project;
   const next = projects[index + 1];
-  const [artDirector, naming, tags] = projectCredits[index];
-  const gallery = index === 0
-    ? ["1lMApZy9YiXYTwlluDR0qxMI4nI.jpg", "tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "rATMsPHebgbVFwRezzVZpEyfPK4.jpg"]
-    : ["jwBg3ZJilOwnxiolnXUnfeY.jpg", "geGhsqF53nrx2i3yOzGg7oo7xlY.jpg", "x5M74ldT5CoUgBze2ZgcNz1jMH4.jpg"].filter(file => file !== image);
+  const galleries = [
+    ["cover.jpg", "pinstripe.jpg", "formal.jpg"],
+    ["glass.jpg", "silk.jpg"],
+    ["tulle.jpg", "coat.jpg"],
+    ["coat.jpg", "pinstripe.jpg"],
+    ["portrait.jpg", "layers.jpg"],
+    ["tailoring.jpg", "pinstripe.jpg"],
+    ["silk.jpg", "light-study.jpg"],
+    ["pinstripe.jpg", "suit.jpg"],
+    ["jewelry.jpg", "coat.jpg"],
+    ["formal.jpg", "outerwear.jpg"]
+  ];
+  const gallery = galleries[index];
   return `<section class="project-hero">
-    ${projectMedia(name, image, true)}
+    ${photo(image, "", true)}
     <div class="project-stamp">${photo(image)}<span class="project-initials" aria-hidden="true">${initials(name)}</span></div>
     <div class="project-heading">
-      <h1>${name}</h1><div><time>2025</time><p>${scope}</p></div>
+      <h1>${name}</h1><div><time datetime="2026">2026</time><p>${scope}</p></div>
     </div>
   </section>
   <section class="project-notes inset">
     <div class="project-facts">
       <h2>${headline}.</h2>
-      <h3>Credits:</h3>
+      <h3>Project notes</h3>
       <dl class="credit-list">
-        <dt>Creative Direction:</dt><dd>${creativeDirectors[index]}</dd>
-        <dt>Art Direction:</dt><dd>${artDirector}</dd>
-        <dt>Brand Strategy:</dt><dd>A. Álvarez</dd>
-        <dt>Naming:</dt><dd>${naming}</dd>
+        <dt>Studio</dt><dd>DECODÉ</dd>
+        <dt>Direction</dt><dd>${scope}</dd>
       </dl>
-      <dl class="project-fields"><dt>Client:</dt><dd>${client}</dd><dt>Year:</dt><dd>2025</dd><dt>Tags:</dt><dd>${tags}</dd></dl>
+      <dl class="project-fields"><dt>Format</dt><dd>${client}</dd><dt>Year</dt><dd>2026</dd></dl>
       <p>${summary}</p>
     </div>
   </section>
@@ -201,11 +200,18 @@ function projectDetail(project, index) {
 }
 
 function articleDetail(article, index) {
-  const [name, title, image, secondary, summary] = article;
-  const [context, question, answer, quote, credit] = articleNotes[name];
+  const [name, title, image, secondary, summary, context, question, answer] = article;
+  const closingLines = [
+    "A turn can tell you more about a dress than a still fitting.",
+    "The edge of a lapel is a good place to start looking.",
+    "A fragrance image starts with materials the viewer can see.",
+    "Leave space between the jewelry and the edge of the frame.",
+    "Show what the coat looks like over the clothes it was cut to cover.",
+    "Before adding another light, see what changes when the sitter turns."
+  ];
   const related = [1, 2, 3].map(offset => articles[(index + offset) % articles.length]);
   return `<article>
-    <header class="article-lead inset"><h1>${name}:<br>${title}</h1><p><span>A. Álvarez</span><time datetime="2023-09-22">Sep 22, 2023</time></p></header>
+    <header class="article-lead inset"><h1>${name}:<br>${title}</h1><p><span>DECODÉ</span><span>Field Notes</span></p></header>
     <div class="article-image inset">${photo(image, "Editorial photograph for " + name, true)}</div>
     <div class="article-text">
       <p>${summary}</p>
@@ -215,19 +221,24 @@ function articleDetail(article, index) {
       ${photo(secondary, "Second editorial photograph for " + name)}
     </div>
     <figure class="article-quote">
-      <blockquote>“${quote}”</blockquote>
-      <figcaption>${credit}</figcaption>
+      <blockquote>“${closingLines[index]}”</blockquote>
+      <figcaption>DECODÉ FIELD NOTES</figcaption>
     </figure>
   </article>
-  <section class="related inset"><h2>MORE ARTICLES.</h2>${journalGrid(related)}<a class="back" href="/journal">← All articles</a></section>`;
+  <section class="related inset"><h2>MORE ARTICLES.</h2>${journalGrid(related)}<a class="back" href="/journal">← All posts</a></section>`;
 }
 
 const listings = { home, work, journal, about };
 const collection = page === "work" ? projects : articles;
-const index = item ? collection.findIndex(([name, title]) => {
+const currentIndex = item ? collection.findIndex(([name, title]) => {
   const path = page === "work" || legacy ? projectPath(name) : articlePath(name, title);
   return path.endsWith(`/${item}`);
 }) : -1;
+const previousIndex = item ? previousDetailPaths[page]?.findIndex(path => {
+  const slug = path.split("/").at(-1);
+  return slug === item || (page === "journal" && legacy && slug.startsWith(item + "-"));
+}) ?? -1 : -1;
+const index = currentIndex >= 0 ? currentIndex : previousIndex;
 if (index >= 0 && page === "work") {
   main.innerHTML = projectDetail(collection[index], index);
 } else if (index >= 0 && page === "journal") {
@@ -302,38 +313,9 @@ function rotatePortrait(portrait) {
 }
 document.querySelectorAll(".portrait img, .listing-photo img, .footer-cover img").forEach(rotatePortrait);
 
-const videos = [...document.querySelectorAll("video[data-src]")];
-const visibleVideos = new Set();
 const craftScene = document.querySelector(".craft");
-const craftVideos = [...document.querySelectorAll(".craft-media video")];
+const craftLayers = [...document.querySelectorAll(".craft-media img")].slice(1);
 const wideCraft = matchMedia("(min-width: 1200px)");
-
-function syncVideo(video) {
-  const shouldPlay = visibleVideos.has(video) && !motion.matches && !document.hidden &&
-    (!video.closest(".craft-media") || video.classList.contains("craft-visible"));
-  if (shouldPlay) {
-    if (!video.hasAttribute("src")) video.src = video.dataset.src;
-    video.play().catch(() => {});
-  } else {
-    video.pause();
-  }
-}
-
-const videoObserver = new IntersectionObserver(entries => {
-  for (const { target, isIntersecting } of entries) {
-    if (isIntersecting) visibleVideos.add(target);
-    else visibleVideos.delete(target);
-    syncVideo(target);
-  }
-}, { threshold: .2 });
-
-for (const video of videos) {
-  video.addEventListener("playing", () => video.classList.add("is-playing"));
-  video.addEventListener("error", () => video.classList.remove("is-playing"));
-  videoObserver.observe(video);
-}
-motion.addEventListener("change", () => videos.forEach(syncVideo));
-document.addEventListener("visibilitychange", () => videos.forEach(syncVideo));
 
 if (craftScene) {
   let framePending = false;
@@ -342,15 +324,12 @@ if (craftScene) {
     const bounds = craftScene.getBoundingClientRect();
     const panelHeight = craftScene.querySelector(".craft-heading").offsetHeight;
     const progress = -bounds.top / panelHeight;
-    for (const [index, video] of craftVideos.entries()) {
+    for (const [index, layer] of craftLayers.entries()) {
       const enter = Math.max(0, Math.min(1, (progress - index - .25) * 2));
       const next = Math.max(0, Math.min(1, (progress - index - 1.25) * 2));
       const opacity = wideCraft.matches && !motion.matches && bounds.bottom > 0 && bounds.top < innerHeight
         ? enter * (1 - next) : 0;
-      video.style.setProperty("--craft-opacity", opacity);
-      const wasVisible = video.classList.contains("craft-visible");
-      video.classList.toggle("craft-visible", opacity > 0);
-      if (wasVisible !== (opacity > 0)) syncVideo(video);
+      layer.style.setProperty("--craft-opacity", opacity);
     }
   }
   function scheduleCraft() {

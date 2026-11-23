@@ -5,9 +5,9 @@
 }
 
 :root {
-  --red: #e49b8c;
-  --black: #160f14;
-  --paper: #f0e5d9;
+  --red: #d12d37;
+  --black: #080808;
+  --paper: #e4e5e7;
   --unit: max(1rem, 1.6vw);
   --gutter: max(1rem, 1.11vw);
   --display: "Abril Fatface", Georgia, serif;
@@ -25,7 +25,7 @@ body::after {
   background: url("/editorial/grain.png") repeat;
   opacity: .36;
 }
-body[data-page="journal"] { background: var(--paper); color: #80354b; }
+body[data-page="journal"] { background: var(--paper); color: #af1d29; }
 body[data-page="journal"] .journal-lead h1 { color: var(--red); }
 body[data-page="journal"][data-detail] { background: var(--black); color: white; }
 body[data-page="journal"][data-detail] .site-header { color: var(--red); }
@@ -255,8 +255,7 @@ video.is-playing { opacity: 1; }
 .craft .service:nth-child(4) { background: var(--paper); }
 .service h3 { margin: 0 auto .35em; max-width: 9ch; font: 400 clamp(2rem, 6vw, 5.2rem)/1 var(--display); text-transform: uppercase; letter-spacing: -.035em; }
 .craft-media { position: sticky; top: 0; height: 100svh; align-self: start; }
-.craft-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
-.craft-media video.is-playing { opacity: var(--craft-opacity, 0); }
+.craft-media img + img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: var(--craft-opacity, 0); }
 @media (width < 1200px) {
   .craft { grid-template-columns: 1fr; }
   .craft-media { display: none; }
@@ -459,13 +458,3 @@ body[data-page="journal"][data-detail] footer { background: #000; color: var(--p
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
   video.is-playing { opacity: 0; }
 }
-
-/* The wordmark uses its own letter spacing across the cover and footer. */
-.cover h1, .footer-mark {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: min(19vw, 28rem);
-  letter-spacing: -.1em;
-}
-.cover h1 { transform: translate(-.05em, -55%); }
-.footer-meta { justify-content: space-between; }
