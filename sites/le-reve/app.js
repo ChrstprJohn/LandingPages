@@ -243,26 +243,32 @@ if (page !== "home") {
   document.title = `${main.querySelector("h1").innerText.replace(/\n/g, " ")} — Le Rêve`;
 }
 
-const portrait = document.querySelector(".portrait img, .listing-photo img");
 const motion = matchMedia("(prefers-reduced-motion: reduce)");
-let frame = 0;
-let timer;
-function updateRotation() {
-  clearInterval(timer);
-  if (!portrait || motion.matches || document.hidden) return;
-  timer = setInterval(() => {
-    frame = (frame + 1) % heroPhotos.length;
-    const nextPhoto = new Image();
-    nextPhoto.src = media(heroPhotos[frame]);
-    const scheduled = frame;
-    nextPhoto.decode().then(() => {
-      if (!motion.matches && !document.hidden && frame === scheduled) portrait.src = nextPhoto.src;
-    }).catch(() => {});
-  }, 405);
+function rotatePortrait(portrait) {
+  let frame = heroPhotos.findIndex(file => portrait.getAttribute("src")?.endsWith(file));
+  let timer;
+  let visible = false;
+  function updateRotation() {
+    clearInterval(timer);
+    if (!visible || motion.matches || document.hidden) return;
+    timer = setInterval(() => {
+      frame = (frame + 1) % heroPhotos.length;
+      const nextPhoto = new Image();
+      nextPhoto.src = media(heroPhotos[frame]);
+      const scheduled = frame;
+      nextPhoto.decode().then(() => {
+        if (visible && !motion.matches && !document.hidden && frame === scheduled) portrait.src = nextPhoto.src;
+      }).catch(() => {});
+    }, 405);
+  }
+  new IntersectionObserver(([entry]) => {
+    visible = entry.isIntersecting;
+    updateRotation();
+  }).observe(portrait);
+  motion.addEventListener("change", updateRotation);
+  document.addEventListener("visibilitychange", updateRotation);
 }
-motion.addEventListener("change", updateRotation);
-document.addEventListener("visibilitychange", updateRotation);
-updateRotation();
+document.querySelectorAll(".portrait img, .listing-photo img, .footer-cover img").forEach(rotatePortrait);
 
 const videos = [...document.querySelectorAll("video[data-src]")];
 const visibleVideos = new Set();
