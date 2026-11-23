@@ -163,14 +163,24 @@ video.is-playing { opacity: 1; }
 .service:nth-child(even) { background: #f3f3f2; }
 .service img { width: min(66%, 330px); aspect-ratio: 4/5; }
 .service h3 { margin: 0 0 .5em; }
-.studio-services, .team { padding-block: 6vw; }
-.studio-services .service-list, .team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2vw; }
-.studio-services .service { min-height: initial; color: var(--paper); background: none; padding: 3vw 0; }
-.studio-services .service img { width: 100%; }
-.team figure { margin: 2vw 0 0; }
-.team img { height: auto; aspect-ratio: 3/4; filter: grayscale(1); transition: filter .4s ease; }
-.team figure:hover img { filter: grayscale(0); }
-.team figcaption { display: grid; padding-top: .8em; gap: .35em; }
+.studio, .team { background: var(--paper); color: var(--black); }
+.studio h2, .studio-services h2, .team h2 { font-size: clamp(.975rem, 1.83vw, 2rem); display: flex; gap: .55em; align-items: center; }
+.studio h2::before, .studio-services h2::before, .team h2::before { content: ""; width: .55em; aspect-ratio: 1; background: var(--red); clip-path: polygon(0 0,100% 0,50% 100%); }
+.studio-lead { font-size: clamp(1rem, 3.2vw, 4rem); line-height: 1.08; letter-spacing: -.04em; }
+.studio-services { position: relative; isolation: isolate; color: white; padding-block: 120px 8vw; }
+.studio-services > img { position: absolute; inset: 0; z-index: -1; filter: brightness(.3); }
+.studio-services .studio-lead, .team .studio-lead { margin-block: 2rem 4rem; max-width: 26em; }
+.studio-services ol { margin: 0 0 0 auto; padding: 0; width: min(65%, 54rem); list-style: none; }
+.studio-services li { display: grid; grid-template-columns: auto 1fr; gap: .75rem 1.25rem; border-top: 1px solid #ffffff80; padding-block: 2.5rem; }
+.studio-services h3 { margin: 0; font-size: clamp(1.25rem, 4vw, 4rem); line-height: 1; }
+.studio-services li p { grid-column: 2; }
+.team { position: relative; padding-block: 5rem; }
+.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.team-grid a:nth-child(2) { grid-column: 3; }
+.team-grid a:nth-child(3) { grid-column: 2; }
+.team img { height: auto; aspect-ratio: 4/3; filter: grayscale(1); transition: filter .4s ease; }
+.team a:is(:hover, :focus-visible) img { filter: grayscale(0); }
+.team-caption { display: flex; justify-content: space-between; gap: .75em; padding-top: .55em; }
 .listing-cover { position: relative; min-height: 90svh; padding-top: 5rem; }
 .listing-cover p, .journal-lead p { max-width: 21em; }
 .listing-photo { position: absolute; inset: 43.5% auto auto 50%; translate: -50% -50%; width: clamp(185px, 14vw, 240px); aspect-ratio: 3/4; }
@@ -185,12 +195,19 @@ video.is-playing { opacity: 1; }
 .journal-card .caption { justify-content: space-between; padding: 1em 0 .35em; border-bottom: 1px solid currentColor; }
 .journal-card p { margin-top: .8em; }
 body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
-.about-cover { padding-top: 5rem; display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 3vw; }
-.about-cover h1 { grid-column: 1/-1; }
-.about-cover img { aspect-ratio: 3/4; grid-column: 2; object-position: 60% center; }
-.about-cover p { grid-column: 1; grid-row: 2; align-self: end; }
-.studio { padding-block: 12vw 0; display: grid; gap: 1.5em; }
-.studio p { margin-bottom: 3em; }
+.about-cover { padding-top: 5rem; display: grid; grid-template-columns: 3fr 2fr; align-items: start; gap: 3rem 0; }
+.about-cover h1 { grid-column: 1/-1; font-size: clamp(4.5rem, 15vw, 13.5rem); }
+.about-cover img { height: auto; aspect-ratio: 3/5; grid-column: 2; object-position: center; }
+.about-intro { grid-column: 1; grid-row: 2; align-self: end; max-width: 28em; padding: 0 2rem 2.5rem 0; }
+.about-intro p + p, .studio-copy p + p { margin-top: .8em; }
+.studio { padding-block: 2rem 5rem; display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 2.4rem 3vw; }
+.studio h2, .studio-lead { grid-column: 1/-1; }
+.studio img { width: min(100%, 25rem); justify-self: end; height: auto; aspect-ratio: 10/13; }
+.studio-copy { max-width: 27em; }
+.studio-philosophy { background: var(--red); color: white; }
+.studio-philosophy h2::before { background: var(--black); }
+.studio-philosophy img { grid-column: 1/-1; width: min(100%, 43.75rem); justify-self: center; }
+.studio-philosophy .studio-copy { grid-column: 2; }
 .project-hero { position: relative; min-height: 100svh; isolation: isolate; overflow: clip; padding: var(--gutter); color: white; }
 .project-hero > :is(img, video) { position: absolute; inset: 0; z-index: -1; filter: brightness(.68); object-position: center 38%; }
 .project-heading { position: absolute; top: 50%; left: 50%; right: var(--gutter); }
@@ -261,9 +278,9 @@ footer { background: var(--paper); color: var(--black); padding: 5vw var(--gutte
   .journal-lead h1, .about-cover h1 { font-size: 4.5rem; }
   .journal-lead h1 { bottom: 5.5svh; }
   .journal-grid { gap: 3rem; }
-  .about-cover { gap: 23vw; }
-  .about-cover p { margin-top: -10vw; }
-  .about-cover img, .about-cover p { grid-column: auto; grid-row: auto; }
+  .about-cover { gap: .5rem; padding-top: 7.5rem; }
+  .about-cover img, .about-intro { grid-column: auto; grid-row: auto; }
+  .about-intro { padding: 2rem 0 4rem; }
   .project-heading { top: 49%; left: var(--gutter); }
   .project-hero > :is(img, video) { top: -4svh; height: 145%; }
   .project-hero h1 { max-width: 7ch; font-size: 3.05rem; }
@@ -276,7 +293,11 @@ footer { background: var(--paper); color: var(--black); padding: 5vw var(--gutte
   .craft .service-list { padding-top: 12svh; }
   .service { min-height: 100svh; }
   .image-study { min-height: 147svh; }
-  .studio-services .service-list, .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .studio { grid-template-columns: 1fr; gap: 2rem; padding-block: 4.5rem; }
+  .studio-philosophy .studio-copy { grid-column: auto; }
+  .studio-services ol { width: 100%; }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-grid a:nth-child(n) { grid-column: auto; }
   .footer-cover { margin: 8vw 0; }
   .footer-cover img { width: 150px; }
   .footer-links > span { font-size: 1.7em; }

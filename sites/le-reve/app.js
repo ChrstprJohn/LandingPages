@@ -114,17 +114,38 @@ function about() {
   return `<section class="about-cover inset">
     <h1>THE<br>STUDIO.</h1>
     ${photo("QwguGwCCrl6nE9DPClR05Lalu0.jpg", "Fashion portrait with dark sunglasses", true)}
-    <p>Le Rêve is an independent branding studio working across design, strategy and creative direction.</p>
+    <div class="about-intro">
+      <p>Le Rêve is an independent branding studio working across design, strategy and creative direction. We help brands express what makes them distinctive through clear ideas and considered design.</p>
+      <p>We turn those ideas into visual systems that carry a consistent identity across print, campaigns and digital experiences.</p>
+    </div>
   </section>
   <section class="studio inset">
-    <span>WHO WE ARE</span><h2>IDENTITIES WITH A CLEAR POINT OF VIEW.</h2>
-    <p>We work with founders and growing brands to shape how their ideas look, sound and feel across campaigns, products and digital experiences.</p>
-    <span>OUR PHILOSOPHY</span><h2>DESIGN THAT AGES WELL.</h2>
-    <p>Research gives our work direction. Photography, typography and art direction give each brand its own character.</p>
+    <h2>WHO WE ARE</h2>
+    <p class="studio-lead">WE CREATE DISTINCTIVE IDENTITIES GROUNDED IN STRATEGY AND EXPRESSED THROUGH DESIGN.</p>
+    ${photo("5poLw8E1YUAHA8zxFjTXUebil8.jpg", "Editorial portrait in a red and white jacket")}
+    <div class="studio-copy">
+      <p>We work with founders and growing brands to shape how their ideas look, sound and feel across campaigns, products and digital experiences.</p>
+      <p>We give each identity a character that reflects the people behind it and the audience it needs to reach.</p>
+    </div>
   </section>
-  <section class="studio-services inset"><h2>OUR SERVICES</h2>${serviceList(4)}</section>
-  <section class="team inset"><h2>OUR TEAM</h2><div class="team-grid">${team.map(([name, role, file]) =>
-    `<figure>${photo(file, name)}<figcaption><strong>${name}</strong><span>${role}</span></figcaption></figure>`
+  <section class="studio studio-philosophy inset">
+    <h2>OUR PHILOSOPHY</h2>
+    <p class="studio-lead">WE BUILD IDENTITIES AROUND PURPOSE SO THEY CAN ENDURE AS TASTES CHANGE.</p>
+    ${photo("tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "Fashion editorial with two models")}
+    <div class="studio-copy">
+      <p>Research gives our work direction. Photography, typography and art direction give each brand its own character.</p>
+      <p>We balance intuition with research to create a visual language that stays coherent as the business grows.</p>
+    </div>
+  </section>
+  <section class="studio-services inset">
+    ${photo("9teLjFMpKKKKUQKKA5vbgIBMps.jpg")}
+    <h2>OUR SERVICES</h2>
+    <p class="studio-lead">WE TRANSLATE BRAND STRATEGY INTO A VISUAL IDENTITY WITH A CLEAR PURPOSE.</p>
+    <ol>${services.map(([name, text], index) => `<li><span aria-hidden="true">[0${index + 1}]</span><h3>${name}</h3><p>${text}</p></li>`).join("")}</ol>
+  </section>
+  <section class="team inset"><h2>OUR TEAM</h2><p class="studio-lead">STRATEGISTS AND DESIGNERS WORKING TOGETHER TO SHAPE HOW BRANDS LOOK, SOUND AND FEEL.</p>
+  <div class="team-grid">${team.map(([name, role, file]) =>
+    `<a href="https://www.linkedin.com/company/ler%C3%AAve/">${photo(file)}<div class="team-caption"><strong>${name}</strong><span>${role}</span></div></a>`
   ).join("")}</div></section>`;
 }
 
@@ -252,6 +273,6 @@ if (!motion.matches) {
       reveals.unobserve(entry.target);
     }
   }, { threshold: .12 });
-  document.querySelectorAll(".statement > *, .welcome > *, .featured > h2, .craft-heading > *, .service, .studio > *, .team-grid figure, .study-portraits img, .project-notes > *, .lookbook img")
+  document.querySelectorAll(".statement > *, .welcome > *, .featured > h2, .craft-heading > *, .service, .studio > *, .studio-services li, .team-grid a, .study-portraits img, .project-notes > *, .lookbook img")
     .forEach(element => reveals.observe(element));
 }
