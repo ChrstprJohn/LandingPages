@@ -22,9 +22,10 @@ function projectMedia(name, image, priority = false) {
 }
 
 function projectGrid(entries) {
+  const ticker = '<span>SEE MORE.</span>'.repeat(16);
   return `<div class="projects">${entries.map(([name, client, image]) => `
     <a class="project" href="${projectPath(name)}">
-      <div class="project-image">${projectMedia(name, image)}<strong aria-hidden="true">${initials(name)}</strong><span class="project-teaser" aria-hidden="true">SEE MORE.</span></div>
+      <div class="project-image">${projectMedia(name, image)}<strong aria-hidden="true">${initials(name)}</strong><span class="project-teaser" aria-hidden="true"><span class="project-ticker">${ticker}</span></span></div>
       <div class="caption"><b>${name}</b><span>${client}</span><time>2025</time></div>
     </a>`).join("")}</div>`;
 }
