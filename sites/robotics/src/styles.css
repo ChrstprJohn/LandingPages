@@ -804,6 +804,7 @@ h1, .section-title, .project-title, .join-form h2 {
 
 @media (375px <= width < 480px) {
   .project-strip { --strip-height: calc(20vw + 93px); }
+  .contact-section .section-title { min-block-size: 3lh; }
 }
 
 @media (400px <= width < 480px) {
