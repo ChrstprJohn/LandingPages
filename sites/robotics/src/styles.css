@@ -743,6 +743,10 @@ h1, .section-title, .project-title, .join-form h2 {
   .blog-main .footer { padding-top: 20px; }
 }
 
+@media (max-width: 767px) {
+  .contact-section { padding-top: 60px; }
+}
+
 @media (480px <= width <= 991px) {
   .essay-index { --guide-row: calc(0.167vw + 32.52px); }
   .essay-index .editorial-head {
