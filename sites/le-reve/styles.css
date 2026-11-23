@@ -313,9 +313,10 @@ video.is-playing { opacity: 1; }
 body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .about-cover { padding-top: 5rem; display: grid; grid-template-columns: 3fr 2fr; align-items: start; gap: 3rem 0; }
 .about-cover h1 { grid-column: 1/-1; font-size: clamp(4.5rem, 15vw, 13.5rem); }
-.about-cover img { height: auto; aspect-ratio: 3/5; grid-column: 2; object-position: center; }
+.about-portrait { grid-column: 2; }
+.about-portrait img { height: auto; aspect-ratio: 3/5; }
 @supports (animation-timeline: scroll()) {
-  .about-cover > img { animation: about-portrait-drift linear both; animation-timeline: scroll(root); animation-range: 0 1000px; }
+  .about-portrait img { animation: about-portrait-drift linear both; animation-timeline: scroll(root); animation-range: 0 1000px; }
   @keyframes about-portrait-drift { from { translate: 0 -1px; } to { translate: 0 -27px; } }
 }
 .about-intro { grid-column: 1; grid-row: 2; align-self: end; max-width: 28em; padding: 0 2rem 2.5rem 0; }
@@ -432,9 +433,11 @@ body[data-page="journal"][data-detail] footer { background: #000; color: var(--p
   .journal-lead p { max-width: 21.4375rem; font-size: .825rem; }
   .journal-lead h1::after { content: none; }
   .journal-grid { gap: 3rem; }
-  .about-cover { gap: .5rem; padding-top: 7.5rem; }
-  .about-cover img, .about-intro { grid-column: auto; grid-row: auto; }
-  .about-intro { padding: 2rem 0 4rem; }
+  .about-cover h1 { font-size: 4.56rem; }
+  .about-portrait, .about-intro { grid-column: auto; grid-row: auto; }
+  .about-portrait { position: relative; aspect-ratio: 3/4; overflow: clip; }
+  .about-portrait img { position: absolute; inset: 0 auto auto 0; }
+  .about-intro { padding: 2.5rem 0; font-size: .825rem; }
   .project-heading { top: 49%; left: var(--gutter); }
   .project-hero > :is(img, video) { top: -4svh; height: 145%; }
   .project-hero h1 { max-width: 7ch; font-size: 3.05rem; }

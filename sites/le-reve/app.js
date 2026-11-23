@@ -125,7 +125,7 @@ function about() {
   ];
   return `<section class="about-cover inset">
     <h1>THE<br>STUDIO.</h1>
-    ${photo("QwguGwCCrl6nE9DPClR05Lalu0.jpg", "Fashion portrait with dark sunglasses", true)}
+    <div class="about-portrait">${photo("QwguGwCCrl6nE9DPClR05Lalu0.jpg", "Fashion portrait with dark sunglasses", true)}</div>
     <div class="about-intro">
       <p>Le Rêve is an independent branding studio working across design, strategy and creative direction. We help brands express what makes them distinctive through clear ideas and considered design.</p>
       <p>We turn those ideas into visual systems that carry a consistent identity across print, campaigns and digital experiences.</p>
@@ -385,7 +385,7 @@ if (!motion.matches) {
   revealEditorial(".welcome > span, .welcome-notes > *", .7);
   revealEditorial(".welcome > img", wide ? .57 : .7);
   revealEditorial(".welcome h2", wide ? .7 : .9);
-  revealEditorial(".about-intro", .84);
+  revealEditorial(".about-intro", compactHeader.matches ? 1 : .84);
   const reveals = new IntersectionObserver(entries => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
