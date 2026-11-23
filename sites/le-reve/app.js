@@ -32,13 +32,17 @@ function initials(name) {
   return name.split(" ").map(word => word[0]).join("");
 }
 
+const journalCrops = ["2 / 3", "3 / 4", "2 / 3", "3 / 2", "4 / 5", "3 / 2"];
+
 function journalGrid(entries) {
-  return `<div class="journal-grid">${entries.map(([name, title, image]) => `
-    <a class="journal-card" href="${articlePath(name, title)}">
-      ${photo(image)}
+  return `<div class="journal-grid">${entries.map(entry => {
+    const [name, title, image, , summary] = entry;
+    return `<a class="journal-card" href="${articlePath(name, title)}" aria-label="${name}: ${title}">
+      <div class="journal-image" style="--crop: ${journalCrops[articles.indexOf(entry)]}">${photo(image)}</div>
       <div class="caption"><span>Article</span><span>A. Álvarez</span></div>
-      <h2>${name}<br>${title}</h2>
-    </a>`).join("")}</div>`;
+      <p>${summary}</p>
+    </a>`;
+  }).join("")}</div>`;
 }
 
 const services = [

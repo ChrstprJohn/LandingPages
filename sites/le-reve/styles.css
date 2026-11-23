@@ -144,7 +144,7 @@ video.is-playing { opacity: 1; }
   transition: opacity .35s ease;
 }
 .project-teaser { position: absolute; inset: 0; display: grid; place-items: center; color: white; opacity: 0; transform: translateY(8px); transition: opacity .35s ease, transform .35s ease; }
-.journal-card:is(:hover, :focus-visible) img { transform: scale(1.035); }
+.journal-card:is(:hover, :focus-visible) img { transform: scale(1.09); }
 .project:is(:hover, :focus-visible) :is(img, video) { filter: brightness(.55); }
 .project:is(:hover, :focus-visible) .project-teaser { opacity: 1; transform: translateY(0); }
 .caption { display: flex; align-items: baseline; gap: .6em 1.2em; padding: 1em var(--gutter); }
@@ -179,11 +179,12 @@ video.is-playing { opacity: 1; }
 .listing-count { position: absolute; top: .25em; left: calc(100% + .35em); font: 600 calc(var(--unit) * .86)/1.3 Arial, sans-serif; }
 .listing-count::before { content: attr(data-count); }
 .journal-lead { position: relative; min-height: 90svh; padding-top: 5rem; }
-.journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5vw 3.3vw; }
-.journal-card { overflow: clip; }
-.journal-card img { aspect-ratio: 4/5; height: auto; }
-.journal-card .caption { justify-content: space-between; padding-inline: 0; }
-.journal-card h2 { font-size: clamp(1.65rem, 3.4vw, 7vw); }
+.journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3.75vw; align-items: start; }
+.journal-card { display: block; color: var(--black); font-size: max(1rem, 1.375vw); letter-spacing: -.035em; }
+.journal-image { aspect-ratio: var(--crop); overflow: clip; }
+.journal-card .caption { justify-content: space-between; padding: 1em 0 .35em; border-bottom: 1px solid currentColor; }
+.journal-card p { margin-top: .8em; }
+body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .about-cover { padding-top: 5rem; display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 3vw; }
 .about-cover h1 { grid-column: 1/-1; }
 .about-cover img { aspect-ratio: 3/4; grid-column: 2; object-position: 60% center; }
@@ -259,8 +260,7 @@ footer { background: var(--paper); color: var(--black); padding: 5vw var(--gutte
   .journal-lead { min-height: 50svh; }
   .journal-lead h1, .about-cover h1 { font-size: 4.5rem; }
   .journal-lead h1 { bottom: 5.5svh; }
-  .journal-grid { gap: 12vw; }
-  .journal-card img { aspect-ratio: 2/3; }
+  .journal-grid { gap: 3rem; }
   .about-cover { gap: 23vw; }
   .about-cover p { margin-top: -10vw; }
   .about-cover img, .about-cover p { grid-column: auto; grid-row: auto; }
