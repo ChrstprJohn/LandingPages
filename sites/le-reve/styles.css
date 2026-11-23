@@ -270,8 +270,8 @@ video.is-playing { opacity: 1; }
   .craft .service { font-size: .825rem; }
   .service h3 { font-size: clamp(1.5rem, 7.7vw, 2.25rem); }
 }
-.studio, .team { background: var(--paper); color: var(--black); }
-.studio h2, .studio-services h2, .team h2 { font-size: clamp(.975rem, 1.83vw, 2rem); display: flex; gap: .55em; align-items: center; }
+.studio, .team { background: var(--gallery-paper); color: var(--black); }
+.studio h2, .studio-services h2, .team h2 { font-size: clamp(.975rem, 1.83vw, 2rem); letter-spacing: -.04em; display: flex; gap: .55em; align-items: center; }
 .studio h2::before, .studio-services h2::before, .team h2::before { content: ""; width: .55em; aspect-ratio: 1; background: var(--red); clip-path: polygon(0 0,100% 0,50% 100%); }
 .studio-lead { font-size: clamp(1rem, 3.2vw, 4rem); line-height: 1.08; letter-spacing: -.04em; }
 .studio-services { position: relative; isolation: isolate; color: white; padding-block: 7.5rem 8vw; }
@@ -444,7 +444,8 @@ body[data-page="journal"][data-detail] footer { background: #000; color: var(--p
   .project-hero h1 { max-width: 7ch; font-size: 3.05rem; }
   .project-stamp { top: 15.7%; bottom: auto; left: 50%; transform: translateX(-50%); width: 150px; }
   .project-initials { font-size: 3.6rem; }
-  .studio { grid-template-columns: 1fr; gap: 2rem; padding-block: 4.5rem; }
+  .studio { grid-template-columns: 1fr; gap: 2.375rem; padding-block: 5rem; }
+  .studio-philosophy { row-gap: 2.9375rem; }
   .studio-philosophy .studio-copy { grid-column: auto; }
   .studio-services ol { width: 100%; }
   .team-grid { grid-template-columns: 1fr; }
