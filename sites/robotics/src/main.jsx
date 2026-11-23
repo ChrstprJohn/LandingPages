@@ -312,7 +312,9 @@ function ProjectStrip({ project }) {
     const mode = gsap.matchMedia(element)
     mode.add('(max-width: 991px) and (prefers-reduced-motion: no-preference)', () => {
       const duplicate = element.querySelector('[aria-hidden="true"]')
-      const loopWidth = () => duplicate.offsetLeft - element.firstElementChild.offsetLeft
+      const loopWidth = () => duplicate.getBoundingClientRect().left - element.firstElementChild.getBoundingClientRect().left
+      let pointerDown = false
+      let resumeTimer
       const autoplay = gsap.fromTo(element, { scrollLeft: 0 }, {
         scrollLeft: loopWidth,
         duration: 15,
@@ -322,25 +324,48 @@ function ProjectStrip({ project }) {
         paused: true,
       })
       const play = () => {
-        if (!element.matches(':focus-visible') && loopWidth()) {
-          autoplay.progress((element.scrollLeft % loopWidth()) / loopWidth()).play()
+        const width = loopWidth()
+        if (!pointerDown && !element.matches(':focus-visible') && width) {
+          autoplay.progress((element.scrollLeft % width) / width).play()
         }
       }
       const pause = () => autoplay.pause()
+      const resumeAfterScroll = () => {
+        clearTimeout(resumeTimer)
+        resumeTimer = setTimeout(() => {
+          resumeTimer = undefined
+          play()
+        }, 150)
+      }
+      const startPointer = () => {
+        pointerDown = true
+        clearTimeout(resumeTimer)
+        resumeTimer = undefined
+        pause()
+      }
+      const endPointer = () => {
+        if (!pointerDown) return
+        pointerDown = false
+        resumeAfterScroll()
+      }
+      const onScroll = () => {
+        if (resumeTimer !== undefined) resumeAfterScroll()
+      }
       play()
       element.addEventListener('focusin', pause)
       element.addEventListener('focusout', play)
-      element.addEventListener('pointerdown', pause)
-      element.addEventListener('pointerup', play)
-      element.addEventListener('pointercancel', play)
-      element.addEventListener('pointerleave', play)
+      element.addEventListener('pointerdown', startPointer)
+      element.addEventListener('scroll', onScroll, { passive: true })
+      window.addEventListener('pointerup', endPointer)
+      window.addEventListener('pointercancel', endPointer)
       return () => {
+        clearTimeout(resumeTimer)
         element.removeEventListener('focusin', pause)
         element.removeEventListener('focusout', play)
-        element.removeEventListener('pointerdown', pause)
-        element.removeEventListener('pointerup', play)
-        element.removeEventListener('pointercancel', play)
-        element.removeEventListener('pointerleave', play)
+        element.removeEventListener('pointerdown', startPointer)
+        element.removeEventListener('scroll', onScroll)
+        window.removeEventListener('pointerup', endPointer)
+        window.removeEventListener('pointercancel', endPointer)
       }
     })
     return () => mode.revert()
