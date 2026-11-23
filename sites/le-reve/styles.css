@@ -82,18 +82,8 @@ nav { display: flex; gap: 1rem; }
 .cover h1 { position: absolute; font-size: 20vw; white-space: nowrap; letter-spacing: -.079em; top: 50%; transform: translate(-.04em, -60%); }
 .portrait { width: 24.3vw; aspect-ratio: 3/4; background: #181818; }
 .cover small { position: absolute; bottom: var(--gutter); }
-.home-entrance .cover :is(h1, small),
-.project-hero :is(.project-stamp, .project-heading h1, .project-heading time, .project-heading p) {
-  animation: hero-rise 1s cubic-bezier(.15,.62,.33,1) both;
-  animation-timing-function: linear(0, .53 22%, .78 40%, .88 54%, .94 66%, .98 80%, 1);
-}
-.home-entrance .cover small { animation-delay: .23s; }
-.listing-photo { animation: portrait-in .7s ease-out both; }
-.listing-cover h1, .about-cover h1 { animation: hero-rise 1s cubic-bezier(.15,.62,.33,1) backwards; }
-.listing-cover h1 { animation-delay: .45s; }
-.about-cover h1 { animation-delay: .1s; }
-@keyframes portrait-in { from { opacity: 0; scale: .96; } }
-@keyframes hero-rise { from { opacity: 0; translate: 0 2.5rem; } }
+.home-entrance .cover :is(h1, small), .project-stamp, .project-heading :is(h1, time, p), .listing-cover h1, .about-cover h1 { translate: 0 var(--hero-rise, 0px); }
+.listing-photo { scale: var(--portrait-scale, 1); }
 .statement { min-height: 100svh; place-content: center; display: grid; grid-template-columns: minmax(0, 50rem); padding-bottom: 1rem; gap: 1rem; text-align: center; }
 .statement h2 { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; font-size: 12.8rem; line-height: 1; white-space: nowrap; letter-spacing: -.035em; }
 .statement h2 span { display: block; }
@@ -325,9 +315,6 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .project-heading > div { display: grid; grid-template-columns: 1fr 1fr; gap: 2vw; margin-top: .85em; }
 .project-stamp { position: absolute; bottom: var(--gutter); left: var(--gutter); display: grid; place-items: center; width: min(17.4vw, 30svh); aspect-ratio: 2/3; }
 .project-stamp img, .project-initials { grid-area: 1/1; }
-.project-hero :is(.project-stamp, .project-heading h1) { animation-delay: .15s; }
-.project-hero .project-heading time { animation-delay: .35s; }
-.project-hero .project-heading p { animation-delay: .55s; }
 .project-initials { color: var(--red); font-size: 8vw; }
 .project-notes, .lookbook, .project-next { background: var(--gallery-paper); color: var(--black); }
 .project-notes { padding-block: 9rem; }
@@ -418,7 +405,7 @@ body[data-page="journal"][data-detail] footer { background: #000; }
   .project-image strong { font-size: 12vw; opacity: 1; }
   .project-image :is(img, video) { filter: brightness(.55); }
   .listing-photo { top: 49.5%; }
-  .listing-cover h1 { position: absolute; clip-path: inset(50%); animation: none; }
+  .listing-cover h1 { position: absolute; clip-path: inset(50%); }
   .listing-cover p, .journal-lead p { max-width: 100%; }
   .journal-lead { min-height: 50svh; }
   .journal-lead h1, .about-cover h1 { font-size: 4.5rem; }

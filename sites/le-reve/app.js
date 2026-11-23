@@ -1,9 +1,10 @@
 import { gsap } from "gsap";
+import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { articles, projects } from "./data.js";
 import { articlePath, matchRoute, previousDetailPaths, projectPath } from "./routes.js";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(CustomEase, ScrollTrigger);
 
 const { page, item, legacy } = matchRoute(location.pathname, location.search);
 const main = document.querySelector("main");
@@ -317,6 +318,29 @@ function rotatePortrait(portrait) {
 document.querySelectorAll(".portrait img, .listing-photo img, .footer-cover img").forEach(rotatePortrait);
 
 const scrollMotion = gsap.matchMedia();
+scrollMotion.add("(prefers-reduced-motion: no-preference)", () => {
+  const heroEase = CustomEase.create("", "M0,0 L.22,.53 L.40,.78 L.54,.88 L.66,.94 L.80,.98 L1,1");
+  const listingEase = CustomEase.create("", ".15,.62,.33,1");
+  const entrances = [
+    [".home-entrance .cover h1", 0, heroEase],
+    [".home-entrance .cover small", .23, heroEase],
+    [".project-stamp, .project-heading h1", .15, heroEase],
+    [".project-heading time", .35, heroEase],
+    [".project-heading p", .55, heroEase],
+    [".listing-cover h1", .45, listingEase],
+    [".about-cover h1", .1, listingEase]
+  ];
+  for (const [selector, delay, ease] of entrances) {
+    const targets = document.querySelectorAll(selector);
+    if (targets.length) gsap.fromTo(targets, { opacity: 0, "--hero-rise": "2.5rem" }, {
+      opacity: 1, "--hero-rise": "0rem", duration: 1, delay, ease, clearProps: "opacity,--hero-rise"
+    });
+  }
+  const portrait = document.querySelector(".listing-photo");
+  if (portrait) gsap.fromTo(portrait, { opacity: 0, "--portrait-scale": .96 }, {
+    opacity: 1, "--portrait-scale": 1, duration: .7, ease: "power1.out", clearProps: "opacity,--portrait-scale"
+  });
+});
 scrollMotion.add({
   animate: "(prefers-reduced-motion: no-preference)",
   desktopHover: "(min-width: 1200px) and (hover: hover)",
