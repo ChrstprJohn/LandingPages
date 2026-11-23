@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npx --yes pnpm@11.24.0 --filter robotics... install --frozen-lockfile",
+  "buildCommand": "npx --yes pnpm@11.24.0 --filter robotics build",
+  "outputDirectory": "dist",
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/blog-posts/:slug", "destination": "/blog-posts/:slug/index.html" }
+  ]
+}
