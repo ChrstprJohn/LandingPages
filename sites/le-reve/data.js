@@ -1,9 +1,9 @@
 export const projects = [
   ["Brand Pulse", "Aethel · Luxury Couture", "VaVeL0jmtullQAkoQ37i7Y4er6k.jpg", "Strategic rebranding and editorial art direction", "Where heritage meets future", "A quiet identity for a couture house, built around cinematic lighting and the texture of its fabrics."],
-  ["Pixel Forge", "Éclat Parfums", "geGhsqF53nrx2i3yOzGg7oo7xlY.jpg", "Naming, identity and packaging", "Scent storytelling", "A visual language and packaging system that give a niche fragrance collection a distinct presence."],
+  ["Pixel Forge", "Éclat Parfums", "J3m4BsOH6XPCYuuKIWUCtsiOMdw.png", "Naming, identity and packaging", "Scent storytelling", "A visual language and packaging system that give a niche fragrance collection a distinct presence."],
   ["Frame Lab", "Sustainable Fabric Sourcing", "9teLjFMpKKKKUQKKA5vbgIBMps.jpg", "Digital editorial and content strategy", "The editorial voice of material", "An editorial platform that makes fabric sourcing easier to understand through images and material stories."],
   ["Mood Craft", "Minimalist Resort Wear", "QwguGwCCrl6nE9DPClR05Lalu0.jpg", "Limited-edition branding", "A collection beyond the season", "A restrained identity for resort wear designed to move between places and seasons."],
-  ["Design Core", "Designer Jewelry and Accessories", "x5M74ldT5CoUgBze2ZgcNz1jMH4.jpg", "Brand experience and retail design", "Space as statement", "A retail concept that brings the sculptural qualities of jewelry into the space around it."],
+  ["Design Core", "Designer Jewelry and Accessories", "J3m4BsOH6XPCYuuKIWUCtsiOMdw.png", "Brand experience and retail design", "Space as statement", "A retail concept that brings the sculptural qualities of jewelry into the space around it."],
   ["Color Tribe", "The Curated Edit", "wLV5KyoD8k6EgBRIoC0IOK1Lrmk.jpg", "Verbal strategy and content", "A language for curation", "A distinct editorial voice for a concept store with a changing roster of designers."],
   ["Photo Grid", "Noir", "IwPc55au32d0TM7VdbuuFwa4jI.jpg", "Immersive live performance", "Value in the details", "A visual system for live performance that carries through from the stage to the photographic record."],
   ["Idea Mint", "Territorio", "tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "City music festival", "A point of view on style", "A flexible campaign identity drawn from the city and its creative community."],
