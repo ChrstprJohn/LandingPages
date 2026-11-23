@@ -551,7 +551,7 @@ h1, .section-title, .project-title, .join-form h2 {
 
 @media (width > 991px) {
   .essay-index .footer { display: none; }
-  .essay-index .editorial-head { min-height: calc(352 * var(--u)); padding-top: calc(30 * var(--u)); }
+  .essay-index .editorial-head { min-height: calc(200 * var(--u)); padding-top: calc(30 * var(--u)); }
   .essay-index .editorial-head h1 { font-size: calc(60 * var(--u)); }
   .essay-index :is(.essay-label, .essay-links li a) { min-height: calc(32 * var(--u)); }
   .essay-index .essay-links li a { padding-left: calc(36 * var(--u)); }
