@@ -267,8 +267,10 @@ h1, .section-title, .project-title, .join-form h2 {
   margin-top: calc(18 * var(--u));
 }
 .discipline { position: absolute; bottom: var(--pad); left: var(--pad); width: calc(190 * var(--u)); height: auto; }
-.studio-label { display: flex; align-items: center; justify-content: space-between; gap: 0.8em; font-size: var(--tiny); text-transform: uppercase; }
+.studio-label { display: flex; align-items: center; font-size: var(--tiny); text-transform: uppercase; }
+.studio-label::before { content: ''; flex: 1; min-width: 0.75em; border-top: 1px solid currentColor; }
 .studio-label span { padding: 0.45em 0.75em; border: 1px solid currentColor; white-space: nowrap; }
+.studio-label span:first-child { order: -1; }
 .studio-label span:last-child { border-radius: 99px; }
 .project-icons span { display: grid; place-items: center; width: 1.65em; height: 1.65em; border: 1px solid currentColor; border-radius: 50%; }
 .company-logo img, .contact-footer-art { aspect-ratio: 1.7; object-fit: cover; }
