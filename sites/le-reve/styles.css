@@ -72,8 +72,10 @@ nav { display: flex; gap: 1rem; }
 .statement h2 { font-size: 12.8rem; line-height: 1; white-space: nowrap; }
 .statement h2 span { display: block; }
 .statement .statement-kicker { color: white; font: 800 7.45rem/1 Arial, sans-serif; letter-spacing: -.065em; }
-.statement :is(h2 > span, .statement-caption, p) { transition: opacity .65s cubic-bezier(.22,.7,.3,1), translate .65s cubic-bezier(.22,.7,.3,1); }
-.statement .statement-pending { opacity: 0; translate: 0 40px; transition: none; }
+:is(.statement h2 > span, .statement-caption, .statement > p, .welcome > span, .welcome > img, .welcome h2, .welcome-notes > *, .featured h2 > span):not(.editorial-pending) {
+  transition: opacity .65s cubic-bezier(.22,.7,.3,1), translate .65s cubic-bezier(.22,.7,.3,1);
+}
+.editorial-pending { opacity: 0; translate: 0 40px; transition: none; }
 .statement-caption { display: flex; justify-content: space-between; color: white; }
 .statement p { color: white; font-size: clamp(1rem, 3.4vw, 3.4rem); line-height: 1; letter-spacing: -.045em; }
 .welcome {
@@ -87,10 +89,12 @@ nav { display: flex; gap: 1rem; }
   border-top: 1px solid #474747;
 }
 .welcome > span { grid-column: 1/-1; }
+.welcome > * { position: relative; top: -2.5rem; }
+.welcome > div { min-height: 50.25rem; display: grid; grid-template-rows: auto 1fr; }
 .welcome img { height: 50.25rem; }
 .welcome h2 { font-size: 8.4375rem; max-width: 6ch; }
-.welcome-notes { display: flex; justify-content: space-between; gap: 2em; margin-top: .625rem; }
-.welcome-notes strong { flex: none; }
+.welcome-notes { display: flex; flex-direction: column; justify-content: space-between; gap: 2em; margin-top: .625rem; }
+.welcome-notes p { font-size: 1.35rem; letter-spacing: -.035em; }
 .welcome p, .craft p, .studio p, .about-cover p { max-width: 34em; }
 .banner {
   overflow: hidden;
@@ -139,6 +143,7 @@ main > .banner { margin-inline: var(--gutter); }
 .featured > h2, .related > h2 { padding-block: 6vw 3vw; }
 .featured { padding-bottom: 10rem; }
 .featured > h2 { text-align: center; color: white; font-size: 8.4375rem; padding-block: 13.125rem 0; }
+.featured h2 > span { display: block; position: relative; top: -2.5rem; }
 .featured-cue { margin: 0 auto 1.125rem; width: 14px; height: 13px; background: var(--red); clip-path: polygon(0 0,100% 0,50% 100%); }
 @media (width < 1200px) {
   .statement { grid-template-columns: minmax(0, 37.5rem); }
@@ -146,7 +151,8 @@ main > .banner { margin-inline: var(--gutter); }
   .statement .statement-kicker { font-size: 5.5625rem; }
   .statement p { font-size: 2.625rem; }
   .welcome { grid-template-columns: 1fr; gap: 1.125rem; min-height: 88.375rem; }
-  .welcome > div { margin-top: .875rem; align-self: start; }
+  .welcome > div { min-height: auto; margin-top: .875rem; align-self: start; }
+  .welcome-notes { min-height: 16rem; }
   .welcome img { height: 56.25rem; }
   .welcome h2 { font-size: 7.4rem; max-width: none; }
   .welcome + .banner { margin-top: 0; font-size: 5.7rem; }
@@ -160,6 +166,8 @@ main > .banner { margin-inline: var(--gutter); }
   .statement p { font-size: 1.1875rem; }
   .welcome { min-height: 59.625rem; font-size: .825rem; }
   .welcome img { height: 28.125rem; }
+  .welcome-notes { min-height: 20.875rem; }
+  .welcome-notes p { font-size: inherit; }
   .welcome h2, .featured > h2 { font-size: 3.36rem; letter-spacing: -.025em; }
   .welcome + .banner { font-size: 3.75rem; }
   .featured > h2 { padding-top: 12.9375rem; }
@@ -406,7 +414,7 @@ body[data-page="journal"][data-detail] footer { background: #000; color: var(--p
   .team-grid a:nth-child(n) { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .statement .statement-pending { opacity: 1; translate: none; }
+  .editorial-pending { opacity: 1; translate: none; }
   .image-study { min-height: auto; margin-bottom: 0; }
   .study-stage { position: relative; }
   .journal-card img { transform: none !important; }

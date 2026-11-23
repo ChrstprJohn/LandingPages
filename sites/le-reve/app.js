@@ -88,7 +88,7 @@ function home() {
     <div><h2>BUILD VALUE.</h2><div class="welcome-notes"><strong>THE ONLY<br>INVESTMENT<br>THAT LASTS</strong><p>We build brand identities and digital experiences for fashion and culture, bringing strategy and art direction together from the first idea through the final image.</p></div></div>
   </section>
   ${banner("LEGACY.")}
-  <section class="featured"><h2 class="inset">FEATURED</h2><div class="featured-cue" aria-hidden="true"></div>${projectGrid(projects.slice(0, 5))}</section>
+  <section class="featured"><h2 class="inset"><span>FEATURED</span></h2><div class="featured-cue" aria-hidden="true"></div>${projectGrid(projects.slice(0, 5))}</section>
   ${craft}
   <section class="image-study">
     <div class="study-stage">
@@ -336,19 +336,25 @@ if (craftScene) {
 }
 
 if (!motion.matches) {
-  const statementLayers = document.querySelectorAll(".statement h2 > span, .statement-caption, .statement > p");
-  const statementReveal = new IntersectionObserver(entries => {
-    for (const { target, isIntersecting } of entries) {
-      if (!isIntersecting) continue;
-      target.classList.remove("statement-pending");
-      statementReveal.unobserve(target);
+  function revealEditorial(selector, viewportLine) {
+    const observer = new IntersectionObserver(entries => {
+      for (const { target, isIntersecting } of entries) {
+        if (!isIntersecting) continue;
+        target.classList.remove("editorial-pending");
+        observer.unobserve(target);
+      }
+    }, { rootMargin: `0px 0px ${40 - Math.round(innerHeight * (1 - viewportLine))}px 0px` });
+    for (const layer of document.querySelectorAll(selector)) {
+      if (layer.getBoundingClientRect().bottom <= 0) continue;
+      layer.classList.add("editorial-pending");
+      observer.observe(layer);
     }
-  }, { rootMargin: `0px 0px ${40 - Math.round(innerHeight * .1)}px 0px` });
-  for (const layer of statementLayers) {
-    if (layer.getBoundingClientRect().bottom <= 0) continue;
-    layer.classList.add("statement-pending");
-    statementReveal.observe(layer);
   }
+  const wide = wideCraft.matches;
+  revealEditorial(".statement h2 > span, .statement-caption, .statement > p, .featured h2 > span", .9);
+  revealEditorial(".welcome > span, .welcome-notes > *", .7);
+  revealEditorial(".welcome > img", wide ? .57 : .7);
+  revealEditorial(".welcome h2", wide ? .7 : .9);
   const reveals = new IntersectionObserver(entries => {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
@@ -359,6 +365,6 @@ if (!motion.matches) {
       reveals.unobserve(entry.target);
     }
   }, { threshold: .12 });
-  document.querySelectorAll(".welcome > *, .featured > h2, .craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .project-notes > *, .lookbook img")
+  document.querySelectorAll(".craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .project-notes > *, .lookbook img")
     .forEach(element => reveals.observe(element));
 }
