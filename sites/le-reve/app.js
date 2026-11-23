@@ -91,13 +91,15 @@ function home() {
   <section class="featured"><h2 class="inset">FEATURED</h2><div class="featured-cue" aria-hidden="true"></div>${projectGrid(projects.slice(0, 5))}</section>
   ${craft}
   <section class="image-study">
+    <div class="study-stage">
     ${banner("LE RÊVE.")}
-    <div class="study-portraits">${[
-      ["tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "U8Vg5n0udgRw8Sxt4TAfelLsFQ.jpg"],
-      ["VaVeL0jmtullQAkoQ37i7Y4er6k.jpg", "bsKPZP76FlBVKmo7uSXI3whYM.jpg"],
-      ["O1NAT0hwgGZBCqv95S4Hll1Hc.jpg", "U8oqYyQiEJdpCRBBHLATMsFPpk.jpg"]
+    <div class="study-portraits" aria-hidden="true">${[
+      ["tvuxr7MrGGUgsAAIZF8KZjvsHs.jpg", "U8Vg5n0udgRw8Sxt4TAfelLsFQ.jpg", "ynnm1qlBFDLXtQVSKbo4CfPZTk.jpg"],
+      ["VaVeL0jmtullQAkoQ37i7Y4er6k.jpg", "bsKPZP76FlBVKmo7uSXI3whYM.jpg", "ekKxn88e2R0im7jDV4AsFxbRg.jpg"],
+      ["O1NAT0hwgGZBCqv95S4Hll1Hc.jpg", "U8oqYyQiEJdpCRBBHLATMsFPpk.jpg", "geGhsqF53nrx2i3yOzGg7oo7xlY.jpg"]
     ].map(files => `<div>${files.map(file => photo(file)).join("")}</div>`).join("")}</div>
-    <p>We create brand identities and digital experiences.</p>
+    <p>We create brand identities and digital experiences, starting with research into the brand and the people it needs to reach. We turn those findings into a visual system that works across campaigns, print, and the web.</p>
+    </div>
   </section>`;
 }
 
@@ -344,6 +346,6 @@ if (!motion.matches) {
       reveals.unobserve(entry.target);
     }
   }, { threshold: .12 });
-  document.querySelectorAll(".statement > *, .welcome > *, .featured > h2, .craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .study-portraits img, .project-notes > *, .lookbook img")
+  document.querySelectorAll(".statement > *, .welcome > *, .featured > h2, .craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .project-notes > *, .lookbook img")
     .forEach(element => reveals.observe(element));
 }
