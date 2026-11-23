@@ -329,6 +329,15 @@ scrollMotion.add({
   const listeners = new AbortController();
   const options = { signal: listeners.signal };
 
+  function bindCardMotion(card, pointerArea, render) {
+    const update = () => render((conditions.hover && pointerArea.matches(":hover")) || card.matches(":focus-visible"));
+    pointerArea.addEventListener("pointerenter", update, options);
+    pointerArea.addEventListener("pointerleave", update, options);
+    card.addEventListener("focus", update, options);
+    card.addEventListener("blur", update, options);
+    update();
+  }
+
   for (const media of document.querySelectorAll(".project-image")) {
     const card = media.closest(".project");
     const ticker = gsap.to(card.querySelector(".project-ticker"), {
@@ -337,16 +346,17 @@ scrollMotion.add({
     const shade = conditions.desktopHover && gsap.fromTo(media.querySelector("img"), { filter: "brightness(1)" }, {
       filter: "brightness(0.7)", duration: .45, ease: "power2.out", paused: true
     });
-    const update = () => {
-      const active = (conditions.hover && media.matches(":hover")) || card.matches(":focus-visible");
+    bindCardMotion(card, media, active => {
       ticker.paused(!active);
       if (shade) shade.reversed(!active).resume();
-    };
-    media.addEventListener("pointerenter", update, options);
-    media.addEventListener("pointerleave", update, options);
-    card.addEventListener("focus", update, options);
-    card.addEventListener("blur", update, options);
-    update();
+    });
+  }
+
+  for (const card of document.querySelectorAll(".journal-card")) {
+    const zoom = gsap.to(card.querySelector("img"), {
+      scale: 1.1, duration: .48, ease: "power2.inOut", paused: true
+    });
+    bindCardMotion(card, card, active => zoom.reversed(!active).resume());
   }
 
   return () => listeners.abort();
