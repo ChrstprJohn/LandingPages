@@ -1,5 +1,9 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { articles, projects } from "./data.js";
 import { articlePath, matchRoute, previousDetailPaths, projectPath } from "./routes.js";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const { page, item, legacy } = matchRoute(location.pathname, location.search);
 const main = document.querySelector("main");
@@ -70,16 +74,16 @@ function home() {
     <h1 aria-label="DECODÉ">DECODÉ</h1><small>© DECODÉ Studio</small>
   </section>
   <section class="statement inset">
-    <h2><span class="statement-kicker">READ THE</span><span class="statement-impact">DETAILS</span></h2>
+    <h2><span class="statement-kicker">LOOK AT THE</span><span class="statement-impact">DETAILS</span></h2>
     <div class="statement-caption"><span>FORM</span><span>LIGHT</span><span>MATERIAL</span></div>
     <p>FASHION. FRAGRANCE. OBJECTS.</p>
   </section>
   <section class="welcome inset">
     <span>DECODÉ STUDIO</span>
-    ${photo("light-study.jpg", "Editorial portrait")}
+    ${photo("red-study.jpg", "Editorial portrait against a red backdrop")}
     <div><h2>IN FOCUS.</h2><div class="welcome-notes"><strong>CUT<br>TEXTURE<br>ATTITUDE</strong><p>We develop campaigns, lookbooks and visual identities for fashion, fragrance and accessories. The work starts with how the object is made and how it sits in an image.</p></div></div>
   </section>
-  ${banner("FORM.")}
+  ${banner("HERITAGE.")}
   <section class="featured"><h2 class="inset"><span>FEATURED</span></h2><div class="featured-cue" aria-hidden="true"></div>${projectGrid(projects.slice(0, 5))}</section>
   ${craft}
   <section class="image-study">
@@ -90,7 +94,7 @@ function home() {
       ["suit.jpg", "fragrance.jpg", "glass.jpg"],
       ["layers.jpg", "tulle.jpg", "jewelry.jpg"]
     ].map(files => `<div>${files.map(file => photo(file)).join("")}</div>`).join("")}</div>
-    <p>An ongoing study of garments, gestures and the way materials respond to light.</p>
+    <p>We study how clothes move, where the light falls and which details hold the eye. These photographs bring together different ways of looking at tailoring, fabric and the objects worn alongside them. The same observations guide our work on campaigns and lookbooks.</p>
     </div>
   </section>`;
 }
@@ -313,68 +317,84 @@ function rotatePortrait(portrait) {
 }
 document.querySelectorAll(".portrait img, .listing-photo img, .footer-cover img").forEach(rotatePortrait);
 
-const craftScene = document.querySelector(".craft");
-const craftLayers = [...document.querySelectorAll(".craft-media img")].slice(1);
-const wideCraft = matchMedia("(min-width: 1200px)");
+const scrollMotion = gsap.matchMedia();
+scrollMotion.add({
+  animate: "(prefers-reduced-motion: no-preference)",
+  wide: "(min-width: 1200px)",
+  compact: "(max-width: 640px)"
+}, ({ conditions }) => {
+  if (!conditions.animate) return;
 
-if (craftScene) {
-  let framePending = false;
-  function paintCraft() {
-    framePending = false;
-    const bounds = craftScene.getBoundingClientRect();
-    const panelHeight = craftScene.querySelector(".craft-heading").offsetHeight;
-    const progress = -bounds.top / panelHeight;
-    for (const [index, layer] of craftLayers.entries()) {
-      const enter = Math.max(0, Math.min(1, (progress - index - .25) * 2));
-      const next = Math.max(0, Math.min(1, (progress - index - 1.25) * 2));
-      const opacity = wideCraft.matches && !motion.matches && bounds.bottom > 0 && bounds.top < innerHeight
-        ? enter * (1 - next) : 0;
-      layer.style.setProperty("--craft-opacity", opacity);
-    }
-  }
-  function scheduleCraft() {
-    if (framePending) return;
-    framePending = true;
-    requestAnimationFrame(paintCraft);
-  }
-  addEventListener("scroll", scheduleCraft, { passive: true });
-  addEventListener("resize", scheduleCraft);
-  wideCraft.addEventListener("change", scheduleCraft);
-  motion.addEventListener("change", scheduleCraft);
-  scheduleCraft();
-}
-
-if (!motion.matches) {
-  function revealEditorial(selector, viewportLine) {
-    const observer = new IntersectionObserver(entries => {
-      for (const { target, isIntersecting } of entries) {
-        if (!isIntersecting) continue;
-        target.classList.remove("editorial-pending");
-        observer.unobserve(target);
-      }
-    }, { rootMargin: `0px 0px ${40 - Math.round(innerHeight * (1 - viewportLine))}px 0px` });
+  function reveal(selector, start, opacity = 0) {
     for (const layer of document.querySelectorAll(selector)) {
       if (layer.getBoundingClientRect().bottom <= 0) continue;
-      layer.classList.add("editorial-pending");
-      observer.observe(layer);
+      gsap.from(layer, {
+        opacity,
+        y: opacity === 0 ? "2.5rem" : "2.25rem",
+        duration: .65,
+        ease: opacity === 0 ? "power2.out" : "power3.out",
+        clearProps: "opacity,transform",
+        scrollTrigger: { trigger: layer, start, once: true }
+      });
     }
   }
-  const wide = wideCraft.matches;
-  revealEditorial(".statement h2 > span, .statement-caption, .statement > p, .featured h2 > span", .9);
-  revealEditorial(".welcome > span, .welcome-notes > *", .7);
-  revealEditorial(".welcome > img", wide ? .57 : .7);
-  revealEditorial(".welcome h2", wide ? .7 : .9);
-  revealEditorial(".about-intro", compactHeader.matches ? 1 : .84);
-  const reveals = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.animate(
-        [{ opacity: .15, translate: "0 36px" }, { opacity: 1, translate: "0 0" }],
-        { duration: 640, easing: "cubic-bezier(.22,1,.36,1)" }
+
+  const { wide, compact } = conditions;
+  reveal(".statement h2 > span, .statement-caption, .statement > p, .featured h2 > span", "top 90%");
+  reveal(".welcome > span, .welcome-notes > *", "top 70%");
+  reveal(".welcome > img", wide ? "top 57%" : "top 70%");
+  reveal(".welcome h2", wide ? "top 70%" : "top 90%");
+  reveal(".about-intro", compact ? "top bottom" : "top 84%");
+  reveal(".craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .project-notes > *, .lookbook img", "top 88%", .15);
+
+  const study = document.querySelector(".image-study");
+  if (study) {
+    gsap.from(".study-portraits > div", {
+      scale: .5,
+      ease: "none",
+      scrollTrigger: { trigger: study, start: "top bottom", end: "top top", scrub: true }
+    });
+
+    const studyFrames = gsap.timeline({
+      scrollTrigger: {
+        trigger: study,
+        start: "top top",
+        end: "bottom 110%",
+        scrub: true,
+        snap: {
+          snapTo: [0, .5, 1],
+          inertia: false,
+          delay: .16,
+          duration: { min: .15, max: .35 }
+        }
+      }
+    });
+    for (const [index, child] of [2, 3].entries()) {
+      studyFrames.fromTo(
+        `.study-portraits img:nth-child(${child})`,
+        wide ? { xPercent: 100, opacity: 1 } : { opacity: 0 },
+        wide
+          ? { xPercent: 0, duration: 1, ease: "none" }
+          : { opacity: 1, duration: 1, ease: "none" },
+        index
       );
-      reveals.unobserve(entry.target);
     }
-  }, { threshold: .12 });
-  document.querySelectorAll(".craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .project-notes > *, .lookbook img")
-    .forEach(element => reveals.observe(element));
-}
+  }
+
+  const craft = document.querySelector(".craft");
+  if (!craft || !wide) return;
+  const panels = craft.querySelector(".service-list");
+  const layers = craft.querySelectorAll(".craft-media img + img");
+  const crossfade = gsap.timeline({
+    scrollTrigger: {
+      trigger: craft,
+      start: "top top",
+      end: () => "+=" + panels.offsetHeight,
+      scrub: true
+    }
+  });
+  layers.forEach((layer, index) => {
+    crossfade.fromTo(layer, { opacity: 0 }, { opacity: 1, duration: .5, ease: "none" }, index + .25);
+  });
+  crossfade.to({}, { duration: 1.25 });
+});

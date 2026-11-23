@@ -21,3 +21,4 @@ Photos are sourced under the [Unsplash License](https://unsplash.com/license). T
 | `formal.jpg` | [Unsplash photograph](https://unsplash.com/photos/5KyzZbonwqQ) |
 | `glass.jpg` | [Unsplash photograph](https://unsplash.com/photos/vlNwmD9hTMI) |
 | `white-suit.jpg` | [Unsplash photograph](https://unsplash.com/photos/31mpttOpaus) |
+| `red-study.jpg` | [Unsplash photograph](https://unsplash.com/photos/qltRsAUc0TU) |
