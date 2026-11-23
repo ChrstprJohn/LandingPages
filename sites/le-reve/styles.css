@@ -456,12 +456,12 @@ body[data-page="journal"][data-detail] footer { background: #000; color: var(--p
   .team-grid a:nth-child(n) { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
   .image-study { min-height: auto; }
   .study-stage { position: relative; }
   .study-portraits img + img { opacity: 0; }
   .journal-card img { transform: none !important; }
   .craft-heading, .craft .service { position: static; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
   video.is-playing { opacity: 0; }
 }
