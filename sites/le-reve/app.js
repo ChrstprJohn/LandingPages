@@ -79,9 +79,8 @@ function home() {
     <p>FASHION. FRAGRANCE. OBJECTS.</p>
   </section>
   <section class="welcome inset">
-    <span>DECODÉ STUDIO</span>
     ${photo("red-study.jpg", "Editorial portrait against a red backdrop")}
-    <div><h2>IN FOCUS.</h2><div class="welcome-notes"><strong>CUT<br>TEXTURE<br>ATTITUDE</strong><p>We develop campaigns, lookbooks and visual identities for fashion, fragrance and accessories. The work starts with how the object is made and how it sits in an image.</p></div></div>
+    <div><h2>IN FOCUS.</h2><div class="welcome-notes"><p>We develop campaigns, lookbooks and visual identities for fashion, fragrance and accessories. The work starts with how the object is made and how it sits in an image.</p></div></div>
   </section>
   ${banner("HERITAGE.")}
   <section class="featured"><h2 class="inset"><span>FEATURED</span></h2><div class="featured-cue" aria-hidden="true"></div>${projectGrid(projects.slice(0, 5))}</section>
@@ -318,11 +317,34 @@ function rotatePortrait(portrait) {
 document.querySelectorAll(".portrait img, .listing-photo img, .footer-cover img").forEach(rotatePortrait);
 
 const scrollMotion = gsap.matchMedia();
+scrollMotion.add("(min-width: 1200px) and (hover: hover) and (prefers-reduced-motion: no-preference)", () => {
+  const listeners = new AbortController();
+  const options = { signal: listeners.signal };
+
+  for (const media of document.querySelectorAll(".project-image")) {
+    const card = media.closest(".project");
+    const shade = gsap.fromTo(media.querySelector("img"), { filter: "brightness(1)" }, {
+      filter: "brightness(0.7)", duration: .45, ease: "power2.out", paused: true
+    });
+    const update = () => {
+      if (media.matches(":hover") || card.matches(":focus-visible")) shade.play();
+      else shade.reverse();
+    };
+    media.addEventListener("pointerenter", update, options);
+    media.addEventListener("pointerleave", update, options);
+    card.addEventListener("focus", update, options);
+    card.addEventListener("blur", update, options);
+    update();
+  }
+
+  return () => listeners.abort();
+});
 scrollMotion.add({
   animate: "(prefers-reduced-motion: no-preference)",
   wide: "(min-width: 1200px)",
   compact: "(max-width: 640px)"
-}, ({ conditions }) => {
+}, (context) => {
+  const { conditions } = context;
   if (!conditions.animate) return;
 
   function reveal(selector, start, opacity = 0) {
@@ -341,7 +363,7 @@ scrollMotion.add({
 
   const { wide, compact } = conditions;
   reveal(".statement h2 > span, .statement-caption, .statement > p, .featured h2 > span", "top 90%");
-  reveal(".welcome > span, .welcome-notes > *", "top 70%");
+  reveal(".welcome-notes p", "top 70%");
   reveal(".welcome > img", wide ? "top 57%" : "top 70%");
   reveal(".welcome h2", wide ? "top 70%" : "top 90%");
   reveal(".about-intro", compact ? "top bottom" : "top 84%");
@@ -350,15 +372,18 @@ scrollMotion.add({
   const study = document.querySelector(".image-study");
   if (study) {
     gsap.from(".study-portraits > div", {
-      scale: .5,
-      ease: "none",
-      scrollTrigger: { trigger: study, start: "top bottom", end: "top top", scrub: true }
+      opacity: 0,
+      duration: .55,
+      stagger: .08,
+      ease: "power2.out",
+      clearProps: "opacity",
+      scrollTrigger: { trigger: study, start: "top 84%", once: true }
     });
 
     const studyFrames = gsap.timeline({
       scrollTrigger: {
         trigger: study,
-        start: "top top",
+        start: "top -75%",
         end: "bottom 110%",
         scrub: true,
         snap: {
@@ -383,18 +408,18 @@ scrollMotion.add({
 
   const craft = document.querySelector(".craft");
   if (!craft || !wide) return;
-  const panels = craft.querySelector(".service-list");
   const layers = craft.querySelectorAll(".craft-media img + img");
-  const crossfade = gsap.timeline({
-    scrollTrigger: {
-      trigger: craft,
-      start: "top top",
-      end: () => "+=" + panels.offsetHeight,
-      scrub: true
-    }
+  const showLayer = context.add(null, (active) => {
+    gsap.to(layers, {
+      opacity: index => Number(index <= active), duration: .3, ease: "power2.out", overwrite: "auto"
+    });
   });
-  layers.forEach((layer, index) => {
-    crossfade.fromTo(layer, { opacity: 0 }, { opacity: 1, duration: .5, ease: "none" }, index + .25);
+  craft.querySelectorAll(".service").forEach((panel, index) => {
+    ScrollTrigger.create({
+      trigger: panel,
+      start: "top center",
+      onEnter: () => showLayer(index),
+      onLeaveBack: () => showLayer(index - 1)
+    });
   });
-  crossfade.to({}, { duration: 1.25 });
 });

@@ -106,15 +106,14 @@ nav { display: flex; gap: 1rem; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
   gap: 1.125rem 2rem;
-  padding-block: 2.4375rem 0;
+  padding-block: calc(3.5625rem + 1lh) 0;
   border-top: 1px solid #474747;
 }
-.welcome > span { grid-column: 1/-1; }
 .welcome > * { position: relative; top: -2.5rem; }
 .welcome > div { min-height: 50.25rem; display: grid; grid-template-rows: auto 1fr; }
 .welcome img { height: 50.25rem; }
 .welcome h2 { font-size: 8.4375rem; max-width: 6ch; letter-spacing: -.04em; }
-.welcome-notes { display: flex; flex-direction: column; justify-content: space-between; gap: 2em; margin-top: .625rem; }
+.welcome-notes { display: flex; flex-direction: column; justify-content: flex-end; margin-top: .625rem; }
 .welcome-notes p { font-size: 1.4625rem; line-height: 1.1; letter-spacing: -.04em; }
 .craft p, .studio p, .about-cover p { max-width: 34em; }
 .banner {
@@ -171,17 +170,17 @@ main > .banner { margin-inline: var(--gutter); }
   .featured > h2 { font-size: 7.4rem; padding-top: 13.25rem; }
 }
 @media (width < 810px) {
-  .statement { grid-template-columns: minmax(0, 16.75rem); padding-block: 1.25rem 0; }
+  .statement { grid-template-columns: minmax(0, 16.75rem); padding-block: 5.125rem 0; }
   .statement h2 { font-size: min(4.3125rem, 20vw); }
-  .statement .statement-kicker { font-size: min(2.5rem, 10vw); }
+  .statement .statement-kicker { font-size: min(2.5rem, 10.3vw); line-height: 1; }
   .statement-caption { font-size: .825rem; }
-  .statement p { font-size: 1.1875rem; }
+  .statement p { font-size: min(.95rem, 4vw); line-height: 1.25; }
   .welcome { min-height: 59.625rem; font-size: .825rem; }
   .welcome img { height: 28.125rem; }
   .welcome-notes p { font-size: .9rem; }
   .welcome-notes { min-height: 20.875rem; }
   .welcome-notes p { font-size: inherit; }
-  .welcome h2, .featured > h2 { font-size: 3.36rem; letter-spacing: -.025em; }
+  .welcome h2, .featured > h2 { font-size: 3.36rem; letter-spacing: -.04em; }
   .welcome + .banner { font-size: 3.75rem; }
   .featured > h2 { padding-top: 12.9375rem; }
 }
@@ -200,7 +199,6 @@ main > .banner { margin-inline: var(--gutter); }
   transition: opacity .3s ease, filter .45s ease;
 }
 video.is-playing { opacity: 1; }
-.project-image img { transition: filter .55s ease; }
 .project-image strong {
   position: absolute;
   z-index: 1;
@@ -223,7 +221,7 @@ video.is-playing { opacity: 1; }
 .journal-card:focus-visible img { transform: scale(1.1); }
 .project:focus-visible :is(strong, .project-teaser) { opacity: 1; }
 .project:focus-visible .project-ticker { animation-play-state: running; }
-.project:is(:hover, :focus-visible) .caption :is(b, time) { color: var(--red); }
+.project:is(:hover, :focus-visible) .caption :is(b, span, time) { color: var(--red); }
 @media (hover: hover) {
   .journal-card:hover img { transform: scale(1.1); }
   .project-image:hover :is(strong, .project-teaser) { opacity: 1; }
@@ -270,7 +268,7 @@ video.is-playing { opacity: 1; }
   .service h3 { max-width: none; }
 }
 @media (width < 810px) {
-  .craft-heading h2 { font-size: 3.36rem; letter-spacing: -.025em; }
+  .craft-heading h2 { font-size: 3.36rem; letter-spacing: -.04em; }
   .craft-heading h2 br { display: none; }
   .craft .service { font-size: .825rem; }
   .service h3 { font-size: clamp(1.5rem, 7.7vw, 2.25rem); }
