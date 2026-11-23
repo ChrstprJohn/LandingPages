@@ -1,5 +1,6 @@
 import { articles, creativeDirectors, projects, projectVideos } from "./data.js";
 import { articlePath, matchRoute, projectPath } from "./routes.js";
+import { articleNotes } from "./article-notes.js";
 
 const { page, item, legacy } = matchRoute(location.pathname, location.search);
 const main = document.querySelector("main");
@@ -179,12 +180,22 @@ function projectDetail(project, index) {
 
 function articleDetail(article, index) {
   const [name, title, image, secondary, summary] = article;
+  const [context, question, answer, quote, credit] = articleNotes[name];
   const related = [1, 2, 3].map(offset => articles[(index + offset) % articles.length]);
   return `<article>
     <header class="article-lead inset"><h1>${name}:<br>${title}</h1><p><span>A. Álvarez</span><time datetime="2023-09-22">Sep 22, 2023</time></p></header>
     <div class="article-image inset">${photo(image, "Editorial photograph for " + name, true)}</div>
-    <p class="article-text inset">${summary}</p>
-    <div class="article-image inset">${photo(secondary, "Second editorial photograph for " + name)}</div>
+    <div class="article-text">
+      <p>${summary}</p>
+      <p>${context}</p>
+      <h2>${question}</h2>
+      <p>${answer}</p>
+      ${photo(secondary, "Second editorial photograph for " + name)}
+    </div>
+    <figure class="article-quote">
+      <blockquote>“${quote}”</blockquote>
+      <figcaption>${credit}</figcaption>
+    </figure>
   </article>
   <section class="related inset"><h2>MORE ARTICLES.</h2>${journalGrid(related)}<a class="back" href="/journal">← All articles</a></section>`;
 }
