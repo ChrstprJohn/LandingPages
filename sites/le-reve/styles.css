@@ -294,10 +294,6 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .about-cover h1 { grid-column: 1/-1; font-size: clamp(4.5rem, 15vw, 13.5rem); }
 .about-portrait { grid-column: 2; }
 .about-portrait img { height: auto; aspect-ratio: 3/5; }
-@supports (animation-timeline: scroll()) {
-  .about-portrait img { animation: about-portrait-drift linear both; animation-timeline: scroll(root); animation-range: 0 62.5rem; }
-  @keyframes about-portrait-drift { from { translate: 0 -1px; } to { translate: 0 -1.6875rem; } }
-}
 .about-intro { grid-column: 1; grid-row: 2; align-self: end; max-width: 28em; padding: 0 2rem 2.5rem 0; }
 .about-intro p + p, .studio-copy p + p { margin-top: .8em; }
 .studio { padding-block: 2rem 5rem; display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 2.4rem 3vw; }

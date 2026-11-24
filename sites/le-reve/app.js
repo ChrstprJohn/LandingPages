@@ -421,7 +421,15 @@ scrollMotion.add({
   reveal(".welcome > img", wide ? "top 57%" : "top 70%");
   reveal(".welcome h2", wide ? "top 70%" : "top 90%");
   reveal(".about-intro", compact ? "top bottom" : "top 84%");
-  reveal(".craft-heading > *, .service > div, .studio > *, .studio-services li, .team-grid a, .project-notes > *, .lookbook img", "top 88%", .15);
+  reveal(".studio > :is(h2, .studio-lead, .studio-copy), .studio-services > :is(h2, .studio-lead, ol), .team > :is(h2, .studio-lead)", "top 88%");
+  reveal(".craft-heading > *, .service > div, .project-notes > *, .lookbook img", "top 88%", .15);
+
+  const aboutPortrait = document.querySelector(".about-portrait img");
+  if (aboutPortrait) gsap.to(aboutPortrait, {
+    y: "-1.6875rem",
+    ease: "none",
+    scrollTrigger: { start: 0, end: () => `+=${innerHeight}`, scrub: true }
+  });
 
   const study = document.querySelector(".image-study");
   if (study) {
