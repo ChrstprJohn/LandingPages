@@ -339,6 +339,33 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .studio-philosophy h2::before { background: var(--black); }
 .studio-philosophy img { grid-column: 1/-1; width: min(100%, 43.75rem); justify-self: center; }
 .studio-philosophy .studio-copy { grid-column: 2; }
+@media (width > 640px) {
+  .studio { align-items: start; gap: 0 2rem; padding-block: 5rem; }
+  .studio .studio-lead { min-height: 3lh; max-width: 59.375rem; margin-block: 2rem 3rem; font-size: 2.8125rem; line-height: 1.1; }
+  .studio img { aspect-ratio: 1; object-position: center top; }
+  .studio-copy { width: min(100%, 25rem); max-width: none; font-size: 1.2375rem; }
+  .studio-philosophy .studio-lead { min-height: 4lh; }
+  .studio-philosophy img { width: min(100%, 43.75rem); }
+  .studio-philosophy .studio-copy { display: grid; grid-column: 1/-1; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .625rem; justify-self: center; width: min(100%, 43.75rem); min-height: 6lh; margin-top: 1rem; }
+  .studio-philosophy .studio-copy p + p { margin-top: 0; }
+}
+@media (810px <= width < 1200px) {
+  .studio h2 { font-size: 1.3rem; }
+  .studio .studio-lead { min-height: 3lh; font-size: 2rem; }
+  .studio-copy { font-size: 1.1rem; }
+  .studio-philosophy img { width: min(100%, 37.5rem); }
+  .studio-philosophy .studio-copy { min-height: 5lh; }
+}
+@media (640px < width < 810px) {
+  .studio { grid-template-columns: 1fr; }
+  .studio h2 { font-size: .975rem; }
+  .studio .studio-lead { min-height: 2lh; font-size: 1.2rem; }
+  .studio img { justify-self: start; }
+  .studio-copy { justify-self: center; min-height: 10.25rem; margin-top: 2rem; font-size: .825rem; }
+  .studio-philosophy img { width: min(100%, 37.5rem); justify-self: center; }
+  .studio-philosophy .studio-copy { display: block; justify-self: start; width: min(100%, 25rem); min-height: 8.125rem; margin-inline-start: max(0px, calc((100% - 43.75rem) / 2)); }
+  .studio-philosophy .studio-copy p + p { margin-top: .625rem; }
+}
 .project-hero { position: relative; min-height: 100svh; isolation: isolate; overflow: clip; padding: var(--gutter); color: white; }
 .project-hero > :is(img, video) { position: absolute; inset: 0; z-index: -1; filter: brightness(.68); object-position: center 38%; }
 .project-heading { position: absolute; top: calc(50% - 1rem); left: calc(50% + .5625rem); right: var(--gutter); }
