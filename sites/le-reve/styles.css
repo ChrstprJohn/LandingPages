@@ -420,8 +420,10 @@ body[data-page="journal"][data-detail] footer { background: #000; }
   .project-stamp { top: 15.7%; bottom: auto; left: 50%; transform: translateX(-50%); width: 150px; }
   .project-initials { font-size: 3.6rem; }
   .studio { grid-template-columns: 1fr; gap: 2.375rem; padding-block: 5rem; }
-  .studio-philosophy { row-gap: 2.9375rem; }
-  .studio-philosophy .studio-copy { grid-column: auto; }
+  .studio-philosophy { row-gap: 0; }
+  .studio-philosophy .studio-lead { min-height: 5.3125rem; margin-top: 2rem; font-size: 1.2rem; }
+  .studio-philosophy img { aspect-ratio: 1; object-position: center top; margin-top: 3rem; }
+  .studio-philosophy .studio-copy { grid-column: auto; min-height: 9.1875rem; margin-top: 1rem; font-size: .825rem; }
   .studio-services { padding-block: 5rem; }
   .studio-services ol { width: 100%; }
   .team-grid { grid-template-columns: 1fr; }
