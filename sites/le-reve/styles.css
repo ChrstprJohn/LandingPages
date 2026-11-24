@@ -331,6 +331,23 @@ body[data-page="journal"][data-detail] .journal-card { color: var(--paper); }
 .about-portrait img { height: auto; aspect-ratio: 3/5; }
 .about-intro { grid-column: 1; grid-row: 2; align-self: end; max-width: 28em; padding: 0 2rem 2.5rem 0; }
 .about-intro p + p, .studio-copy p + p { margin-top: .8em; }
+@media (width > 640px) {
+  .about-cover { padding-bottom: 5rem; }
+  .about-cover h1 { font-size: 13.5rem; }
+  .about-portrait { position: relative; aspect-ratio: 3/4; overflow: clip; }
+  .about-portrait img { position: absolute; inset: 0 auto auto 0; }
+  .about-intro { align-self: center; justify-self: center; width: min(100%, 25rem); min-height: 16.6875rem; margin-inline-end: 3rem; padding: 0; font-size: 1.4625rem; }
+}
+@media (810px <= width < 1200px) {
+  .about-cover h1 { font-size: 7.6rem; }
+  .about-intro { min-height: 11.1875rem; font-size: 1.2rem; }
+}
+@media (640px < width < 810px) {
+  .about-cover { grid-template-columns: 1fr; }
+  .about-cover h1 { font-size: 4.56rem; }
+  .about-portrait, .about-intro { grid-column: auto; grid-row: auto; }
+  .about-intro { min-height: 6.5625rem; margin: 0; font-size: .9rem; }
+}
 .studio { padding-block: 2rem 5rem; display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 2.4rem 3vw; }
 .studio h2, .studio-lead { grid-column: 1/-1; }
 .studio img { width: min(100%, 25rem); justify-self: end; height: auto; aspect-ratio: 10/13; }
