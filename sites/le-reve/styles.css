@@ -422,6 +422,7 @@ body[data-page="journal"][data-detail] footer { background: #000; }
   .studio { grid-template-columns: 1fr; gap: 2.375rem; padding-block: 5rem; }
   .studio-philosophy { row-gap: 2.9375rem; }
   .studio-philosophy .studio-copy { grid-column: auto; }
+  .studio-services { padding-block: 5rem; }
   .studio-services ol { width: 100%; }
   .team-grid { grid-template-columns: 1fr; }
   .team-grid a:nth-child(n) { grid-column: auto; }
