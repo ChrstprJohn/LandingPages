@@ -425,7 +425,14 @@ body[data-page="journal"][data-detail] footer { background: #000; }
   .studio .studio-copy { grid-column: 1; min-height: 10.25rem; margin-top: 2rem; font-size: .825rem; }
   .studio-philosophy .studio-copy { min-height: 9.1875rem; margin-top: 1rem; }
   .studio-services { padding-block: 5rem; }
-  .studio-services ol { width: 100%; }
+  .studio-services .studio-lead { min-height: 4lh; max-width: none; margin-bottom: 6.125rem; font-size: 1.2rem; line-height: 1.1; }
+  .studio-services ol { display: grid; width: 100%; row-gap: 3rem; }
+  .studio-services li { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; padding: 0; border: 0; }
+  .studio-services li > span { display: none; }
+  .studio-services h3 { font-size: .9rem; line-height: 1.1; }
+  .studio-services li p { min-height: 5lh; font-size: .825rem; }
+  .studio-services li:first-child p { min-height: 6lh; }
+  .studio-services li:last-child p { min-height: 7lh; }
   .team-grid { grid-template-columns: 1fr; }
   .team-grid a:nth-child(n) { grid-column: auto; }
 }
