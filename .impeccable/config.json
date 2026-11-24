@@ -17,6 +17,24 @@
         ],
         "createdAt": "2026-11-23T12:52:36.129Z",
         "reason": "Reference recreation: the repeated editorial banner is decorative, hidden from assistive technology, and static when reduced motion is requested."
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "sites/le-reve/styles.css"
+        ],
+        "createdAt": "2026-11-23T14:31:52.376Z",
+        "reason": "DECODÉ reference match: live Le Rêve navigation and editorial copy use Inter Display, and the user requested the reference typography."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "sites/le-reve/index.html"
+        ],
+        "createdAt": "2026-11-24T08:04:25.695Z",
+        "reason": "The flagged footer selectors use white with mix-blend-mode difference. On the pale #eaeef4 backdrop the rendered foreground is #15110b, which exceeds WCAG AA."
       }
     ]
   }
