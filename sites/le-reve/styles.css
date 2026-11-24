@@ -413,17 +413,17 @@ body[data-page="journal"][data-detail] footer { background: #000; }
   .about-portrait, .about-intro { grid-column: auto; grid-row: auto; }
   .about-portrait { position: relative; aspect-ratio: 3/4; overflow: clip; }
   .about-portrait img { position: absolute; inset: 0 auto auto 0; }
-  .about-intro { padding: 2.5rem 0; font-size: .825rem; }
+  .about-intro { min-height: 13.5625rem; padding: 2.5rem 0; font-size: .825rem; }
   .project-heading { top: 48%; left: var(--gutter); }
   .project-hero > :is(img, video) { top: -4svh; height: 145%; }
   .project-hero h1 { font-size: 3.12rem; }
   .project-stamp { top: 15.7%; bottom: auto; left: 50%; transform: translateX(-50%); width: 150px; }
   .project-initials { font-size: 3.6rem; }
-  .studio { grid-template-columns: 1fr; gap: 2.375rem; padding-block: 5rem; }
-  .studio-philosophy { row-gap: 0; }
-  .studio-philosophy .studio-lead { min-height: 5.3125rem; margin-top: 2rem; font-size: 1.2rem; }
-  .studio-philosophy img { aspect-ratio: 1; object-position: center top; margin-top: 3rem; }
-  .studio-philosophy .studio-copy { grid-column: auto; min-height: 9.1875rem; margin-top: 1rem; font-size: .825rem; }
+  .studio { grid-template-columns: 1fr; row-gap: 0; padding-block: 5rem; }
+  .studio .studio-lead { min-height: 5.3125rem; margin-top: 2rem; font-size: 1.2rem; }
+  .studio img { aspect-ratio: 1; object-position: center top; margin-top: 3rem; }
+  .studio .studio-copy { grid-column: 1; min-height: 10.25rem; margin-top: 2rem; font-size: .825rem; }
+  .studio-philosophy .studio-copy { min-height: 9.1875rem; margin-top: 1rem; }
   .studio-services { padding-block: 5rem; }
   .studio-services ol { width: 100%; }
   .team-grid { grid-template-columns: 1fr; }
