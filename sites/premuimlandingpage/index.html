@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="Decode Studio's product design portfolio, spanning digital experiences, AI products, and intelligent systems." />
+    <style>
+      .opening-signature { display: none; position: fixed; inset: 0; z-index: 65; place-items: center; overflow: hidden; background: #050505; color: #ff3b12; pointer-events: none; }
+      .show-opening .opening-signature { display: grid; }
+      .opening-signature svg { display: block; width: 100%; height: auto; }
+      .opening-signature path { fill: none; stroke: currentColor; stroke-width: 3.35; stroke-linecap: round; stroke-linejoin: round; }
+      .show-opening .opening-signature path { animation: draw-signature 2.6s linear both; stroke-dasharray: 1; }
+      .opening-dot { fill: currentColor; opacity: 0; }
+      .show-opening .opening-dot { animation: sign-dot .08s 2.58s both; }
+      @keyframes draw-signature { 0% { stroke-dashoffset: 1; opacity: 0; } 1% { opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 1; } }
+      @keyframes sign-dot { to { opacity: 1; } }
+      @media (max-width: 600px) { .opening-signature svg { transform: translateY(-5px); } }
+      @media (prefers-reduced-motion: reduce) { .show-opening .opening-signature { display: none; } }
+    </style>
+    <script>
+      if (location.pathname === '/' && (!location.hash || location.hash === '#main-content') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('show-opening')
+      }
+    </script>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>Decode Studio</title>
+  </head>
+  <body>
+    <div id="opening-signature" class="opening-signature" role="status" aria-label="Opening Decode Studio">
+      <svg viewBox="0 -45 1586 992" aria-hidden="true">
+        <path pathLength="1" data-pen-stroke d="
+          M0 511C40 512 70 509 117 505C142 454 379 374 555 374C710 369 765 431 637 514C567 559 444 612 408 604C374 599 424 551 501 529C487 552 475 579 466 592C539 505 621 389 685 296C621 389 539 505 466 592C487 562 505 539 526 519C383 525 117 547 117 505C104 533 197 532 311 527C484 521 600 513 667 508
+          C684 505 709 491 705 478C702 465 685 477 680 498C672 526 703 531 723 505C733 489 751 472 757 485C745 476 726 498 729 514C733 531 754 525 770 503C781 485 800 475 801 492C804 515 783 534 775 518C769 505 785 483 799 490C809 502 818 498 828 486C815 493 808 513 815 524C828 541 847 506 855 480C877 428 892 401 888 416C885 438 857 497 855 517C855 533 873 521 886 503C905 493 914 476 906 473C897 467 885 490 883 506C882 530 917 518 945 507
+          C982 501 1049 446 1098 396C1127 376 1105 329 1069 336C1025 344 977 389 973 432C969 467 1016 474 1044 487C1093 511 1085 556 1053 584C1019 614 965 623 943 598C915 565 974 535 1021 525C1052 517 1074 510 1085 501
+          C1099 492 1109 468 1121 442C1116 470 1098 515 1100 525C1103 537 1124 506 1124 486C1124 470 1110 475 1101 477C1115 474 1132 470 1143 472C1143 476 1141 490 1138 499C1146 484 1152 478 1149 493C1146 509 1135 532 1145 532C1156 532 1174 508 1186 487C1180 510 1173 530 1185 525C1195 522 1208 505 1217 491C1206 494 1198 511 1203 523C1215 541 1237 513 1247 480C1262 435 1281 403 1277 421C1267 465 1241 509 1246 524C1253 534 1268 515 1280 500
+          C1289 490 1292 477 1295 470C1297 483 1291 497 1289 506C1282 525 1289 531 1297 524C1309 515 1319 494 1325 481C1335 466 1349 475 1346 493C1343 517 1324 535 1313 523C1306 510 1317 478 1335 477C1341 489 1361 505 1388 493
+          C1438 484 1493 478 1545 480C1562 481 1551 486 1544 487
+        " />
+        <circle class="opening-dot" cx="1297" cy="452" r="2.7" />
+      </svg>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
