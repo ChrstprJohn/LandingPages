@@ -1,0 +1,2542 @@
+{
+  "/about": {
+    "documentTitle": "About Dconstruct — Custom Home Builders",
+    "title": "The care we’d put into a home of our own",
+    "label": "WHY DCONSTRUCT",
+    "summary": "Clear prices, skilled trades and one team you can count on. That’s how Dconstruct approaches every home.",
+    "image": "pages/about-hero.jpg",
+    "cta": {
+      "title": "Ready to Plan Your Build?",
+      "text": "Every family deserves a home that’s built with care. Tell us where you are in your plans and we’ll help you take the next step.",
+      "image": "pages/about-cta.jpg"
+    },
+    "intro": {
+      "title": "At Dconstruct, good building starts with careful work. We design and construct custom homes with clear decisions, honest prices and a close eye on the details.",
+      "label": "WHO WE ARE",
+      "summary": "Dconstruct designs and builds custom homes and renovations for people who value durable materials, open communication and a home they can make their own.",
+      "image": "pages/about-studio.jpg"
+    },
+    "principles": {
+      "title": "The Principles Behind Our Work",
+      "label": "WHAT DRIVES US",
+      "summary": "We shape complex requirements into plans that are clear and practical.",
+      "points": [
+        [
+          "Design With Purpose",
+          "We turn complicated briefs into thoughtful plans that can be built."
+        ],
+        [
+          "Care for Clients",
+          "We handle each home with care and stay focused on what matters to its owners."
+        ],
+        [
+          "Practical Experience",
+          "Experienced trades and proven methods keep the quality consistent from job to job."
+        ],
+        [
+          "Straight Answers",
+          "We keep you informed about decisions, progress and what comes next."
+        ]
+      ]
+    },
+    "story": {
+      "title": "Building Well Begins With a Shared Commitment",
+      "label": "OUR JOURNEY",
+      "summary": "Dconstruct started with a straightforward idea about building homes with care. Our design-build studio brings skilled trades, clear prices and the practical details that make a house good to live in for years.",
+      "image": "pages/about-journey.jpg"
+    },
+    "team": {
+      "title": "Experienced People, Carefully Built Homes",
+      "label": "LEADERSHIP",
+      "summary": "Illustrative portraits show the skills and roles behind a custom home.",
+      "members": [
+        {
+          "name": "Adrian Vale",
+          "role": "Founder & Principal Builder",
+          "tag": "Architectural Design",
+          "image": "marcus.png"
+        },
+        {
+          "name": "Mateo Cruz",
+          "role": "Lead Architect",
+          "tag": "Renovations & Additions",
+          "image": "daniel.png"
+        },
+        {
+          "name": "Ethan Shaw",
+          "role": "Design Director",
+          "tag": "Kitchens & Bathrooms",
+          "image": "nathan.png"
+        },
+        {
+          "name": "Gavin Marsh",
+          "role": "Senior Project Manager",
+          "tag": "Custom Home Building",
+          "image": "pages/team-owen-carter.png"
+        },
+        {
+          "name": "Jonah Price",
+          "role": "Construction Manager",
+          "tag": "Outdoor Living",
+          "image": "pages/team-ethan-walsh.png"
+        },
+        {
+          "name": "Miles Quinn",
+          "role": "Site Superintendent",
+          "tag": "Construction Management",
+          "image": "cole-bennett.png"
+        },
+        {
+          "name": "Nolan Reed",
+          "role": "Interior Designer",
+          "tag": "Kitchens & Bathrooms",
+          "image": "liam.png"
+        }
+      ]
+    }
+  },
+  "/services": {
+    "documentTitle": "Services — Custom Home Building & Renovations | Dconstruct",
+    "title": "What We Plan & Build",
+    "label": "OUR SERVICES",
+    "summary": "Custom homes, renovations, kitchens and outdoor rooms, all designed and built with one dedicated crew.",
+    "entries": [
+      "/services/architectural-design",
+      "/services/construction-management",
+      "/services/custom-home-building",
+      "/services/kitchen-bath-remodeling",
+      "/services/outdoor-living",
+      "/services/renovations-additions"
+    ],
+    "cta": {
+      "title": "Ready to Plan Your Build?",
+      "text": "Every family deserves a home that’s built with care. Tell us where you are in your plans and we’ll help you take the next step.",
+      "image": "pages/services-cta.jpg"
+    },
+    "sectionTitle": "Design and construction together",
+    "sectionLabel": "SERVICES"
+  },
+  "/our-team": {
+    "documentTitle": "Our Team — Architects & Builders | Dconstruct",
+    "title": "The People Who Build Your Home.",
+    "label": "OUR TEAM",
+    "summary": "Architects, builders and specialist trades who care about making homes that work.",
+    "team": {
+      "title": "Experienced People, Carefully Built Homes",
+      "label": "LEADERSHIP",
+      "summary": "Illustrative team portraits",
+      "members": [
+        {
+          "name": "Adrian Vale",
+          "role": "Founder & Principal Builder",
+          "tag": "Architectural Design",
+          "image": "marcus.png"
+        },
+        {
+          "name": "Mateo Cruz",
+          "role": "Lead Architect",
+          "tag": "Renovations & Additions",
+          "image": "daniel.png"
+        },
+        {
+          "name": "Ethan Shaw",
+          "role": "Design Director",
+          "tag": "Kitchens & Bathrooms",
+          "image": "nathan.png"
+        },
+        {
+          "name": "Gavin Marsh",
+          "role": "Senior Project Manager",
+          "tag": "Custom Home Building",
+          "image": "pages/team-owen-carter.png"
+        },
+        {
+          "name": "Jonah Price",
+          "role": "Construction Manager",
+          "tag": "Outdoor Living",
+          "image": "pages/team-ethan-walsh.png"
+        },
+        {
+          "name": "Miles Quinn",
+          "role": "Site Superintendent",
+          "tag": "Construction Management",
+          "image": "cole-bennett.png"
+        },
+        {
+          "name": "Nolan Reed",
+          "role": "Interior Designer",
+          "tag": "Kitchens & Bathrooms",
+          "image": "liam.png"
+        },
+        {
+          "name": "Aiden Ford",
+          "role": "Estimator & Quantity Surveyor",
+          "tag": "Custom Home Building",
+          "image": "pages/team-ryan-mercer.png"
+        },
+        {
+          "name": "Theo Nolan",
+          "role": "Master Carpenter",
+          "tag": "Architectural Design",
+          "image": "pages/team-jack-sullivan.png"
+        },
+        {
+          "name": "Lucas Grant",
+          "role": "Client Experience Lead",
+          "tag": "Renovations & Additions",
+          "image": "adam.png"
+        },
+        {
+          "name": "Elias Hart",
+          "role": "Sustainability Consultant",
+          "tag": "Outdoor Living",
+          "image": "pages/team-noah-whitfield.png"
+        },
+        {
+          "name": "Rowan Brooks",
+          "role": "Landscape & Outdoor Lead",
+          "tag": "Construction Management",
+          "image": "pages/team-caleb-morrison.png"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Get to Know Your Build Team.",
+      "text": "A good home starts with the people who build it. Meet the team that can help turn your plans into rooms you’ll use every day.",
+      "image": "pages/team-cta.jpg"
+    }
+  },
+  "/projects": {
+    "documentTitle": "Our Work — Custom Homes & Renovations | Dconstruct",
+    "title": "Homes We’ve Planned & Built",
+    "label": "OUR WORK",
+    "summary": "Explore custom homes and renovated spaces planned, engineered and built with the same team throughout.",
+    "entries": [
+      "/projects/oakhill-residence",
+      "/projects/ridgeline-house",
+      "/projects/marina-bay-home",
+      "/projects/cedar-park-renovation",
+      "/projects/willowmere-estate",
+      "/projects/highgrove-house",
+      "/projects/marsh-timber-house",
+      "/projects/bayside-extension",
+      "/projects/the-stone-kitchen",
+      "/projects/poolhouse-pavilion",
+      "/projects/fernhill-farmhouse",
+      "/projects/crestwood-courtyard"
+    ],
+    "cta": {
+      "title": "Ready to Plan Your Build?",
+      "text": "Every family deserves a home that’s built with care. Tell us where you are in your plans and we’ll help you take the next step.",
+      "image": "pages/projects-cta.jpg"
+    },
+    "sectionTitle": "Custom builds and recent renovations",
+    "sectionLabel": "SELECTED WORK"
+  },
+  "/blogs": {
+    "documentTitle": "Insights & Build Stories | Dconstruct",
+    "title": "Ideas, Advice & Building Stories.",
+    "label": "NEWS & UPDATES",
+    "summary": "Start planning with the details that matter.",
+    "entries": [
+      "/blogs/what-it-really-costs-to-build-a-custom-home-in-2026",
+      "/blogs/design-build-vs-traditional-contracting-which-is-right-for-you",
+      "/blogs/10-questions-to-ask-before-hiring-a-custom-home-builder",
+      "/blogs/how-to-read-and-trust-a-fixed-price-building-contract",
+      "/blogs/choosing-timber-stone-and-steel-a-materials-primer",
+      "/blogs/second-storey-additions-what-s-possible-on-your-block",
+      "/blogs/designing-for-natural-light-orientation-done-right",
+      "/blogs/the-custom-kitchen-where-craft-meets-everyday-life",
+      "/blogs/sustainable-homes-building-for-comfort-and-lower-bills",
+      "/blogs/a-realistic-timeline-for-building-your-custom-home",
+      "/blogs/renovating-while-you-live-in-it-a-survival-guide",
+      "/blogs/indoor-outdoor-living-designing-seamless-transitions",
+      "/blogs/council-approvals-explained-permits-without-the-panic",
+      "/blogs/smart-homes-wiring-for-technology-that-lasts",
+      "/blogs/heritage-homes-renovating-with-respect",
+      "/blogs/budgeting-beyond-the-build-the-costs-people-forget",
+      "/blogs/site-preparation-why-groundwork-makes-or-breaks-a-build"
+    ],
+    "cta": {
+      "title": "Ready to Plan Your Build?",
+      "text": "Every family deserves a home that’s built with care. Tell us where you are in your plans and we’ll help you take the next step.",
+      "image": "pages/blogs-cta.jpg"
+    },
+    "sectionTitle": "Notes From the Jobsite",
+    "sectionLabel": "NEWS & UPDATES",
+    "filters": [
+      "All",
+      "Design & Architecture",
+      "Materials & Craft",
+      "Renovation Guides",
+      "Sustainable Building",
+      "The Build Process"
+    ]
+  },
+  "/contact": {
+    "documentTitle": "Contact Dconstruct — Start Your Custom Home",
+    "title": "Talk With Our Building Team.",
+    "label": "CONTACT",
+    "summary": "Straight answers and a team ready to talk through what you want to build.",
+    "formTitle": "Let’s Talk About Your Project",
+    "formIntro": "Planning a new home, a renovation or still weighing your options? We’ll help you sort out what matters and decide where to begin.",
+    "fields": [
+      [
+        "input",
+        "Name",
+        "text",
+        "Jane Smith",
+        true
+      ],
+      [
+        "input",
+        "Email",
+        "email",
+        "jane@company.com",
+        true
+      ],
+      [
+        "input",
+        "Subject",
+        "text",
+        "Subject",
+        false
+      ],
+      [
+        "textarea",
+        "Message",
+        "",
+        "Message",
+        false
+      ]
+    ],
+    "map": "https://maps.google.com/maps?q=120%20Maker%20Street%2C%20Austin%2C%20TX%2078701%2C%20USA&z=15&output=embed",
+    "cta": {
+      "title": "Ready to Plan Your Build?",
+      "text": "Every family deserves a home that’s built with care. Tell us where you are in your plans and we’ll help you take the next step.",
+      "image": "pages/contact-cta.jpg"
+    }
+  },
+  "/privacy-policy": {
+    "documentTitle": "Privacy Policy — Dconstruct Custom Homes",
+    "title": "Privacy Policy",
+    "label": "Privacy",
+    "summary": "",
+    "body": [
+      [
+        "p",
+        "This policy explains how Dconstruct Custom Homes handles information on this site, including details you choose to share through an inquiry or an email."
+      ],
+      [
+        "h3",
+        "1. About This Site"
+      ],
+      [
+        "p",
+        "Dconstruct is a residential design-build studio concept based in Austin, Texas. This policy covers the site and the tools it provides to explore projects, read articles and prepare an inquiry."
+      ],
+      [
+        "h3",
+        "2. Information You Provide"
+      ],
+      [
+        "p",
+        "The contact form uses your name, email address, subject and message to prepare a draft in your browser. The newsletter field checks the format of the address you enter. If you choose to open the draft in an email app and send it, that service will handle the details included in the message."
+      ],
+      [
+        "h3",
+        "3. How the Site Uses Information"
+      ],
+      [
+        "p",
+        "The contact form uses the information you enter to generate a draft you can review. Theme preferences help the site display in your chosen mode on future visits. Your email provider handles any message you choose to send from your own app."
+      ],
+      [
+        "h3",
+        "4. Information Shared With Others"
+      ],
+      [
+        "p",
+        "An embedded map is provided by Google, and its loading may make requests to that provider. External services have their own privacy policies. If you choose to use the map or open another website, that service handles the information needed to show its content."
+      ],
+      [
+        "h3",
+        "5. Preferences and Browser Storage"
+      ],
+      [
+        "p",
+        "The site uses your browser’s local storage to keep your chosen color theme. You can clear that preference in your browser settings. Some external services, including the map, may use their own storage or cookies."
+      ],
+      [
+        "h3",
+        "6. Keeping Information Secure"
+      ],
+      [
+        "p",
+        "Review any draft before sending and only include details that are relevant to your inquiry. Your own email app controls what is retained in drafts and sent messages. You can also clear browser data on a shared device."
+      ],
+      [
+        "h3",
+        "7. Choices You Can Make"
+      ],
+      [
+        "p",
+        "Choose whether to prepare or send an inquiry, and decide what information to include. You can change the theme from the menu or clear local storage in your browser. Ask your email provider about messages you send."
+      ],
+      [
+        "h3",
+        "8. Questions and Contact"
+      ],
+      [
+        "p",
+        "For questions about information entered into the site or an inquiry you choose to send, use the contact details listed on the Contact page."
+      ]
+    ]
+  },
+  "/blogs/10-questions-to-ask-before-hiring-a-custom-home-builder": {
+    "documentTitle": "10 Things to Ask a Custom Home Builder Before You Hire | Dconstruct Insights",
+    "title": "10 Things to Ask a Custom Home Builder Before You Hire",
+    "label": "NEWS & UPDATES",
+    "summary": "Questions that tell you how a builder really works.",
+    "image": "blog-questions.jpg",
+    "body": [
+      [
+        "p",
+        "The right questions give you a clearer picture of the people who will manage your build, protect your budget and deal with the problems that come up."
+      ],
+      [
+        "h3",
+        "See a live site"
+      ],
+      [
+        "p",
+        "Ask whether you can visit a working site and a finished house. Notice how the crew stores materials, protects the work and talks through day-to-day questions."
+      ],
+      [
+        "p",
+        "Ask for a sample price and change process. A good builder can show how the scope is recorded, how changes are approved and who handles delays."
+      ],
+      [
+        "h3",
+        "Look closely at the work"
+      ],
+      [
+        "p",
+        "Ask to visit a home that has been occupied for a few years. Check whether cabinet doors work smoothly, whether the finishes suit everyday use, and whether the owners felt supported if something needed attention after handover."
+      ],
+      [
+        "p",
+        "Find out who will be on site most days. You’ll want to meet the person who coordinates the crew, sets the standard for the work and is responsible for keeping you informed throughout the project."
+      ],
+      [
+        "h3",
+        "Talk about money"
+      ],
+      [
+        "p",
+        "Ask how the crew will handle something unexpected behind a wall or below the soil. Learn when they will stop, what information they will give you and how you’ll approve any added cost before work continues."
+      ],
+      [
+        "p",
+        "Check which products are named in the scope and which are covered by an allowance. Ask for real examples within each allowance so you can judge whether it fits your expectations."
+      ],
+      [
+        "h3",
+        "Notice how they communicate"
+      ],
+      [
+        "p",
+        "Pay attention to the way they respond when you don’t know the answer or need more time to think. Clear, patient communication matters as much during a difficult week on site as it does at the first meeting."
+      ]
+    ],
+    "author": "Miles Quinn",
+    "avatar": "cole-bennett.png",
+    "authorRole": "Site Superintendent",
+    "category": "The Build Process",
+    "readTime": "5",
+    "tags": [
+      [
+        "Craftsmanship",
+        "/blogs/tags/craftsmanship"
+      ],
+      [
+        "Outdoor Living",
+        "/blogs/tags/outdoor-living"
+      ],
+      [
+        "Kitchen Design",
+        "/blogs/tags/kitchen-design"
+      ]
+    ],
+    "pager": [
+      "/blogs/design-build-vs-traditional-contracting-which-is-right-for-you",
+      "/blogs/how-to-read-and-trust-a-fixed-price-building-contract"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/a-realistic-timeline-for-building-your-custom-home": {
+    "documentTitle": "A Practical Timeline for a Custom Home Build | Dconstruct Insights",
+    "title": "A Practical Timeline for a Custom Home Build",
+    "label": "NEWS & UPDATES",
+    "summary": "How the work progresses from the first ideas to the final walkthrough.",
+    "image": "pages/blog-a-realistic-timeline-for-building-your-custom-home.jpg",
+    "body": [
+      [
+        "p",
+        "A building schedule is easier to follow when you know what each stage makes possible. Here’s how a custom home typically comes together."
+      ],
+      [
+        "h3",
+        "From plans to handover"
+      ],
+      [
+        "p",
+        "The team draws and documents the home first. Approvals make way for the foundations and structure, then the exterior can be closed in and finished."
+      ],
+      [
+        "p",
+        "We share the working schedule before construction and keep you informed as each trade finishes, so the timing stays visible."
+      ],
+      [
+        "h3",
+        "Design and approvals"
+      ],
+      [
+        "p",
+        "Use the design stage to settle the important details, including materials and finishes you’ll want to see before work begins. Thorough drawings give the team time to make decisions and reduce questions during the build."
+      ],
+      [
+        "p",
+        "Approval times depend on the authority and the work proposed. A complete application submitted early gives the review a better chance of moving steadily."
+      ],
+      [
+        "h3",
+        "Work on site"
+      ],
+      [
+        "p",
+        "Work starts at ground level with excavation, drainage and foundations. The structure goes up, followed by the roof, exterior doors and windows, services and interior finishing. Weather, material availability and sequencing can affect the dates in ways the schedule needs to account for."
+      ],
+      [
+        "p",
+        "A regular update explains what has been completed, what’s scheduled for the coming week and any timing changes that might affect your decisions."
+      ],
+      [
+        "h3",
+        "Getting the keys"
+      ],
+      [
+        "p",
+        "The finishing stage includes adjustments, cleaning and a careful walkthrough. Take time to make a list of details that need attention and learn how to operate the systems. This is also when the team can explain how to care for the materials."
+      ]
+    ],
+    "author": "Mateo Cruz",
+    "avatar": "daniel.png",
+    "authorRole": "Lead Architect",
+    "category": "Design & Architecture",
+    "readTime": "6",
+    "tags": [
+      [
+        "Smart Homes",
+        "/blogs/tags/smart-homes"
+      ],
+      [
+        "Home Maintenance",
+        "/blogs/tags/home-maintenance"
+      ]
+    ],
+    "pager": [
+      "/blogs/sustainable-homes-building-for-comfort-and-lower-bills",
+      "/blogs/renovating-while-you-live-in-it-a-survival-guide"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/budgeting-beyond-the-build-the-costs-people-forget": {
+    "documentTitle": "Budgeting for the Costs Outside the Build | Dconstruct Insights",
+    "title": "Budgeting for the Costs Outside the Build",
+    "label": "NEWS & UPDATES",
+    "summary": "Plan for landscaping, fixtures and other costs beyond the base quote.",
+    "image": "pages/blog-budgeting-beyond-the-build-the-costs-people-forget.jpg",
+    "body": [
+      [
+        "p",
+        "A house quote can cover the construction and still leave costs before move-in. Put the whole project on the same budget from the start."
+      ],
+      [
+        "h3",
+        "Make a complete plan"
+      ],
+      [
+        "p",
+        "Allow for landscaping, driveways, appliances and window coverings. Ask who will provide each item, what is already priced and what needs a separate quote."
+      ],
+      [
+        "p",
+        "Include a contingency for work you can’t price confidently yet. Set it aside early so an unexpected cost doesn’t force a quick decision."
+      ],
+      [
+        "h3",
+        "Work beyond the walls"
+      ],
+      [
+        "p",
+        "Plans for the garden, fences, retaining walls and paths can be expensive, especially when they need machine access before construction finishes. Price them with the main work so you can make those choices while equipment and trades are still on hand."
+      ],
+      [
+        "p",
+        "Give the outdoor items a realistic allowance. If some will wait until later, consider which groundwork or connections are easier to do during the build."
+      ],
+      [
+        "h3",
+        "Items that go inside"
+      ],
+      [
+        "p",
+        "Lights, curtains, appliances and furniture often come from separate suppliers. Each purchase can feel manageable on its own, but a list of what each room needs makes the total easier to see."
+      ],
+      [
+        "p",
+        "Pick a finish level before you shop and price a few plausible options. This will give the allowance a basis you can defend."
+      ],
+      [
+        "h3",
+        "Set money aside for changes"
+      ],
+      [
+        "p",
+        "A contingency lets you handle an unforeseen cost without changing the rest of the budget immediately. Decide early what the reserve is for and check how much remains at each major decision."
+      ]
+    ],
+    "author": "Adrian Vale",
+    "avatar": "marcus.png",
+    "authorRole": "Founder & Principal Builder",
+    "category": "The Build Process",
+    "readTime": "6",
+    "tags": [
+      [
+        "Home Additions",
+        "/blogs/tags/home-additions"
+      ],
+      [
+        "Sustainable Building",
+        "/blogs/tags/sustainable-building"
+      ],
+      [
+        "Concrete",
+        "/blogs/tags/concrete"
+      ]
+    ],
+    "pager": [
+      "/blogs/heritage-homes-renovating-with-respect",
+      "/blogs/site-preparation-why-groundwork-makes-or-breaks-a-build"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/choosing-timber-stone-and-steel-a-materials-primer": {
+    "documentTitle": "Timber, Stone and Steel in a Custom Home | Dconstruct Insights",
+    "title": "Timber, Stone and Steel in a Custom Home",
+    "label": "NEWS & UPDATES",
+    "summary": "How materials affect the strength, character and upkeep of a home.",
+    "image": "pages/blog-choosing-timber-stone-and-steel-a-materials-primer.jpg",
+    "body": [
+      [
+        "p",
+        "Timber, stone and steel give a house different kinds of strength and character. Choose each for what it needs to do."
+      ],
+      [
+        "h3",
+        "Choose for the job"
+      ],
+      [
+        "p",
+        "Timber brings a forgiving, familiar surface. Steel is useful where a long span needs a slim structure. Stone and concrete add weight and resist daily wear."
+      ],
+      [
+        "p",
+        "Think about how the space will be used, how it will be cleaned and where it will need maintenance. The lowest first cost can hide work later."
+      ],
+      [
+        "h3",
+        "Building with timber"
+      ],
+      [
+        "p",
+        "Timber frames can go up quickly and suit many custom shapes. Good builders pay attention to where the material meets masonry, plumbing and exposed weather as they detail it."
+      ],
+      [
+        "p",
+        "Give timber a way to dry and leave room for it to move. Careful joints around showers, exterior openings and roof edges matter over many seasons."
+      ],
+      [
+        "h3",
+        "Where steel and stone work"
+      ],
+      [
+        "p",
+        "Steel can carry loads over wide glazed openings, so you can keep the openings generous without breaking the view with columns. An engineer can help select the right member and coordinate insulation around any part that reaches the outside."
+      ],
+      [
+        "p",
+        "Stone and concrete tolerate rough use and add mass. With the right insulation and daily sun exposure, a slab can help smooth out temperature changes across the day."
+      ],
+      [
+        "h3",
+        "Make the materials work together"
+      ],
+      [
+        "p",
+        "A custom home often brings all three materials together. Use timber where a room will benefit from warmth underfoot, steel for spans and stone for surfaces that see heavy traffic. Ask the team to draw the junctions early so the parts work as one."
+      ]
+    ],
+    "author": "Aiden Ford",
+    "avatar": "pages/team-ryan-mercer.png",
+    "authorRole": "Estimator & Quantity Surveyor",
+    "category": "Materials & Craft",
+    "readTime": "8",
+    "tags": [
+      [
+        "Landscaping",
+        "/blogs/tags/landscaping"
+      ],
+      [
+        "Renovations",
+        "/blogs/tags/renovations"
+      ]
+    ],
+    "pager": [
+      "/blogs/how-to-read-and-trust-a-fixed-price-building-contract",
+      "/blogs/second-storey-additions-what-s-possible-on-your-block"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/council-approvals-explained-permits-without-the-panic": {
+    "documentTitle": "Understanding Permits and Approvals Before You Build | Dconstruct Insights",
+    "title": "Understanding Permits and Approvals Before You Build",
+    "label": "NEWS & UPDATES",
+    "summary": "What approvals may be needed and how good documentation helps the review.",
+    "image": "pages/blog-council-approvals-explained-permits-without-the-panic.jpg",
+    "body": [
+      [
+        "p",
+        "A project can lose time waiting on permits. Find out what your authority needs early, while you still have time to make changes."
+      ],
+      [
+        "h3",
+        "What gets reviewed"
+      ],
+      [
+        "p",
+        "Many builds need approvals for planning and construction. Some projects also need engineering or environmental documentation, depending on the type of work and the location."
+      ],
+      [
+        "p",
+        "A complete set of plans and a clear description of the work give the reviewer what they need to begin."
+      ],
+      [
+        "h3",
+        "Preparing a submission"
+      ],
+      [
+        "p",
+        "Check the requirements that apply to your specific site. The reviewer may need drawings, dimensions, site levels and other supporting information. Ask the design team to confirm which steps can proceed together and which need a separate decision."
+      ],
+      [
+        "p",
+        "Local experience helps a team anticipate the questions a reviewer is likely to ask. Make room in the schedule to answer those questions if they do come up."
+      ],
+      [
+        "h3",
+        "Schedule the review"
+      ],
+      [
+        "p",
+        "Build in time for a review and any requests for more information before locking in a start date. Submit the package once the required documents are ready and keep a record of the changes requested or approved."
+      ],
+      [
+        "p",
+        "Agree who will lodge the application and answer questions. One point of contact makes it easier to keep everyone informed when the review changes the order of the work."
+      ],
+      [
+        "h3",
+        "Protect the start date"
+      ],
+      [
+        "p",
+        "Check that the approved drawings and any conditions are in the crew’s hands before breaking ground. The site team can plan the work more confidently when they know what was approved."
+      ]
+    ],
+    "author": "Miles Quinn",
+    "avatar": "cole-bennett.png",
+    "authorRole": "Site Superintendent",
+    "category": "The Build Process",
+    "readTime": "7",
+    "tags": [
+      [
+        "Outdoor Living",
+        "/blogs/tags/outdoor-living"
+      ],
+      [
+        "Project Management",
+        "/blogs/tags/project-management"
+      ]
+    ],
+    "pager": [
+      "/blogs/indoor-outdoor-living-designing-seamless-transitions",
+      "/blogs/smart-homes-wiring-for-technology-that-lasts"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/design-build-vs-traditional-contracting-which-is-right-for-you": {
+    "documentTitle": "Design-Build or Separate Contracts? How to Choose the Right Fit | Dconstruct Insights",
+    "title": "Design-Build or Separate Contracts? How to Choose the Right Fit",
+    "label": "NEWS & UPDATES",
+    "summary": "What gets simpler when your designer and builder work together from the start.",
+    "image": "blog-design.jpg",
+    "body": [
+      [
+        "p",
+        "The way you hire your team affects when you learn the price, how long decisions take and who helps when something changes."
+      ],
+      [
+        "h3",
+        "Who holds the project together"
+      ],
+      [
+        "p",
+        "In a separate-contract project, you typically hire a designer for the drawings and a builder to price and construct them. A design-build team provides both services through one studio."
+      ],
+      [
+        "p",
+        "With one lead, the people responsible for the final build can check the practical details while the plans are drawn. Questions about price, materials and sequencing can be raised earlier."
+      ],
+      [
+        "h3",
+        "The cost of late changes"
+      ],
+      [
+        "p",
+        "When a builder first sees a complete design at tender, the drawings may describe a home that costs more to build than the owner expected. Returning to redesign and reprice can delay the start, and changes may affect drawings that had already been approved by everyone involved."
+      ],
+      [
+        "p",
+        "An integrated team can test an estimate against the budget at several stages. If a span, window system or material turns out to be expensive, it’s easier to review the options while the design is still flexible."
+      ],
+      [
+        "h3",
+        "A single point of contact"
+      ],
+      [
+        "p",
+        "In design-build, one lead answers for the drawings and for the work on site. When something needs a decision during construction, that team can discuss the practical implications and the design intent together before coming back to you with a recommendation."
+      ],
+      [
+        "p",
+        "The same coordination can improve the finishing details. Early input from the trades on joints, tolerances and installation makes it easier for the work on site to follow the intent of the original drawings."
+      ],
+      [
+        "h3",
+        "When separate contracts fit"
+      ],
+      [
+        "p",
+        "If you have an established relationship with an architect or want to commission an unusually experimental design, separate appointments may suit your plans. Ask how the teams will estimate costs, hand off drawings and resolve site questions before choosing which arrangement to use."
+      ]
+    ],
+    "author": "Nolan Reed",
+    "avatar": "liam.png",
+    "authorRole": "Interior Designer",
+    "category": "Design & Architecture",
+    "readTime": "7",
+    "tags": [
+      [
+        "Kitchen Design",
+        "/blogs/tags/kitchen-design"
+      ],
+      [
+        "Permits & Approvals",
+        "/blogs/tags/permits-approvals"
+      ]
+    ],
+    "pager": [
+      "/blogs/what-it-really-costs-to-build-a-custom-home-in-2026",
+      "/blogs/10-questions-to-ask-before-hiring-a-custom-home-builder"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/designing-for-natural-light-orientation-done-right": {
+    "documentTitle": "How to Design a Home Around Natural Light | Dconstruct Insights",
+    "title": "How to Design a Home Around Natural Light",
+    "label": "NEWS & UPDATES",
+    "summary": "Site and window decisions that make rooms brighter through the seasons.",
+    "image": "pages/blog-designing-for-natural-light-orientation-done-right.jpg",
+    "body": [
+      [
+        "p",
+        "Rooms feel different as the sun moves. Look at the site’s light before settling the floor plan and those changes can work in your favor."
+      ],
+      [
+        "h3",
+        "Read the site"
+      ],
+      [
+        "p",
+        "Check where shadows fall from trees, neighbors and higher ground, then decide which rooms should have morning or afternoon light. Living areas and bedrooms may need different things."
+      ],
+      [
+        "p",
+        "Use a study of the sun path for your own lot. Watch for glare as well as for rooms that struggle to get daylight."
+      ],
+      [
+        "h3",
+        "Make orientation useful"
+      ],
+      [
+        "p",
+        "A window that faces the strongest sun can heat a room in winter and make it uncomfortable in summer. The ideal direction depends on the climate and hemisphere. Look at sun angles throughout the year and plan the glazing and shading for actual conditions."
+      ],
+      [
+        "p",
+        "Exterior eaves and screens can block strong summer light while leaving room for gentler daylight in seasons when you need it."
+      ],
+      [
+        "h3",
+        "Take light farther inside"
+      ],
+      [
+        "p",
+        "High windows, modest skylights, internal openings and light-colored walls can pass daylight across a deeper floor plan. Give a second look to circulation and bathrooms. Daylight in those areas often improves rooms that can feel cut off."
+      ],
+      [
+        "p",
+        "Review the sun path and the glazing plan together before pricing. It’s easier to adjust an opening on a drawing than after the frame is up."
+      ],
+      [
+        "h3",
+        "What a bright home feels like"
+      ],
+      [
+        "p",
+        "Good daylight makes ordinary rooms pleasant from morning to evening. Look for comfortable contrasts and places to sit without glare, especially near worktops and screens. Those daily experiences matter as much as the amount of light measured at a window."
+      ]
+    ],
+    "author": "Elias Hart",
+    "avatar": "pages/team-noah-whitfield.png",
+    "authorRole": "Sustainability Consultant",
+    "category": "The Build Process",
+    "readTime": "5",
+    "tags": [
+      [
+        "Timber Framing",
+        "/blogs/tags/timber-framing"
+      ],
+      [
+        "Home Additions",
+        "/blogs/tags/home-additions"
+      ]
+    ],
+    "pager": [
+      "/blogs/second-storey-additions-what-s-possible-on-your-block",
+      "/blogs/the-custom-kitchen-where-craft-meets-everyday-life"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/heritage-homes-renovating-with-respect": {
+    "documentTitle": "Renovating an Older Home With Care | Dconstruct Insights",
+    "title": "Renovating an Older Home With Care",
+    "label": "NEWS & UPDATES",
+    "summary": "Update the house for everyday life while keeping its original character.",
+    "image": "pages/blog-heritage-homes-renovating-with-respect.jpg",
+    "body": [
+      [
+        "p",
+        "Older homes carry the marks of how they were built. Learn what gives yours character before drawing up a change."
+      ],
+      [
+        "h3",
+        "Understand the original"
+      ],
+      [
+        "p",
+        "Look at the openings, joinery, floor surfaces and room proportions. Decide which details to repair and which can sit alongside new work."
+      ],
+      [
+        "p",
+        "A careful update can improve how the home feels and works while keeping details that show its age."
+      ],
+      [
+        "h3",
+        "Protect the details worth keeping"
+      ],
+      [
+        "p",
+        "Record the older finishes and fittings before demolition. Door hardware, timber floors and plaster trim can be worth repairing even when nearby structure needs work. An early inspection gives you time to plan what stays and how to protect it."
+      ],
+      [
+        "p",
+        "Ask about the condition of elements you want to keep and what will happen if the crew finds damaged material behind them."
+      ],
+      [
+        "h3",
+        "Improve what sits behind them"
+      ],
+      [
+        "p",
+        "An older home may need structural work, more insulation or new wiring and pipes. Plan routes for those services with the people repairing the original rooms so there are fewer changes to the visible work."
+      ],
+      [
+        "p",
+        "Good repairs often need patient work around tight junctions and old materials. Allow time to find the best approach."
+      ],
+      [
+        "h3",
+        "Let the change read clearly"
+      ],
+      [
+        "p",
+        "New work can look contemporary and still belong beside the older parts of the house. Pick up the scale, textures or lines you want to carry forward, and leave room for the addition to show when it was made."
+      ]
+    ],
+    "author": "Jonah Price",
+    "avatar": "pages/team-ethan-walsh.png",
+    "authorRole": "Construction Manager",
+    "category": "Sustainable Building",
+    "readTime": "8",
+    "tags": [
+      [
+        "Timber Framing",
+        "/blogs/tags/timber-framing"
+      ],
+      [
+        "Sustainable Building",
+        "/blogs/tags/sustainable-building"
+      ]
+    ],
+    "pager": [
+      "/blogs/smart-homes-wiring-for-technology-that-lasts",
+      "/blogs/budgeting-beyond-the-build-the-costs-people-forget"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/how-to-read-and-trust-a-fixed-price-building-contract": {
+    "documentTitle": "What to Look For in a Fixed-Price Building Contract | Dconstruct Insights",
+    "title": "What to Look For in a Fixed-Price Building Contract",
+    "label": "NEWS & UPDATES",
+    "summary": "Check the scope, allowances and change process before signing.",
+    "image": "blog-contract.jpg",
+    "body": [
+      [
+        "p",
+        "The contract records what you have both agreed to build, what it will cost and how you will handle changes."
+      ],
+      [
+        "h3",
+        "Scope, allowances and changes"
+      ],
+      [
+        "p",
+        "Inclusions identify work covered by the price. Allowances estimate the cost of choices that haven’t been settled. Check both carefully so the quote means the same thing to both sides."
+      ],
+      [
+        "p",
+        "A change to the agreed work can alter cost or timing. Read where the agreement explains who can request it, when the builder prices it and how you give approval."
+      ],
+      [
+        "h3",
+        "Check what’s included"
+      ],
+      [
+        "p",
+        "Start with the scope and compare it against the drawings. Look for quantities, manufacturers and finishes you can identify, especially for items you expect to be part of the price, such as handles, lights or bathroom fittings."
+      ],
+      [
+        "p",
+        "If the quote lists an allowance, ask what you can actually buy with it at current prices. Try choosing a few realistic options in a showroom. A fixture or tile can cost more once trim pieces, delivery and other items are included."
+      ],
+      [
+        "h3",
+        "Review the change process"
+      ],
+      [
+        "p",
+        "Ask how an adjustment is handled if you change a selection or the builder uncovers something once work starts. You should be able to see the proposed change, any added time or cost, and the process for approving it."
+      ],
+      [
+        "p",
+        "Finishing the drawings and making material selections before signing can remove many questions. Keep a record of any decisions that still need to be made."
+      ],
+      [
+        "h3",
+        "Read before signing"
+      ],
+      [
+        "p",
+        "Check the dates, progress payments and the process for raising a disagreement. Ask the builder about any wording you don’t understand and take the time to get independent advice where you need it before committing your money."
+      ]
+    ],
+    "author": "Lucas Grant",
+    "avatar": "adam.png",
+    "authorRole": "Client Experience Lead",
+    "category": "Sustainable Building",
+    "readTime": "6",
+    "tags": [
+      [
+        "Home Maintenance",
+        "/blogs/tags/home-maintenance"
+      ],
+      [
+        "Smart Homes",
+        "/blogs/tags/smart-homes"
+      ]
+    ],
+    "pager": [
+      "/blogs/10-questions-to-ask-before-hiring-a-custom-home-builder",
+      "/blogs/choosing-timber-stone-and-steel-a-materials-primer"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/indoor-outdoor-living-designing-seamless-transitions": {
+    "documentTitle": "Connecting Indoor Rooms With Outdoor Living | Dconstruct Insights",
+    "title": "Connecting Indoor Rooms With Outdoor Living",
+    "label": "NEWS & UPDATES",
+    "summary": "Plan doors, decking and floor levels that make the transition feel easy.",
+    "image": "pages/blog-indoor-outdoor-living-designing-seamless-transitions.jpg",
+    "body": [
+      [
+        "p",
+        "The relationship between the house and the garden can change how often you spend time outside. Plan those rooms together from the beginning."
+      ],
+      [
+        "h3",
+        "Where the rooms meet"
+      ],
+      [
+        "p",
+        "Wide door openings, aligned floor levels and related materials can connect an interior room with a deck or courtyard. Think about how you’ll walk between the two spaces."
+      ],
+      [
+        "p",
+        "Show the door, drain and floor finish on the same drawing. Those details need to work well together in real weather."
+      ],
+      [
+        "h3",
+        "Work with floor levels"
+      ],
+      [
+        "p",
+        "Matching the surfaces on either side of a doorway can make a small space feel more open. It is also easier to carry food out or bring things in across a level transition, especially when those doors are used every day."
+      ],
+      [
+        "p",
+        "A flush opening still needs good waterproofing and a way for rainwater to drain away. Coordinate both details before the door system and exterior paving are ordered."
+      ],
+      [
+        "h3",
+        "Doors and finishes"
+      ],
+      [
+        "p",
+        "Sliding or folding doors can open much of a wall. Related timber tones or stone colors help the rooms feel connected without requiring identical finishes."
+      ],
+      [
+        "p",
+        "Set the canopy, ceiling and lighting where they can support the same layout. This helps a covered patio feel like part of the living area."
+      ],
+      [
+        "h3",
+        "Use it in every season"
+      ],
+      [
+        "p",
+        "Choose shelter and shade based on the site’s weather. A covered table and a protected place to sit can make outdoor rooms usable more often."
+      ]
+    ],
+    "author": "Adrian Vale",
+    "avatar": "marcus.png",
+    "authorRole": "Founder & Principal Builder",
+    "category": "Renovation Guides",
+    "readTime": "6",
+    "tags": [
+      [
+        "Home Additions",
+        "/blogs/tags/home-additions"
+      ],
+      [
+        "Sustainable Building",
+        "/blogs/tags/sustainable-building"
+      ],
+      [
+        "Renovations",
+        "/blogs/tags/renovations"
+      ]
+    ],
+    "pager": [
+      "/blogs/renovating-while-you-live-in-it-a-survival-guide",
+      "/blogs/council-approvals-explained-permits-without-the-panic"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/renovating-while-you-live-in-it-a-survival-guide": {
+    "documentTitle": "How to Live at Home While You Renovate | Dconstruct Insights",
+    "title": "How to Live at Home While You Renovate",
+    "label": "NEWS & UPDATES",
+    "summary": "Plan the work in stages to make daily life easier during construction.",
+    "image": "pages/blog-renovating-while-you-live-in-it-a-survival-guide.jpg",
+    "body": [
+      [
+        "p",
+        "Staying in your home during a renovation can work when the household and the crew agree on a clear plan before work starts."
+      ],
+      [
+        "h3",
+        "Reach the essentials"
+      ],
+      [
+        "p",
+        "Keep access to a bathroom and a way to prepare meals. Talk with the builder about which rooms will be usable at each stage."
+      ],
+      [
+        "p",
+        "A short weekly conversation can tell you when work is moving into a new area and when a service may be unavailable."
+      ],
+      [
+        "h3",
+        "Set a sequence"
+      ],
+      [
+        "p",
+        "Planning the order of work can keep the busiest rooms available longer. If the kitchen needs to come out, figure out where you’ll put a temporary sink or prep area, and plan an alternate route when the crew needs the normal entrance."
+      ],
+      [
+        "p",
+        "Set aside a clean corner for the household to use while work is going on. A small clear area can help preserve a daily routine."
+      ],
+      [
+        "h3",
+        "Keep dust contained"
+      ],
+      [
+        "p",
+        "Temporary barriers and floor coverings protect the rooms you are using. Decide where to store furniture and loose belongings, and ask how the crew handles daily cleanup around shared access points."
+      ],
+      [
+        "p",
+        "Agree on working hours and which doors the crew will use. This makes it easier to arrange naps, calls, deliveries and anything that needs a quiet room."
+      ],
+      [
+        "h3",
+        "Talk ahead of changes"
+      ],
+      [
+        "p",
+        "An update is most helpful before a task changes how the household uses the home. Tell the site lead if you see a conflict, and ask them to flag important changes early. Both sides can plan their day around the same information."
+      ]
+    ],
+    "author": "Jonah Price",
+    "avatar": "pages/team-ethan-walsh.png",
+    "authorRole": "Construction Manager",
+    "category": "Sustainable Building",
+    "readTime": "5",
+    "tags": [
+      [
+        "Timber Framing",
+        "/blogs/tags/timber-framing"
+      ],
+      [
+        "Sustainable Building",
+        "/blogs/tags/sustainable-building"
+      ]
+    ],
+    "pager": [
+      "/blogs/a-realistic-timeline-for-building-your-custom-home",
+      "/blogs/indoor-outdoor-living-designing-seamless-transitions"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/second-storey-additions-what-s-possible-on-your-block": {
+    "documentTitle": "Adding a Second Floor to Your Existing Home | Dconstruct Insights",
+    "title": "Adding a Second Floor to Your Existing Home",
+    "label": "NEWS & UPDATES",
+    "summary": "What to consider about structure, approvals and design when you build up.",
+    "image": "pages/blog-second-storey-additions-what-s-possible-on-your-block.jpg",
+    "body": [
+      [
+        "p",
+        "A second floor can add useful space without taking more of the garden. Start by checking what the existing house can support."
+      ],
+      [
+        "h3",
+        "Can the structure carry another floor?"
+      ],
+      [
+        "p",
+        "Check the footings and the walls that carry weight. An early structural review helps establish where you could build above them, where reinforcement is needed and what will cost more."
+      ],
+      [
+        "p",
+        "Think about how a new stair will fit. Where it lands affects the rooms downstairs as much as the spaces you gain upstairs."
+      ],
+      [
+        "h3",
+        "Find out where the weight goes"
+      ],
+      [
+        "p",
+        "Building above a house adds loads to walls, beams and foundations that were designed for the original building. Ask the designer and structural engineer to review the existing construction and drawings before they decide where rooms or heavy finishes can go."
+      ],
+      [
+        "p",
+        "An early review can also show whether an extension on the ground or a roof-space conversion will give you comparable room."
+      ],
+      [
+        "h3",
+        "Plan for a disrupted routine"
+      ],
+      [
+        "p",
+        "A full second story can leave part of the house open as the roof comes off. Discuss staging, temporary weather protection, access and which rooms will be usable in each phase before you decide whether to remain at home."
+      ],
+      [
+        "p",
+        "If the household needs to stay put throughout, ask whether there is a smaller way to achieve the additional space."
+      ],
+      [
+        "h3",
+        "Keep the original character"
+      ],
+      [
+        "p",
+        "Look at the pitch of the roof, the width of the windows and the trim details of the older rooms. A new floor can carry those proportions forward while using materials and construction methods that suit the new space."
+      ]
+    ],
+    "author": "Ethan Shaw",
+    "avatar": "nathan.png",
+    "authorRole": "Design Director",
+    "category": "Design & Architecture",
+    "readTime": "6",
+    "tags": [
+      [
+        "Permits & Approvals",
+        "/blogs/tags/permits-approvals"
+      ],
+      [
+        "Sustainable Building",
+        "/blogs/tags/sustainable-building"
+      ]
+    ],
+    "pager": [
+      "/blogs/choosing-timber-stone-and-steel-a-materials-primer",
+      "/blogs/designing-for-natural-light-orientation-done-right"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/site-preparation-why-groundwork-makes-or-breaks-a-build": {
+    "documentTitle": "Site Preparation and the Work Beneath a Home | Dconstruct Insights",
+    "title": "Site Preparation and the Work Beneath a Home",
+    "label": "NEWS & UPDATES",
+    "summary": "Surveying, drainage and foundations that prepare the ground for building.",
+    "image": "pages/blog-site-preparation-why-groundwork-makes-or-breaks-a-build.jpg",
+    "body": [
+      [
+        "p",
+        "The way a home stands and drains depends on the work done long before the frame is visible."
+      ],
+      [
+        "h3",
+        "Start with the ground"
+      ],
+      [
+        "p",
+        "Survey the site, find out what the soil is like and plan where stormwater will go. Those findings affect the design as well as the excavation."
+      ],
+      [
+        "p",
+        "Allow time to investigate the ground properly so the footings, retaining and drainage can be planned as one."
+      ],
+      [
+        "h3",
+        "What happens before framing"
+      ],
+      [
+        "p",
+        "Preparation can include survey marks, earthworks, temporary access, drainage, retaining walls and foundations. Each step makes the rest of the construction safer and more predictable, even though little of it will be visible after move-in."
+      ],
+      [
+        "p",
+        "Unresolved water or soil issues can surface later as movement, damp or damaged finishes. Make sure the site conditions match what the team allowed for as the early work proceeds."
+      ],
+      [
+        "h3",
+        "Give water a path"
+      ],
+      [
+        "p",
+        "Show where roof water, surface runoff and ground moisture go. Drainage, waterproofing and foundation details should suit the slope and soils of the particular site, with room for maintenance where there are outlets or drains."
+      ],
+      [
+        "p",
+        "Use a survey and soil investigation to find issues the finished block won’t show. Bring the findings into the drawings before committing to the groundwork."
+      ],
+      [
+        "h3",
+        "Start on firm ground"
+      ],
+      [
+        "p",
+        "Time spent resolving drainage, levels and foundations makes later stages less uncertain. Ask the site lead to explain what has been checked before work gets covered, so everyone knows what the home is standing on."
+      ]
+    ],
+    "author": "Adrian Vale",
+    "avatar": "marcus.png",
+    "authorRole": "Founder & Principal Builder",
+    "category": "Renovation Guides",
+    "readTime": "7",
+    "tags": [
+      [
+        "Permits & Approvals",
+        "/blogs/tags/permits-approvals"
+      ],
+      [
+        "Sustainable Building",
+        "/blogs/tags/sustainable-building"
+      ],
+      [
+        "Kitchen Design",
+        "/blogs/tags/kitchen-design"
+      ]
+    ],
+    "pager": [
+      "/blogs/budgeting-beyond-the-build-the-costs-people-forget"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/smart-homes-wiring-for-technology-that-lasts": {
+    "documentTitle": "Wiring a Home for Technology You Can Upgrade | Dconstruct Insights",
+    "title": "Wiring a Home for Technology You Can Upgrade",
+    "label": "NEWS & UPDATES",
+    "summary": "Give future devices a useful foundation without buying gadgets too early.",
+    "image": "pages/blog-smart-homes-wiring-for-technology-that-lasts.jpg",
+    "body": [
+      [
+        "p",
+        "Devices change quickly. Put the right cables and access in place while it’s easiest to reach the walls."
+      ],
+      [
+        "h3",
+        "Plan the wiring early"
+      ],
+      [
+        "p",
+        "Ask your electrician where network lines, outlets and empty conduit should go. Adding them before the wall linings go on can be simpler and cheaper."
+      ],
+      [
+        "p",
+        "Think through lighting, heating, security and entertainment together. The drawings can leave you options if the devices you choose later use different standards."
+      ],
+      [
+        "p",
+        "Ask for a clear layout of outlets, data points and spare routes while the home is still being drawn. Cable runs are easier to adjust before they sit behind joinery and wall finishes."
+      ],
+      [
+        "p",
+        "Allow room for upgrades around permanent fixtures, such as a reachable path between floors and space to replace equipment near the network connection."
+      ],
+      [
+        "h3",
+        "Treat technology as a system"
+      ],
+      [
+        "p",
+        "Look at which parts of your home depend on each other. Cameras, access points and entertainment devices all need power and a way to communicate, and lighting and climate control need physical controls you can use easily."
+      ],
+      [
+        "p",
+        "Consider wired network connections for permanent equipment and use wireless where you need the freedom to move."
+      ],
+      [
+        "h3",
+        "Keep controls simple"
+      ],
+      [
+        "p",
+        "Put the budget toward equipment you actually expect to use and the routes that give you a chance to upgrade. A home is easier to live in when a visitor can operate the lights without an app."
+      ]
+    ],
+    "author": "Aiden Ford",
+    "avatar": "pages/team-ryan-mercer.png",
+    "authorRole": "Estimator & Quantity Surveyor",
+    "category": "Materials & Craft",
+    "readTime": "5",
+    "tags": [
+      [
+        "Landscaping",
+        "/blogs/tags/landscaping"
+      ],
+      [
+        "Kitchen Design",
+        "/blogs/tags/kitchen-design"
+      ]
+    ],
+    "pager": [
+      "/blogs/council-approvals-explained-permits-without-the-panic",
+      "/blogs/heritage-homes-renovating-with-respect"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/sustainable-homes-building-for-comfort-and-lower-bills": {
+    "documentTitle": "A Comfortable Home That Uses Less Energy | Dconstruct Insights",
+    "title": "A Comfortable Home That Uses Less Energy",
+    "label": "NEWS & UPDATES",
+    "summary": "How shading, insulation and efficient systems can improve daily comfort.",
+    "image": "pages/blog-sustainable-homes-building-for-comfort-and-lower-bills.jpg",
+    "body": [
+      [
+        "p",
+        "A home that needs less energy can also be calmer, quieter and more comfortable in every season."
+      ],
+      [
+        "h3",
+        "Comfort starts with design"
+      ],
+      [
+        "p",
+        "A well-insulated envelope and carefully fitted windows help keep the rooms closer to a steady temperature. Begin with the parts of the home you use most often."
+      ],
+      [
+        "p",
+        "Then consider efficient equipment, ventilation and solar where they make sense for the site, budget and the people living there."
+      ],
+      [
+        "h3",
+        "Get the envelope right"
+      ],
+      [
+        "p",
+        "Pay attention to insulation and air sealing across walls, the roof and floor edges. The building holds its indoor temperature better when those details work together, and well-chosen glazing helps reduce the discomfort near large windows."
+      ],
+      [
+        "p",
+        "Use shade, the arrangement of rooms and the site’s position to control when sunlight comes inside. A properly sized eave or an outside screen can reduce unwanted heat before you need to pay to move it again."
+      ],
+      [
+        "h3",
+        "Select the systems next"
+      ],
+      [
+        "p",
+        "Once the envelope is set, choose the heating, cooling and hot-water systems for the home’s actual needs. Good ventilation brings fresh air inside, and solar may make sense depending on roof orientation and when your household uses electricity."
+      ],
+      [
+        "p",
+        "Size equipment after the drawings and energy requirements are known. The best investment may be better insulation in one place instead of a larger system."
+      ],
+      [
+        "p",
+        "The benefits show up each day. Temperatures hold more steadily between rooms, windows feel less drafty and a quieter system can run when needed. Lower energy use follows from making those parts of the home work together."
+      ]
+    ],
+    "author": "Gavin Marsh",
+    "avatar": "pages/team-owen-carter.png",
+    "authorRole": "Senior Project Manager",
+    "category": "Materials & Craft",
+    "readTime": "8",
+    "tags": [
+      [
+        "Landscaping",
+        "/blogs/tags/landscaping"
+      ],
+      [
+        "Kitchen Design",
+        "/blogs/tags/kitchen-design"
+      ],
+      [
+        "Renovations",
+        "/blogs/tags/renovations"
+      ]
+    ],
+    "pager": [
+      "/blogs/the-custom-kitchen-where-craft-meets-everyday-life",
+      "/blogs/a-realistic-timeline-for-building-your-custom-home"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/the-custom-kitchen-where-craft-meets-everyday-life": {
+    "documentTitle": "Designing a Custom Kitchen for Everyday Use | Dconstruct Insights",
+    "title": "Designing a Custom Kitchen for Everyday Use",
+    "label": "NEWS & UPDATES",
+    "summary": "Cabinetry, work surfaces and layout choices for a hard-working room.",
+    "image": "pages/blog-the-custom-kitchen-where-craft-meets-everyday-life.jpg",
+    "body": [
+      [
+        "p",
+        "A kitchen has to work through school mornings, quiet dinners and crowded weekends. Small decisions made early pay off every day."
+      ],
+      [
+        "h3",
+        "Made for daily use"
+      ],
+      [
+        "p",
+        "Cabinets, fasteners, surfaces and hinges all take wear. Pick fixtures you can maintain and finishes that feel comfortable in the places you constantly touch, wipe down or lean against."
+      ],
+      [
+        "p",
+        "Put the bin near the main prep surface, leave room to open appliances, and set light over the part of the counter you use. Those choices help the room feel easy even when several people are moving through."
+      ],
+      [
+        "h3",
+        "Start with your routines"
+      ],
+      [
+        "p",
+        "Work through a typical meal in the plan. Imagine bringing in groceries, setting items down, washing vegetables and reaching for pans. This will show where the fridge, sink, range and storage need to be so you can move comfortably."
+      ],
+      [
+        "p",
+        "Ask who cooks and who comes into the kitchen while someone is working. The width and shape of the room should suit those habits."
+      ],
+      [
+        "h3",
+        "Materials that take wear"
+      ],
+      [
+        "p",
+        "Stone, sound cabinet construction and strong hardware can outlast less durable choices, especially on a heavily used island. Check samples for stains, scratches and upkeep before choosing. A material that looks good in a showroom has to work in your household too."
+      ],
+      [
+        "p",
+        "Deep drawers make cookware easier to reach, and soft-close hinges are welcome where doors get opened all day."
+      ],
+      [
+        "h3",
+        "Good craft on every touch"
+      ],
+      [
+        "p",
+        "Aligned fronts, consistent gaps and smooth-running drawers matter because you use them so often. When reviewing a sample, open and close it and look at the edges and corners. The small details tell you how a kitchen will feel to live with."
+      ]
+    ],
+    "author": "Theo Nolan",
+    "avatar": "pages/team-jack-sullivan.png",
+    "authorRole": "Master Carpenter",
+    "category": "Sustainable Building",
+    "readTime": "7",
+    "tags": [
+      [
+        "Steel",
+        "/blogs/tags/steel"
+      ],
+      [
+        "Renovations",
+        "/blogs/tags/renovations"
+      ],
+      [
+        "Energy Efficiency",
+        "/blogs/tags/energy-efficiency"
+      ]
+    ],
+    "pager": [
+      "/blogs/designing-for-natural-light-orientation-done-right",
+      "/blogs/sustainable-homes-building-for-comfort-and-lower-bills"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/blogs/what-it-really-costs-to-build-a-custom-home-in-2026": {
+    "documentTitle": "What a Custom Home Really Costs to Build in 2026 | Dconstruct Insights",
+    "title": "What a Custom Home Really Costs to Build in 2026",
+    "label": "NEWS & UPDATES",
+    "summary": "See which parts of a custom build drive the price and how a detailed fixed-price agreement protects your budget.",
+    "image": "blog-cost.jpg",
+    "body": [
+      [
+        "p",
+        "Two custom homes of the same size can cost very different amounts. Knowing what moves the price helps you compare quotes and set a workable budget."
+      ],
+      [
+        "h3",
+        "Where the budget goes"
+      ],
+      [
+        "p",
+        "Groundwork, the frame and envelope, and the interior finishes make up much of the bill. We look at the soil, grade and access to your site early, because those conditions affect what contractors need to do before the frame can go up."
+      ],
+      [
+        "p",
+        "A detailed fixed-price agreement helps you see what your money covers. Compare the scope, selections and allowances line by line before committing, especially when two quotes describe the same work in different ways."
+      ],
+      [
+        "h3",
+        "Why the price can move"
+      ],
+      [
+        "p",
+        "The site can change the cost more than anything else. A level lot with firm soil and good access is usually simpler to build on than one that needs retaining, difficult excavation, long service runs or a crane to reach parts of the structure."
+      ],
+      [
+        "p",
+        "The finish schedule is another large variable. Stone or laminate, custom cabinets or standard units, and different kinds of glazing can each change the price without changing the floor plan. Picking a realistic finish level early gives the estimate a firmer basis."
+      ],
+      [
+        "h3",
+        "Frequently missed costs"
+      ],
+      [
+        "p",
+        "Once the house is priced, allow for the parts of the project that sit outside the building shell. Driveways, planting, fencing, appliances and blinds can take up a substantial part of the budget. Many arrive just as the final bills are due."
+      ],
+      [
+        "p",
+        "Give those items their own line in the budget before work starts. Check which you want the builder to provide and which you plan to arrange yourself, so the figure reflects the move-in costs."
+      ],
+      [
+        "h3",
+        "Keep the budget visible"
+      ],
+      [
+        "p",
+        "Work from a complete set of drawings and a written scope when you agree on a fixed price. Confirm who approves changes and how they will be priced before any additional work begins. You’ll have a clearer record of what was agreed and can decide when an upgrade is worth it."
+      ]
+    ],
+    "author": "Mateo Cruz",
+    "avatar": "daniel.png",
+    "authorRole": "Lead Architect",
+    "category": "Renovation Guides",
+    "readTime": "6",
+    "tags": [
+      [
+        "Budgeting",
+        "/blogs/tags/budgeting"
+      ],
+      [
+        "Permits & Approvals",
+        "/blogs/tags/permits-approvals"
+      ],
+      [
+        "Sustainable Building",
+        "/blogs/tags/sustainable-building"
+      ]
+    ],
+    "pager": [
+      "/blogs/design-build-vs-traditional-contracting-which-is-right-for-you"
+    ],
+    "date": "May 3, 2026"
+  },
+  "/projects/bayside-extension": {
+    "documentTitle": "Bayview Extension — Custom Home Project | Dconstruct",
+    "title": "Bayview Extension",
+    "label": "Renovation",
+    "summary": "A rear addition that gives a small cottage room to grow.",
+    "image": "pages/projects-bayside-extension.jpg",
+    "body": [
+      [
+        "p",
+        "The family wanted more room and still loved their small coastal cottage. Extending the back gave them space to gather without changing the front they knew."
+      ],
+      [
+        "h3",
+        "More room for everyday life"
+      ],
+      [
+        "p",
+        "A new living and dining room opens across the back of the cottage onto a sunny deck through a wide set of doors."
+      ],
+      [
+        "p",
+        "The new extension reads as contemporary and picks up the proportions and materials of the cottage."
+      ]
+    ],
+    "pager": [
+      "/projects/marsh-timber-house",
+      "/projects/the-stone-kitchen"
+    ],
+    "location": "Bayview",
+    "gallery": [
+      "pages/project-bayside-extension-1.jpg",
+      "pages/project-bayside-extension-2.jpg",
+      "pages/project-bayside-extension-3.jpg",
+      "pages/project-bayside-extension-4.jpg"
+    ]
+  },
+  "/projects/cedar-park-renovation": {
+    "documentTitle": "Cedar Glen Renovation — Custom Home Project | Dconstruct",
+    "title": "Cedar Glen Renovation",
+    "label": "Renovation",
+    "summary": "A closed-off cottage opened up into a light family home.",
+    "image": "pages/projects-cedar-park-renovation.jpg",
+    "body": [
+      [
+        "p",
+        "Cedar Glen was a dark cottage divided into small rooms. The new plan brings in light and keeps the original details the family valued."
+      ],
+      [
+        "h3",
+        "Making the most of the cottage"
+      ],
+      [
+        "p",
+        "We opened the rooms at the rear, built a light-filled addition and repaired the original work worth keeping. The project was arranged in stages so the household could stay put."
+      ],
+      [
+        "p",
+        "Careful junctions between stone and timber make the cottage and its addition feel like one home."
+      ]
+    ],
+    "pager": [
+      "/projects/marina-bay-home",
+      "/projects/willowmere-estate"
+    ],
+    "location": "Cedar Glen",
+    "gallery": [
+      "pages/project-cedar-park-renovation-1.jpg",
+      "pages/project-cedar-park-renovation-2.jpg",
+      "pages/project-cedar-park-renovation-3.jpg",
+      "pages/project-cedar-park-renovation-4.jpg"
+    ]
+  },
+  "/projects/crestwood-courtyard": {
+    "documentTitle": "Crestline Courtyard — Custom Home Project | Dconstruct",
+    "title": "Crestline Courtyard",
+    "label": "New Build",
+    "summary": "A home that brings a planted courtyard into daily life.",
+    "image": "pages/projects-crestwood-courtyard.jpg",
+    "body": [
+      [
+        "p",
+        "Crestline Courtyard is arranged around a planted garden that gives a view and daylight to the rooms beside it."
+      ],
+      [
+        "h3",
+        "A garden at the center"
+      ],
+      [
+        "p",
+        "The rooms look across the courtyard, with glazing that can be opened onto sheltered outdoor space."
+      ],
+      [
+        "p",
+        "Everyone stays connected while having places to sit quietly away from the shared rooms."
+      ]
+    ],
+    "pager": [
+      "/projects/fernhill-farmhouse"
+    ],
+    "location": "Crestline",
+    "gallery": [
+      "pages/project-crestwood-courtyard-1.jpg",
+      "pages/project-crestwood-courtyard-2.jpg",
+      "pages/project-crestwood-courtyard-3.jpg",
+      "pages/project-crestwood-courtyard-4.jpg"
+    ]
+  },
+  "/projects/fernhill-farmhouse": {
+    "documentTitle": "Fernbank Farmhouse — Custom Home Project | Dconstruct",
+    "title": "Fernbank Farmhouse",
+    "label": "New Build",
+    "summary": "A contemporary farmhouse with room for a growing family.",
+    "image": "pages/projects-fernhill-farmhouse.jpg",
+    "body": [
+      [
+        "p",
+        "Fernbank Farmhouse adapts the familiar rural house form for a family with a busy routine and a love of being outside."
+      ],
+      [
+        "h3",
+        "Familiar forms, open rooms"
+      ],
+      [
+        "p",
+        "The timber gables suit the rural setting while the rooms inside are arranged for informal meals and gatherings."
+      ],
+      [
+        "p",
+        "Hard-wearing finishes make it easy to come in from the paddock in muddy boots."
+      ]
+    ],
+    "pager": [
+      "/projects/poolhouse-pavilion",
+      "/projects/crestwood-courtyard"
+    ],
+    "location": "Fernbank",
+    "gallery": [
+      "pages/project-fernhill-farmhouse-1.jpg",
+      "pages/project-fernhill-farmhouse-2.jpg",
+      "pages/project-fernhill-farmhouse-3.jpg",
+      "pages/project-fernhill-farmhouse-4.jpg"
+    ]
+  },
+  "/projects/highgrove-house": {
+    "documentTitle": "Highfield House — Custom Home Project | Dconstruct",
+    "title": "Highfield House",
+    "label": "Custom Home",
+    "summary": "A considered custom home with a price agreed up front.",
+    "image": "project-highgrove.jpg",
+    "body": [
+      [
+        "p",
+        "Highfield House pairs a personal design with a build price that was clear from the start."
+      ],
+      [
+        "h3",
+        "Planning the cost early"
+      ],
+      [
+        "p",
+        "We scheduled and priced the work before breaking ground, then sent a short report each week so the owners knew where the build stood."
+      ],
+      [
+        "p",
+        "The finished single-storey home is understated and practical, with the details and materials agreed during design."
+      ]
+    ],
+    "pager": [
+      "/projects/willowmere-estate",
+      "/projects/marsh-timber-house"
+    ],
+    "location": "Highfield",
+    "gallery": [
+      "pages/project-highgrove-house-1.jpg",
+      "pages/project-highgrove-house-2.jpg",
+      "pages/project-highgrove-house-3.jpg",
+      "pages/project-highgrove-house-4.jpg"
+    ]
+  },
+  "/projects/marina-bay-home": {
+    "documentTitle": "Harbour Reach Home — Custom Home Project | Dconstruct",
+    "title": "Harbour Reach Home",
+    "label": "Custom Home",
+    "summary": "A waterfront home that opens naturally onto the deck.",
+    "image": "project-marina.jpg",
+    "body": [
+      [
+        "p",
+        "The rooms at Harbour Reach are set out as low pavilions so life inside the house opens directly to the bay."
+      ],
+      [
+        "h3",
+        "Rooms that open to water"
+      ],
+      [
+        "p",
+        "Full-height sliding glazing can pull back at the edge of the main room. Continuous levels carry the living area out to the deck and pool during the warmer months."
+      ],
+      [
+        "p",
+        "Coastal-grade fittings and protected timber details suit a house that faces an exposed stretch of water."
+      ]
+    ],
+    "pager": [
+      "/projects/ridgeline-house",
+      "/projects/cedar-park-renovation"
+    ],
+    "location": "Waterfront",
+    "gallery": [
+      "pages/project-marina-bay-home-1.jpg",
+      "pages/project-marina-bay-home-2.jpg",
+      "pages/project-marina-bay-home-3.jpg",
+      "pages/project-marina-bay-home-4.jpg"
+    ]
+  },
+  "/projects/marsh-timber-house": {
+    "documentTitle": "Reed & Timber House — Custom Home Project | Dconstruct",
+    "title": "Reed & Timber House",
+    "label": "New Build",
+    "summary": "A lightweight timber home at the edge of a marsh.",
+    "image": "pages/projects-marsh-timber-house.jpg",
+    "body": [
+      [
+        "p",
+        "Reed & Timber House is raised beside a wetland so the building can work with the changing water and the surrounding reeds."
+      ],
+      [
+        "h3",
+        "A measured footprint"
+      ],
+      [
+        "p",
+        "Slender supports limit the disturbance below the house and leave room for air to move. A timber screen cuts glare from the western windows."
+      ],
+      [
+        "p",
+        "The timber finish will take on a silvery tone over time and fit more easily into the marsh landscape."
+      ]
+    ],
+    "pager": [
+      "/projects/highgrove-house",
+      "/projects/bayside-extension"
+    ],
+    "location": "Reedbank",
+    "gallery": [
+      "pages/project-marsh-timber-house-1.jpg",
+      "pages/project-marsh-timber-house-2.jpg",
+      "pages/project-marsh-timber-house-3.jpg",
+      "pages/project-marsh-timber-house-4.jpg"
+    ]
+  },
+  "/projects/oakhill-residence": {
+    "documentTitle": "Oakline Residence — Custom Home Project | Dconstruct",
+    "title": "Oakline Residence",
+    "label": "New Build",
+    "summary": "A five-bedroom family home with daylight, space and durable finishes.",
+    "image": "project-oakhill.jpg",
+    "body": [
+      [
+        "p",
+        "Oakline Residence sits beneath mature trees on a quiet ridge. The family asked for a bright, durable home with room for the way their lives might change."
+      ],
+      [
+        "h3",
+        "Planning for life at home"
+      ],
+      [
+        "p",
+        "The living rooms face the best daylight, with deep overhangs to shade the glass in summer. Limestone, oak and steel bring familiar textures to rooms designed to feel comfortable to use, clean and care for every day."
+      ],
+      [
+        "p",
+        "The plan and build price were agreed early so the crew could concentrate on finishing a home built for years of family life."
+      ]
+    ],
+    "pager": [
+      "/projects/ridgeline-house"
+    ],
+    "location": "Oakline",
+    "gallery": [
+      "pages/project-oakhill-residence-1.jpg",
+      "pages/project-oakhill-residence-2.jpg",
+      "pages/project-oakhill-residence-3.jpg",
+      "pages/project-oakhill-residence-4.jpg"
+    ]
+  },
+  "/projects/poolhouse-pavilion": {
+    "documentTitle": "Garden Pool Pavilion — Custom Home Project | Dconstruct",
+    "title": "Garden Pool Pavilion",
+    "label": "Outdoor",
+    "summary": "A sheltered poolside room extends the house into its garden.",
+    "image": "pages/projects-poolhouse-pavilion.jpg",
+    "body": [
+      [
+        "p",
+        "Garden Pool Pavilion gives the backyard a sheltered spot for everyday meals, quiet mornings and evenings with people over."
+      ],
+      [
+        "h3",
+        "Outside in all weather"
+      ],
+      [
+        "p",
+        "A simple canopy frames the pool and covers a small kitchen and sitting area across the garden."
+      ],
+      [
+        "p",
+        "Weather-ready finishes suit the rain, direct sun and the splash of the pool."
+      ]
+    ],
+    "pager": [
+      "/projects/the-stone-kitchen",
+      "/projects/fernhill-farmhouse"
+    ],
+    "location": "Crestline",
+    "gallery": [
+      "pages/project-poolhouse-pavilion-1.jpg",
+      "pages/project-poolhouse-pavilion-2.jpg",
+      "pages/project-poolhouse-pavilion-3.jpg",
+      "pages/project-poolhouse-pavilion-4.jpg"
+    ]
+  },
+  "/projects/ridgeline-house": {
+    "documentTitle": "Ridgeview House — Custom Home Project | Dconstruct",
+    "title": "Ridgeview House",
+    "label": "Design & Build",
+    "summary": "A hillside home that puts a difficult site to work.",
+    "image": "pages/projects-ridgeline-house.jpg",
+    "body": [
+      [
+        "p",
+        "Ridgeview House sits on a steep slope. We stepped the rooms down the site so each level looks past the next to the valley."
+      ],
+      [
+        "h3",
+        "Building with the slope"
+      ],
+      [
+        "p",
+        "A central stair connects the split floors, and an open double-height space brings daylight from the upper windows down into the middle of the house."
+      ],
+      [
+        "p",
+        "Keeping design and construction together let the team work out the retaining and structure before moving equipment onto the site."
+      ]
+    ],
+    "pager": [
+      "/projects/oakhill-residence",
+      "/projects/marina-bay-home"
+    ],
+    "location": "Hillside",
+    "gallery": [
+      "pages/project-ridgeline-house-1.jpg",
+      "pages/project-ridgeline-house-2.jpg",
+      "pages/project-ridgeline-house-3.jpg",
+      "pages/project-ridgeline-house-4.jpg"
+    ]
+  },
+  "/projects/the-stone-kitchen": {
+    "documentTitle": "The Flint Kitchen — Custom Home Project | Dconstruct",
+    "title": "The Flint Kitchen",
+    "label": "Kitchen Remodel",
+    "summary": "A busy family kitchen rebuilt in durable stone and oak.",
+    "image": "pages/projects-the-stone-kitchen.jpg",
+    "body": [
+      [
+        "p",
+        "The Flint Kitchen makes room for family cooking and gathering where a cramped galley previously cut the rooms apart."
+      ],
+      [
+        "h3",
+        "Details made for daily use"
+      ],
+      [
+        "p",
+        "Honed stone, oak cabinetry and sturdy handles were picked with the wear of family life and the feel of the materials in mind."
+      ],
+      [
+        "p",
+        "The arrangement reflects where the family cooks and gathers, with a clear working surface and reachable storage."
+      ]
+    ],
+    "pager": [
+      "/projects/bayside-extension",
+      "/projects/poolhouse-pavilion"
+    ],
+    "location": "Ashford",
+    "gallery": [
+      "pages/project-the-stone-kitchen-1.jpg",
+      "pages/project-the-stone-kitchen-2.jpg",
+      "pages/project-the-stone-kitchen-3.jpg",
+      "pages/project-the-stone-kitchen-4.jpg"
+    ]
+  },
+  "/projects/willowmere-estate": {
+    "documentTitle": "Willowbank Estate — Custom Home Project | Dconstruct",
+    "title": "Willowbank Estate",
+    "label": "New Build",
+    "summary": "An open country home with space to bring people together.",
+    "image": "pages/projects-willowmere-estate.jpg",
+    "body": [
+      [
+        "p",
+        "Willowbank Estate is a single-storey country home for a family who often have friends and relatives over."
+      ],
+      [
+        "h3",
+        "Room for a crowd"
+      ],
+      [
+        "p",
+        "The kitchen sits at the center of the living spaces, with an easy opening to a covered outdoor room and pool."
+      ],
+      [
+        "p",
+        "Finishes chosen for comfort and everyday upkeep suit a full household and the coming and going of weekend guests."
+      ]
+    ],
+    "pager": [
+      "/projects/cedar-park-renovation",
+      "/projects/highgrove-house"
+    ],
+    "location": "Willowbank",
+    "gallery": [
+      "pages/project-willowmere-estate-1.jpg",
+      "pages/project-willowmere-estate-2.jpg",
+      "pages/project-willowmere-estate-3.jpg",
+      "pages/project-willowmere-estate-4.jpg"
+    ]
+  },
+  "/services/architectural-design": {
+    "documentTitle": "Architectural Design — Custom Home Services | Dconstruct",
+    "title": "Architectural Design",
+    "label": "SERVICE",
+    "summary": "Individual designs ready for construction.",
+    "image": "service-architecture.jpg",
+    "body": [
+      [
+        "p",
+        "A design that makes the available space count."
+      ],
+      [
+        "p",
+        "Our in-house studio looks at how the home will sit, how daylight travels through it and what materials suit the building and the budget."
+      ],
+      [
+        "h3",
+        "Designed alongside the build"
+      ],
+      [
+        "p",
+        "Designers and builders work together from early sketches, checking the practical details, costs and ways to build."
+      ],
+      [
+        "p",
+        "You end up with a clear set of drawings and a plan the crew can carry out within budget."
+      ]
+    ],
+    "pager": [
+      "/services/construction-management"
+    ],
+    "related": [
+      "/projects/ridgeline-house",
+      "/projects/marsh-timber-house"
+    ]
+  },
+  "/services/construction-management": {
+    "documentTitle": "Construction Management — Custom Home Services | Dconstruct",
+    "title": "Construction Management",
+    "label": "SERVICE",
+    "summary": "One point of contact throughout your build.",
+    "image": "service-management.jpg",
+    "body": [
+      [
+        "p",
+        "One lead to keep the build moving."
+      ],
+      [
+        "p",
+        "A custom build has a lot of moving parts, so a dedicated lead holds the schedule, cost, trades and finish standards together."
+      ],
+      [
+        "h3",
+        "One lead for the site"
+      ],
+      [
+        "p",
+        "We arrange trades and deliveries, check the work as it goes and tell you what changed each week."
+      ],
+      [
+        "p",
+        "You can see how the project is tracking against the agreed schedule and price, and get answers from the person overseeing it."
+      ]
+    ],
+    "pager": [
+      "/services/architectural-design",
+      "/services/custom-home-building"
+    ],
+    "related": [
+      "/projects/highgrove-house"
+    ]
+  },
+  "/services/custom-home-building": {
+    "documentTitle": "Custom Home Building — Custom Home Services | Dconstruct",
+    "title": "Custom Home Building",
+    "label": "SERVICE",
+    "summary": "From an empty lot to your front door.",
+    "image": "service-custom.jpg",
+    "body": [
+      [
+        "p",
+        "A home shaped around your own daily life."
+      ],
+      [
+        "p",
+        "From a first site visit to the last coat of paint, we take care of design and building together so the rooms work for the way you want to live."
+      ],
+      [
+        "h3",
+        "From plans to keys"
+      ],
+      [
+        "p",
+        "One dedicated team looks after the site, drawings, structure, fit-out and handover, with a single contact for decisions along the way."
+      ],
+      [
+        "p",
+        "An agreed price and weekly progress updates let you see where the build stands from early drawings to move-in."
+      ]
+    ],
+    "pager": [
+      "/services/construction-management",
+      "/services/kitchen-bath-remodeling"
+    ],
+    "related": [
+      "/projects/oakhill-residence",
+      "/projects/marina-bay-home",
+      "/projects/willowmere-estate",
+      "/projects/fernhill-farmhouse"
+    ]
+  },
+  "/services/kitchen-bath-remodeling": {
+    "documentTitle": "Kitchens & Bathrooms — Custom Home Services | Dconstruct",
+    "title": "Kitchens & Bathrooms",
+    "label": "SERVICE",
+    "summary": "Well-built rooms that earn their keep.",
+    "image": "service-kitchen.jpg",
+    "body": [
+      [
+        "p",
+        "Carefully built rooms for the busiest routines."
+      ],
+      [
+        "p",
+        "We renovate kitchens and bathrooms with the right layout and durable materials, from the cabinetry to the stone and tile that see heavy daily use."
+      ],
+      [
+        "h3",
+        "Care in the finish"
+      ],
+      [
+        "p",
+        "We work with skilled joiners and installers so the drawers, surfaces and fixtures continue to work well."
+      ],
+      [
+        "p",
+        "Each room is planned around cooking, cleaning or getting ready, so the finished layout makes those routines easier."
+      ]
+    ],
+    "pager": [
+      "/services/custom-home-building",
+      "/services/outdoor-living"
+    ],
+    "related": [
+      "/projects/the-stone-kitchen"
+    ]
+  },
+  "/services/outdoor-living": {
+    "documentTitle": "Outdoor Living — Custom Home Services | Dconstruct",
+    "title": "Outdoor Living",
+    "label": "SERVICE",
+    "summary": "Outdoor rooms that feel part of home.",
+    "image": "service-outdoor.jpg",
+    "body": [
+      [
+        "p",
+        "Make room to live outside."
+      ],
+      [
+        "p",
+        "Decks, pools, pavilions and gardens should work with the home they sit beside. We plan them as connected spaces you can use regularly."
+      ],
+      [
+        "h3",
+        "Planned with the house"
+      ],
+      [
+        "p",
+        "Setting levels, materials and sightlines early keeps the transition to the garden comfortable and easy."
+      ],
+      [
+        "p",
+        "Materials suited to sun and rain help these outdoor rooms stay inviting over time."
+      ]
+    ],
+    "pager": [
+      "/services/kitchen-bath-remodeling",
+      "/services/renovations-additions"
+    ],
+    "related": [
+      "/projects/poolhouse-pavilion",
+      "/projects/crestwood-courtyard"
+    ]
+  },
+  "/services/renovations-additions": {
+    "documentTitle": "Renovations & Additions — Custom Home Services | Dconstruct",
+    "title": "Renovations & Additions",
+    "label": "SERVICE",
+    "summary": "Make room for the way you live now.",
+    "image": "service-renovation.jpg",
+    "body": [
+      [
+        "p",
+        "Add space to the home you know."
+      ],
+      [
+        "p",
+        "A renovation can give you more room and better light while keeping the parts of your current home you’d miss, from an old facade to a familiar floor plan."
+      ],
+      [
+        "h3",
+        "New work that fits in"
+      ],
+      [
+        "p",
+        "We design extensions, second floors and whole-home updates around the structure and details that are worth carrying forward."
+      ],
+      [
+        "p",
+        "Planning the work in stages can reduce disruption and help your household get on with the day."
+      ]
+    ],
+    "pager": [
+      "/services/outdoor-living"
+    ],
+    "related": [
+      "/projects/cedar-park-renovation",
+      "/projects/bayside-extension"
+    ]
+  },
+  "/blogs/tags/budgeting": {
+    "title": "Budgeting",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on budgeting for custom builds.",
+    "documentTitle": "Budgeting | Dconstruct Insights",
+    "entries": [
+      "/blogs/what-it-really-costs-to-build-a-custom-home-in-2026"
+    ]
+  },
+  "/blogs/tags/concrete": {
+    "title": "Concrete",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on concrete for custom builds.",
+    "documentTitle": "Concrete | Dconstruct Insights",
+    "entries": [
+      "/blogs/budgeting-beyond-the-build-the-costs-people-forget"
+    ]
+  },
+  "/blogs/tags/craftsmanship": {
+    "title": "Craftsmanship",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on craftsmanship for custom builds.",
+    "documentTitle": "Craftsmanship | Dconstruct Insights",
+    "entries": [
+      "/blogs/10-questions-to-ask-before-hiring-a-custom-home-builder"
+    ]
+  },
+  "/blogs/tags/energy-efficiency": {
+    "title": "Energy Efficiency",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on energy efficiency for custom builds.",
+    "documentTitle": "Energy Efficiency | Dconstruct Insights",
+    "entries": [
+      "/blogs/the-custom-kitchen-where-craft-meets-everyday-life"
+    ]
+  },
+  "/blogs/tags/home-additions": {
+    "title": "Home Additions",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on home additions for custom builds.",
+    "documentTitle": "Home Additions | Dconstruct Insights",
+    "entries": [
+      "/blogs/designing-for-natural-light-orientation-done-right",
+      "/blogs/indoor-outdoor-living-designing-seamless-transitions",
+      "/blogs/budgeting-beyond-the-build-the-costs-people-forget"
+    ]
+  },
+  "/blogs/tags/home-maintenance": {
+    "title": "Home Maintenance",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on home maintenance for custom builds.",
+    "documentTitle": "Home Maintenance | Dconstruct Insights",
+    "entries": [
+      "/blogs/how-to-read-and-trust-a-fixed-price-building-contract",
+      "/blogs/a-realistic-timeline-for-building-your-custom-home"
+    ]
+  },
+  "/blogs/tags/kitchen-design": {
+    "title": "Kitchen Design",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on kitchen design for custom builds.",
+    "documentTitle": "Kitchen Design | Dconstruct Insights",
+    "entries": [
+      "/blogs/design-build-vs-traditional-contracting-which-is-right-for-you",
+      "/blogs/10-questions-to-ask-before-hiring-a-custom-home-builder",
+      "/blogs/sustainable-homes-building-for-comfort-and-lower-bills",
+      "/blogs/smart-homes-wiring-for-technology-that-lasts",
+      "/blogs/site-preparation-why-groundwork-makes-or-breaks-a-build"
+    ]
+  },
+  "/blogs/tags/landscaping": {
+    "title": "Landscaping",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on landscaping for custom builds.",
+    "documentTitle": "Landscaping | Dconstruct Insights",
+    "entries": [
+      "/blogs/choosing-timber-stone-and-steel-a-materials-primer",
+      "/blogs/sustainable-homes-building-for-comfort-and-lower-bills",
+      "/blogs/smart-homes-wiring-for-technology-that-lasts"
+    ]
+  },
+  "/blogs/tags/outdoor-living": {
+    "title": "Outdoor Living",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on outdoor living for custom builds.",
+    "documentTitle": "Outdoor Living | Dconstruct Insights",
+    "entries": [
+      "/blogs/10-questions-to-ask-before-hiring-a-custom-home-builder",
+      "/blogs/council-approvals-explained-permits-without-the-panic"
+    ]
+  },
+  "/blogs/tags/permits-approvals": {
+    "title": "Permits & Approvals",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on permits & approvals for custom builds.",
+    "documentTitle": "Permits & Approvals | Dconstruct Insights",
+    "entries": [
+      "/blogs/what-it-really-costs-to-build-a-custom-home-in-2026",
+      "/blogs/design-build-vs-traditional-contracting-which-is-right-for-you",
+      "/blogs/second-storey-additions-what-s-possible-on-your-block",
+      "/blogs/site-preparation-why-groundwork-makes-or-breaks-a-build"
+    ]
+  },
+  "/blogs/tags/project-management": {
+    "title": "Project Management",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on project management for custom builds.",
+    "documentTitle": "Project Management | Dconstruct Insights",
+    "entries": [
+      "/blogs/council-approvals-explained-permits-without-the-panic"
+    ]
+  },
+  "/blogs/tags/renovations": {
+    "title": "Renovations",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on renovations for custom builds.",
+    "documentTitle": "Renovations | Dconstruct Insights",
+    "entries": [
+      "/blogs/choosing-timber-stone-and-steel-a-materials-primer",
+      "/blogs/the-custom-kitchen-where-craft-meets-everyday-life",
+      "/blogs/sustainable-homes-building-for-comfort-and-lower-bills",
+      "/blogs/indoor-outdoor-living-designing-seamless-transitions"
+    ]
+  },
+  "/blogs/tags/smart-homes": {
+    "title": "Smart Homes",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on smart homes for custom builds.",
+    "documentTitle": "Smart Homes | Dconstruct Insights",
+    "entries": [
+      "/blogs/how-to-read-and-trust-a-fixed-price-building-contract",
+      "/blogs/a-realistic-timeline-for-building-your-custom-home"
+    ]
+  },
+  "/blogs/tags/steel": {
+    "title": "Steel",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on steel for custom builds.",
+    "documentTitle": "Steel | Dconstruct Insights",
+    "entries": [
+      "/blogs/the-custom-kitchen-where-craft-meets-everyday-life"
+    ]
+  },
+  "/blogs/tags/sustainable-building": {
+    "title": "Sustainable Building",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on sustainable building for custom builds.",
+    "documentTitle": "Sustainable Building | Dconstruct Insights",
+    "entries": [
+      "/blogs/what-it-really-costs-to-build-a-custom-home-in-2026",
+      "/blogs/second-storey-additions-what-s-possible-on-your-block",
+      "/blogs/renovating-while-you-live-in-it-a-survival-guide",
+      "/blogs/indoor-outdoor-living-designing-seamless-transitions",
+      "/blogs/heritage-homes-renovating-with-respect",
+      "/blogs/budgeting-beyond-the-build-the-costs-people-forget",
+      "/blogs/site-preparation-why-groundwork-makes-or-breaks-a-build"
+    ]
+  },
+  "/blogs/tags/timber-framing": {
+    "title": "Timber Framing",
+    "label": "NEWS & UPDATES",
+    "summary": "Ideas and advice on timber framing for custom builds.",
+    "documentTitle": "Timber Framing | Dconstruct Insights",
+    "entries": [
+      "/blogs/designing-for-natural-light-orientation-done-right",
+      "/blogs/renovating-while-you-live-in-it-a-survival-guide",
+      "/blogs/heritage-homes-renovating-with-respect"
+    ]
+  }
+}

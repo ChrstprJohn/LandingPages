@@ -5,6 +5,15 @@
     "ignoreValues": [
       {
         "rule": "overused-font",
+        "value": "geist",
+        "files": [
+          "sites/construction-2/src/styles.css"
+        ],
+        "createdAt": "2026-11-27T00:28:49.343Z",
+        "reason": "Agent decided: browser inspection confirmed Geist is the body font on the supplied Ironwood reference, and the requested recreation preserves its typography."
+      },
+      {
+        "rule": "overused-font",
         "value": "instrument serif",
         "createdAt": "2026-11-14T16:24:08.427Z",
         "reason": "Agent decided: Google Fonts import matches the supplied Lundani Studio reference typography for this faithful recreation."
