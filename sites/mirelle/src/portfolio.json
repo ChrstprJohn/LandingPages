@@ -1,0 +1,1483 @@
+{
+  "projects": [
+    {
+      "slug": "iver-and-co",
+      "title": "Iver & Co",
+      "description": "A new identity for a family-run outfitter, from the sign above the door to the smallest garment tag. Built around deep green, warm paper and a single mark.",
+      "year": "2024",
+      "category": "Brand Identity",
+      "cover": {
+        "file": "iver-and-co-cover.webp",
+        "alt": "A face in profile amid green light and drifting smoke"
+      },
+      "summary": "Iver & Co is a concept for a shop that repairs outdoor clothing alongside selling it. The brief started with the overstuffed wall behind the repairs counter, where paper receipts, alterations tags and saved buttons all had their own visual language. We wanted someone dropping off a well-worn coat to feel the same care as someone buying one for the first time.\n\nThe identity pairs a compact serif wordmark with moss green and the natural colour of uncoated stock. A shadowed portrait sets the tone for the campaign, while the smaller pieces carry only the information a customer needs. Shop bags, tags and workshop slips all come from the same set of templates.",
+      "sections": [
+        {
+          "title": "Start where coats get mended.",
+          "paragraphs": [
+            "We drew the first layouts for four things used at the counter every day. A repair tag had to leave room for a note in pencil. A receipt needed an obvious place for the collection date. Neither could spare much space for a decorative border.",
+            "The jacket labels gave us the final wordmark width. Once it could fit a narrow cotton strip without folding over the edge, the same drawing could go on the door. We kept the shop name together across both sizes."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "white-wall.webp",
+              "alt": "A rough white plaster surface"
+            },
+            {
+              "file": "pendant-lights.webp",
+              "alt": "Dark pendant lights against a warm wall"
+            }
+          ]
+        },
+        {
+          "title": "Two inks, one stack of paper.",
+          "paragraphs": [
+            "Dark green does most of the work, with a warm black reserved for details that need sharper contrast. The pale plaster and turned edges in the studio photographs helped us settle on a matte stock with just enough texture.",
+            "Everything that runs through the counter printer uses one paper size. Anything shipped with a garment uses a second. The supplier can keep both in stock, and the store can change the collection hours without reprinting boxes."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "crumpled-sheet.webp",
+              "alt": "Creases in a pale sheet"
+            },
+            {
+              "file": "concrete-planes.webp",
+              "alt": "Beige concrete building planes in daylight"
+            }
+          ]
+        },
+        {
+          "title": "Give the campaign room to breathe.",
+          "paragraphs": [
+            "The lead image is a green-lit profile. We let shadows run beyond the figure and left the type low in the composition so the eye can follow the light first. The campaign has room for longer winter nights and brighter spring editions.",
+            "We finished with a short print guide on using the mark, setting care instructions and adding a new repair service. It could sit in a drawer under the till beside the current forms."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "folded-fabric.webp",
+              "alt": "Soft folds and deep shadows in pale fabric"
+            },
+            {
+              "file": "curved-building.webp",
+              "alt": "The curve of a white building against the sky"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "orren-studio",
+        "alder-botanics"
+      ]
+    },
+    {
+      "slug": "orren-studio",
+      "title": "Orren Studio",
+      "description": "Art direction for a small practice working in restoration. Black-and-white photography, broad margins and a sequence that puts the materials in view.",
+      "year": "2025",
+      "category": "Art Direction",
+      "cover": {
+        "file": "orren-studio-cover.webp",
+        "alt": "A stack of clothbound books on a small table"
+      },
+      "summary": "Orren Studio imagines an architecture office with a habit of keeping the full record of a building. There are measured drawings, photographs of the joins and old samples from places that have changed hands. The task was to make an archive for the public without throwing out the details the architects would need later.\n\nBooks provided the sense of scale. We treated the site as a set of open spreads, with one principal image per view and a narrower area for captions, dates and notes. Rooms, thresholds and fittings appear in the order someone might encounter them in a visit.",
+      "sections": [
+        {
+          "title": "Draw the visitor's route first.",
+          "paragraphs": [
+            "The opening sequence moves from a full view of the building to its entrance, then turns into the rooms. A detail can sit at the end of the sequence when its significance depends on seeing the entire space first.",
+            "Each job follows that order even when a different part of the building becomes the lead image. Older projects fit the same catalogue."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "stone-corridor.webp",
+              "alt": "A long stone corridor with vaulted arches"
+            },
+            {
+              "file": "mountain-track.webp",
+              "alt": "Tyre tracks on a road beneath a low mountain cloud"
+            }
+          ]
+        },
+        {
+          "title": "Keep a single scale for the captions.",
+          "paragraphs": [
+            "The short, numbered captions borrow their proportions from reference books. Details stay close to what they describe and can be read on a phone without pinching. Location and date have the same ordered positions throughout.",
+            "Photography moves between dark threshold views and pale daylight. Keeping the text and margins steady makes those changes in light more tangible. The type does its work at two scales and a set of wide intervals."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "pendant-lights.webp",
+              "alt": "Dark pendant lights against a warm wall"
+            },
+            {
+              "file": "layered-mountains.webp",
+              "alt": "Layers of misted hills in early light"
+            }
+          ]
+        },
+        {
+          "title": "Leave room for the next building.",
+          "paragraphs": [
+            "At the end of the sequence we show sourcing details and the project team in a compact set of lines. The public archive can hold a few pictures or a dozen without needing special treatment for either.",
+            "The print edition uses the same image order. A book for a particular building can be assembled from the archive with its drawings and photography still connected to the right dates."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "curved-building.webp",
+              "alt": "The curve of a white building against the sky"
+            },
+            {
+              "file": "fogged-pines.webp",
+              "alt": "Tall pines in dense morning fog"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "alder-botanics",
+        "fallow-press"
+      ]
+    },
+    {
+      "slug": "alder-botanics",
+      "title": "Alder Botanics",
+      "description": "An identity for seasonal botanical oils, with orange field photography, dry paper and a label system that leaves room for the harvest date.",
+      "year": "2025",
+      "category": "Brand Identity",
+      "cover": {
+        "file": "alder-botanics-cover.webp",
+        "alt": "Orange poppies backlit by the evening sun"
+      },
+      "summary": "Alder Botanics is an imagined line of plant oils with short runs and no promise that every product will be made again. The label has to explain what it contains, where the ingredients came from and when that batch was mixed. The collection needs a family resemblance that survives its changing ingredients.\n\nThe orange flowers in evening light introduced a bright tone in an otherwise earthy system. We paired the photos with plain type, a small illustration for each plant and generous space for batch numbers. Sleeves and small cartons share one warm paper so the variation comes from the plants and the ink.",
+      "sections": [
+        {
+          "title": "Let the harvest set the palette.",
+          "paragraphs": [
+            "We started with the colour of pressed petals after several weeks between paper. Stems had already browned and some of the orange had gone almost red. Those colours felt closer to the workshop than the saturated swatches in a printing catalogue.",
+            "The range uses two accent inks at a time. The producer can introduce a third when a new ingredient deserves it."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "stems-in-glass.webp",
+              "alt": "Green stems in a glass bottle"
+            },
+            {
+              "file": "crumpled-sheet.webp",
+              "alt": "Creases in a pale sheet"
+            }
+          ]
+        },
+        {
+          "title": "Make the batch number part of the label.",
+          "paragraphs": [
+            "The front has just enough space to name the plant and the preparation. The paper wrap then turns into a narrow panel for the source, ingredients and date, set in an order that is easy to scan.",
+            "We left a clear area for a rubber stamp so a small run can be packed by hand. The label files stay the same while a new crop moves through the workshop."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "mist-at-dawn.webp",
+              "alt": "A low layer of fog over a field at sunrise"
+            },
+            {
+              "file": "trees-at-first-light.webp",
+              "alt": "Trees beside still water at first light"
+            }
+          ]
+        },
+        {
+          "title": "Take the field into the shop.",
+          "paragraphs": [
+            "The imagery stays close to the growing season. A late afternoon landscape sets the pace, followed by stem studies and soft details of paper or cloth.",
+            "Small instruction cards sit behind the display stock. They carry the same plant mark as the label and explain when to use the oil, with open space for the shop to write down a suggestion."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "folded-fabric.webp",
+              "alt": "Soft folds and deep shadows in pale fabric"
+            },
+            {
+              "file": "meadow-tree.webp",
+              "alt": "One tree in a sunlit meadow at a distance"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "fallow-press",
+        "sela-ceramics"
+      ]
+    },
+    {
+      "slug": "fallow-press",
+      "title": "Fallow Press",
+      "description": "An editorial system for a press between fiction and visual culture. Quiet covers and a clear spine let each title travel comfortably on its own.",
+      "year": "2023",
+      "category": "Editorial Design",
+      "cover": {
+        "file": "fallow-press-cover.webp",
+        "alt": "A blurred person passing a pale stone wall"
+      },
+      "summary": "Fallow Press is designed as an independent home for slim books that change shape as you read. A short novel might be followed by an illustrated essay. The first stock list therefore needed a system that could identify the press without flattening the differences between its titles.\n\nThe concept combines a pale field with one moving or soft-focus image at a time. We fixed the spine, author line and imprint position across the series. Translating those choices into tables, jackets and a catalogue gave the stories room to change form from one release to the next.",
+      "sections": [
+        {
+          "title": "Learn what a spine can say.",
+          "paragraphs": [
+            "We tested the books on a shelf first, at the distance someone might stand from a row in a shop. Author, title and series mark needed enough separation to stay legible on the thinnest volume.",
+            "The spine handed us a limit for the largest type. From there we could adapt a short title, a longer book title and a two-line author credit to the same small area."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "crumpled-sheet.webp",
+              "alt": "Creases in a pale sheet"
+            },
+            {
+              "file": "concrete-planes.webp",
+              "alt": "Beige concrete building planes in daylight"
+            }
+          ]
+        },
+        {
+          "title": "Work with the marks already on the page.",
+          "paragraphs": [
+            "The brief called for images with movement or surface detail. A blurred silhouette leaves a way into the cover without fixing one interpretation of the text. A few titles can stay almost entirely pale.",
+            "Paper samples provided an additional spacing exercise. Balancing the visual weight of the leading and the margins made a dense opening chapter feel related to the more open pages of an essay."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "linen-weave.webp",
+              "alt": "Natural linen with an open weave"
+            },
+            {
+              "file": "white-wall.webp",
+              "alt": "A rough white plaster surface"
+            }
+          ]
+        },
+        {
+          "title": "Give booksellers a useful file.",
+          "paragraphs": [
+            "The complete catalogue uses a compact description, publication timing and a one-line listing for bookshops. Each data block works on a sheet handed over at a fair or inside an email.",
+            "We kept the imagery linked to the edition information so a later reprint can be listed alongside an older run without confusing the two covers."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "green-glass-set.webp",
+              "alt": "A green glass bottle and tumbler"
+            },
+            {
+              "file": "stone-corridor.webp",
+              "alt": "A long stone corridor with vaulted arches"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "sela-ceramics",
+        "luma-atelier"
+      ]
+    },
+    {
+      "slug": "sela-ceramics",
+      "title": "Sela Ceramics",
+      "description": "A visual language for domestic ceramics in small runs. Movement, warm clay and handwritten batch notes give the collection the pace of the workshop.",
+      "year": "2023",
+      "category": "Art Direction",
+      "cover": {
+        "file": "sela-ceramics-cover.webp",
+        "alt": "Orange flowers blurred into a circular sweep"
+      },
+      "summary": "Sela Ceramics is an imagined maker's collection built around the variation that happens inside a kiln. Mugs, shallow bowls and jugs are formed with a small set of tools, although the finished surface can be very different from one firing to another. The brief made that variation part of the identity.\n\nA bright flower photographed in motion points to the marks that arise from turning a piece. We developed a slower set of supporting photographs around the studio shelves, hands and drying forms. Plain paper and a small type system leave each object easy to recognise.",
+      "sections": [
+        {
+          "title": "Begin with the working shelves.",
+          "paragraphs": [
+            "We looked at the forms at the stage where they still carry every fingerprint. One shelf becomes a record of how a batch changes before it is fired. The layouts borrowed that repetition without making the pieces feel identical.",
+            "We saved the broadest image areas for a handmade surface at close range."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "pottery-shelves.webp",
+              "alt": "Clay pots and bowls on studio shelves"
+            },
+            {
+              "file": "green-glass-set.webp",
+              "alt": "A green glass bottle and tumbler"
+            }
+          ]
+        },
+        {
+          "title": "Put the batch in the box.",
+          "paragraphs": [
+            "The labels include the clay body, glaze and a line for firing notes. A clear line of text keeps dimensions together for anyone buying a set across multiple runs. The details are laid out in the order the workshop enters them.",
+            "The packaging starts with three plain boxes. An insert can change size or move between them, letting the same print order cover pieces with a slightly different height or handle."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "stems-in-glass.webp",
+              "alt": "Green stems in a glass bottle"
+            },
+            {
+              "file": "folded-fabric.webp",
+              "alt": "Soft folds and deep shadows in pale fabric"
+            }
+          ]
+        },
+        {
+          "title": "Photograph the small differences.",
+          "paragraphs": [
+            "The image sequence moves between the open workshop and a single object lit across its surface. In the narrow crops, shadows show where a rim dips or folds inwards. The wider shots give the making room a place in the story.",
+            "A short care card accompanies every piece and uses the same mark and paper as the batch label.",
+            "We left the last panel of the brochure for notes on forthcoming firings. It can hold a list or a single date."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "sculpted-clay.webp",
+              "alt": "A small, folded ceramic sculpture in side light"
+            },
+            {
+              "file": "mist-at-dawn.webp",
+              "alt": "A low layer of fog over a field at sunrise"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "luma-atelier",
+        "venn-house"
+      ]
+    },
+    {
+      "slug": "luma-atelier",
+      "title": "Luma Atelier",
+      "description": "An identity study for a wardrobe atelier, pairing soft portraiture and natural cloth with a practical run of labels, fitting cards and editorial pages.",
+      "year": "2024",
+      "category": "Brand Identity",
+      "cover": {
+        "file": "luma-atelier-cover.webp",
+        "alt": "A blurred double exposure in a cool grey room"
+      },
+      "summary": "Luma Atelier imagines a made-to-order wardrobe built from a few fabric weights. Clients come in to handle cloth, try pieces and choose small adjustments to a particular cut. The identity has to work on the table while fittings are happening, as well as on a site that gives each piece room to move.\n\nWe chose a blurred portrait held in cool light as the opening image. It introduces movement without attaching the collection to a particular season. Scale and rhythm carry through the lookbook, with spare information kept near the edge and room in the print pieces for handwritten fitting notes.",
+      "sections": [
+        {
+          "title": "Find the form in motion.",
+          "paragraphs": [
+            "A changing silhouette tells more about a garment than a fixed display. The image treatment studies the shoulder, the turn of a collar and the moment when a sleeve falls back into place. It feels natural even on a small cover.",
+            "The other images bring hands and cloth closer, building up the surface of the collection between looks."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "sculpted-clay.webp",
+              "alt": "A small, folded ceramic sculpture in side light"
+            },
+            {
+              "file": "linen-weave.webp",
+              "alt": "Natural linen with an open weave"
+            }
+          ]
+        },
+        {
+          "title": "Keep the fitting card clear.",
+          "paragraphs": [
+            "We based the typography on the size of the measurements actually used in a fitting. The table can be read while someone is standing and it has spare lines for adjustments to the pattern.",
+            "The label and delivery slip take the same type sizes. Each stays compact and the reference number appears in the same position, so the atelier can return to the right pattern later."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "folded-fabric.webp",
+              "alt": "Soft folds and deep shadows in pale fabric"
+            },
+            {
+              "file": "sculpted-clay.webp",
+              "alt": "A small, folded ceramic sculpture in side light"
+            }
+          ]
+        },
+        {
+          "title": "Set a gentler pace online.",
+          "paragraphs": [
+            "The digital lookbook opens with an unbroken frame, then allows a different width for a detail photo. A small legend gives the fibre and style names alongside the image rather than at the end.",
+            "The transitions were drawn to suit slower footage and still images alike. A new set of photographs can come in with a different palette and still follow the same sequence.",
+            "A lightweight summary at the end of the page makes the pieces easy to refer to during a fitting."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "crumpled-sheet.webp",
+              "alt": "Creases in a pale sheet"
+            },
+            {
+              "file": "fogged-pines.webp",
+              "alt": "Tall pines in dense morning fog"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "venn-house",
+        "pike-and-lune"
+      ]
+    },
+    {
+      "slug": "venn-house",
+      "title": "Venn House",
+      "description": "A small identity for an imagined guesthouse, centred on arrival. Room notes, a neighbourhood map and markers share the warmth of the interior.",
+      "year": "2022",
+      "category": "Brand Identity",
+      "cover": {
+        "file": "venn-house-cover.webp",
+        "alt": "A wood-floored attic room with sloping ceilings"
+      },
+      "summary": "Venn House is a concept for a guesthouse on the upper floors of a former workshop. The best light comes in from the stairwell, where guests pause before finding their rooms. That first trip upstairs gave us a useful order for everything from the street sign to the folder on a bedside table.\n\nWe drew a simple sequence of room numbers and left the existing materials visible around them. Walnut, warm glass and faded paper set the palette. The information stays brief and moves from what visitors need as they arrive to the details they might want the following morning.",
+      "sections": [
+        {
+          "title": "Follow the light upstairs.",
+          "paragraphs": [
+            "We began the visit at street level and noted where a person would stop to look for an instruction. The entrance has one sign near the door, and room numbers sit where the best light already falls on them.",
+            "The arrival folder is the first place the guesthouse adds a more personal voice. It can be used in every room."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "trees-at-first-light.webp",
+              "alt": "Trees beside still water at first light"
+            },
+            {
+              "file": "flooded-tree.webp",
+              "alt": "A bare tree reflected in flooded ground"
+            }
+          ]
+        },
+        {
+          "title": "Make the room guide fold flat.",
+          "paragraphs": [
+            "Dropping extra folds allowed the guide to stay open on a narrow desk. The back has a neighbourhood route that can be read without unfolding the parts about breakfast or checking out. Type stays large enough for softer evening light.",
+            "The headings match the way each room is numbered. Any page can be updated on the same stock if a detail about the stay changes, with a clear version date for the team."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "low-sun-in-mist.webp",
+              "alt": "Low sunlight over a fog-covered field"
+            },
+            {
+              "file": "mountain-track.webp",
+              "alt": "Tyre tracks on a road beneath a low mountain cloud"
+            }
+          ]
+        },
+        {
+          "title": "Draw the quiet corners.",
+          "paragraphs": [
+            "The image direction looks for the part of a room where its older materials meet the new fittings. Window light, quiet levels and warmer floorboards are enough to hold a frame.",
+            "Digital room cards carry the same sequence of images as the guide. Shot size then changes from wider room views to a handful of smaller details in the order a visitor would notice them."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "moorland-walk.webp",
+              "alt": "Hikers at a distance on a misted hillside"
+            },
+            {
+              "file": "layered-mountains.webp",
+              "alt": "Layers of misted hills in early light"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "pike-and-lune",
+        "rowan-and-flint"
+      ]
+    },
+    {
+      "slug": "pike-and-lune",
+      "title": "Pike & Lune",
+      "description": "An art direction study for a print dealer, with abundant side light and a catalogue that leaves the work enough space to sit on the page.",
+      "year": "2022",
+      "category": "Art Direction",
+      "cover": {
+        "file": "pike-and-lune-cover.webp",
+        "alt": "Framed pictures lining a warm wood hallway"
+      },
+      "summary": "Pike & Lune is imagined as a dealer in small-run prints and things made on paper. Each work arrives with a different amount of information. A useful catalogue needs room to explain an edition, its paper and framing, without making the basic stock list hard to read.\n\nWe approached the project as a walk down a long hall, following framed works at intervals. Warm wood and directional daylight surround the pages. The system uses close details of paper and honest room views to show scale, with a caption placed low enough to read without interrupting the image.",
+      "sections": [
+        {
+          "title": "Leave a wall between the pictures.",
+          "paragraphs": [
+            "A gap between two works changes how both are read. The catalogue borrows that interval by alternating solitary plates with shorter detail views, giving a print enough room to stand by itself.",
+            "The paper sits slightly warm next to stronger tones. On a screen the same value holds detail in the shadow end of the photographs."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "sculpted-clay.webp",
+              "alt": "A small, folded ceramic sculpture in side light"
+            },
+            {
+              "file": "pottery-shelves.webp",
+              "alt": "Clay pots and bowls on studio shelves"
+            }
+          ]
+        },
+        {
+          "title": "Put the edition within reach.",
+          "paragraphs": [
+            "We compared the things a collector asks for in person with the order they appear in the stock form. The listing now gives artist, date and edition first, followed by technique and the size of the paper.",
+            "Every full-page plate can take a narrow caption on one side. Labels for frames, a print checklist and the online listing use the same column widths and item order."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "metal-letterpress.webp",
+              "alt": "Two worn metal letterpress blocks"
+            },
+            {
+              "file": "pressed-botanicals.webp",
+              "alt": "Pressed flowers and leaves arranged on paper"
+            }
+          ]
+        },
+        {
+          "title": "Use the catalogue on both sides of the desk.",
+          "paragraphs": [
+            "The folder divides into a public image section and an inventory. Staff can put a close-up beside a plate at a viewing without moving the chain of item numbers.",
+            "We let daylight set the rhythm of the photography, especially in the warm dark spaces around a frame. It keeps pictures of different sizes from looking cropped to the same dimensions.",
+            "Individual sheets can be printed again as new editions arrive."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "timber-hall.webp",
+              "alt": "Vertical timber slats in a softly lit corridor"
+            },
+            {
+              "file": "magnolia-sky.webp",
+              "alt": "Pale magnolia blossoms against a blue sky"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "rowan-and-flint",
+        "maren-salt"
+      ]
+    },
+    {
+      "slug": "rowan-and-flint",
+      "title": "Rowan & Flint",
+      "description": "A cedar-toned identity for a workshop making small staircases and timber fittings. Grain, joinery and numbered drawings shape the printed materials.",
+      "year": "2025",
+      "category": "Brand Identity",
+      "cover": {
+        "file": "rowan-and-flint-cover.webp",
+        "alt": "A curving wooden stair viewed directly from above"
+      },
+      "summary": "Rowan & Flint imagines a shop fitting new timber into rooms that have already stood for decades. The details of each job sit in notebooks, finished drawings and scraps kept by the people doing the work. The concept brings that everyday record into a visual identity without losing the character of the materials.\n\nA view down a wooden staircase leads the study. We created a restrained mark, a set of forms for site measurements and a square catalogue that leaves space for details. Burnt black and pale paper carry the everyday print, with warmer wood tones reserved for the photography.",
+      "sections": [
+        {
+          "title": "Look down before drawing up.",
+          "paragraphs": [
+            "We took the first visual cue from a staircase seen from directly over the opening. One run of timber makes a simple repeated curve. The description and date fit in the quieter area around the line of the stairs.",
+            "From there the catalogue turns to the workshop. A saw, a jig and a few marks on a drawing show how the parts that look simple from a distance come together in order."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "timber-workshop.webp",
+              "alt": "An old workshop with tools and a tall window"
+            },
+            {
+              "file": "hands-on-clay.webp",
+              "alt": "Hands lifting the rim of a clay vessel on a spinning wheel"
+            }
+          ]
+        },
+        {
+          "title": "Read each drawing on site.",
+          "paragraphs": [
+            "Measurements need to stay clear in a narrow hallway, possibly with rough hands and very little light. We drew the columns around the pencilled values rather than around the border of an existing form.",
+            "The index runs the other way up the page, so a folded drawing keeps the project name and page number visible. A document can come back from a site visit with new marks and still be put in the correct bundle."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "linen-weave.webp",
+              "alt": "Natural linen with an open weave"
+            },
+            {
+              "file": "white-wall.webp",
+              "alt": "A rough white plaster surface"
+            }
+          ]
+        },
+        {
+          "title": "Keep the wood at the centre.",
+          "paragraphs": [
+            "Short captions identify the timber and the room, then leave the photograph alone. We used wider spaces around the overhead images so a curved detail can sit next to a drawing without looking forced into a grid.",
+            "The last piece is a plain folder for a completed project. It carries maintenance notes, a list of finishes and the drawings that might be referred to when another room is fitted."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "pendant-lights.webp",
+              "alt": "Dark pendant lights against a warm wall"
+            },
+            {
+              "file": "timber-hall.webp",
+              "alt": "Vertical timber slats in a softly lit corridor"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "maren-salt",
+        "briar-and-holt"
+      ]
+    },
+    {
+      "slug": "maren-salt",
+      "title": "Maren Salt",
+      "description": "A spare identity for a small-batch sea salt. Cool glass, mineral textures and clear batch details carry across the jar, refill pouch and trade materials.",
+      "year": "2023",
+      "category": "Brand Identity",
+      "cover": {
+        "file": "maren-salt-cover.webp",
+        "alt": "A translucent green bottle lit against pale paper"
+      },
+      "summary": "Maren Salt imagines a producer who harvests in short periods when the water and weather permit. The portfolio study follows the product from a clear glass jar on a kitchen shelf to the larger packets that a small shop might stock. Each version needs to be recognisable at a glance and easy to refill.\n\nWe set a cool, mineral palette against wide areas of pale paper, using a clear bottle study to set the temperature. The range shares one mark. Size, granularity and origin appear in a steady order so the smallest label stays readable.",
+      "sections": [
+        {
+          "title": "Take the palette from the water.",
+          "paragraphs": [
+            "A quiet lake and pale reflections gave the brand a set of restrained values. The type keeps a darker edge against the glass, and the labels let some light through so the product still has colour of its own.",
+            "We made the visual distinction between grades by leaving a larger or smaller white field. The name, source and quantity stay in the same place while the surface around them changes."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "trees-at-first-light.webp",
+              "alt": "Trees beside still water at first light"
+            },
+            {
+              "file": "flooded-tree.webp",
+              "alt": "A bare tree reflected in flooded ground"
+            }
+          ]
+        },
+        {
+          "title": "Fit the refill through the same door.",
+          "paragraphs": [
+            "The refill makes sense if a customer can find it beside the jar and read its size without tracing a new set of graphics. Each version carries a disposal line at the bottom, set with the same care as the product name.",
+            "The front of the packet gives a plain weight and the milling grade. Batch date and handling notes sit together at the back where they can be stamped after a run is packed."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "splash-detail.webp",
+              "alt": "A small water splash isolated against black"
+            },
+            {
+              "file": "concrete-planes.webp",
+              "alt": "Beige concrete building planes in daylight"
+            }
+          ]
+        },
+        {
+          "title": "Make the small print part of the design.",
+          "paragraphs": [
+            "We drew the trade sheet from the same family of parts. The figures remain easy to compare down a narrow column and leave the product descriptions as short lines.",
+            "The image sequence closes with faded fields and surface details. It signals the landscape around the product in a way that can still work in winter, when there is little direct daylight."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "green-glass-set.webp",
+              "alt": "A green glass bottle and tumbler"
+            },
+            {
+              "file": "linen-weave.webp",
+              "alt": "Natural linen with an open weave"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "briar-and-holt",
+        "aster-quartet"
+      ]
+    },
+    {
+      "slug": "briar-and-holt",
+      "title": "Briar & Holt",
+      "description": "Art direction for a florist working with branches and late-season stems. Deep shadows and a compact set of printed cards give the work a quiet setting.",
+      "year": "2025",
+      "category": "Art Direction",
+      "cover": {
+        "file": "briar-and-holt-cover.webp",
+        "alt": "Pale flowers in a narrow vase against a dark wall"
+      },
+      "summary": "Briar & Holt is a concept for a small floristry workshop that keeps a weekly list of what is in season. The owner can offer branches or foliage when an expected flower is unavailable. The design needs to hold the look of the practice together while the material in the shop changes frequently.\n\nWe began with stems leaning out of a dark vessel and an open patch of wall behind it. That balance between the dense form and the room around it gave us the basic proportions for the wrapping, cards and photographs. A warm grey stock holds both ink and a handwritten note.",
+      "sections": [
+        {
+          "title": "Give the stems a dark room.",
+          "paragraphs": [
+            "Photographs start with one arrangement and a small light from the side. The darker wall holds all the weight, while a few pale leaves and petals show where the stem turns towards the window.",
+            "We chose close crops only where the material can carry them. The wider pictures leave the table edge and workshop wall in view when they help explain the scale."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "stems-in-glass.webp",
+              "alt": "Green stems in a glass bottle"
+            },
+            {
+              "file": "orange-poppy.webp",
+              "alt": "An orange poppy photographed at close range"
+            }
+          ]
+        },
+        {
+          "title": "Make the order card useful at the bench.",
+          "paragraphs": [
+            "The card records the date, pick-up window and a delivery note. We gave the recipient's name more room after testing a long one against the fold. The bottom line is open for a small drawing or a shade picked by hand.",
+            "The printed pieces come from one paper size. A shop can bind blank order pads from the same stack as the cards that go out with each arrangement."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "pale-peony.webp",
+              "alt": "A white peony against teal fabric"
+            },
+            {
+              "file": "west-sound-cover.webp",
+              "alt": "White fabric in the wind over an open field"
+            }
+          ]
+        },
+        {
+          "title": "Follow one season into the next.",
+          "paragraphs": [
+            "The catalogue uses a repeating frame with space for a short note on what is available. New leaves and seed heads can appear in rough sequence without waiting for a full campaign.",
+            "We finish on details partly in shadow. They preserve the tone of the winter work while leaving the next collection open to brighter materials."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "green-glass-set.webp",
+              "alt": "A green glass bottle and tumbler"
+            },
+            {
+              "file": "pomegranate-on-linen.webp",
+              "alt": "A bowl of pomegranate seeds on pale linen"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "aster-quartet",
+        "wick-house-gardens"
+      ]
+    },
+    {
+      "slug": "aster-quartet",
+      "title": "Aster Quartet",
+      "description": "A direction for a chamber ensemble's programme, drawn from pauses and the marks between notes. Bright suspended forms interrupt a deep black field.",
+      "year": "2024",
+      "category": "Art Direction",
+      "cover": {
+        "file": "aster-quartet-cover.webp",
+        "alt": "A suspended splash of water against black"
+      },
+      "summary": "Aster Quartet imagines four musicians preparing an evening of shorter works. The running order moves from a very quiet opening to music whose density changes in a few bars. The printed programme has to help an audience follow those changes without turning the evening into a diagram.\n\nAn illuminated spray against black supplied the movement for the visual language. We kept title, composer and duration in a simple score-like structure. Posters use the open field for the ensemble name and date, while the programme introduces small changes of pace through its spreads.",
+      "sections": [
+        {
+          "title": "Find the space around the note.",
+          "paragraphs": [
+            "We set the image sequence around places in the programme where a piece gives way to silence. The photograph of suspended droplets holds details too small to see at first from across a room.",
+            "An exhibition poster can use a wider crop, holding the date low and allowing the bright form to claim most of the surface. Smaller formats compress the image before changing the reading order of the type."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "white-vaults.webp",
+              "alt": "White vaulted ceiling and carved columns"
+            },
+            {
+              "file": "stone-corridor.webp",
+              "alt": "A long stone corridor with vaulted arches"
+            }
+          ]
+        },
+        {
+          "title": "Give the evening a running order.",
+          "paragraphs": [
+            "The title and composer line stay close. Duration goes at the other end of the row, where an audience can see it without losing the name of the work. Ensemble notes appear only after that list.",
+            "We printed a small set of trial spreads with different weights of black. The choice keeps reverse type clear without making the highlights in the imagery feel clipped."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "curved-building.webp",
+              "alt": "The curve of a white building against the sky"
+            },
+            {
+              "file": "pendant-lights.webp",
+              "alt": "Dark pendant lights against a warm wall"
+            }
+          ]
+        },
+        {
+          "title": "Let the printed and moving versions meet.",
+          "paragraphs": [
+            "The digital sequence uses the same pauses as the printed handout. A movement ends before the next piece is introduced by name. The timing remains quiet enough to use in the lobby.",
+            "A final sheet holds details of the venue and performance. It can change for later events while the part of the programme about the music remains intact."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "blue-ridges.webp",
+              "alt": "Blue mountain ridges at dawn"
+            },
+            {
+              "file": "the-still-review-cover.webp",
+              "alt": "A bedroom with blue linen and bright sheer curtains"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "wick-house-gardens",
+        "the-still-review"
+      ]
+    },
+    {
+      "slug": "wick-house-gardens",
+      "title": "Wick House Gardens",
+      "description": "Art direction for a garden open across the seasons. Soft forest light and notes close to the images set the pace for a small visitor publication.",
+      "year": "2023",
+      "category": "Art Direction",
+      "cover": {
+        "file": "wick-house-gardens-cover.webp",
+        "alt": "Conifers and tall grass softened by fog"
+      },
+      "summary": "Wick House Gardens imagines a site with a wooded entrance, a planted courtyard and long beds cut through a slope. The first view of the garden is the path beneath the trees, where the outlines beyond it appear slowly in morning mist. We brought that gradual arrival into the imagery and guide.\n\nThe study moves from a pale forest to closer details of branch, bud and grass. The type and marks stay compact through those changes in scale. A small edition gives visitors a way to keep a record, with spaces where a new variety or seasonal hour can be added.",
+      "sections": [
+        {
+          "title": "Open with the walk in.",
+          "paragraphs": [
+            "The route begins with a bank of trees and turns into the first clear area. Alongside the opening photograph we left only enough space to orient a reader. The names of plants come later, where they have a surface or season to attach to.",
+            "We chose smaller images for individual leaves and marks. The surrounding gutter stays wide enough to work through the book in poor light outside."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "magnolia-sky.webp",
+              "alt": "Pale magnolia blossoms against a blue sky"
+            },
+            {
+              "file": "fogged-pines.webp",
+              "alt": "Tall pines in dense morning fog"
+            }
+          ]
+        },
+        {
+          "title": "Make weather part of the picture.",
+          "paragraphs": [
+            "The same spot can become a completely different composition from week to week. The direction allows for pale skies and soft backgrounds so a picture taken earlier in the season can sit beside an image made on a wet day.",
+            "We split the guide into areas that can be followed in any order. The entrance cover remains the same even when a path or planting area has a new opening time."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "orange-poppy.webp",
+              "alt": "An orange poppy photographed at close range"
+            },
+            {
+              "file": "west-sound-cover.webp",
+              "alt": "White fabric in the wind over an open field"
+            }
+          ]
+        },
+        {
+          "title": "Leave room for the next edition.",
+          "paragraphs": [
+            "The plant list can grow one page at a time. Pages take a standard inset and print in small bundles, and the introduction names the season without making promises about what will be in flower on a given day.",
+            "The final image looks back towards the trees, then gives way to a narrow strip of practical information for a return visit."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "pressed-botanicals.webp",
+              "alt": "Pressed flowers and leaves arranged on paper"
+            },
+            {
+              "file": "open-acre-cover.webp",
+              "alt": "The worn spines of old books on a shelf"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "the-still-review",
+        "vardon-museum"
+      ]
+    },
+    {
+      "slug": "the-still-review",
+      "title": "The Still Review",
+      "description": "An editorial prototype for a slow-reading journal. Cool morning light and generous page edges frame essays, short reviews and occasional photo sequences.",
+      "year": "2025",
+      "category": "Editorial Design",
+      "cover": {
+        "file": "the-still-review-cover.webp",
+        "alt": "A bedroom with blue linen and bright sheer curtains"
+      },
+      "summary": "The Still Review is an imagined quarterly for writing that benefits from a second reading. Long essays sit beside shorter notices and sequences of pictures. The editorial system needs to let those forms coexist without giving every contribution the same visual weight.\n\nWe gathered soft, ordinary scenes and built the first issue around the light at the start of a day. A pale bedroom introduces the mood. A small type system, legible captions and margins that leave room to rest a hand carry the journal from a short announcement to the longest essay.",
+      "sections": [
+        {
+          "title": "Set the longest essay first.",
+          "paragraphs": [
+            "We began with several consecutive pages of dense writing. Character width and leading came from that trial, including a version that had to survive a longer title and a run of short footnotes.",
+            "The grid divides into a steady reading area and an extra strip of space at the edge. Notes can sit there without compressing the principal line or moving its starting point."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "open-book.webp",
+              "alt": "The binding and leaves of an open book"
+            },
+            {
+              "file": "metal-letterpress.webp",
+              "alt": "Two worn metal letterpress blocks"
+            }
+          ]
+        },
+        {
+          "title": "Let the photographs keep their pace.",
+          "paragraphs": [
+            "A picture may fill a spread or stay small beside an observation. We avoided repeating one frame size through the entire issue; daylight and the room around an object can determine how large it needs to be.",
+            "Captions stay close and use the same face as the notes. In a photo sequence we use the margins to hold a pause, with the next essay clearly set away from the final picture."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "old-book-stack.webp",
+              "alt": "A stack of old books with worn edges"
+            },
+            {
+              "file": "printing-tools.webp",
+              "alt": "Printing and lettering tools laid out on a desk"
+            }
+          ]
+        },
+        {
+          "title": "Keep the index easy to return to.",
+          "paragraphs": [
+            "The contents bring together writing, image credits and contributor notes on a few pages. A reader who wants to find a detail a week later can start from a name or a section title.",
+            "The last page uses the same layout for details about the next issue and the dates that matter to contributors."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "fogged-pines.webp",
+              "alt": "Tall pines in dense morning fog"
+            },
+            {
+              "file": "flooded-tree.webp",
+              "alt": "A bare tree reflected in flooded ground"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "vardon-museum",
+        "west-sound"
+      ]
+    },
+    {
+      "slug": "vardon-museum",
+      "title": "Vardon Museum",
+      "description": "Exhibition print and wayfinding for a small museum study. Clear labels and a quiet publication leave the drama to the work on the walls.",
+      "year": "2024",
+      "category": "Editorial Design",
+      "cover": {
+        "file": "vardon-museum-cover.webp",
+        "alt": "Dark framed work centred on a pale gallery wall"
+      },
+      "summary": "Vardon Museum imagines a gallery assembling a show from objects, photographs and a newly opened archive. Information has to stay useful at the doorway, in the rooms and in a catalogue someone might bring home. We used the sightline from the entrance to decide how much a visitor should be asked to read at each point.\n\nA single framed work across a pale room gave the project its proportions. The system uses black with a restrained accent and places labels in one clear band. Printed pages keep enough space for objects with longer histories and short captions that can be read while standing.",
+      "sections": [
+        {
+          "title": "Read the room before adding a sign.",
+          "paragraphs": [
+            "On moving through a gallery, the eye looks for the doorway and the most distant visible wall. We put the introduction near that first turning point and left a clean view to the work ahead.",
+            "Section numbers remain consistent between the map and the room labels. A small detail belongs near its object even if the catalogue later explains it in more depth."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "pottery-shelves.webp",
+              "alt": "Clay pots and bowls on studio shelves"
+            },
+            {
+              "file": "splash-detail.webp",
+              "alt": "A small water splash isolated against black"
+            }
+          ]
+        },
+        {
+          "title": "Give the archive its own voice.",
+          "paragraphs": [
+            "In the catalogue, items with longer histories are set in a narrow secondary column. The main image stays paired with the artist, year and object title, so browsing does not require reading through each note.",
+            "We used open pages between parts of the archive to make the shifts of material visible. Texture and scale provide the changes in tone that a larger type system would otherwise have to cover."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "white-wall.webp",
+              "alt": "A rough white plaster surface"
+            },
+            {
+              "file": "metal-letterpress.webp",
+              "alt": "Two worn metal letterpress blocks"
+            }
+          ]
+        },
+        {
+          "title": "Keep the room labels in reach.",
+          "paragraphs": [
+            "Each label can be printed again at the museum if an object rotates or a credit changes. Positions and text sizes stay the same across the set.",
+            "The take-away map brings the same order of rooms into a folded format. Its final panel becomes a reading list and a place to record a future visit."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "white-vaults.webp",
+              "alt": "White vaulted ceiling and carved columns"
+            },
+            {
+              "file": "curved-building.webp",
+              "alt": "The curve of a white building against the sky"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "west-sound",
+        "hewn-annual"
+      ]
+    },
+    {
+      "slug": "west-sound",
+      "title": "West Sound",
+      "description": "An editorial study on wind, walking and the coast. Soft cloth and a low sky guide the images, with field notes given room to sit alongside them.",
+      "year": "2024",
+      "category": "Editorial Design",
+      "cover": {
+        "file": "west-sound-cover.webp",
+        "alt": "White fabric in the wind over an open field"
+      },
+      "summary": "West Sound imagines an annual booklet drawn from repeated walks along a loosely defined stretch of coast. The content comes in different forms: time and tide notes, short observations and photographs that follow weather over a season. The design needs to make those entries legible while retaining the slow pace of a walk.\n\nWe looked for an image of white fabric moving against grass and open sky. That contrast between a brief movement and a steady horizon sets the sequence. The print uses a soft paper and quiet type so route details can live near the images without becoming the lead.",
+      "sections": [
+        {
+          "title": "Make a clear place for the time of day.",
+          "paragraphs": [
+            "Notes from the earliest hour are grouped by route and date. The information still sits close to a photograph when the two appeared on the same walk and can be checked against the index.",
+            "We allowed a route to take up two spreads when visibility or weather changes along the way. That gives a single view time to settle before a second replaces it."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "trees-at-first-light.webp",
+              "alt": "Trees beside still water at first light"
+            },
+            {
+              "file": "fogged-pines.webp",
+              "alt": "Tall pines in dense morning fog"
+            }
+          ]
+        },
+        {
+          "title": "Keep the horizon in the frame.",
+          "paragraphs": [
+            "The lead images leave enough area above the grass to show a wind direction or the weight of the sky. Close views of fabric or a field edge can sit opposite them to make the bigger distances more apparent.",
+            "The main column is held back from the edge, even when a photograph runs to it. This leaves space for thumbs, a bent corner or a note pencilled beside an entry."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "low-sun-in-mist.webp",
+              "alt": "Low sunlight over a fog-covered field"
+            },
+            {
+              "file": "wick-house-gardens-cover.webp",
+              "alt": "Conifers and tall grass softened by fog"
+            }
+          ]
+        },
+        {
+          "title": "Bring the route back to a page.",
+          "paragraphs": [
+            "Near the end, the pages group the short routes together again and point to useful dates and observations. A map stays with the instructions it refers to.",
+            "The booklet closes with the weather. We used a quiet image that can be read at any distance from the page."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "layered-mountains.webp",
+              "alt": "Layers of misted hills in early light"
+            },
+            {
+              "file": "orange-poppy.webp",
+              "alt": "An orange poppy photographed at close range"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "hewn-annual",
+        "open-acre"
+      ]
+    },
+    {
+      "slug": "hewn-annual",
+      "title": "Hewn Annual",
+      "description": "A publication prototype about tables, tools and everyday making. Fruit and soft cloth establish a warm page, with recipes and workshop notes given equal care.",
+      "year": "2023",
+      "category": "Editorial Design",
+      "cover": {
+        "file": "hewn-annual-cover.webp",
+        "alt": "Apples and pears in a pale bowl on a wood table"
+      },
+      "summary": "Hewn Annual is an imagined collection of short essays about objects that are used often enough to lose their shine. A mixing bowl, a cloth or a handled tool may matter to an article in a different way from a finished piece. The book pairs each essay with images that show familiar objects in the light someone actually works in.\n\nWe drew the opening palette from a bowl of fruit on a pale table. Low sunlight, cream paper and close details of printing and clay sit together throughout the annual. The grid holds recipe quantities, longer lines of observation and captions without having to vary the type face.",
+      "sections": [
+        {
+          "title": "Start with things within reach.",
+          "paragraphs": [
+            "The first chapter is set on a table with a bowl, a piece of linen and a handful of notes. It uses those ordinary parts as the introduction to a book about work done across rooms and benches.",
+            "The margins let a photograph share a page with a paragraph in the same open light. We cut back the heading sizes as soon as they started to dominate the table."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "printing-tools.webp",
+              "alt": "Printing and lettering tools laid out on a desk"
+            },
+            {
+              "file": "old-book-stack.webp",
+              "alt": "A stack of old books with worn edges"
+            }
+          ]
+        },
+        {
+          "title": "Keep the lists easy to lift out.",
+          "paragraphs": [
+            "Recipes and instructions are set with their measurements in a column people can scan. This lets the rest of the text read at an easier pace and keeps short lists from spreading across an empty page.",
+            "The layout uses standard paper sizes in the workshop edition. A single set of pages can sit flat beside a wheel or a bowl while its owner refers to it."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "hands-on-clay.webp",
+              "alt": "Hands lifting the rim of a clay vessel on a spinning wheel"
+            },
+            {
+              "file": "centring-clay.webp",
+              "alt": "A potter holding a clay bowl on a wheel"
+            }
+          ]
+        },
+        {
+          "title": "Close on the marks of use.",
+          "paragraphs": [
+            "The photographic sequence follows the worn edges of tools, folds in cloth and hands working on a surface. Quiet crops make small changes visible without complicating the composition.",
+            "We gave the final notes the same type as the instructions. A late reference or material can be found as quickly as an opening recipe."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "stone-corridor.webp",
+              "alt": "A long stone corridor with vaulted arches"
+            },
+            {
+              "file": "concrete-planes.webp",
+              "alt": "Beige concrete building planes in daylight"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "open-acre",
+        "iver-and-co"
+      ]
+    },
+    {
+      "slug": "open-acre",
+      "title": "Open Acre",
+      "description": "An editorial identity for a journal about working land. Faded book cloth and overcast fields tie a growing series of issues into one recognisable collection.",
+      "year": "2022",
+      "category": "Editorial Design",
+      "cover": {
+        "file": "open-acre-cover.webp",
+        "alt": "The worn spines of old books on a shelf"
+      },
+      "summary": "Open Acre imagines a small journal that follows a few pieces of land over time. Each annual edition returns to the same subjects in a different season, adding drawings, short observations and visits to working spaces. The system has to identify an issue without distracting from field notes that often carry the most detail.\n\nA row of cloth-bound volumes established the tone. We used one imprint and a loose sequence of earth colours that can change between runs. Inside, photographs of fields give a reader distance from the close text and classroom-like drawings on the surrounding pages.",
+      "sections": [
+        {
+          "title": "Put the year on the spine.",
+          "paragraphs": [
+            "We tested one row of books with the covers hidden. A slightly wider space between title and date made the series readable at shelf height, while a low label identifies a particular area or issue.",
+            "On the front we held the year close to the title and allowed the colour to do very little work. That means a new cover can be printed on available cloth or stock later."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "mist-at-dawn.webp",
+              "alt": "A low layer of fog over a field at sunrise"
+            },
+            {
+              "file": "valley-in-mist.webp",
+              "alt": "Green hills underneath low clouds"
+            }
+          ]
+        },
+        {
+          "title": "Give field notes a steady frame.",
+          "paragraphs": [
+            "The short entries start with time and place, then move into observations at their natural length. Images can go across the gutter when a wider view matters or sit quietly beside a single note.",
+            "The maps come with a scale and practical marks. We reserved space for a handwritten addition so a reader can annotate a route without blocking a photograph."
+          ],
+          "layout": "grid",
+          "images": [
+            {
+              "file": "meadow-tree.webp",
+              "alt": "One tree in a sunlit meadow at a distance"
+            },
+            {
+              "file": "trees-at-first-light.webp",
+              "alt": "Trees beside still water at first light"
+            }
+          ]
+        },
+        {
+          "title": "Let the next issue grow from this one.",
+          "paragraphs": [
+            "We separated the fixed identity from the print pieces that follow each season. An editor can start a new run while keeping orders, page numbers and small type choices in familiar places.",
+            "The sample file ends with the landscape at a different hour. It leaves the book open to the notes that might come back from another visit."
+          ],
+          "layout": "stack",
+          "images": [
+            {
+              "file": "hands-on-clay.webp",
+              "alt": "Hands lifting the rim of a clay vessel on a spinning wheel"
+            },
+            {
+              "file": "stems-in-glass.webp",
+              "alt": "Green stems in a glass bottle"
+            }
+          ]
+        }
+      ],
+      "related": [
+        "iver-and-co",
+        "orren-studio"
+      ]
+    }
+  ],
+  "about": {
+    "heading": "I'm Rin Avel, the designer behind decodestudio. I make identities, publications and things that move.",
+    "intro": [
+      "decodestudio is an independent practice for identity, editorial work and art direction. I start by looking at the things people already use, from printed forms to the places they put them.",
+      "I move between type, photography and motion as the work takes shape. This portfolio is a collection of concept projects, with each study built around a different material or use."
+    ],
+    "introImages": [
+      {
+        "file": "timber-hall.webp",
+        "alt": "Vertical timber slats in a softly lit corridor"
+      },
+      {
+        "file": "figure-by-window.webp",
+        "alt": "A figure in shadow beside a bright window"
+      }
+    ],
+    "experienceHeading": "From the press room to my own studio.",
+    "experienceIntro": "A fictional studio timeline, from folding sheets and checking proofs to leading projects and putting the pieces together at decodestudio.",
+    "experience": [
+      [
+        "Founder",
+        "Developing identities, publications and motion systems for the people who make, publish and look after physical things.",
+        "decodestudio",
+        "Independent",
+        "[2021–Present]"
+      ],
+      [
+        "Design Lead",
+        "Shaped art direction and type systems for small cultural programmes, from early image work through the finished publication.",
+        "Morrow Room",
+        "London, UK",
+        "[2018–2021]"
+      ],
+      [
+        "Editorial Designer",
+        "Set long-form pages, prepared exhibition handouts and worked with a small press on paper, finishes and edition sizes.",
+        "Wickline Press",
+        "Bristol, UK",
+        "[2015–2018]"
+      ],
+      [
+        "Junior Designer",
+        "Prepared layouts and print files for wayfinding, room guides and small books, with a particular focus on photography.",
+        "Fold House",
+        "Copenhagen, DK",
+        "[2013–2015]"
+      ],
+      [
+        "Design Assistant",
+        "Set short runs of type, checked the grain in paper and helped finish books by hand in a shared workshop.",
+        "Plover Bindery",
+        "Edinburgh, UK",
+        "[2012–2013]"
+      ],
+      [
+        "Studio Assistant",
+        "Looked after reference books and image files, kept samples in order and learned the rhythm of a small print room.",
+        "Highbank Office",
+        "Leeds, UK",
+        "[2010–2012]"
+      ]
+    ],
+    "services": [
+      {
+        "title": "Visual Identity",
+        "tags": [
+          "Wordmarks",
+          "Art Direction",
+          "Brand Systems"
+        ],
+        "description": "Identity starts with the places it has to live. I build the mark, type and colour around a real set of uses, from a garment tag to a printed sign.",
+        "image": {
+          "file": "yellow-flower-portrait.webp",
+          "alt": "Yellow flowers partly concealing a face in profile"
+        }
+      },
+      {
+        "title": "Editorial Design",
+        "tags": [
+          "Publications",
+          "Grid Systems",
+          "Print Production"
+        ],
+        "description": "I bring writing, imagery and notes into a readable order for books and catalogues. Paper and binding are part of the design from the first layout.",
+        "image": {
+          "file": "notebook-on-wood.webp",
+          "alt": "A dark notebook and pen on a wooden desk"
+        }
+      },
+      {
+        "title": "Illustration",
+        "tags": [
+          "Covers",
+          "Editorial",
+          "Packaging"
+        ],
+        "description": "Drawn marks for covers, printed inserts and packaging. I work with ink, paper and simple shapes that can repeat across a set without losing their character.",
+        "image": {
+          "file": "west-sound-cover.webp",
+          "alt": "White fabric in the wind over an open field"
+        }
+      },
+      {
+        "title": "Motion & Digital",
+        "tags": [
+          "Title Cards",
+          "Web Direction",
+          "Social Templates"
+        ],
+        "description": "I carry an identity into title cards, small websites and moving image. Type and imagery keep their relationships as the timing and format change.",
+        "image": {
+          "file": "aster-quartet-cover.webp",
+          "alt": "A suspended splash of water against black"
+        }
+      }
+    ],
+    "servicesEnd": {
+      "file": "magnolia-sky.webp",
+      "alt": ""
+    },
+    "trustHeading": "A few notes from the work on these pages.",
+    "trustIntro": "Every concept started with a particular detail. These are five things that changed the approach, from a narrow book spine to the light in a guesthouse.",
+    "closingImages": [
+      {
+        "file": "studio-painting.webp",
+        "alt": "An artist working at an easel, seen from behind"
+      },
+      {
+        "file": "vardon-museum-cover.webp",
+        "alt": "Dark framed work centred on a pale gallery wall"
+      }
+    ],
+    "projectNotes": [
+      {
+        "text": "The smallest sign sits at the first landing. We kept the rest of the information for the moment a guest reaches their room.",
+        "project": "Venn House",
+        "scope": "Brand Identity study",
+        "image": {
+          "file": "venn-house-cover.webp",
+          "alt": "A wood-floored attic room with sloping ceilings"
+        }
+      },
+      {
+        "text": "A person browsing the shelf sees the spine first. Setting the credit there gave us the smallest useful scale for the type.",
+        "project": "Fallow Press",
+        "scope": "Editorial Design study",
+        "image": {
+          "file": "fallow-press-cover.webp",
+          "alt": "A blurred person passing a pale stone wall"
+        }
+      },
+      {
+        "text": "The clay comes out of the kiln with its own variation. One line for firing notes on the box made room for what had changed.",
+        "project": "Sela Ceramics",
+        "scope": "Art Direction study",
+        "image": {
+          "file": "sela-ceramics-cover.webp",
+          "alt": "Orange flowers blurred into a circular sweep"
+        }
+      },
+      {
+        "text": "An edition number is easier to find if it always sits beside the artist and date. We kept those details together on paper and on screen.",
+        "project": "Pike & Lune",
+        "scope": "Art Direction study",
+        "image": {
+          "file": "pike-and-lune-cover.webp",
+          "alt": "Framed pictures lining a warm wood hallway"
+        }
+      },
+      {
+        "text": "Room for a fitting note matters more than another large picture on the card. The lookbook carries the image at its own pace.",
+        "project": "Luma Atelier",
+        "scope": "Brand Identity study",
+        "image": {
+          "file": "luma-atelier-cover.webp",
+          "alt": "A blurred double exposure in a cool grey room"
+        }
+      }
+    ]
+  }
+}
