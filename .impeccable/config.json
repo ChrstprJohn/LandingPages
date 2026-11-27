@@ -40,7 +40,7 @@
         "rule": "side-tab",
         "value": "*",
         "files": [
-          "sites/dunkly/src/styles.css"
+          "sites/dcdonut/src/styles.css"
         ],
         "createdAt": "2026-11-27T00:31:03.366Z",
         "reason": "Agent decided: live browser inspection measured a 4px cocoa divider on the full-height Dunkly cart drawer at desktop and phone widths. The recreation intentionally matches that divider."
@@ -49,7 +49,7 @@
         "rule": "bounce-easing",
         "value": "cubic-bezier(.24, .75, .3, 1.2)",
         "files": [
-          "sites/dunkly/src/styles.css"
+          "sites/dcdonut/src/styles.css"
         ],
         "createdAt": "2026-11-27T01:06:54.277Z",
         "reason": "Agent decided: live-reference pointer sampling measured the Dunkly primary button briefly at -3.15px before it settled at -3px. The slight overshoot preserves that motion."

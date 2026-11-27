@@ -102,7 +102,7 @@ importers:
         specifier: ^7.3.0
         version: 7.3.8(jiti@2.7.0)(lightningcss@1.33.0)
 
-  sites/dunkly:
+  sites/dcdonut:
     dependencies:
       '@gsap/react':
         specifier: ^2.1.2
