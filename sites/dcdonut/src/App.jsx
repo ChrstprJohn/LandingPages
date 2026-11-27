@@ -54,7 +54,7 @@ function Navigation({ count, onBox }) {
       <div className="nav-links nav-left">
         {nav.slice(0, 3).map(([label, href]) => <a key={href} href={href} aria-current={activeNav === href ? 'page' : undefined}>{label}</a>)}
       </div>
-      <a className="wordmark" href={isHome ? '#top' : '/'} aria-label="Dunkly home" onClick={() => setMenuOpen(false)}>dunkly</a>
+      <a className="wordmark" href={isHome ? '#top' : '/'} aria-label="dcdonut home" onClick={() => setMenuOpen(false)}>dcdonut</a>
       <div className="nav-right flex items-center">
         <div className="nav-links">
           {nav.slice(3).map(([label, href]) => <a key={href} href={href} aria-current={activeNav === href ? 'page' : undefined}>{label}</a>)}
@@ -160,7 +160,7 @@ function PromiseSection() {
       <div className="content-width promise-layout">
         <div className="promise-intro" data-heading>
           <span className="eyebrow">our promise</span>
-          <Display className="stacked">THE DUNKLY WAY</Display>
+          <Display className="stacked">THE DCDONUT WAY</Display>
           <p>Four rules we never break. Not on Mondays, not on holidays, not ever.</p>
           <div className="promise-art"><Seal /><div className="promise-donut-float"><Donut kind="hero" /></div></div>
         </div>
@@ -224,7 +224,7 @@ function FAQ() {
 
 const footerLinks = [
   ['shop', [['all donuts', '/shop'], ['build a box', '/build-a-box'], ['your box', '/cart']]],
-  ['dunkly', [['our story', '/our-story'], ['find a shop', '/find-a-shop'], ['contact us', '/contact']]],
+  ['dcdonut', [['our story', '/our-story'], ['find a shop', '/find-a-shop'], ['contact us', '/contact']]],
   ['help', [['delivery', '/delivery'], ['faq', '/delivery#faq'], ['privacy', '/privacy'], ['terms', '/terms']]],
 ]
 
@@ -252,12 +252,12 @@ function Footer() {
         </div>
         <div className="footer-art">
           <p data-reveal>life’s better when it’s</p>
-          <div className="footer-logo">dunkly</div>
+          <div className="footer-logo">dcdonut</div>
           <span className="drag-hint">(go on, drag a donut)</span>
           {['cocoa', 'berry', 'hazel', 'hero'].map((kind, i) => <div className={`drag-donut drag-${i}`} data-drag key={kind}><div className="drag-donut-hover"><Donut kind={kind} /></div></div>)}
         </div>
         <div className="footer-bottom">
-          <p>© 2026 dunkly donut co.</p>
+          <p>© 2026 dcdonut</p>
           <div className="socials flex flex-wrap justify-center">{['instagram', 'tiktok', 'pinterest'].map(name => <a key={name} href={`https://${name}.com/`}>{name}</a>)}</div>
           <p>baked fresh · never frozen</p>
         </div>
@@ -316,7 +316,7 @@ export default function App() {
     window.addEventListener('pageshow', restoreCart)
     window.addEventListener('storage', restoreCart)
     const name = product?.name || pageNames[path]
-    if (!isHome) document.title = `${name || 'Page not found'} — dunkly`
+    if (!isHome) document.title = `${name || 'Page not found'} — dcdonut`
     const fragment = location.hash.slice(1)
     if (!isHome && fragment) document.getElementById(fragment)?.scrollIntoView()
     return () => {
@@ -364,7 +364,7 @@ export default function App() {
       </> : <>
         <header className="route-header"><div className="hero-stage"><Navigation count={count} onBox={openBox} /></div></header>
         <main className="route-main">
-          {product ? <ProductPage item={product} {...store} /> : pages[path] || <RouteHero title="PAGE NOT FOUND" text="This page is out of the box."><ArrowLink href="/">back to dunkly</ArrowLink></RouteHero>}
+          {product ? <ProductPage item={product} {...store} /> : pages[path] || <RouteHero title="PAGE NOT FOUND" text="This page is out of the box."><ArrowLink href="/">back to dcdonut</ArrowLink></RouteHero>}
         </main>
       </>}
       <Footer />

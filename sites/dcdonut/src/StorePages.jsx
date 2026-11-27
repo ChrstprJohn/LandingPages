@@ -160,7 +160,7 @@ export function BoxBuilder({ addBundle }) {
         </div>
         <div className="size-art" aria-hidden="true">
           <div className="size-tray" data-box-size={box.id} data-flip-id="tray" ref={tray}>
-            <div className="size-box-logo">dunkly<span>box of {box.count}</span></div>
+            <div className="size-box-logo">dcdonut<span>box of {box.count}</span></div>
             <div className="size-slots">{Array.from({ length: box.count }, (_, index) => (
               <div className="size-slot" key={index} data-flip-id={`slot-${index}`} style={{ '--slot-angle': `${trayAngles[index % trayAngles.length]}deg` }}>
                 <Donut kind={catalog[index % catalog.length].id} />

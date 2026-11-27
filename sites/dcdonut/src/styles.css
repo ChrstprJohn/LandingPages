@@ -84,7 +84,7 @@ p { margin: 0; }
 .cart-count { position: absolute; right: -.55rem; top: -.5rem; display: grid; place-items: center; min-width: 1.4rem; height: 1.4rem; padding-inline: .2rem; border: 1px solid var(--cream); border-radius: 4rem; color: var(--cream); background: var(--brown); font-size: .75rem; font-weight: 700; }
 .menu-toggle, .mobile-menu { display: none; }
 .hero-heading { position: absolute; z-index: 1; top: 8.5rem; inset-inline: 1.5rem; text-align: center; font-size: 9.875rem; line-height: .9; letter-spacing: -.01em; white-space: nowrap; }
-.hero-art { position: absolute; z-index: 2; width: 38.75rem; aspect-ratio: 1; top: 11.5625rem; left: 50%; translate: -50% 0; pointer-events: none; }
+.hero-art { position: absolute; z-index: 2; width: 38.75rem; aspect-ratio: 1; top: 11.5625rem; inset-inline: 0; margin-inline: auto; pointer-events: none; }
 .hero-donut, .flavour-image, .drag-donut img { width: 100%; height: 100%; object-fit: contain; }
 .hero-copy { position: absolute; z-index: 3; top: 28.25rem; left: 3rem; font-size: 1.25rem; line-height: 1.45; }
 .hero-action { position: absolute; z-index: 3; top: 27.875rem; right: 3rem; }
@@ -181,7 +181,7 @@ p { margin: 0; }
 .promise { --field: var(--pink); padding: 8.125rem 0 8.75rem; }
 .promise-layout { display: grid; grid-template-columns: 27.5rem 1fr; gap: 4rem; min-height: 43.625rem; }
 .promise .eyebrow, .reviews .eyebrow { rotate: -4deg; background: var(--cream); }
-.promise .display { font-size: 6.75rem; line-height: .86; margin: 1.5rem 0 1rem; }
+.promise .display { font-size: 6.625rem; line-height: .86; margin: 1.5rem 0 1rem; }
 .promise-intro > p, .reviews-intro > p { max-width: 22rem; font-size: 1.25rem; line-height: 1.45; }
 .promise-intro > p { font-weight: 700; margin-top: 1.35rem; }
 .promise-art { position: relative; width: 100%; height: 16.25rem; margin-top: 1rem; }
@@ -262,7 +262,7 @@ p { margin: 0; }
 .footer-links a, .footer-links button { display: block; width: fit-content; margin: .55rem 0; text-align: left; }
 .footer-art { position: relative; isolation: isolate; container-type: inline-size; min-height: 28.375rem; margin-top: 5rem; }
 .footer-art > p { font: 400 2.5rem/1 var(--display); text-align: center; }
-.footer-logo { color: var(--pink); font: 400 35.5cqw/.9 var(--display); letter-spacing: -.047em; text-align: center; }
+.footer-logo { color: var(--pink); font: 400 28cqi/.9 var(--display); letter-spacing: -.047em; text-align: center; }
 .drag-hint { position: absolute; top: 3.5rem; right: 8%; rotate: 8deg; color: #fff3e3a6; font-size: .9375rem; }
 .drag-donut { position: absolute; aspect-ratio: 1; touch-action: none; }
 .drag-donut-hover { width: 100%; height: 100%; transition: scale .4s cubic-bezier(.2,.8,.25,1.09); }
@@ -358,7 +358,7 @@ p { margin: 0; }
   .menu-note { display: inline-flex; align-items: center; gap: .5rem; border-radius: 100px; border: 2px solid var(--brown); background: var(--pink); font-size: .8125rem; line-height: 1.2; font-weight: 700; padding: .3125rem .75rem; margin-top: .625rem; }
   .menu-note::before { content: ''; width: .5rem; aspect-ratio: 1; border-radius: 50%; background: var(--hot); }
   .hero-heading { top: 7.75rem; font-size: 3.375rem; }
-  .hero-art { top: 10.0625rem; left: 0; width: 22.5rem; translate: 0 0; }
+  .hero-art { top: 10.0625rem; width: 22.5rem; }
   .hero-badge { left: 15.75rem; top: 15.125rem; width: 6.875rem; }
   .hero-badge strong { font-size: 1.075rem; }
   .hero-badge span { font-size: .625rem; }
@@ -396,7 +396,7 @@ p { margin: 0; }
   .wordmark { font-size: 2.625rem; }
   .round-button { width: 3.125rem; }
   .hero-heading { top: 8.5rem; font-size: 6.5rem; }
-  .hero-art { top: 12.75rem; left: 7.8125rem; width: 35rem; }
+  .hero-art { top: 12.75rem; inset-inline: 7.8125rem auto; margin-inline: 0; width: 35rem; }
   .hero-badge { top: 14.375rem; left: 37.5rem; width: 9.375rem; }
   .hero-badge span { font-size: .75rem; }
   .hero-badge strong { font-size: 1.4rem; }
@@ -460,7 +460,7 @@ p { margin: 0; }
   .scallops { background-size: 5.5rem 100%; background-position: center bottom; height: 2.1875rem; }
   .hero { height: 50rem; }
   .hero-heading { inset-inline: .75rem; white-space: normal; }
-  .hero-art { top: 11.4375rem; left: .9375rem; width: min(22.5rem, 100%); }
+  .hero-art { top: 11.4375rem; width: min(22.5rem, 100%); }
   .hero-badge { left: min(16.5rem, calc(100% - 6rem)); top: 15.5rem; }
   .hero-ticker { top: 32rem; }
   .hero-copy { top: 37.625rem; }
@@ -540,6 +540,7 @@ p { margin: 0; }
 }
 
 @media (max-width: 367px) {
+  .wordmark { font-size: 1.875rem; }
   .hero-heading, .section-intro .display { font-size: 3rem; }
   .faq .section-intro .display { font-size: 3rem; }
   .promise .display, .reviews-intro .display { font-size: 3.75rem; }

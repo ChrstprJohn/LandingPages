@@ -19,10 +19,10 @@ export function Story() {
     <RouteHero title="OUR STORY" label="est. 2019" text="Two friends, one pot of chocolate and a very stubborn idea: a donut should be dunked twice." art={['cocoa', 'berry']} className="story-hero" />
     <RouteSection className="story-origin">
       <div className="route-width route-split feature-split">
-        <figure className="feature-photo kitchen-photo" data-route-reveal="kitchen-photo"><Donut kind="story-origin" alt="Fresh chocolate donuts in the Dunkly kitchen" /><figcaption>5am,<br />every day</figcaption></figure>
+        <figure className="feature-photo kitchen-photo" data-route-reveal="kitchen-photo"><Donut kind="story-origin" alt="Fresh chocolate donuts in the dcdonut kitchen" /><figcaption>5am,<br />every day</figcaption></figure>
         <div className="article-copy" data-route-reveal="from-right"><SectionTitle label="how it started">IT STARTED WITH ONE POT OF CHOCOLATE</SectionTitle>
           <p>Back in 2019, Mina and Theo were selling donuts from a folding table at the Saturday market. One morning they ran out of glaze and dunked the whole batch in the dark chocolate meant for brownies. Then they did it again.</p>
-          <p>The line went round the block by ten. Every Dunkly donut is still made the same way. Small batches, real Belgian chocolate, two dunks, no shortcuts.</p>
+          <p>The line went round the block by ten. Every dcdonut is still made the same way. Small batches, real Belgian chocolate, two dunks, no shortcuts.</p>
           <p><b>— mina &amp; theo, founders</b></p>
         </div>
       </div>
@@ -37,7 +37,7 @@ export function Story() {
     <RouteSection className="story-visit">
       <div className="route-width route-split feature-split">
         <div className="article-copy" data-route-reveal="from-left"><SectionTitle label="come say hi">THE DOOR IS ALWAYS OPEN</SectionTitle><p>Pop into the shop for a warm one straight off the rack, or let us bring the box to you. Either way, the kettle is on.</p><div className="route-actions"><ArrowLink href="/shop">shop online</ArrowLink><a className="filter-pill" href="/find-a-shop">find a shop</a></div></div>
-        <figure className="feature-photo store-photo" data-route-reveal="store-photo"><Donut kind="story-shop" alt="The Dunkly shop" /></figure>
+        <figure className="feature-photo store-photo" data-route-reveal="store-photo"><Donut kind="story-shop" alt="The dcdonut shop" /></figure>
       </div>
     </RouteSection>
   </>
