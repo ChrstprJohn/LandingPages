@@ -1,0 +1,400 @@
+{
+  "projects": [
+    {
+      "slug": "aster-bloom",
+      "title": "Aster Bloom",
+      "image": "aster",
+      "background": "aster-bg",
+      "year": "2025",
+      "summary": "A botanical identity for a skincare brand rooted in slow, seasonal rituals.",
+      "category": "Branding",
+      "client": "Aster Bloom Co.",
+      "challenge": "A living identity for Aster Bloom",
+      "outcome": "Rituals, not products",
+      "overview": "Aster Bloom needed a brand that felt as considered as its formulations. We built an identity around pressed-botanical marks and a soft, tactile palette. The result feels calm, premium, and unmistakably its own.",
+      "paragraphs": [
+        "We designed the logotype and botanical marks to breathe, shifting subtly across packaging so no two products feel identical. The system stays recognizable while giving each formulation its own quiet personality.",
+        "Every touchpoint was drawn from real pressed flora, then refined into a flexible library. That grounding kept the brand honest and made the premium price feel earned rather than styled on.",
+        "The tone of voice was written to slow readers down, framing each product as part of a daily ritual instead of a transaction. Copy and imagery move at the same unhurried pace.",
+        "We paired muted typography with generous space so the packaging felt like an object worth keeping. That restraint is what makes the shelf presence feel expensive."
+      ],
+      "gallery": [
+        "aster-detail-2",
+        "aster-detail-3",
+        "aster-detail-4",
+        "aster-detail-5"
+      ],
+      "live": null
+    },
+    {
+      "slug": "nova-grid",
+      "title": "Nova Grid",
+      "image": "nova",
+      "background": "nova-bg",
+      "year": "2024",
+      "summary": "A crisp visual system for a data platform that wanted to feel human.",
+      "category": "Design",
+      "client": "Nova Grid",
+      "challenge": "Clarity first",
+      "outcome": "A warmer machine",
+      "overview": "Nova Grid was drowning in charts and jargon. We built a clean, confident design language that turns dense data into something approachable. It now reads as clear as it is capable.",
+      "paragraphs": [
+        "We rebuilt the interface language around a strict grid and a restrained palette, letting the data itself carry the color. Removing decoration made complex dashboards finally feel legible.",
+        "Type and spacing were tuned for long working sessions, reducing the visual noise that used to tire people out. The product now feels calm even when the numbers are not.",
+        "To soften the technical edge, we introduced friendly illustration and plain-language microcopy across the platform. It made a powerful tool feel like it was on the user's side.",
+        "We documented everything as a living system so the team could scale without drifting. Consistency became the thing that made Nova Grid feel trustworthy."
+      ],
+      "gallery": [
+        "visual-bg",
+        "nova-detail-3",
+        "content-bg",
+        "nova-detail-5"
+      ],
+      "live": null
+    },
+    {
+      "slug": "marrow-coffee",
+      "title": "Marrow Coffee",
+      "image": "marrow",
+      "background": "marrow-bg",
+      "year": "2025",
+      "summary": "A bold, honest identity for a roaster obsessed with origin and craft.",
+      "category": "Branding",
+      "client": "Marrow Roasters",
+      "challenge": "Bold to the bone",
+      "outcome": "Origin as story",
+      "overview": "Marrow wanted a brand as direct as their espresso. We leaned into heavy type, raw texture, and unfiltered storytelling. The identity feels warm, confident, and built to last.",
+      "paragraphs": [
+        "We anchored the identity in a heavyweight wordmark and a stripped-back palette that reads instantly across a busy cafe counter. It gives Marrow presence without shouting.",
+        "Textured, tactile packaging references the roasting process itself, so the brand feels made rather than manufactured. That craft cue is what earns a second look on the shelf.",
+        "Each bag carries the farm, the altitude, and the hands behind the harvest, turning packaging into a small piece of storytelling. Transparency became the brand's whole personality.",
+        "We built a flexible label system so new single-origins slot in without a redesign. It keeps the range feeling fresh while staying unmistakably Marrow."
+      ],
+      "gallery": [
+        "marrow-detail-2",
+        "marrow-detail-3",
+        "content",
+        "marrow-detail-5",
+        "marrow-detail-6"
+      ],
+      "live": null
+    },
+    {
+      "slug": "fern-field",
+      "title": "Fern Field",
+      "image": "fern",
+      "background": "fern-bg",
+      "year": "2024",
+      "summary": "A content system that lets an architecture studio speak in its own quiet voice.",
+      "category": "Content",
+      "client": "Fern Studio",
+      "challenge": "Words for the work",
+      "outcome": "A publishing rhythm",
+      "overview": "Fern Studio had beautiful work but no words to match. We shaped a content strategy and editorial voice around their process. Now the writing feels as intentional as the buildings.",
+      "paragraphs": [
+        "We developed an editorial voice that mirrors the studio's restraint, favoring precise, unadorned language over industry jargon. It lets the architecture stay the loudest thing in the room.",
+        "Project narratives were restructured around process and place, giving each build a clear story arc. Clients finally understood the thinking, not just the outcome.",
+        "We set up a lightweight content calendar so the studio could share work without it becoming a burden. Consistency turned an occasional post into a genuine audience.",
+        "Every piece was templated for tone and structure, keeping quality high even when time was short. The voice now stays steady no matter who is writing."
+      ],
+      "gallery": [
+        "content",
+        "fern-detail-3",
+        "fern-detail-4",
+        "fern-detail-5"
+      ],
+      "live": null
+    },
+    {
+      "slug": "halden-press",
+      "title": "Halden Press",
+      "image": "halden",
+      "background": "halden-bg",
+      "year": "2025",
+      "summary": "An editorial voice and content strategy for an independent literary press.",
+      "category": "Content",
+      "client": "Halden Press",
+      "challenge": "A voice worth reading",
+      "outcome": "Building a readership",
+      "overview": "Halden Press needed to sound like the books it champions. We built a literary content system with a distinct, unhurried voice. It turned casual browsers into a loyal readership.",
+      "paragraphs": [
+        "We crafted a house voice that treats every blurb and newsletter as a small piece of literature in itself. Readers started staying for the writing, not just the catalog.",
+        "Tone guidelines kept that voice consistent across editors and seasons, so the press always sounds like one considered person. That coherence is what built trust.",
+        "We reframed the newsletter as a serialized companion to the list, giving subscribers a reason to open every issue. Content became the press's most reliable sales channel.",
+        "Author interviews and essays were programmed to deepen the world around each title. The result is a community that feels invested rather than marketed to."
+      ],
+      "gallery": [
+        "halden-detail-2",
+        "halden-detail-3",
+        "content",
+        "halden-detail-5"
+      ],
+      "live": null
+    },
+    {
+      "slug": "ostara-wine",
+      "title": "Ostara Wine",
+      "image": "ostara",
+      "background": "ostara-bg",
+      "year": "2023",
+      "summary": "An expressive label system for a natural wine label that refuses to sit still.",
+      "category": "Design",
+      "client": "Ostara",
+      "challenge": "A label that moves",
+      "outcome": "Playful, not precious",
+      "overview": "Ostara wanted labels as alive as their wine. We designed an ever-changing illustrative system tied to each vintage. Every bottle now feels collectible.",
+      "paragraphs": [
+        "We built an illustrative system that shifts with every vintage, so each release feels like a limited edition worth keeping. The bottle became part of the appeal.",
+        "A flexible frame holds the wildness together, keeping the range coherent even as the artwork changes. Structure is what lets the expression run free.",
+        "The tone leans irreverent and warm, inviting curious drinkers rather than intimidating them. Natural wine finally felt approachable on the shelf.",
+        "We designed the system to work at small scale and in dim bars, where these bottles actually get chosen. Legibility kept the personality from getting lost."
+      ],
+      "gallery": [
+        "ostara-detail-2",
+        "ostara-detail-3",
+        "ostara-detail-4",
+        "ostara-detail-5"
+      ],
+      "live": null
+    }
+  ],
+  "posts": [
+    {
+      "slug": "the-art-of-white-space-in-modern-interfaces",
+      "title": "The art of white space in designing user interfaces",
+      "summary": "Understanding how negative space shapes user experience and visual hierarchy.",
+      "category": "Design",
+      "date": "Jun 2, 2026",
+      "image": "blog-space",
+      "author": "Claire Smith",
+      "portrait": "blog-space-avatar",
+      "headings": [
+        "The power of pause",
+        "Space with intent"
+      ],
+      "paragraphs": [
+        "White space is not wasted space. It is one of the most powerful tools a designer has for guiding attention, creating rhythm, and letting the important elements of an interface breathe. When used with intention, it turns a crowded screen into something calm and considered.",
+        "I think of negative space as the punctuation of visual language. It creates pauses, separates ideas, and gives emphasis to the elements that remain. Without it, everything competes for attention at once and nothing feels resolved.",
+        "The most common mistake is treating white space as leftover area, something to fill once the real content is placed. Instead, it should be planned first, shaping the layout rather than reacting to it. Generous spacing around a single call to action often does more than any amount of decoration.",
+        "When defending empty pixels to stakeholders, it helps to talk in terms of focus and clarity rather than aesthetics. Space is what makes a message legible, a product feel premium, and a journey feel effortless. Those are outcomes anyone can get behind."
+      ],
+      "gallery": [
+        "blog-space-detail-3",
+        "blog-space-detail-4",
+        "blog-space-detail-5",
+        "blog-space-detail-6"
+      ],
+      "role": "Senior Designer",
+      "related": [
+        "building-a-brand-voice-that-lasts",
+        "why-constraints-make-better-design",
+        "color-systems-that-scale"
+      ]
+    },
+    {
+      "slug": "building-a-brand-voice-that-lasts",
+      "title": "Building a brand voice that lasts for our clients",
+      "summary": "How to define a tone of voice that stays consistent as your company grows.",
+      "category": "Branding",
+      "date": "Jun 9, 2026",
+      "image": "blog-voice",
+      "author": "Marcus Bennett",
+      "portrait": "blog-voice-avatar",
+      "headings": [
+        "More than adjectives",
+        "A living voice"
+      ],
+      "paragraphs": [
+        "A brand voice is more than a list of adjectives on a slide. It is the accumulated personality that shows up in every headline, error message, and email you send. When it is clear, customers recognise you before they even see your logo.",
+        "The best voices are built from real values rather than borrowed trends. Start by asking how you actually want people to feel when they read your words, then work backwards to the choices that create that feeling consistently.",
+        "Consistency is where most brands quietly fall apart. As teams grow, more people write in your name, and without shared guidance the voice drifts. A simple set of principles and a few before and after examples do more than a lengthy style manual nobody reads.",
+        "Treat your voice as something living that evolves with your audience. Review it as your product matures and your market shifts, refining the language while keeping the underlying character intact. A voice that lasts is one you are willing to tend."
+      ],
+      "gallery": [
+        "blog-voice-detail-3",
+        "blog-voice-detail-4",
+        "blog-voice-detail-5",
+        "blog-voice-detail-6"
+      ],
+      "role": "Brand Strategist",
+      "related": [
+        "why-constraints-make-better-design",
+        "from-wireframe-to-reality",
+        "color-systems-that-scale"
+      ]
+    },
+    {
+      "slug": "designing-for-performance-from-day-one",
+      "title": "Designing for performance from day one",
+      "summary": "Why speed is a design decision long before it becomes an engineering one.",
+      "category": "Development",
+      "date": "Jun 16, 2026",
+      "image": "blog-performance",
+      "author": "Elena Ruiz",
+      "portrait": "blog-performance-avatar",
+      "headings": [
+        "A design decision",
+        "Small habits, big gains"
+      ],
+      "paragraphs": [
+        "Performance is often treated as an engineering concern to be optimised at the end, but many of the choices that determine speed are made much earlier. The number of fonts, the weight of imagery, and the complexity of a layout are all design decisions with real cost.",
+        "When performance is considered from the first sketch, it stops being a compromise and becomes a constraint that sharpens the work. A lighter page is usually a clearer one, because every element has to justify the time it takes to load.",
+        "Small habits compound into large gains. Choosing a single well chosen typeface, sizing images to their actual display dimensions, and favouring native patterns over heavy custom effects keeps interfaces responsive without sacrificing character.",
+        "The reward is felt by everyone. Faster experiences convert better, rank higher, and feel more trustworthy, especially on the slower connections and older devices that a surprising share of your audience still uses every day."
+      ],
+      "gallery": [
+        "aster-detail-5",
+        "blog-performance-detail-4",
+        "blog-performance-detail-5",
+        "blog-performance-detail-6"
+      ],
+      "role": "Marketing Lead",
+      "related": [
+        "building-a-brand-voice-that-lasts",
+        "color-systems-that-scale",
+        "the-art-of-white-space-in-modern-interfaces"
+      ]
+    },
+    {
+      "slug": "why-constraints-make-better-design",
+      "title": "Why constraints make better design work",
+      "summary": "A look at how limits, rather than freedom, tend to produce the strongest work.",
+      "category": "Insights",
+      "date": "Jun 23, 2026",
+      "image": "blog-constraints",
+      "author": "Priya Nair",
+      "portrait": "blog-constraints-avatar",
+      "headings": [
+        "The blank canvas",
+        "Less room, more clarity"
+      ],
+      "paragraphs": [
+        "A blank canvas is far more intimidating than a tight brief. When anything is possible, it becomes hard to know where to begin, and the result is often a design that tries to do everything and commits to nothing in particular.",
+        "Constraints give a project its edges. A limited palette, a fixed grid, or a firm deadline forces decisions and reveals what actually matters. Far from limiting creativity, they focus it on the problem worth solving.",
+        "Some of the most memorable work comes from deliberately narrowing the options. Restricting yourself to two typefaces or a single accent colour pushes you to find nuance within the rules rather than reaching for novelty outside them.",
+        "The next time a project feels overwhelming, try adding a constraint rather than removing one. Give yourself less room, and you will often find the clarity that an open ended brief was quietly hiding from you."
+      ],
+      "gallery": [
+        "blog-constraints-detail-3",
+        "blog-performance-detail-6",
+        "aster-detail-5",
+        "blog-voice-detail-5"
+      ],
+      "role": "Design Lead",
+      "related": [
+        "the-art-of-white-space-in-modern-interfaces",
+        "designing-for-performance-from-day-one",
+        "building-a-brand-voice-that-lasts"
+      ]
+    },
+    {
+      "slug": "color-systems-that-scale",
+      "title": "Color systems that scale with confidence",
+      "summary": "Building a flexible palette that stays coherent across products and platforms.",
+      "category": "Design",
+      "date": "Jun 30, 2026",
+      "image": "blog-color",
+      "author": "Claire Smith",
+      "portrait": "blog-space-avatar",
+      "headings": [
+        "Systems, not swatches",
+        "Naming with purpose"
+      ],
+      "paragraphs": [
+        "A handful of colours can carry a small project, but as products grow the palette has to work much harder. It needs to cover states, surfaces, and accessibility requirements without turning into an unmanageable list of one off values.",
+        "The solution is to think in systems rather than swatches. Defining roles such as surface, text, and accent, then mapping tokens to those roles, lets the same underlying decisions scale from a single button to an entire design language.",
+        "Naming is where a good system earns its keep. Semantic names that describe purpose rather than appearance mean you can adjust the palette later without rewriting every screen, because the intent stays stable even as the value changes.",
+        "Accessibility should be built into the system, not bolted on afterwards. Checking contrast as you define each pairing ensures the palette is usable for everyone from the start, and saves painful retrofits once the product is live."
+      ],
+      "gallery": [
+        "blog-color-detail-3",
+        "aster-detail-3",
+        "blog-space-detail-3",
+        "blog-space-detail-4"
+      ],
+      "role": "Senior Designer",
+      "related": [
+        "why-constraints-make-better-design",
+        "building-a-brand-voice-that-lasts",
+        "designing-for-performance-from-day-one"
+      ]
+    },
+    {
+      "slug": "from-wireframe-to-reality",
+      "title": "From wireframe to finished digital experience",
+      "summary": "How to keep the spirit of an early idea intact as it moves toward launch.",
+      "category": "Development",
+      "date": "Jul 7, 2026",
+      "image": "blog-wireframe",
+      "author": "Marcus Bennett",
+      "portrait": "blog-voice-avatar",
+      "headings": [
+        "Starting rough",
+        "Staying on course"
+      ],
+      "paragraphs": [
+        "Every project begins with a rough shape, a wireframe or a sketch that captures an idea before the details arrive. It is deliberately unfinished, and that looseness is exactly what makes it useful for exploring direction quickly.",
+        "The challenge is holding on to that original intent as the work becomes more concrete. Fidelity has a way of introducing decisions the wireframe never made, and without care the finished product can drift far from the idea that started it.",
+        "Frequent, honest reviews keep a design on course. Returning to the early goals at each stage helps the team notice when a convenient shortcut is quietly changing the experience, and gives everyone permission to correct it early.",
+        "Shipping is not the end of the story but the beginning of learning. Once real people use the work, the gaps between intention and reality become visible, and each iteration is a chance to close them a little further."
+      ],
+      "gallery": [
+        "aster-detail-5",
+        "blog-voice-detail-6",
+        "blog-voice-detail-3",
+        "blog-voice-detail-4"
+      ],
+      "role": "Brand Strategist",
+      "related": [
+        "designing-for-performance-from-day-one",
+        "color-systems-that-scale",
+        "the-art-of-white-space-in-modern-interfaces"
+      ]
+    }
+  ],
+  "about": {
+    "images": [
+      "about-image-1",
+      "about-image-2",
+      "blog-constraints-avatar",
+      "about-image-4",
+      "blog-space-avatar",
+      "blog-performance-avatar",
+      "about-image-7",
+      "founder",
+      "blog-performance-avatar",
+      "about-image-10",
+      "blog-space-avatar",
+      "about-image-12",
+      "about-image-13",
+      "about-image-14",
+      "about-image-15",
+      "about-image-16",
+      "about-image-17",
+      "about-image-18"
+    ],
+    "content": [
+      "Every mark, message, and moment should carry weight — considered, deliberate, unmistakably yours.",
+      "Aldena is a New York studio for brands with something to say. We partner with teams who'd rather stand out than blend in, turning sharp ideas into identities that are clear and made to last.",
+      "Since 2016, we've partnered with founders and teams who care as much about the details as we do. At Aldena, branding, design, and content aren't separate services; they're one conversation.",
+      "We craft identities, design systems, and content that connect — pairing sharp strategy with timeless taste. We shape identities with intention, so how you look feel unmistakably yours, year after year.",
+      "We design for longevity, not trends. Every identity we create is made to feel just as right five years from now.",
+      "Design and content are a single conversation. We keep how a brand looks and behaves in sync.",
+      "Good design earns attention; it doesn’t demand it. We cut the excess so the idea does the talking.",
+      "We work with you, not just for you. The best work comes from real collaboration in the details.",
+      "A small studio of designers, strategists, and makers shaping every brand we touch.",
+      "Aldena started the studio after a decade leading brand work across London and Berlin. She sets the creative vision for every project, happiest when a rough idea clicks into a clear, ownable identity. Outside the studio, she collects vintage type specimens.",
+      "Elena turns strategy into systems — grids, type scales, and the details that make a brand feel considered. She's spent eight years designing for clients in tech, hospitality, and culture, and believes good design should feel inevitable, never loud.",
+      "Theo brings brands to life in motion, from micro-interactions to launch films. He bridges design and code, making sure ideas feel as sharp on screen as on paper. Formerly an animator, he judges everything by how satisfying it is to watch.",
+      "Priya finds the story before the visuals begin. She runs the research, interviews, and positioning that gives each project a clear point of view. With a background in cultural anthropology, she's fascinated by why people connect with the brands they love.",
+      "Create a free website with Framer, the website builder loved by startups, designers and agencies."
+    ]
+  },
+  "contact": {
+    "images": [
+      "contact-photo-1",
+      "contact-photo-2",
+      "fern-detail-3"
+    ]
+  }
+}
