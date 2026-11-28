@@ -62,6 +62,15 @@
         ],
         "createdAt": "2026-11-27T01:06:54.277Z",
         "reason": "Agent decided: live-reference pointer sampling measured the Dunkly primary button briefly at -3.15px before it settled at -3px. The slight overshoot preserves that motion."
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "sites/hotel1/src/styles.css"
+        ],
+        "createdAt": "2026-11-28T03:59:17.723Z",
+        "reason": "Agent verified Inter and Inter Display on the supplied reference. The DcdHotel rebrand retains the approved typography."
       }
     ]
   }
