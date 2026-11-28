@@ -6,10 +6,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, CustomEase)
 
-const mediaEase = CustomEase.create('nouva-media', 'M0,0 C0.075,0.01,0.16,0.33,0.32,0.647 0.51,0.96,0.82,1,1,1')
-const wordEase = CustomEase.create('nouva-words', 'M0,0 C0.22,0,0.31,0.09,0.41,0.39 0.53,0.77,0.70,1,1,1')
-const springEase = CustomEase.create('nouva-entrance', 'M0,0 C0.13,0,0.20,0.44,0.36,0.67 0.55,0.94,0.76,1,1,1')
-const panelEase = CustomEase.create('nouva-panel', 'M0,0 C0.13,0,0.23,0.62,0.48,0.88 0.71,1.09,0.86,1,1,1')
+const mediaEase = CustomEase.create('decode-media', 'M0,0 C0.075,0.01,0.16,0.33,0.32,0.647 0.51,0.96,0.82,1,1,1')
+const wordEase = CustomEase.create('decode-words', 'M0,0 C0.22,0,0.31,0.09,0.41,0.39 0.53,0.77,0.70,1,1,1')
+const springEase = CustomEase.create('decode-entrance', 'M0,0 C0.13,0,0.20,0.44,0.36,0.67 0.55,0.94,0.76,1,1,1')
+const panelEase = CustomEase.create('decode-panel', 'M0,0 C0.13,0,0.23,0.62,0.48,0.88 0.71,1.09,0.86,1,1,1')
 const motionQuery = '(prefers-reduced-motion: no-preference)'
 
 function animateHero(select) {

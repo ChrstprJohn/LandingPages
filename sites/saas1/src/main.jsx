@@ -7,7 +7,8 @@ import { useSiteMotion } from './motion.js'
 import './styles.css'
 
 function currentView() {
-  return { path: location.pathname.replace(/\/+$/, '') || '/', hash: location.hash }
+  const path = location.pathname.replace(/\/+$/, '') || '/'
+  return { path: path === '/home' ? '/' : path, hash: location.hash }
 }
 
 function App() {
@@ -20,12 +21,12 @@ function App() {
   useLayoutEffect(() => {
     const previous = history.scrollRestoration
     history.scrollRestoration = 'manual'
-    entry.current = history.state?.nouvaEntry ?? nextEntry.current++
-    history.replaceState({ ...history.state, nouvaEntry: entry.current }, '')
+    entry.current = history.state?.siteEntry ?? nextEntry.current++
+    history.replaceState({ ...history.state, siteEntry: entry.current }, '')
 
     function restore(event) {
       offsets.current.set(entry.current, scrollY)
-      entry.current = event.state?.nouvaEntry ?? nextEntry.current++
+      entry.current = event.state?.siteEntry ?? nextEntry.current++
       setView({ ...currentView(), offset: offsets.current.get(entry.current) })
     }
 
@@ -63,14 +64,14 @@ function App() {
     if (!anchor || anchor.target || anchor.hasAttribute('download')) return
 
     const destination = new URL(anchor.href)
-    if (destination.origin !== location.origin) return
+    if (destination.origin !== location.origin || destination.pathname.startsWith('/media/')) return
 
     event.preventDefault()
     const smooth = destination.pathname === location.pathname && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (destination.href !== location.href) {
       offsets.current.set(entry.current, scrollY)
       entry.current = nextEntry.current++
-      history.pushState({ nouvaEntry: entry.current }, '', destination.href)
+      history.pushState({ siteEntry: entry.current }, '', destination.href)
     }
     setView({ ...currentView(), smooth, followedLink: true })
   }

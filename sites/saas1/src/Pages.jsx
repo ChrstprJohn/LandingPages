@@ -2,16 +2,16 @@ import { useState } from 'react'
 import { legalPages } from './legal.js'
 import { Icon, RollButton } from './ui.jsx'
 
-const subjects = ['General inquiry', 'Pricing & plans', 'Technical support', 'Partnership', 'Other']
+const subjects = ['Product questions', 'Plans and billing', 'Using Decode', 'Working together', 'Something else']
 
 export function routeTitle(path) {
-  if (path === '/') return 'Nouva — AI Content'
+  if (path === '/') return 'Decode — AI Workspace for Content Teams'
   const title = legalPages[path]?.title ?? {
-    '/contact': 'Contact us',
-    '/sign-in': 'Sign In',
-    '/sign-up': 'Sign Up',
+    '/contact': 'Talk to Decode',
+    '/sign-in': 'Sign in',
+    '/sign-up': 'Create an account',
   }[path] ?? 'Page not found'
-  return title + ' — Nouva'
+  return title + ' — Decode'
 }
 
 function PageLead({ title, children, className = '' }) {
@@ -29,38 +29,38 @@ function Contact() {
   return (
     <section className="inner-page contact-page">
       <div className="shell">
-        <PageLead title="Contact us">
-          Have a question or need help?<br />We'll get back to you shortly.
+        <PageLead title="Talk to Decode">
+          Tell us what you’re working on<br />and where your team could use a hand.
         </PageLead>
         <form className="surface contact-form" onSubmit={(event) => {
           event.preventDefault()
           setSubmitted(true)
         }}>
           <div className="form-grid">
-            <label>First name*<input name="First name" autoComplete="given-name" placeholder="Jane" required /></label>
-            <label>Last name*<input name="Last name" autoComplete="family-name" placeholder="Smith" required /></label>
+            <label>First name*<input name="First name" autoComplete="given-name" placeholder="Alex" required /></label>
+            <label>Last name*<input name="Last name" autoComplete="family-name" placeholder="Rivera" required /></label>
           </div>
-          <label>Email*<input name="Email" type="email" autoComplete="email" placeholder="jane@framer.com" required /></label>
-          <label>Company<input name="Company" autoComplete="organization" placeholder="Acme Inc." /></label>
+          <label>Email*<input name="Email" type="email" autoComplete="email" placeholder="alex@example.com" required /></label>
+          <label>Company<input name="Company" autoComplete="organization" placeholder="Your organization" /></label>
           <label>Subject*
             <span className="select-field">
               <select name="Subject" defaultValue="" required>
-                <option value="" disabled>Select…</option>
+                <option value="" disabled>Choose a topic</option>
                 {subjects.map((subject) => <option key={subject}>{subject}</option>)}
               </select>
               <Icon name="chevron" />
             </span>
           </label>
-          <label>Your message*<textarea name="Message" placeholder="Tell us what's on your mind..." required /></label>
+          <label>Your message*<textarea name="Message" placeholder="What would you like to ask about?" required /></label>
           <label className="newsletter">
             <input name="Newsletter" type="checkbox" />
-            <span>I'd like to receive updates and news via email.</span>
+            <span>Send me occasional Decode news.</span>
           </label>
-          <RollButton className="w-full">Send message</RollButton>
-          {submitted && <p className="form-status" role="status">This preview can’t send messages.</p>}
+          <RollButton className="w-full">Submit inquiry</RollButton>
+          {submitted && <p className="form-status" role="status">Form checked. This preview does not send the inquiry.</p>}
           <p className="form-terms">
-            By submitting, you agree to our <a href="/legal/terms-of-service">Terms of Service</a>{' '}
-            and <a href="/legal/privacy-policy">Privacy Policy</a>.
+            Read the <a href="/legal/terms-of-service">Terms of Service</a>{' '}
+            and <a href="/legal/privacy-policy">Privacy Policy</a> for this preview.
           </p>
         </form>
       </div>
@@ -73,53 +73,50 @@ function Auth({ signUp = false }) {
   return (
     <section className="inner-page auth-page">
       <div className="shell">
-        <PageLead title={signUp ? 'Sign Up' : 'Sign In'} className={signUp ? '' : 'sign-in-lead'}>
-          {signUp ? 'Create your account to get started.' : 'Welcome back. Enter your email to continue.'}
+        <PageLead title={signUp ? 'Create an account' : 'Sign in to Decode'} className={signUp ? '' : 'sign-in-lead'}>
+          {signUp ? 'Use your email to try the account setup.' : 'Use your email to continue to your workspace.'}
         </PageLead>
         <form className="auth-form surface" onSubmit={(event) => {
           event.preventDefault()
           setSubmitted(true)
         }}>
-          <input type="email" name="email" aria-label="Email" placeholder="Email" autoComplete="email" required />
-          <RollButton className="w-full">Send Code</RollButton>
-          {submitted && <p className="form-status" role="status">This preview can’t send sign-in codes.</p>}
+          <input type="email" name="email" aria-label="Email" placeholder="you@example.com" autoComplete="email" required />
+          <RollButton className="w-full">Request a code</RollButton>
+          {submitted && <p className="form-status" role="status">Email checked. This preview does not send a code.</p>}
         </form>
         <p className="auth-alternative">
-          {signUp ? 'Already have an account?' : 'Don’t have an account yet?'}{' '}
-          <a href={signUp ? '/sign-in' : '/sign-up'}>{signUp ? 'Sign in' : 'Sign up'}</a>
+          {signUp ? 'Returning to Decode?' : 'New to Decode?'}{' '}
+          <a href={signUp ? '/sign-in' : '/sign-up'}>{signUp ? 'Sign in' : 'Create an account'}</a>
         </p>
-        <a className="auth-credit" href="https://dub.frameauth.com/hello" target="_blank" rel="noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="#bcff00" d="M0 0h24v11a12 12 0 1 1-24 0z" />
-            <path stroke="#11181b" strokeWidth="2.8" fill="none" d="M8 17a5 5 0 1 1 8.7-4.8v4.7m-.7-6.5V8a4 4 0 1 0-8 0" />
-          </svg>
-          FrameAuth in the original
+        <a className="auth-credit" href="/legal/privacy-policy">
+          <Icon name="lock" />
+          How this preview uses email
         </a>
       </div>
     </section>
   )
 }
 
-function withEmail(text) {
-  const address = 'hello@nouva.com'
-  if (!text.includes(address)) return text
-  const [before, after] = text.split(address)
-  return <>{before}<a href={'mailto:' + address}>{address}</a>{after}</>
+function withContact(text) {
+  const label = 'preview contact form'
+  if (!text.includes(label)) return text
+  const [before, after] = text.split(label)
+  return <>{before}<a href="/contact">{label}</a>{after}</>
 }
 
 function Legal({ page }) {
   return (
     <section className="inner-page legal-page">
       <div className="shell">
-        <PageLead title={page.title}>Last Updated: Apr 22, 2026</PageLead>
+        <PageLead title={page.title}>Preview version · November 2026</PageLead>
         <div className="legal-copy">
           {page.intro && <p>{page.intro}</p>}
           {page.sections.map(([name, text, list, after]) => (
             <section key={name}>
               <h2>{name}</h2>
-              <p>{withEmail(text)}</p>
+              <p>{withContact(text)}</p>
               {list && <ul role="list">{list.map((item) => <li key={item}>{item}</li>)}</ul>}
-              {after && <p>{withEmail(after)}</p>}
+              {after && <p>{withContact(after)}</p>}
             </section>
           ))}
         </div>
@@ -132,8 +129,8 @@ function NotFound() {
   return (
     <section className="inner-page not-found">
       <div className="shell text-center">
-        <PageLead title="This page doesn't exist">The page you're looking for may have moved or no longer exists.</PageLead>
-        <RollButton href="/#hero">Back to Homepage</RollButton>
+        <PageLead title="We couldn’t find that page">Check the address or head back to the Decode homepage.</PageLead>
+        <RollButton href="/#hero">Back to Decode</RollButton>
       </div>
     </section>
   )

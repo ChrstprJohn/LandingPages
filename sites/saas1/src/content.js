@@ -1,118 +1,112 @@
 export const stats = [
-  [47, '%', 'Nearly half of all working hours are spent on tasks that should never reach a human. ', 'Nouva handles them instantly.'],
-  [3.2, 'x', "Teams that embrace AI don't just work faster — they produce ", 'three times more output', ' with the exact same number of people.'],
-  [68, '%', 'Most professionals know repetitive work is killing their productivity. ', 'The majority are still waiting for a solution.'],
+  [1, '', 'Start the whole campaign from ', 'one shared brief', ' so the team works from the same source.'],
+  [3, '', 'Turn that brief into ', 'three example formats', ' for email, social, and the web.'],
+  [12, '', 'Explore ', 'twelve sample workflows', ' for the kinds of writing teams do every week.'],
 ]
 
 export const shifts = [
   {
     image: 'intro-output',
-    alt: 'Content output card showing 24 drafts, 8,400 words, and a bar chart',
-    title: 'Track your output',
-    text: 'Nouva monitors your daily output —  tasks, words, and momentum —  so nothing slips through the cracks.',
+    alt: 'Example draft activity card showing 18 reviews, 6,200 words edited, and a bar chart',
+    title: 'See what got reviewed',
+    text: 'Check draft activity and words edited in one view before you plan the next batch.',
   },
   {
     image: 'intro-goal',
-    alt: 'Writing goal card showing 73 percent progress',
-    title: 'Stay ahead of goals',
-    text: 'Set targets, track progress, and  let Nouva keep your team on pace —  automatically, every week.',
+    alt: 'Example weekly review card with nine of twelve drafts reviewed',
+    title: 'Set a review target',
+    text: 'Pick a weekly goal and see how many drafts still need a second pair of eyes.',
   },
   {
     image: 'intro-formats',
-    alt: 'Format breakdown showing blog posts, email copy, and social captions',
-    title: 'See where time goes',
-    text: "Nouva breaks down every task  by type — so you always know what's  getting done and what needs attention.",
+    alt: 'Example channel mix showing newsletter, social, and web drafts',
+    title: 'Check the channel mix',
+    text: 'See how your drafts are split across email, social, and web before you plan what comes next.',
   },
 ]
 
 export const features = [
   {
     image: 'feature-drafts',
-    alt: 'Dashboard showing draft output by day',
-    title: 'Your output, growing every day',
-    text: 'Nouva tracks everything your team  produces — daily, weekly, monthly —  and shows you exactly where you stand.',
+    alt: 'Example analytics panel charting reviewed drafts over seven days',
+    title: 'See how drafts move through review',
+    text: 'Open the activity view to see what made it through review and when the team was busiest.',
   },
   {
     image: 'feature-formats',
-    alt: 'Dashboard showing generated blog posts, emails, and social captions',
-    title: 'From one brief,  every format you need',
-    text: 'Brief Nouva once and get every  format your workflow demands —  adapted, structured, and ready to go.',
+    alt: 'Example brief adapted into a newsletter, a social post, and a landing page',
+    title: 'Give one brief a few different lives',
+    text: 'Use the same source material for a newsletter, a social post, and a landing page. Edit each version for its reader.',
   },
   {
     image: 'feature-time',
-    alt: 'Dashboard comparing the time taken before and after using Nouva',
-    title: 'Do in minutes what used to take hours',
-    text: 'Teams using Nouva complete the same  work in a fraction of the time — without  cutting corners or sacrificing quality.',
+    alt: 'Example dashboard showing review time across a first pass and final review',
+    title: 'See where review time goes',
+    text: 'Compare the first pass with the final review to see where edits take time and where handoffs could be clearer.',
   },
 ]
 
 export const teamBenefits = [
-  ['fingerprint', 'Brand consistency', 'Every output sounds like you — no matter who on your team created it.'],
-  ['layers', 'Multi-format output', 'One input. Every format your workflow needs, ready instantly.'],
-  ['search', 'Built-in optimization', 'Every output is structured and optimized from the very first draft.'],
-  ['users', 'Team collaboration', 'Create, review, and publish together — in one shared workspace.'],
-  ['chart', 'Analytics & insights', 'Track what performs and focus your energy where it matters most.'],
-  ['bolt', 'Unlimited output', 'No caps, no limits. Produce as much as your team needs.'],
+  ['fingerprint', 'A voice guide', 'Give everyone the same examples and language to work from.'],
+  ['layers', 'Drafts by channel', 'Start each piece in the shape it needs for email, social, or web.'],
+  ['search', 'A clearer first pass', 'Start with a structure your editors can read, question, and refine.'],
+  ['users', 'Shared review', 'Give writers and reviewers the same place to work on a draft.'],
+  ['chart', 'Writing activity', 'See how much has been drafted and what’s still waiting on review.'],
+  ['bolt', 'Room for more', 'Keep related drafts together as you add campaigns and contributors.'],
 ]
 
 export const comparison = [
-  ['Disconnected tools, broken workflows', 'Manual tasks that eat your day', 'No visibility into team output', 'Generic results, no customization', 'Built for one user, not teams', 'Hours wasted on repetitive work'],
-  ['Everything your team needs in one place', 'AI handles the repetitive work for you', 'Full visibility into what gets done', 'Tailored to your workflow and voice', 'Built for teams of any size', 'From idea to output in minutes'],
+  ['Briefs buried in chat threads', 'The same context copied by hand', 'Drafts with unclear status', 'Voice notes spread across files', 'Feedback in several places', 'Progress tallied at the end'],
+  ['Shared briefs and drafts', 'A starting point for every channel', 'A view of draft and review activity', 'Voice guidance in the workspace', 'One place to review your writing', 'Progress visible during the week'],
 ]
 
-export const testimonials = [
-  ['sarah', 'Sarah Mitchell', 'Platform Engineer', "Nouva cut our team's workload in half. Tasks that used to take hours now take minutes."],
-  ['james', 'James Okafor', 'CMO at BrightLayer', 'I was skeptical about AI tools. Nouva changed my mind in the first ten minutes.'],
-  ['emma', 'Emma Larsson', 'Head of Marketing at Volta', 'It feels like having an extra team member on call — without the overhead.'],
-  ['daniel', 'Daniel Park', 'Founder at Stackly', 'Before Nouva, coordinating our workflow took longer than the actual work. Not anymore.'],
-  ['priya', 'Priya Nair', 'Freelance Consultant', "Our team produces twice the output with the same headcount. That's the only metric that matters."],
-  ['tom', 'Tom Eriksson', 'Growth Lead at Novu', 'I stopped dreading Monday mornings. Nouva handles the heavy lifting before I even sit down.'],
-  ['aisha', 'Aisha Kamara', 'Brand Strategist at Fuse', 'Every output sounds exactly like us — consistent, on-brand, and ready to go.'],
-  ['lucas', 'Lucas Webb', 'Digital Marketing Manager', "Nouva doesn't just automate — it thinks about structure, tone, and audience before I even ask."],
-  ['nina', 'Nina Hoffman', 'Co-founder at Loopkit', 'Every format, every tone, every audience — It adapts without us explaining ourselves.'],
-  ['marcus', 'Marcus Chen', 'Social Media Lead at Pylon', 'We replaced three separate tools with Nouva. Our workflow is cleaner and improved.'],
-  ['rachel', 'Rachel Torres', 'Content Strategist at Merge', 'Optimization used to be an afterthought. Now every deliverable we ship is structured from the start.'],
-  ['oliver', 'Oliver Grant', 'Head of Product at Briefcase', 'We onboarded Nouva on a Friday. By Monday, the entire team was already using it daily.'],
+export const workflows = [
+  ['newsletter', 'Weekly newsletter', 'Editorial', 'Turn the week’s notes into an email with a clear lead, three short updates, and one thing to read next.'],
+  ['launch', 'Product launch', 'Product marketing', 'Use the launch brief to draft a page, an announcement email, and a short post with the same message.'],
+  ['help', 'Help center update', 'Customer education', 'Turn support notes into a walkthrough with the steps in the order a reader will use them.'],
+  ['onboarding', 'Welcome emails', 'Growth', 'Outline three short emails that each help a new reader take one useful step.'],
+  ['customer-story', 'Customer story', 'Editorial', 'Build a first draft from interview notes and flag details for the interviewee to verify.'],
+  ['social', 'Social series', 'Social media', 'Pull several angles out of one brief so each post covers a different part of the story.'],
+  ['voice', 'Voice guide', 'Brand', 'Collect examples of how the team writes and turn them into editing notes everyone can use.'],
+  ['release', 'Release notes', 'Product', 'Explain what changed, who it affects, and what readers can do with the update.'],
+  ['event', 'Event campaign', 'Community', 'Write an invitation and a reminder that give readers the details they need to show up.'],
+  ['landing', 'Landing page', 'Web', 'Turn an audience brief into a page outline, then work through the main promise and supporting copy.'],
+  ['digest', 'Internal digest', 'Communications', 'Give a week of project updates a reading order and call out decisions that still need an owner.'],
+  ['refresh', 'Article refresh', 'Content operations', 'Mark stale examples and unclear passages, then use those notes to guide the next edit.'],
 ]
 
-// Both billing modes in the live template render $0 for every plan.
+// The plan cards show sample prices in both billing views.
 export const plans = [
   {
-    name: 'Starter',
+    name: 'Solo',
     monthly: 0,
     yearly: 0,
-    description: 'Perfect for individuals who want to explore what AI can do.',
-    includes: ['30 drafts per month', '3 content formats', 'Basic tone adjustment', 'Export to docs', 'Email support'],
+    description: 'For one writer building a routine for briefs and drafts.',
+    includes: ['30 draft slots per month', 'Three writing formats', 'Tone presets', 'Document export', 'Help by email'],
   },
   {
-    name: 'Pro',
+    name: 'Studio',
     monthly: 0,
     yearly: 0,
-    description: 'For teams who need more output without adding more headcount.',
-    includes: ['Unlimited drafts', 'All content formats', 'Brand voice training', 'SEO optimization', 'Priority support'],
+    description: 'For a small group producing and reviewing work across channels.',
+    includes: ['Unlimited draft slots', 'Every writing format', 'Custom voice guidance', 'Search checks', 'Priority help'],
   },
   {
-    name: 'Teams',
+    name: 'Workspace',
     monthly: 0,
     yearly: 0,
-    description: 'For growing teams who need a scalable workflow at speed.',
-    includes: ['Everything in Pro', 'Up to 15 members', 'Shared brand voice', 'Team workspace', 'Dedicated support'],
+    description: 'For teams that share editors, guidelines, and a publishing calendar.',
+    includes: ['All Studio features', 'Up to 15 contributors', 'Shared voice settings', 'Team review space', 'Dedicated help'],
   },
 ]
 
-export const customerLogos = [
-  ['savannah', 124, 16],
-  ['amsterdam', 146, 17],
-  ['theo', 83, 20],
-  ['milan', 95, 25],
-  ['paris', 113, 23],
-]
+export const channels = ['Newsletters', 'Social posts', 'Landing pages', 'Articles', 'Release notes']
 
 export const questions = [
-  ['Is Nouva really that different from ChatGPT?', 'Yes. Nouva is built specifically for team workflows — with automation, output tracking, and collaboration built in. ChatGPT is a general tool. Nouva is a productivity platform.'],
-  ['Will it actually adapt to how we work?', "That's the whole point. Nouva learns your team's processes, preferences, and patterns — so every output feels like it was made for you, not generated for everyone."],
-  ['How much can my team produce with Nouva?', 'Pro and Teams plans are unlimited. Starter plans include 30 tasks per month — enough to get started and see the difference immediately.'],
-  ['What kind of workflows does Nouva support?', 'Content creation, task automation, team collaboration, reporting, and more. New workflow types are added regularly based on user feedback.'],
-  ['Can I cancel anytime?', "Absolutely. No contracts, no cancellation fees. You're in full control — cancel or downgrade whenever you want."],
-  ['Is my data private?', 'Yes. Everything your team produces in Nouva is fully encrypted and never shared with third parties. Your data is yours — always.'],
+  ['What do I start with?', 'Bring a brief with an audience, a goal, and a few source notes. You can build out the draft from there.'],
+  ['Can we use our own voice guide?', 'The Studio and Workspace plan previews include custom voice guidance. Add examples of your tone, phrasing, and style.'],
+  ['How many drafts can I make?', 'The Solo plan preview includes 30 draft slots per month. Studio and Workspace are shown with unlimited draft slots.'],
+  ['Which formats can I draft?', 'The site shows examples for newsletters, social posts, landing pages, articles, and release notes.'],
+  ['Can I buy a plan here?', 'The plan switch lets you compare sample monthly and yearly views. This preview has no checkout.'],
+  ['What happens to the details I enter?', 'The contact and sign-in forms show local feedback in this preview. Form entries are not sent to Decode.'],
 ]

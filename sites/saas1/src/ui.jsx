@@ -1,28 +1,29 @@
 import { useEffect, useRef, useState } from 'react'
 
 const links = [
-  ['Benefits', '/#benefits'],
-  ['Features', '/#features'],
-  ['Pricing', '/#pricing'],
+  ['Overview', '/#benefits'],
+  ['Workflow', '/#features'],
+  ['Plans', '/#pricing'],
   ['FAQ', '/#faq'],
 ]
 
 const footerLinks = [
-  ['Navigation', [['Why It Matters', '/#benefits'], ...links.slice(1)]],
-  ['Information', [
+  ['Product', links],
+  ['Site information', [
     ['Contact', '/contact'],
     ['Privacy Policy', '/legal/privacy-policy'],
     ['Terms of Service', '/legal/terms-of-service'],
-    ['404', '/404'],
+    ['Page not found', '/404'],
   ]],
-  ['Socials', [
-    ['X (Twitter)', 'https://x.com/kadircalik'],
-    ['LinkedIn', 'https://linkedin.com'],
-    ['Instagram', 'https://instagram.com'],
+  ['More', [
+    ['Sign in', '/sign-in'],
+    ['Create an account', '/sign-up'],
+    ['Photography credits', '/media/photography.html'],
   ]],
 ]
 
 const iconPaths = {
+  lock: 'M6 11h12a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Zm2 0V7a4 4 0 0 1 8 0v4',
   plus: 'M12 6v12M6 12h12',
   close: 'm6 6 12 12M18 6 6 18',
   check: 'm5 12 4 4L19 6',
@@ -47,8 +48,8 @@ export function Icon({ name, className = '' }) {
 export function Brand() {
   return (
     <a className="brand inline-flex items-center" href="/#hero">
-      <img src="/media/nouva.svg" width="22" height="22" alt="" />
-      <span>Nouva</span>
+      <img src="/media/decode.svg" width="22" height="22" alt="" />
+      <span>Decode</span>
     </a>
   )
 }
@@ -70,8 +71,8 @@ export function RollButton({ children, href, variant = 'solid', className = '' }
 function HeaderActions({ mobile = false, path }) {
   return (
     <div className={'nav-actions' + (mobile ? ' nav-actions-mobile' : '')}>
-      <a className="nav-link" href="/sign-in" aria-current={path === '/sign-in' ? 'page' : undefined}>Sign In</a>
-      <RollButton href="/contact" variant="outline">Try Nouva</RollButton>
+      <a className="nav-link" href="/sign-in" aria-current={path === '/sign-in' ? 'page' : undefined}>Sign in</a>
+      <RollButton href="/contact" variant="outline">Try Decode</RollButton>
     </div>
   )
 }
@@ -139,7 +140,7 @@ export function Footer() {
         <div className="footer-layout">
           <div className="footer-info">
             <Brand />
-            <p>The AI platform that helps teams work faster, smarter, and at scale.</p>
+            <p>An AI writing workspace for teams that plan, draft, and review together.</p>
           </div>
           <div className="footer-menu">
             {footerLinks.map(([label, items]) => (
@@ -154,7 +155,7 @@ export function Footer() {
             ))}
           </div>
         </div>
-        <p className="copyright">© 2026 Nouva by <a href="https://x.com/kadircalik">Kadir Calik</a></p>
+        <p className="copyright">© 2026 Decode</p>
       </div>
     </footer>
   )
