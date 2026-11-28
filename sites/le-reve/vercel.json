@@ -1,0 +1,51 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "decode-fashioown\\.vercel\\.app"}],
+      "destination": "https://decode-fashioown.chrbuilds.dev/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "decodeee\\.vercel\\.app"}],
+      "destination": "https://decodeee.chrbuilds.dev/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "decode-fashioown\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://decode-fashioown.chrbuilds.dev/>; rel=\"canonical\""}]
+    },
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "decodeee\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://decodeee.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/robots.txt",
+      "has": [{"type": "host", "value": "decode-fashioown\\.chrbuilds\\.dev"}],
+      "destination": "/seo/decode-fashioown/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [{"type": "host", "value": "decode-fashioown\\.chrbuilds\\.dev"}],
+      "destination": "/seo/decode-fashioown/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "has": [{"type": "host", "value": "decodeee\\.chrbuilds\\.dev"}],
+      "destination": "/seo/decodeee/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [{"type": "host", "value": "decodeee\\.chrbuilds\\.dev"}],
+      "destination": "/seo/decodeee/sitemap.xml"
+    }
+  ]
+}

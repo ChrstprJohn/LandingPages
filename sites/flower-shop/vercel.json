@@ -2,5 +2,20 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "floraco\\.vercel\\.app"}],
+      "destination": "https://floraco.chrbuilds.dev/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "floraco\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://floraco.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

@@ -1,9 +1,53 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "dcdonut\\.vercel\\.app"}],
+      "destination": "https://dcdonut.chrbuilds.dev/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "dcdonuts\\.vercel\\.app"}],
+      "destination": "https://dcdonuts.chrbuilds.dev/:path*",
+      "permanent": true
+    },
     { "source": "/home", "destination": "/", "permanent": true }
   ],
   "rewrites": [
+    {
+      "source": "/robots.txt",
+      "has": [{"type": "host", "value": "dcdonut\\.chrbuilds\\.dev"}],
+      "destination": "/seo/dcdonut/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [{"type": "host", "value": "dcdonut\\.chrbuilds\\.dev"}],
+      "destination": "/seo/dcdonut/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "has": [{"type": "host", "value": "dcdonuts\\.chrbuilds\\.dev"}],
+      "destination": "/seo/dcdonuts/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [{"type": "host", "value": "dcdonuts\\.chrbuilds\\.dev"}],
+      "destination": "/seo/dcdonuts/sitemap.xml"
+    },
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "dcdonut\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://dcdonut.chrbuilds.dev/>; rel=\"canonical\""}]
+    },
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "dcdonuts\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://dcdonuts.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

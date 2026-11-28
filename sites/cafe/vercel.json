@@ -2,5 +2,20 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "brewday-delta\\.vercel\\.app"}],
+      "destination": "https://brewday-delta.chrbuilds.dev/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "brewday-delta\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://brewday-delta.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

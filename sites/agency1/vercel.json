@@ -5,10 +5,23 @@
   "buildCommand": "npx --yes pnpm@11.24.0 --filter agency1 build",
   "outputDirectory": "dist",
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "decodeagency\\.vercel\\.app"}],
+      "destination": "https://decodeagency.chrbuilds.dev/:path*",
+      "permanent": true
+    },
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/home/", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "decodeagency\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://decodeagency.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dcdonut.chrbuilds.dev/sitemap.xml

@@ -2,5 +2,20 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "dcd-arch-studio\\.vercel\\.app"}],
+      "destination": "https://dcd-arch-studio.chrbuilds.dev/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "dcd-arch-studio\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://dcd-arch-studio.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

@@ -2,5 +2,20 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "archi-tau\\.vercel\\.app"}],
+      "destination": "https://archi-tau.chrbuilds.dev/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "archi-tau\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://archi-tau.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

@@ -5,9 +5,22 @@
   "buildCommand": "npx --yes pnpm@11.24.0 --filter saas1 build",
   "outputDirectory": "dist",
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "dcode-rust\\.vercel\\.app"}],
+      "destination": "https://dcode-rust.chrbuilds.dev/:path*",
+      "permanent": true
+    },
     { "source": "/home", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "dcode-rust\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://dcode-rust.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

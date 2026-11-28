@@ -5,9 +5,22 @@
   "buildCommand": "npx --yes pnpm@11.24.0 --filter hotel1 build",
   "outputDirectory": "dist",
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "dcdhotel\\.vercel\\.app"}],
+      "destination": "https://dcdhotel.chrbuilds.dev/:path*",
+      "permanent": true
+    },
     { "source": "/home", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "dcdhotel\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://dcdhotel.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

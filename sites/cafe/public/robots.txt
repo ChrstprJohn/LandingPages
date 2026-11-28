@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brewday-delta.chrbuilds.dev/sitemap.xml

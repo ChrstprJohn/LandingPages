@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dcode-rust.chrbuilds.dev/sitemap.xml

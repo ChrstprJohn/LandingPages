@@ -1,9 +1,22 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "dcrafts\\.vercel\\.app"}],
+      "destination": "https://dcrafts.chrbuilds.dev/:path*",
+      "permanent": true
+    },
     { "source": "/home", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "dcrafts\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://dcrafts.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

@@ -5,9 +5,22 @@
   "buildCommand": "npx --yes pnpm@11.24.0 --filter construction-2 build",
   "outputDirectory": "dist",
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "dconstruct\\.vercel\\.app"}],
+      "destination": "https://dconstruct.chrbuilds.dev/:path*",
+      "permanent": true
+    },
     { "source": "/home", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "dconstruct\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://dconstruct.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

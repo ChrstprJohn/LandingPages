@@ -6,10 +6,23 @@
   "outputDirectory": "dist",
   "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "robotics-delta-three\\.vercel\\.app"}],
+      "destination": "https://robotics-delta-three.chrbuilds.dev/:path*",
+      "permanent": true
+    },
     { "source": "/home", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/blog-posts/:slug", "destination": "/blog-posts/:slug/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "robotics-delta-three\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://robotics-delta-three.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }

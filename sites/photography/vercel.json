@@ -2,5 +2,20 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "photostudio-live\\.vercel\\.app"}],
+      "destination": "https://photostudio-live.chrbuilds.dev/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "photostudio-live\\.chrbuilds\\.dev"}],
+      "headers": [{"key": "Link", "value": "<https://photostudio-live.chrbuilds.dev/>; rel=\"canonical\""}]
+    }
   ]
 }
