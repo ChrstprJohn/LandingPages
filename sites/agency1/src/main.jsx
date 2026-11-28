@@ -19,7 +19,7 @@ function SitePage({ path, restoreScroll }) {
 
   useEffect(() => {
     const title = routeTitle(path)
-    document.title = title ? title + ' — Aldena Studio' : defaultTitle
+    document.title = title ? title + ' — Decode Studio' : defaultTitle
   }, [path])
 
   return (
@@ -27,7 +27,7 @@ function SitePage({ path, restoreScroll }) {
       <Navigation path={path} light={lightNavigation} />
       <main id="main-content" tabIndex={-1}>{home ? <Home /> : <Pages path={path} />}</main>
       <Footer />
-      <div className="custom-cursor" aria-hidden="true"><span>View More</span></div>
+      <div className="custom-cursor" aria-hidden="true"><span>Explore</span></div>
     </div>
   )
 }

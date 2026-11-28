@@ -54,6 +54,7 @@ export function Navigation({ path, light = true }) {
     <>
       <a href="#main-content" className="skip-link">Skip to content</a>
       <header className={'header ' + (light ? '' : 'header--ink')}>
+        <a className="mobile-brand" href="/" aria-label="dcd home" aria-current={path === '/' ? 'page' : undefined}>dcd</a>
         <nav className="main-nav" aria-label="Main navigation" data-nav-entry>
           {navigation.map(([label, url]) => (
             <RollingLink key={url} href={url} aria-current={path === url ? 'page' : undefined}>{label.toUpperCase()}</RollingLink>
@@ -133,10 +134,10 @@ export function ContactBanner() {
         <StudioFilm />
         <Grain />
       </div>
-      <h2 className="contact-big" id="contact-banner-title"><span>Great Work</span>{' '}<span>Starts Here</span></h2>
-      <Action href="/contact" light>START A PROJECT</Action>
+      <h2 className="contact-big" id="contact-banner-title"><span>Good Work</span>{' '}<span>Starts Here</span></h2>
+      <Action href="/contact" light>TELL US YOUR IDEA</Action>
       <div className="contact-facts gutters">
-        <span>SINCE 2016</span><span>BRANDING &amp; CONTENT</span><span>BASED IN NEW YORK</span><span>50+ BRANDS SHAPED</span>
+        <span>EST. 2016</span><span>BRAND &amp; EDITORIAL</span><span>NEW YORK STUDIO</span><span>50+ BRAND PROJECTS</span>
       </div>
     </section>
   )
@@ -150,11 +151,11 @@ export function Footer() {
       <div className="footer-content">
         <div className="newsletter">
           <div data-reveal>
-            <h2>Stay in the loop.</h2>
-            <p>Get the latest news, insights directly to your inbox.</p>
+            <h2>Notes in your inbox.</h2>
+            <p>Get new essays and studio updates by email.</p>
           </div>
-          <form data-reveal onSubmit={(event) => { event.preventDefault(); setMessage('Newsletter subscriptions are unavailable in this local preview.') }}>
-            <input name="email" type="email" placeholder="name@email.com" aria-label="Email address" required autoComplete="email" />
+          <form data-reveal onSubmit={(event) => { event.preventDefault(); setMessage('The newsletter form is inactive in this local preview.') }}>
+            <input name="email" type="email" placeholder="you@example.com" aria-label="Email address" required autoComplete="email" />
             <button type="submit">SUBSCRIBE</button>
           </form>
           {message && <p role="status" className="form-status">{message}</p>}
@@ -168,11 +169,11 @@ export function Footer() {
               {socialLinks.map(([label, url]) => <RollingLink href={url} key={url} target="_blank" rel="noreferrer">{label}</RollingLink>)}
             </nav>
           </div>
-          <address data-reveal><a href="tel:2125550198">+1 (212) 555-0198</a><a href="mailto:hello@aldena.studio">hello@aldena.studio</a></address>
+          <address data-reveal><a href="tel:2125550198">+1 (212) 555-0198</a><a href="mailto:hello@decode.studio">hello@decode.studio</a></address>
         </div>
-        <a className="site-credit" href="https://lunisdesign.com/" target="_blank" rel="noreferrer">DESIGNED BY LUNIS. ALL RIGHTS RESERVED.</a>
+        <a className="site-credit" href="https://lunisdesign.com/" target="_blank" rel="noreferrer">ORIGINAL DESIGN BY LUNIS. RIGHTS RESERVED.</a>
       </div>
-      <div className="footer-wordmark" data-reveal>Aldena Studio</div>
+      <div className="footer-wordmark" data-reveal>Decode Studio</div>
     </footer>
   )
 }

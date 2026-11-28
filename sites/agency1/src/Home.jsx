@@ -8,7 +8,7 @@ import { useProjectMotion } from './motion.js'
 
 const wrap = (index, length) => (index + length) % length
 const slideNumber = (index) => String(index + 1).padStart(2, '0')
-const introLabels = ['DESIGNED TO ENDURE.', 'WRITTEN TO RESONATE.', 'CONSIDERED IN EVERY DETAIL.']
+const introLabels = ['DESIGN WITH PURPOSE.', 'WORDS WITH CHARACTER.', 'CARE IN THE SMALLEST DETAIL.']
 
 function HeroService() {
   const shell = useRef(null)
@@ -86,18 +86,18 @@ export function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="hero-picture">
-        <Media name="hero" alt="Colorful portrait of a young woman" eager />
+        <Media name="hero" alt="Fashion portrait in red studio light" eager />
       </div>
       <Grain strength="grain--hero" />
       <div className="hero-frame gutters">
         <div className="hero-title-size">
-          <h1 id="hero-heading" className="hero-title" data-hero-title>Aldena Studio</h1>
+          <h1 id="hero-heading" className="hero-title" data-hero-title>Decode Studio</h1>
           <canvas className="hero-letters" aria-hidden="true" />
           <canvas className="hero-letters hero-letters--pointer" aria-hidden="true" />
         </div>
         <div className="hero-bottom">
           <div className="hero-agency">
-            <h2>Creative Agency</h2>
+            <h2>Creative Studio</h2>
             <p>{introLabels.map((line) => <span key={line}>{line}</span>)}</p>
           </div>
           <HeroService />
@@ -131,24 +131,24 @@ export function StudioIntro() {
   }, { scope: film })
 
   return (
-    <section className="studio-intro gutters" aria-label="About Aldena">
+    <section className="studio-intro gutters" aria-label="About Decode">
       <div className="intro-side">
         <div className="intro-film-perspective">
           <div className="intro-film" ref={film}>
             <StudioFilm />
             <Grain />
-            <span>Aldena</span>
+            <span>Decode</span>
           </div>
         </div>
-        <Action href="/about" light>MORE ABOUT US</Action>
+        <Action href="/about" light>MEET THE STUDIO</Action>
       </div>
       <div className="founder-card">
         <div className="founder-copy" data-text-reveal data-reveal>
           {studioCopy.map((paragraph) => <WordReveal key={paragraph} as="p">{paragraph}</WordReveal>)}
         </div>
         <div className="founder-byline" data-reveal>
-          <Media name="founder" alt="Aldena Rhodes" />
-          <div><strong>Aldena Rhodes</strong><span>Founder &amp; Creative Director</span></div>
+          <Media name="founder" />
+          <div><strong>Christopher John Picardo</strong><span>Founder &amp; Creative Director</span></div>
         </div>
       </div>
     </section>
@@ -160,7 +160,7 @@ export function ProjectPanels({ entries = projects }) {
   useProjectMotion(scope, entries)
 
   return (
-    <section ref={scope} className="project-panels" aria-label="Selected works">
+    <section ref={scope} className="project-panels" aria-label="Selected work">
       {entries.map((project) => (
         <a className="project-panel" href={'/work/' + project.slug} key={project.slug} aria-label={project.title + ' case study'}>
           <Media className="project-bg" name={project.background || project.image + '-bg'} />
@@ -189,10 +189,10 @@ function Services() {
   const move = (direction) => setIndex((value) => wrap(value + direction, services.length))
 
   return (
-    <section className="services" aria-label="What we offer">
+    <section className="services" aria-label="What we do">
       <div className="service-mobile-intro gutters">
-        <h2 data-reveal>What we offer</h2>
-        <p data-reveal>A focused set of brand, web, and digital design services shaped to elevate your presence.</p>
+        <h2 data-reveal>What we do</h2>
+        <p data-reveal>Brand, web, and digital design services for the places your customers meet you.</p>
       </div>
       <div className="service-carousel" data-reveal="carousel" onPointerDown={(event) => {
         if (!event.target.closest('button')) {
@@ -216,12 +216,12 @@ function Services() {
               <div className="service-copy">
                 <div>
                   <div data-reveal="edge">
-                    <span className="smallcaps service-kicker">WHAT WE OFFER</span>
+                    <span className="smallcaps service-kicker">WHAT WE DO</span>
                     <h3>{service.title}</h3>
                   </div>
                   <p data-reveal="edge">{service.detail}</p>
                 </div>
-                <div className="service-price" data-reveal="edge"><span className="smallcaps">STARTING AT</span><strong>{service.price}</strong></div>
+                <div className="service-price" data-reveal="edge"><span className="smallcaps">PROJECTS FROM</span><strong>{service.price}</strong></div>
               </div>
               <div className="service-art" tabIndex={offset === 0 ? 0 : undefined} aria-label={service.title + ' artwork'}>
                 <Media name={service.image + '-bg'} className="service-background" alt="Service card background" />
@@ -284,7 +284,7 @@ function DisclosureList({ type }) {
 function ProcessSection() {
   return (
     <section className="process gutters" aria-labelledby="process-title">
-      <WordReveal as="h2" className="section-title process-title" id="process-title" data-heading-reveal>A refined process built on clarity.</WordReveal>
+      <WordReveal as="h2" className="section-title process-title" id="process-title" data-heading-reveal>A clear process from idea to launch.</WordReveal>
       <DisclosureList type="process" />
     </section>
   )
@@ -292,7 +292,7 @@ function ProcessSection() {
 
 function LogoStrip() {
   return (
-    <div className="logo-strip" aria-label="Some of our clients">
+    <div className="logo-strip" aria-label="Selected client logos">
       <Grain />
       <div className="logo-entrance" data-ticker-reveal>
         <div className="logo-track">
@@ -309,22 +309,22 @@ function LogoStrip() {
 
 function Testimonials() {
   return (
-    <section className="testimonials" aria-label="Hear from our clients">
+    <section className="testimonials" aria-label="What our clients say">
       <div className="testimonials-stage gutters">
-        <h2 className="testimonial-mobile-title section-title">Hear from our clients</h2>
+        <h2 className="testimonial-mobile-title section-title">What our clients say</h2>
         <div className="testimonial-cards">
           {testimonials.map(({ name, role, quote, image, project }, index) => (
             <figure className="testimonial-card" style={{ '--card-index': index, zIndex: testimonials.length - index }} key={name}>
               <blockquote><span aria-hidden="true">”</span><p>{quote}</p></blockquote>
               <figcaption>
                 <div><strong>{name}</strong><span>{role}</span></div>
-                <Media name={image} alt="Client portrait" />
+                <Media name={image} />
               </figcaption>
               <span className="testimonial-project smallcaps">{project}</span>
             </figure>
           ))}
         </div>
-        <div className="testimonials-label smallcaps"><span>HEAR FROM OUR CLIENTS</span><span className="active-testimonial-project">{testimonials[0].project}</span></div>
+        <div className="testimonials-label smallcaps"><span>WHAT OUR CLIENTS SAY</span><span className="active-testimonial-project">{testimonials[0].project}</span></div>
       </div>
     </section>
   )
@@ -334,14 +334,14 @@ export function FaqSection() {
   return (
     <section className="faq gutters" aria-labelledby="faq-title">
       <div className="section-intro">
-        <WordReveal as="h2" className="section-title" id="faq-title" data-heading-reveal>Your questions, answered.</WordReveal>
-        <p data-reveal>A quick rundown of how we work and what to expect.</p>
+        <WordReveal as="h2" className="section-title" id="faq-title" data-heading-reveal>Good questions to ask.</WordReveal>
+        <p data-reveal>How we work together and what you can expect.</p>
       </div>
       <div className="faq-columns">
         <DisclosureList type="faq" />
         <aside className="faq-aside" data-reveal>
           <div className="faq-picture"><Media name="faq-portrait" /><Grain /></div>
-          <div className="faq-cta"><p>Still looking for answers or need a good chat?</p><Action href="/contact">CONTACT US</Action></div>
+          <div className="faq-cta"><p>Is there something else you'd like to ask us?</p><Action href="/contact">GET IN TOUCH</Action></div>
         </aside>
       </div>
     </section>
@@ -370,11 +370,11 @@ function BlogSection() {
   return (
     <section className="journal gutters" aria-labelledby="journal-title">
       <div className="section-intro journal-intro">
-        <WordReveal as="h2" className="section-title" id="journal-title" data-heading-reveal>From the studio.</WordReveal>
-        <p data-reveal="edge">Essays, notes, and perspectives on brand, design, and the craft of telling better stories.</p>
+        <WordReveal as="h2" className="section-title" id="journal-title" data-heading-reveal>Studio notes.</WordReveal>
+        <p data-reveal="edge">Notes and essays on identity, design, and the decisions that shape the stories we tell.</p>
       </div>
       <PostCards reveal="journal" />
-      <div className="journal-action"><Action href="/blog">READ MORE</Action></div>
+      <div className="journal-action"><Action href="/blog">MORE NOTES</Action></div>
     </section>
   )
 }

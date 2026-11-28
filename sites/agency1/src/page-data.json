@@ -2,21 +2,21 @@
   "projects": [
     {
       "slug": "aster-bloom",
-      "title": "Aster Bloom",
+      "title": "Alba Flora",
       "image": "aster",
       "background": "aster-bg",
       "year": "2025",
-      "summary": "A botanical identity for a skincare brand rooted in slow, seasonal rituals.",
+      "summary": "A botanical brand for skincare inspired by the gentle rhythm of the seasons.",
       "category": "Branding",
-      "client": "Aster Bloom Co.",
-      "challenge": "A living identity for Aster Bloom",
-      "outcome": "Rituals, not products",
-      "overview": "Aster Bloom needed a brand that felt as considered as its formulations. We built an identity around pressed-botanical marks and a soft, tactile palette. The result feels calm, premium, and unmistakably its own.",
+      "client": "Alba Flora Co.",
+      "challenge": "An identity drawn from nature",
+      "outcome": "The daily ritual",
+      "overview": "Alba Flora wanted an identity with the same care that went into its formulas. Pressed flowers informed the marks, and soft colors gave the packaging a tactile feel. Together they made a quiet, distinctive brand.",
       "paragraphs": [
-        "We designed the logotype and botanical marks to breathe, shifting subtly across packaging so no two products feel identical. The system stays recognizable while giving each formulation its own quiet personality.",
-        "Every touchpoint was drawn from real pressed flora, then refined into a flexible library. That grounding kept the brand honest and made the premium price feel earned rather than styled on.",
-        "The tone of voice was written to slow readers down, framing each product as part of a daily ritual instead of a transaction. Copy and imagery move at the same unhurried pace.",
-        "We paired muted typography with generous space so the packaging felt like an object worth keeping. That restraint is what makes the shelf presence feel expensive."
+        "The wordmark and flower symbols vary a little from pack to pack, giving every formula its own character. A consistent silhouette lets customers recognize the range even as the details change.",
+        "We started with actual pressed flowers and simplified their shapes into a practical set of marks. The botanical details connect the packaging to the ingredients and reward a closer look.",
+        "We wrote the product copy to suit the pace of a morning or evening routine. The short, deliberate sentences and quiet photography let each object take its time.",
+        "Subdued lettering and generous margins made the packs feel worth keeping on a bathroom shelf. The same choices gave the range a distinct presence in stores."
       ],
       "gallery": [
         "aster-detail-2",
@@ -28,21 +28,21 @@
     },
     {
       "slug": "nova-grid",
-      "title": "Nova Grid",
+      "title": "Orbit Grid",
       "image": "nova",
       "background": "nova-bg",
       "year": "2024",
-      "summary": "A crisp visual system for a data platform that wanted to feel human.",
+      "summary": "A clearer visual language for a data platform built around the people using it.",
       "category": "Design",
-      "client": "Nova Grid",
-      "challenge": "Clarity first",
-      "outcome": "A warmer machine",
-      "overview": "Nova Grid was drowning in charts and jargon. We built a clean, confident design language that turns dense data into something approachable. It now reads as clear as it is capable.",
+      "client": "Orbit Grid",
+      "challenge": "Making room for the data",
+      "outcome": "A more human tool",
+      "overview": "Orbit Grid had useful data buried under dense charts and specialist language. We designed a more readable visual system that gives people a clear place to start, even on busy screens.",
       "paragraphs": [
-        "We rebuilt the interface language around a strict grid and a restrained palette, letting the data itself carry the color. Removing decoration made complex dashboards finally feel legible.",
-        "Type and spacing were tuned for long working sessions, reducing the visual noise that used to tire people out. The product now feels calm even when the numbers are not.",
-        "To soften the technical edge, we introduced friendly illustration and plain-language microcopy across the platform. It made a powerful tool feel like it was on the user's side.",
-        "We documented everything as a living system so the team could scale without drifting. Consistency became the thing that made Nova Grid feel trustworthy."
+        "We set a firm grid and scaled back the interface palette so color could signal something meaningful in the charts. Dense dashboards became easier to scan without taking information away.",
+        "We adjusted the type sizes and spacing for people who spend hours in the product. Clearer divisions between data groups reduced the effort it takes to read a long screen.",
+        "Plain-language labels and small illustrations made unfamiliar actions easier to understand. The product kept its technical depth while giving new users a friendlier entry point.",
+        "Living guidelines show how the pieces fit as the product grows. Consistent controls let people carry what they learned on one screen to the next."
       ],
       "gallery": [
         "visual-bg",
@@ -54,21 +54,21 @@
     },
     {
       "slug": "marrow-coffee",
-      "title": "Marrow Coffee",
+      "title": "Ember Coffee",
       "image": "marrow",
       "background": "marrow-bg",
       "year": "2025",
-      "summary": "A bold, honest identity for a roaster obsessed with origin and craft.",
+      "summary": "A direct, distinctive identity for a roaster with a deep respect for origin.",
       "category": "Branding",
-      "client": "Marrow Roasters",
-      "challenge": "Bold to the bone",
-      "outcome": "Origin as story",
-      "overview": "Marrow wanted a brand as direct as their espresso. We leaned into heavy type, raw texture, and unfiltered storytelling. The identity feels warm, confident, and built to last.",
+      "client": "Ember Roasters",
+      "challenge": "A bolder first impression",
+      "outcome": "The story of each origin",
+      "overview": "Ember wanted a brand with the directness of its espresso. Substantial lettering, tactile materials, and frank language gave the roaster a warm identity with room to grow.",
       "paragraphs": [
-        "We anchored the identity in a heavyweight wordmark and a stripped-back palette that reads instantly across a busy cafe counter. It gives Marrow presence without shouting.",
-        "Textured, tactile packaging references the roasting process itself, so the brand feels made rather than manufactured. That craft cue is what earns a second look on the shelf.",
-        "Each bag carries the farm, the altitude, and the hands behind the harvest, turning packaging into a small piece of storytelling. Transparency became the brand's whole personality.",
-        "We built a flexible label system so new single-origins slot in without a redesign. It keeps the range feeling fresh while staying unmistakably Marrow."
+        "A weighty wordmark and spare palette hold their own on a busy coffee counter. The simple shapes keep the name readable on everything from bags to pocket-sized tasting cards.",
+        "The packaging uses textures that recall a working roastery. Those rougher surfaces catch the light and give people a reason to pick up a bag for a second look.",
+        "We reserved space on each bag for the farm, its elevation, and the people who grew the coffee. That information gives customers something specific to remember about each roast.",
+        "The modular labels let the team introduce a single-origin coffee with a few simple updates. Each release has room for its own story and still belongs to the same shelf."
       ],
       "gallery": [
         "marrow-detail-2",
@@ -81,21 +81,21 @@
     },
     {
       "slug": "fern-field",
-      "title": "Fern Field",
+      "title": "Moss Field",
       "image": "fern",
       "background": "fern-bg",
       "year": "2024",
-      "summary": "A content system that lets an architecture studio speak in its own quiet voice.",
+      "summary": "An editorial system for an architecture practice with a quiet point of view.",
       "category": "Content",
-      "client": "Fern Studio",
-      "challenge": "Words for the work",
-      "outcome": "A publishing rhythm",
-      "overview": "Fern Studio had beautiful work but no words to match. We shaped a content strategy and editorial voice around their process. Now the writing feels as intentional as the buildings.",
+      "client": "Moss Studio",
+      "challenge": "Writing from the work",
+      "outcome": "A steady editorial pace",
+      "overview": "Moss Studio wanted its writing to carry the same care as its buildings. We developed a voice and publishing plan grounded in the way the architects work. That gave every project a clear story to tell.",
       "paragraphs": [
-        "We developed an editorial voice that mirrors the studio's restraint, favoring precise, unadorned language over industry jargon. It lets the architecture stay the loudest thing in the room.",
-        "Project narratives were restructured around process and place, giving each build a clear story arc. Clients finally understood the thinking, not just the outcome.",
-        "We set up a lightweight content calendar so the studio could share work without it becoming a burden. Consistency turned an occasional post into a genuine audience.",
-        "Every piece was templated for tone and structure, keeping quality high even when time was short. The voice now stays steady no matter who is writing."
+        "The studio's spare architectural language gave us a starting point for the writing. We used concrete descriptions of light, space, and material so the buildings could remain the focus.",
+        "We organized the project stories around the site and the decisions that shaped each build. Readers can follow how the architects got there and see the reasons behind the choices.",
+        "A simple publishing calendar made it easier to share work between deadlines. A regular rhythm gave readers a reason to come back as projects progressed.",
+        "Short templates give contributors a common structure and examples of the studio's tone. The writing stays consistent whoever picks up the next piece."
       ],
       "gallery": [
         "content",
@@ -107,21 +107,21 @@
     },
     {
       "slug": "halden-press",
-      "title": "Halden Press",
+      "title": "Lumen Press",
       "image": "halden",
       "background": "halden-bg",
       "year": "2025",
-      "summary": "An editorial voice and content strategy for an independent literary press.",
+      "summary": "A distinct editorial voice and publishing plan for an independent literary press.",
       "category": "Content",
-      "client": "Halden Press",
-      "challenge": "A voice worth reading",
-      "outcome": "Building a readership",
-      "overview": "Halden Press needed to sound like the books it champions. We built a literary content system with a distinct, unhurried voice. It turned casual browsers into a loyal readership.",
+      "client": "Lumen Press",
+      "challenge": "A house style with character",
+      "outcome": "Making readers regulars",
+      "overview": "Lumen Press wanted the way it spoke to readers to reflect the books it publishes. We set an unhurried editorial voice and built a publishing system around it. Casual visitors had a reason to return.",
       "paragraphs": [
-        "We crafted a house voice that treats every blurb and newsletter as a small piece of literature in itself. Readers started staying for the writing, not just the catalog.",
-        "Tone guidelines kept that voice consistent across editors and seasons, so the press always sounds like one considered person. That coherence is what built trust.",
-        "We reframed the newsletter as a serialized companion to the list, giving subscribers a reason to open every issue. Content became the press's most reliable sales channel.",
-        "Author interviews and essays were programmed to deepen the world around each title. The result is a community that feels invested rather than marketed to."
+        "We wrote the house voice so a jacket blurb or a newsletter would hold up as a short piece of writing. Every format offered a small sample of what makes the list distinctive.",
+        "Guidelines with examples gave editors common ground across seasons and formats. A reader could recognize the press in a two-line announcement as easily as in a longer essay.",
+        "With a recurring structure, the newsletter became a companion to new releases. Readers knew what to expect from each issue, and the press had a dependable route from editorial to sales.",
+        "Interviews and essays gave readers more ways into each book. By extending the conversation around a release, the press built interest in its wider list."
       ],
       "gallery": [
         "halden-detail-2",
@@ -133,21 +133,21 @@
     },
     {
       "slug": "ostara-wine",
-      "title": "Ostara Wine",
+      "title": "Solaire Wine",
       "image": "ostara",
       "background": "ostara-bg",
       "year": "2023",
-      "summary": "An expressive label system for a natural wine label that refuses to sit still.",
+      "summary": "A flexible set of labels for a natural wine producer that changes with the seasons.",
       "category": "Design",
-      "client": "Ostara",
-      "challenge": "A label that moves",
-      "outcome": "Playful, not precious",
-      "overview": "Ostara wanted labels as alive as their wine. We designed an ever-changing illustrative system tied to each vintage. Every bottle now feels collectible.",
+      "client": "Solaire",
+      "challenge": "Room for each vintage",
+      "outcome": "Character with a light touch",
+      "overview": "Solaire wanted labels with the energy of each vintage. We set a new illustration within a familiar layout each year, creating a series people can collect.",
       "paragraphs": [
-        "We built an illustrative system that shifts with every vintage, so each release feels like a limited edition worth keeping. The bottle became part of the appeal.",
-        "A flexible frame holds the wildness together, keeping the range coherent even as the artwork changes. Structure is what lets the expression run free.",
-        "The tone leans irreverent and warm, inviting curious drinkers rather than intimidating them. Natural wine finally felt approachable on the shelf.",
-        "We designed the system to work at small scale and in dim bars, where these bottles actually get chosen. Legibility kept the personality from getting lost."
+        "A different illustration marks every vintage, giving each release a distinct presence. People can spot a new bottle quickly and still see how it fits within the larger series.",
+        "We built a common frame for the changing artwork. The stable label layout holds the collection together and gives the illustrations room for bolder choices.",
+        "We wrote the labels with curiosity and a light touch. The language gives people an easy way into natural wine, even when they're choosing a bottle for the first time.",
+        "We checked the labels at shelf distance and in low light, where people often encounter them. Strong type kept the details readable alongside the louder artwork."
       ],
       "gallery": [
         "ostara-detail-2",
@@ -161,22 +161,22 @@
   "posts": [
     {
       "slug": "the-art-of-white-space-in-modern-interfaces",
-      "title": "The art of white space in designing user interfaces",
-      "summary": "Understanding how negative space shapes user experience and visual hierarchy.",
+      "title": "How white space guides the eye in modern interfaces",
+      "summary": "How the open areas of a layout shape attention, rhythm, and the reading experience.",
       "category": "Design",
       "date": "Jun 2, 2026",
       "image": "blog-space",
       "author": "Claire Smith",
       "portrait": "blog-space-avatar",
       "headings": [
-        "The power of pause",
-        "Space with intent"
+        "A pause for the eye",
+        "Give space a job"
       ],
       "paragraphs": [
-        "White space is not wasted space. It is one of the most powerful tools a designer has for guiding attention, creating rhythm, and letting the important elements of an interface breathe. When used with intention, it turns a crowded screen into something calm and considered.",
-        "I think of negative space as the punctuation of visual language. It creates pauses, separates ideas, and gives emphasis to the elements that remain. Without it, everything competes for attention at once and nothing feels resolved.",
-        "The most common mistake is treating white space as leftover area, something to fill once the real content is placed. Instead, it should be planned first, shaping the layout rather than reacting to it. Generous spacing around a single call to action often does more than any amount of decoration.",
-        "When defending empty pixels to stakeholders, it helps to talk in terms of focus and clarity rather than aesthetics. Space is what makes a message legible, a product feel premium, and a journey feel effortless. Those are outcomes anyone can get behind."
+        "The empty areas of an interface tell people what to look at next. A well-placed gap can distinguish two ideas, slow the reading pace, or give a single control more weight. Together those choices make a busy screen much easier to take in.",
+        "I use spacing the way a writer uses punctuation. A little gap keeps related details together, while a larger one signals a new subject. Those differences give a layout a rhythm readers can follow.",
+        "Reserve room for important actions when you first lay out a screen. If the main button needs a clear path from the heading, give that path space before adding secondary links or decoration. It's much easier to make room on a sketch than on a finished page.",
+        "In a review, tie the amount of space to a specific task. Show how the gap makes the next action easier to find or lets a key message read at a glance on a small screen. Concrete examples give the team a shared reason to protect it."
       ],
       "gallery": [
         "blog-space-detail-3",
@@ -193,22 +193,22 @@
     },
     {
       "slug": "building-a-brand-voice-that-lasts",
-      "title": "Building a brand voice that lasts for our clients",
-      "summary": "How to define a tone of voice that stays consistent as your company grows.",
+      "title": "How to build a brand voice people will remember",
+      "summary": "A practical way to keep your voice recognizable as more people write for your company.",
       "category": "Branding",
       "date": "Jun 9, 2026",
       "image": "blog-voice",
       "author": "Marcus Bennett",
       "portrait": "blog-voice-avatar",
       "headings": [
-        "More than adjectives",
-        "A living voice"
+        "From traits to decisions",
+        "Keep the voice alive"
       ],
       "paragraphs": [
-        "A brand voice is more than a list of adjectives on a slide. It is the accumulated personality that shows up in every headline, error message, and email you send. When it is clear, customers recognise you before they even see your logo.",
-        "The best voices are built from real values rather than borrowed trends. Start by asking how you actually want people to feel when they read your words, then work backwards to the choices that create that feeling consistently.",
-        "Consistency is where most brands quietly fall apart. As teams grow, more people write in your name, and without shared guidance the voice drifts. A simple set of principles and a few before and after examples do more than a lengthy style manual nobody reads.",
-        "Treat your voice as something living that evolves with your audience. Review it as your product matures and your market shifts, refining the language while keeping the underlying character intact. A voice that lasts is one you are willing to tend."
+        "People meet a brand in its smallest bits of writing, from a headline to an error message. A clear character across those moments makes a company recognizable even when the name and logo are out of view.",
+        "Pick a few characteristics that are already visible in how your company works. Decide how you want a customer to feel after reading a message, then test which words and sentence lengths create that effect in practice.",
+        "As more people write for the company, give them a short reference they can use under a deadline. Pair each principle with a before-and-after example from a familiar task, such as a product announcement or a customer support reply.",
+        "Revisit the examples when your audience or product changes. New situations may need a different level of warmth or detail, while the underlying character can stay familiar. Regular small revisions help the voice keep up."
       ],
       "gallery": [
         "blog-voice-detail-3",
@@ -225,22 +225,22 @@
     },
     {
       "slug": "designing-for-performance-from-day-one",
-      "title": "Designing for performance from day one",
-      "summary": "Why speed is a design decision long before it becomes an engineering one.",
+      "title": "Designing fast interfaces from the start",
+      "summary": "How decisions about type, imagery, and layout shape speed before development begins.",
       "category": "Development",
       "date": "Jun 16, 2026",
       "image": "blog-performance",
       "author": "Elena Ruiz",
       "portrait": "blog-performance-avatar",
       "headings": [
-        "A design decision",
-        "Small habits, big gains"
+        "Speed starts in design",
+        "Small choices add up"
       ],
       "paragraphs": [
-        "Performance is often treated as an engineering concern to be optimised at the end, but many of the choices that determine speed are made much earlier. The number of fonts, the weight of imagery, and the complexity of a layout are all design decisions with real cost.",
-        "When performance is considered from the first sketch, it stops being a compromise and becomes a constraint that sharpens the work. A lighter page is usually a clearer one, because every element has to justify the time it takes to load.",
-        "Small habits compound into large gains. Choosing a single well chosen typeface, sizing images to their actual display dimensions, and favouring native patterns over heavy custom effects keeps interfaces responsive without sacrificing character.",
-        "The reward is felt by everyone. Faster experiences convert better, rank higher, and feel more trustworthy, especially on the slower connections and older devices that a surprising share of your audience still uses every day."
+        "The first wireframes already make commitments about speed. A type family, a full-bleed photograph, or a complex layout all have a cost once the page reaches a browser. Naming that cost early leaves room to make a deliberate choice.",
+        "Consider a performance budget while sketching the first ideas. Working within it makes it easier to choose the one or two details that deserve extra weight and gives the rest of the page room to load quickly.",
+        "The small choices stack up over a site. Use a type family that does several jobs, size images for the space they occupy, and reach for native controls where they meet the need. Those habits make room for meaningful visual details.",
+        "Check the experience on the kinds of hardware and connections your audience actually uses. A design that feels immediate on a new laptop may ask too much of an older phone, especially away from a reliable connection."
       ],
       "gallery": [
         "aster-detail-5",
@@ -257,22 +257,22 @@
     },
     {
       "slug": "why-constraints-make-better-design",
-      "title": "Why constraints make better design work",
-      "summary": "A look at how limits, rather than freedom, tend to produce the strongest work.",
+      "title": "How constraints sharpen creative work",
+      "summary": "Why a tighter brief can bring the strongest ideas into focus and help teams commit.",
       "category": "Insights",
       "date": "Jun 23, 2026",
       "image": "blog-constraints",
       "author": "Priya Nair",
       "portrait": "blog-constraints-avatar",
       "headings": [
-        "The blank canvas",
-        "Less room, more clarity"
+        "The trouble with a blank page",
+        "Use the edges of the brief"
       ],
       "paragraphs": [
-        "A blank canvas is far more intimidating than a tight brief. When anything is possible, it becomes hard to know where to begin, and the result is often a design that tries to do everything and commits to nothing in particular.",
-        "Constraints give a project its edges. A limited palette, a fixed grid, or a firm deadline forces decisions and reveals what actually matters. Far from limiting creativity, they focus it on the problem worth solving.",
-        "Some of the most memorable work comes from deliberately narrowing the options. Restricting yourself to two typefaces or a single accent colour pushes you to find nuance within the rules rather than reaching for novelty outside them.",
-        "The next time a project feels overwhelming, try adding a constraint rather than removing one. Give yourself less room, and you will often find the clarity that an open ended brief was quietly hiding from you."
+        "With a completely open brief, the first decision can feel like the hardest one. There are too many places to begin, and early drafts can pull in several directions at once without developing any of them far enough.",
+        "A fixed grid, a short deadline, or a narrow palette gives a project useful edges. Each limit makes some choices obvious and leaves the team more time to explore what matters for the particular problem.",
+        "Pick a restriction and see how far you can take it. One accent color can make you more attentive to proportion and contrast. Two typefaces can push you to use weight and spacing with more care.",
+        "When a project feels too broad, give the next round a specific rule. It can be as simple as a single page format or a shorter headline. The restriction usually makes the next decision much easier to see."
       ],
       "gallery": [
         "blog-constraints-detail-3",
@@ -289,22 +289,22 @@
     },
     {
       "slug": "color-systems-that-scale",
-      "title": "Color systems that scale with confidence",
-      "summary": "Building a flexible palette that stays coherent across products and platforms.",
+      "title": "Color systems that grow with a product",
+      "summary": "How to build a flexible palette that stays coherent across screens, states, and teams.",
       "category": "Design",
       "date": "Jun 30, 2026",
       "image": "blog-color",
       "author": "Claire Smith",
       "portrait": "blog-space-avatar",
       "headings": [
-        "Systems, not swatches",
-        "Naming with purpose"
+        "Give every color a role",
+        "Choose names that last"
       ],
       "paragraphs": [
-        "A handful of colours can carry a small project, but as products grow the palette has to work much harder. It needs to cover states, surfaces, and accessibility requirements without turning into an unmanageable list of one off values.",
-        "The solution is to think in systems rather than swatches. Defining roles such as surface, text, and accent, then mapping tokens to those roles, lets the same underlying decisions scale from a single button to an entire design language.",
-        "Naming is where a good system earns its keep. Semantic names that describe purpose rather than appearance mean you can adjust the palette later without rewriting every screen, because the intent stays stable even as the value changes.",
-        "Accessibility should be built into the system, not bolted on afterwards. Checking contrast as you define each pairing ensures the palette is usable for everyone from the start, and saves painful retrofits once the product is live."
+        "A small project can get by with a short list of colors. Over time, new surfaces, interaction states, and contrast requirements turn that list into something harder to keep straight without a shared system.",
+        "Start with what a color does, whether it sets a surface apart, signals an action, or supports readable text. Tie those jobs to tokens so the same decisions carry from a single component to a full product.",
+        "Call each token by its purpose so the name stays true as the palette changes. When a surface moves from pale gray to cream, every screen that uses it can keep the same reference. The change can happen in one place.",
+        "Check contrast when you set up each text and surface pairing. Doing that work while the palette is small gives every team a usable set of defaults and avoids repeating the same checks on each screen."
       ],
       "gallery": [
         "blog-color-detail-3",
@@ -321,22 +321,22 @@
     },
     {
       "slug": "from-wireframe-to-reality",
-      "title": "From wireframe to finished digital experience",
-      "summary": "How to keep the spirit of an early idea intact as it moves toward launch.",
+      "title": "Taking a rough wireframe all the way to launch",
+      "summary": "How to keep the intent of an early sketch intact as the work becomes more detailed.",
       "category": "Development",
       "date": "Jul 7, 2026",
       "image": "blog-wireframe",
       "author": "Marcus Bennett",
       "portrait": "blog-voice-avatar",
       "headings": [
-        "Starting rough",
-        "Staying on course"
+        "Sketch with room to change",
+        "Check the original intent"
       ],
       "paragraphs": [
-        "Every project begins with a rough shape, a wireframe or a sketch that captures an idea before the details arrive. It is deliberately unfinished, and that looseness is exactly what makes it useful for exploring direction quickly.",
-        "The challenge is holding on to that original intent as the work becomes more concrete. Fidelity has a way of introducing decisions the wireframe never made, and without care the finished product can drift far from the idea that started it.",
-        "Frequent, honest reviews keep a design on course. Returning to the early goals at each stage helps the team notice when a convenient shortcut is quietly changing the experience, and gives everyone permission to correct it early.",
-        "Shipping is not the end of the story but the beginning of learning. Once real people use the work, the gaps between intention and reality become visible, and each iteration is a chance to close them a little further."
+        "An early wireframe captures the shape of an idea while there is still time to move things around. Keeping it rough gives everyone permission to question the order, purpose, and weight of each part of the page.",
+        "As a design gains detail, new choices can change the experience in ways a sketch never predicted. Keep the original intent close at hand so the team can recognize when a local improvement pulls the whole product off course.",
+        "Bring the early goals to reviews and use them to judge the latest version. This gives the team a way to discuss where an implementation shortcut has changed the result and fix it while the cost is still low.",
+        "Once the work ships, watch what people do with it. Their habits reveal where the original assumptions held up and where the design needs help. That evidence gives the next round a clearer place to start."
       ],
       "gallery": [
         "aster-detail-5",
@@ -374,19 +374,19 @@
       "about-image-18"
     ],
     "content": [
-      "Every mark, message, and moment should carry weight — considered, deliberate, unmistakably yours.",
-      "Aldena is a New York studio for brands with something to say. We partner with teams who'd rather stand out than blend in, turning sharp ideas into identities that are clear and made to last.",
-      "Since 2016, we've partnered with founders and teams who care as much about the details as we do. At Aldena, branding, design, and content aren't separate services; they're one conversation.",
-      "We craft identities, design systems, and content that connect — pairing sharp strategy with timeless taste. We shape identities with intention, so how you look feel unmistakably yours, year after year.",
-      "We design for longevity, not trends. Every identity we create is made to feel just as right five years from now.",
-      "Design and content are a single conversation. We keep how a brand looks and behaves in sync.",
-      "Good design earns attention; it doesn’t demand it. We cut the excess so the idea does the talking.",
-      "We work with you, not just for you. The best work comes from real collaboration in the details.",
-      "A small studio of designers, strategists, and makers shaping every brand we touch.",
-      "Aldena started the studio after a decade leading brand work across London and Berlin. She sets the creative vision for every project, happiest when a rough idea clicks into a clear, ownable identity. Outside the studio, she collects vintage type specimens.",
-      "Elena turns strategy into systems — grids, type scales, and the details that make a brand feel considered. She's spent eight years designing for clients in tech, hospitality, and culture, and believes good design should feel inevitable, never loud.",
-      "Theo brings brands to life in motion, from micro-interactions to launch films. He bridges design and code, making sure ideas feel as sharp on screen as on paper. Formerly an animator, he judges everything by how satisfying it is to watch.",
-      "Priya finds the story before the visuals begin. She runs the research, interviews, and positioning that gives each project a clear point of view. With a background in cultural anthropology, she's fascinated by why people connect with the brands they love.",
+      "Every mark, line, and interaction should feel deliberate, carry meaning, and belong to you.",
+      "Decode is a New York studio for brands with a point of view. We work with teams who have a clear idea worth sharing and build identities that express it well wherever people meet them.",
+      "Since 2016, we've worked alongside founders and teams who care about the details. At Decode, strategy, visuals, and editorial share the same brief, so every part of the project holds together.",
+      "We create identities, design systems, and editorial work grounded in strategy and an eye for detail. By making each choice with care, we build a recognizable voice that can grow with you.",
+      "We build for years of everyday use. Every identity should feel natural long after the excitement of launch has passed.",
+      "Visuals and writing answer to the same idea. We keep how a brand looks, sounds, and acts in step.",
+      "We make each element earn its place. Give the idea room and people can understand it at a glance.",
+      "We pull clients into the decisions that matter. The work gets better when everyone can shape the details.",
+      "A small team of designers, strategists, and makers who care about the details.",
+      "Christopher John Picardo leads the creative work at Decode Studio, from the first conversation to the finished identity. The focus is on finding the clearest expression of an idea and carrying it through the typography, imagery, and language.",
+      "Elena gives strategy a working form through grids, type, and the smaller choices that hold a design together. In eight years across technology, hospitality, and culture, she's learned how to make a complex system feel natural to use.",
+      "Theo helps brands move, from the smallest interface cue to a launch film. He works across design and code so ideas translate smoothly from print to screen. His time as an animator taught him to look closely at how each movement feels.",
+      "Priya listens for the story before sketching begins. She leads interviews, research, and positioning so every project has a clear direction. Her background in cultural anthropology informs how she thinks about the connections people form with brands.",
       "Create a free website with Framer, the website builder loved by startups, designers and agencies."
     ]
   },

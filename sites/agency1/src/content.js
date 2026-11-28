@@ -1,3 +1,5 @@
+import pages from './page-data.json'
+
 export const navigation = [
   ['Home', '/'],
   ['About', '/about'],
@@ -14,62 +16,49 @@ export const socialLinks = [
 ]
 
 export const studioCopy = [
-  "We're a brand and editorial studio for companies that would rather be understood than noticed. We build identities, publications, and content systems with the patience of print.",
-  'Fewer projects, closer attention, work that reads the same on a billboard as it does on a business card.',
+  "We're a brand and editorial studio for companies with something clear to say. We give that idea a lasting form through identities, publications, and content systems made with care.",
+  'We take on a few projects at a time and give each the same care, from a full campaign to a single printed card.',
 ]
 
 export const services = [
   {
     title: 'Brand Identity',
-    summary: 'We believe a brand identity is a body of work, not just a logo.',
-    detail: 'A complete visual identity built from strategy up — logo suite, type and color systems, and a flexible design language. We deliver a brand that stays recognizable everywhere while giving each touchpoint room to breathe. Includes a full guidelines document so your team can apply it with confidence.',
+    summary: 'An identity comes to life in every place people meet your brand.',
+    detail: 'We start with strategy and build a full visual identity around it, including marks, type, colors, and a flexible design system. Each piece has room to suit its setting while still belonging to the same brand. Your team gets a practical set of guidelines for using the system day to day.',
     price: '$6,000',
     image: 'brand',
   },
   {
     title: 'Visual Design',
-    summary: 'Design systems that stay sharp across every touchpoint.',
-    detail: 'Design work that turns your brand into real, usable assets — packaging, web layouts, social templates, and marketing collateral. We keep every piece coherent so your brand feels considered at every scale. Ideal for studios who have an identity and need it brought to life.',
+    summary: 'A visual system that holds together wherever it appears.',
+    detail: 'We turn your brand into pieces you can use, from packaging and web layouts to social templates and campaign materials. We design across those formats so they read as one family at any size. It suits teams with an identity ready to put to work.',
     price: '$3,500',
     image: 'visual',
   },
   {
     title: 'Content & Voice',
-    summary: 'Words and stories that make your brand sound like itself.',
-    detail: 'An editorial voice and content strategy that make your brand sound as intentional as it looks. We define tone guidelines, shape your key messaging, and set up a publishing rhythm your team can sustain. Great for brands with strong visuals but no words to match.',
+    summary: 'A voice people can recognize in every story you tell.',
+    detail: 'We give your brand an editorial voice and a plan for using it. Together we work out the tone, the messages customers need to hear, and a schedule your team can keep up with. It gives an established visual identity a voice that feels equally considered.',
     price: '$2,500',
     image: 'content',
   },
   {
     title: 'Brand Refresh',
-    summary: 'Repositioned interfaces and motion that bring the brand to life.',
-    detail: "A focused evolution for brands that are close but not quite there — sharpening your identity, tightening the system, and modernizing without losing what people already recognize. We audit what's working, then refine the rest. A lower-commitment path to a brand that feels current.",
+    summary: 'A sharper identity expressed through design and movement.',
+    detail: "We review what people already recognize in your brand and build from those strengths. The refresh tightens the identity, brings consistency to the system, and updates the places that feel dated. It's a focused way to move forward with the identity you already have.",
     price: '$4,000',
     image: 'refresh',
   },
 ]
 
-export const projects = [
-  {
-    slug: 'aster-bloom', title: 'Aster Bloom', image: 'aster', year: '2025',
-    summary: 'A botanical identity for a skincare brand rooted in slow, seasonal rituals.',
-  },
-  {
-    slug: 'nova-grid', title: 'Nova Grid', image: 'nova', year: '2024',
-    summary: 'A crisp visual system for a data platform that wanted to feel human.',
-  },
-  {
-    slug: 'marrow-coffee', title: 'Marrow Coffee', image: 'marrow', year: '2025',
-    summary: 'A bold, honest identity for a roaster obsessed with origin and craft.',
-  },
-]
+export const projects = pages.projects.slice(0, 3)
 
 export const process = [
-  ['Discovery', '1–2 weeks', 'We start by getting under the skin of your business — interviewing stakeholders, auditing your current brand, and mapping the competitive landscape. The goal is a clear, shared understanding of where you are and where you want to go.'],
-  ['Strategy', '1 week', 'With the research in hand, we define the strategic foundation — your positioning, messaging, and the core narrative that sets you apart. This becomes the blueprint that guides every creative and design decision that follows.'],
-  ['Design', '2–3 weeks', 'This is where the vision takes shape. We explore directions, refine the details, and craft a distinctive visual identity — from typography and colour to the finer moments that make the work feel unmistakably yours.'],
-  ['Development', '2–4 weeks', 'We bring the designs to life with clean, performant build work. Every interaction is considered and every breakpoint tested, so the final product feels as good as it looks across every device and screen.'],
-  ['Launch', '1 week', 'With everything polished and approved, we prepare for a smooth launch. We handle the final checks, hand over the assets and guidelines, and make sure you are set up to carry the work forward with confidence.'],
+  ['Discovery', '1–2 weeks', 'We interview the people closest to the business, look at your current brand, and review the market around you. That gives everyone a shared picture of what works today and what the next phase needs to accomplish.'],
+  ['Strategy', '1 week', 'The research informs your positioning, the messages people need to hear, and the story that ties them together. We use those decisions as a brief for the visual and editorial work that follows.'],
+  ['Design', '2–3 weeks', 'We explore a few visual directions, agree on one, and work through the details. Type and color establish the character early, and we carry it through to the smallest details people will see in everyday use.'],
+  ['Development', '2–4 weeks', 'We turn the design into a working product and check how it responds on different screens. Testing the interactions and layouts during the build helps us carry the care in the design into the finished experience.'],
+  ['Launch', '1 week', 'Once the work is approved, we make the final checks and prepare for launch. We hand over the assets and guidelines, then walk your team through what they\'ll need to keep using the work after release.'],
 ]
 
 export const customers = [
@@ -80,42 +69,26 @@ export const customers = [
 
 export const testimonials = [
   {
-    name: 'Marcus Bennett', role: 'Founder of Northlight Studio', image: 'marcus', project: 'A brand identity project',
-    quote: 'From day one they understood exactly who we wanted to become. The identity they crafted feels bold, timeless, and unmistakably ours—it has completely changed how people recognise and remember us.',
+    name: 'Marcus Bennett', role: 'Founder of Northlight Studio', image: 'marcus', project: 'Brand identity engagement',
+    quote: 'They picked up on what we were trying to become from the first conversation. The identity finally feels like it belongs to us, and people recognize our work much more readily now.',
   },
   {
-    name: 'Elena Ruiz', role: 'Head of Product at Cadence Labs', image: 'elena', project: 'A visual design project',
-    quote: 'Every screen they touched came back sharper, cleaner, and more considered. The visual system they built gives our product a sense of polish and clarity we simply could not achieve on our own.',
+    name: 'Elena Ruiz', role: 'Head of Product at Cadence Labs', image: 'elena', project: 'Visual design engagement',
+    quote: 'The screens came back clearer and easier to use. The visual system gave our product the consistency we\'d been trying to find, and our team can now carry that through to the next release.',
   },
   {
-    name: 'Priya Nair', role: 'Brand Lead at Veritas Group', image: 'priya', project: 'A content & voice project',
-    quote: 'They found the words we had been struggling to say for years. Our messaging finally sounds human, confident, and consistent—everything we publish now feels like it speaks with one clear voice.',
+    name: 'Priya Nair', role: 'Brand Lead at Veritas Group', image: 'priya', project: 'Editorial voice engagement',
+    quote: 'They put words to ideas we\'d struggled to explain for years. What we publish now sounds like one team speaking plainly and with confidence, even when several of us contribute to it.',
   },
 ]
 
 export const questions = [
-  ['What services do you actually offer?', 'We focus on brand identity, visual and web design, and content and voice. Whether you need a full rebrand or help refining one part of your presence, we shape a scope that fits where your business is right now.'],
-  ['How long does a typical project take?', 'Most brand and website projects run between four and eight weeks, depending on scope. After our first call we share a clear timeline with milestones so you always know what is happening and what comes next.'],
-  ['What do you need from me to get started?', 'Just an initial brief and a short kickoff call. From there we handle the heavy lifting, checking in at key milestones and only asking for your input where your feedback genuinely moves the work forward.'],
-  ['Do you offer ongoing support after launch?', 'Yes. We offer flexible retainers for continued design, iteration, and support once your project is live, so your brand and website keep evolving alongside your business rather than standing still.'],
-  ['How does pricing and payment work?', 'We quote a fixed price per project based on scope, so there are no surprises. Payment is typically split into an upfront deposit and a final balance on delivery, with retainers billed monthly.'],
-  ['Do you work with clients outside New York?', 'Absolutely. We are based in New York but work with clients around the world, running projects remotely with regular check-ins. Different time zones have never gotten in the way of great work.'],
+  ['What kind of work can we hire you for?', 'We work across identity, visual and web design, and editorial voice. That could mean building a brand from the ground up or improving one part of it. We\'ll agree on what the business needs before the work begins.'],
+  ['How much time should I plan for?', 'A brand or website project usually takes four to eight weeks, depending on the work involved. After the first call, we\'ll share a schedule showing the main milestones and where we\'ll need your input.'],
+  ['What should I prepare before we start?', 'A short brief and a kickoff call are enough to get started. We\'ll take it from there and bring you into the reviews where your knowledge and feedback can make the biggest difference to the work.'],
+  ['Can we keep working together after launch?', 'Yes, we offer flexible retainers for design, improvements, and support after a project goes live. This gives your team a way to keep the brand or site current as your business changes.'],
+  ['How do you quote and bill for projects?', 'We agree on a fixed fee based on what\'s in scope. You\'ll usually pay a deposit at the start and the remaining balance on delivery. We invoice ongoing retainers each month.'],
+  ['Can we work together from another city?', 'Yes. Our studio is in New York, and we run projects remotely with teams around the world. We set up a regular check-in time that fits everyone\'s schedule and makes approvals easy to plan.'],
 ]
 
-export const posts = [
-  {
-    slug: 'the-art-of-white-space-in-modern-interfaces', image: 'blog-space', category: 'Design', date: 'Jun 2, 2026',
-    title: 'The art of white space in designing user interfaces',
-    summary: 'Understanding how negative space shapes user experience and visual hierarchy.',
-  },
-  {
-    slug: 'building-a-brand-voice-that-lasts', image: 'blog-voice', category: 'Branding', date: 'Jun 9, 2026',
-    title: 'Building a brand voice that lasts for our clients',
-    summary: 'How to define a tone of voice that stays consistent as your company grows.',
-  },
-  {
-    slug: 'designing-for-performance-from-day-one', image: 'blog-performance', category: 'Development', date: 'Jun 16, 2026',
-    title: 'Designing for performance from day one',
-    summary: 'Why speed is a design decision long before it becomes an engineering one.',
-  },
-]
+export const posts = pages.posts.slice(0, 3)

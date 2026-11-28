@@ -6,14 +6,14 @@ import pages from './page-data.json'
 
 const listPages = {
   '/work': {
-    title: 'Selected Works',
-    subtitle: 'A selection of work for brands with something to say, crafted to look sharp and read even sharper.',
+    title: 'Selected Work',
+    subtitle: 'A collection of identities, design systems, and editorial work for brands with a point of view.',
     categories: ['All', 'Branding', 'Design', 'Content'],
     entries: pages.projects,
   },
   '/blog': {
-    title: 'Studio Journal',
-    subtitle: "What we're thinking about and learning along the way — a place for the conversations and ideas that shape how we build.",
+    title: 'Studio Notes',
+    subtitle: "Notes on the questions, ideas, and conversations that come up in the studio and change the way we work.",
     categories: ['All', 'Design', 'Branding', 'Development', 'Insights'],
     entries: pages.posts,
   },
@@ -27,7 +27,7 @@ function getRecord(path) {
 
 export function routeTitle(path) {
   const clean = path.replace(/\/+$/, '')
-  return listPages[clean]?.title || getRecord(clean)?.title || { '/about': 'About Aldena', '/contact': 'Get in Touch' }[clean]
+  return listPages[clean]?.title || getRecord(clean)?.title || { '/about': 'About Decode', '/contact': 'Let’s Talk' }[clean]
 }
 
 function PageHeading({ title, subtitle, description, className = '' }) {
@@ -74,7 +74,7 @@ function Catalog({ path }) {
         </div>
       </div>
       {shown.length ? (isWork ? <ProjectPanels entries={shown} /> : <div className="catalog-posts gutters"><PostCards entries={shown} /></div>)
-        : <p className="catalog-empty gutters">No results found.</p>}
+        : <p className="catalog-empty gutters">No matching results.</p>}
     </div>
   )
 }
@@ -101,20 +101,20 @@ function WorkDetail({ entry }) {
             <div><dt>Type</dt><dd>{entry.category}</dd></div>
             <div><dt>Year</dt><dd>{entry.year}</dd></div>
             <div><dt>Client</dt><dd>{entry.client}</dd></div>
-            {entry.live && <div><dt>Website</dt><dd><RollingLink href={entry.live} target="_blank" rel="noreferrer">View Live Site</RollingLink></dd></div>}
+            {entry.live && <div><dt>Website</dt><dd><RollingLink href={entry.live} target="_blank" rel="noreferrer">Visit the Site</RollingLink></dd></div>}
           </dl>
         </div>
         <ImageGrid images={challengeGallery} />
-        <div className="detail-editorial" data-reveal><span>The Challenge</span><div><h2>{entry.challenge}</h2>{entry.paragraphs.slice(0, 2).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div>
+        <div className="detail-editorial" data-reveal><span>The Brief</span><div><h2>{entry.challenge}</h2>{entry.paragraphs.slice(0, 2).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div>
         <ImageGrid images={outcomeGallery} />
-        <div className="detail-editorial" data-reveal><span>The Outcome</span><div><h2>{entry.outcome}</h2>{entry.paragraphs.slice(2).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div>
+        <div className="detail-editorial" data-reveal><span>The Result</span><div><h2>{entry.outcome}</h2>{entry.paragraphs.slice(2).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div>
         {entry.gallery.length > 4 && <ImageGrid images={entry.gallery.slice(2, -2)} />}
       </div>
       {next && <div className="detail-next">
         <div className="detail-next-intro gutters">
           <div>
-            <WordReveal as="h2" data-heading-reveal>Next Project.</WordReveal>
-            <p data-reveal>Keep exploring—here’s another project from our studio, shaped by the same care and craft.</p>
+            <WordReveal as="h2" data-heading-reveal>Up next.</WordReveal>
+            <p data-reveal>Take a look at another project from the studio and see how we approached a different brief.</p>
           </div>
         </div>
         <ProjectPanels entries={[next]} />
@@ -151,8 +151,8 @@ function PostDetail({ entry }) {
         </div>
       </div>
       <section className="post-more gutters">
-        <WordReveal as="h2" className="section-title" data-heading-reveal>More to explore.</WordReveal>
-        <p data-reveal>A few more articles worth your time, covering the ideas, process, and craft behind the work we do.</p>
+        <WordReveal as="h2" className="section-title" data-heading-reveal>Further reading.</WordReveal>
+        <p data-reveal>More from the studio on the decisions, techniques, and ideas that go into the work you see here.</p>
         <PostCards entries={related} />
       </section>
       <ContactBanner />
@@ -162,33 +162,33 @@ function PostDetail({ entry }) {
 
 function AboutPage() {
   const { images, content } = pages.about
-  const values = ['Built to Last', 'One Voice', 'Clarity First', 'True Partners']
+  const values = ['Made to Endure', 'Shared Voice', 'Clear Thinking', 'Close Partners']
   const team = [
-    ['Aldena Rhodes', 'Founder & Creative Director', images[7]], ['Elena Rossi', 'Founder & Creative Director', images[8]],
+    ['Christopher John Picardo', 'Founder & Creative Director', images[7]], ['Elena Rossi', 'Founder & Creative Director', images[8]],
     ['Theo Vasquez', 'Motion & Interaction Designer', images[9]], ['Priya Nandakumar', 'Brand Strategist', images[10]],
   ]
   return (
     <>
       <section className="about-hero">
-        <div className="page-hero-picture"><Media name={images[0]} alt="Aldena studio photograph" eager /></div>
+        <div className="page-hero-picture"><Media name={images[0]} alt="Blurred figure passing through a city street" eager /></div>
         <Grain strength="grain--hero" />
-        <PageHeading title="About Aldena" subtitle={content[0]} />
+        <PageHeading title="About Decode" subtitle={content[0]} />
         <div className="about-trust" data-reveal>
           <div>{images.slice(1, 6).map((name) => <Media name={name} key={name} />)}</div>
-          <span><span aria-hidden="true">★★★★★</span><br />TRUSTED BY 50+ CLIENTS</span>
+          <span><span aria-hidden="true">★★★★★</span><br />WORKED WITH 50+ CLIENTS</span>
         </div>
       </section>
       <section className="about-details gutters">
         <div className="about-editorial">
-          <span className="smallcaps" data-reveal>The Studio</span>
+          <span className="smallcaps" data-reveal>Our Studio</span>
           <div>
             <WordReveal as="p" className="about-statement" data-reading-reveal data-reveal>{content[1]}</WordReveal>
             <div className="about-intro-copy" data-reveal>{content.slice(2, 4).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
           </div>
         </div>
-        <div className="about-image detail-image parallax-image" data-reveal="photo"><Media name={images[6]} alt="Aldena studio interior" /><Grain /></div>
+        <div className="about-image detail-image parallax-image" data-reveal="photo"><Media name={images[6]} alt="Creative team gathered around a worktable" /><Grain /></div>
         <div className="about-editorial">
-          <span className="smallcaps" data-reveal>Our Values</span>
+          <span className="smallcaps" data-reveal>What We Value</span>
           <div className="about-values">
             {values.map((value, i) => (
               <div key={value} data-reveal>
@@ -204,14 +204,14 @@ function AboutPage() {
       </section>
       <section className="team-section gutters">
         <div className="team-heading">
-          <WordReveal as="h2" className="section-title" data-heading-reveal>The team behind Aldena.</WordReveal>
+          <WordReveal as="h2" className="section-title" data-heading-reveal>The people behind Decode.</WordReveal>
           <p data-reveal>{content[8]}</p>
         </div>
           <div className="team-grid">
             {team.map(([name, role, image], i) => (
               <article key={name} data-reveal>
                 <p className="team-bio">{content[i + 9]}</p>
-                <div className="detail-image team-portrait parallax-image"><Media name={image} alt={name} /></div>
+                <div className="detail-image team-portrait parallax-image"><Media name={image} /></div>
                 <div className="team-identity">
                   <h3>{name}</h3><span className="smallcaps">{role}</span>
                   <div className="team-social">
@@ -234,10 +234,10 @@ function AboutPage() {
         </div>
         <div className="about-stats gutters">
           {[
-            ['+', 'Projects Completed', 'From full rebrands to focused identity work.'],
-            ['+', 'Brands launched', "From first sketch to client's public debut."],
-            ['', 'Industry Awards', 'Design and craft, recognized internationally.'],
-            ['%', 'Client retention', 'Most of our clients return for the next chapter.'],
+            ['+', 'Completed Projects', 'From complete rebrands to smaller identity updates.'],
+            ['+', 'Brand Launches', "From the first sketch to the day it goes live."],
+            ['', 'Design Awards', 'International recognition for design and craft.'],
+            ['%', 'Returning Clients', "Many clients come back when it's time for new work."],
           ].map(([suffix, label, text]) => <div key={label}><strong aria-label={'3,100' + suffix}><span data-metric aria-hidden="true">3,100{suffix}</span></strong><h3>{label}</h3><p>{text}</p></div>)}
         </div>
       </section>
@@ -253,35 +253,35 @@ function ContactPage() {
     const data = new FormData(event.currentTarget)
     const body = 'Name: ' + data.get('name') + '\nEmail: ' + data.get('email')
       + '\nPhone: ' + data.get('phone') + '\n\n' + data.get('message')
-    const subject = data.get('projectType') || 'Aldena project inquiry'
-    setDraft('mailto:hello@aldena.studio?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body))
+    const subject = data.get('projectType') || 'Decode project inquiry'
+    setDraft('mailto:hello@decode.studio?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body))
   }
   return (
     <article className="contact-page">
       <section className="contact-hero">
         <div className="page-hero-picture"><Media name={pages.contact.images[0]} alt="" eager /></div>
         <Grain strength="grain--hero" />
-        <PageHeading title="Get in Touch" subtitle="Have a project in mind? Tell us about it and we will be in touch within 24 hours." />
+        <PageHeading title="Let’s Talk" subtitle="Planning a project? Send us a few details and we'll get back to you within 24 hours." />
       </section>
       <div className="contact-form-wrap gutters">
         <div className="contact-details" data-reveal>
-          <RollingLink href="mailto:hello@aldena.studio">hello@aldena.studio</RollingLink>
+          <RollingLink href="mailto:hello@decode.studio">hello@decode.studio</RollingLink>
           <RollingLink href="tel:2125550198">+1 (212) 555-0198</RollingLink>
-          <RollingLink href="https://www.linkedin.com/company/lunisdesign/" target="_blank" rel="noreferrer">Find us on LinkedIn</RollingLink>
+          <RollingLink href="https://www.linkedin.com/company/lunisdesign/" target="_blank" rel="noreferrer">Connect on LinkedIn</RollingLink>
         </div>
         <form className="contact-form" data-reveal onSubmit={prepareDraft} onChange={() => { if (draft) setDraft('') }}>
-          <label className="form-wide">Name<input name="name" placeholder="Jane Doe" autoComplete="name" required /></label>
-          <label>Email<input name="email" placeholder="jane@company.com" autoComplete="email" type="email" required /></label>
+          <label className="form-wide">Name<input name="name" placeholder="Avery Lee" autoComplete="name" required /></label>
+          <label>Email<input name="email" placeholder="avery@company.com" autoComplete="email" type="email" required /></label>
           <label>Phone (optional)<input name="phone" placeholder="+1 (555) 000-0000" autoComplete="tel" type="tel" /></label>
-          <label className="form-wide">Project Type<select name="projectType" defaultValue=""><option value="">Select a project type</option><option>Brand Identity</option><option>Web Design</option><option>Product Design</option><option>Other</option></select></label>
-          <label className="form-wide">Message<textarea name="message" placeholder="Tell us about your project..." rows="5" required /></label>
-          <button type="submit">Submit</button>
-          {draft && <p className="form-status" role="status"><a href={draft}>Open your email draft</a> to send your message.</p>}
+          <label className="form-wide">Project Type<select name="projectType" defaultValue=""><option value="">Choose a project type</option><option>Brand Identity</option><option>Web Design</option><option>Product Design</option><option>Other</option></select></label>
+          <label className="form-wide">Message<textarea name="message" placeholder="Share a little about the project..." rows="5" required /></label>
+          <button type="submit">Send Inquiry</button>
+          {draft && <p className="form-status" role="status"><a href={draft}>Open the email draft</a> to send your message.</p>}
         </form>
       </div>
       <div className="contact-photo-grid gutters">
         {pages.contact.images.slice(1, 3).map((image, i) => (
-          <figure key={image} className="detail-image parallax-image" data-reveal><Media name={image} alt={i === 0 ? 'The Aldena team' : 'The Aldena office'} /><figcaption>{i === 0 ? 'The Team.' : 'The Office.'}</figcaption></figure>
+          <figure key={image} className="detail-image parallax-image" data-reveal><Media name={image} alt={i === 0 ? 'Colleagues in a shared workspace' : 'A desk in a sunlit office'} /><figcaption>{i === 0 ? 'Our Team.' : 'Our Space.'}</figcaption></figure>
         ))}
       </div>
     </article>
@@ -295,5 +295,5 @@ export default function Pages({ path }) {
   const entry = getRecord(path)
   if (entry && path.startsWith('/work/')) return <WorkDetail entry={entry} />
   if (entry && path.startsWith('/blog/')) return <PostDetail entry={entry} />
-  return <div className="not-found gutters"><h1>Page not found.</h1><Action href="/" light>BACK TO HOME</Action></div>
+  return <div className="not-found gutters"><h1>Page is missing.</h1><Action href="/" light>RETURN HOME</Action></div>
 }
