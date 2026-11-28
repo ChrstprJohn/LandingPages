@@ -6,6 +6,12 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "dconstruct\\.vercel\\.app"}],
+      "destination": "https://dconstruct.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "dconstruct\\.vercel\\.app"}],
       "destination": "https://dconstruct.chrbuilds.dev/:path*",

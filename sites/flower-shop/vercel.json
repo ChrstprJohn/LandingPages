@@ -5,6 +5,12 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "floraco\\.vercel\\.app"}],
+      "destination": "https://floraco.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "floraco\\.vercel\\.app"}],
       "destination": "https://floraco.chrbuilds.dev/:path*",

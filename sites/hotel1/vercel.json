@@ -6,6 +6,12 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "dcdhotel\\.vercel\\.app"}],
+      "destination": "https://dcdhotel.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "dcdhotel\\.vercel\\.app"}],
       "destination": "https://dcdhotel.chrbuilds.dev/:path*",

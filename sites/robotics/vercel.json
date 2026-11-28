@@ -7,6 +7,12 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "robotics-delta-three\\.vercel\\.app"}],
+      "destination": "https://robotics-delta-three.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "robotics-delta-three\\.vercel\\.app"}],
       "destination": "https://robotics-delta-three.chrbuilds.dev/:path*",

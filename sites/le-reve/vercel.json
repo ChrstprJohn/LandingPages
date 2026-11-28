@@ -2,9 +2,21 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "decode-fashioown\\.vercel\\.app"}],
+      "destination": "https://decode-fashioown.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "decode-fashioown\\.vercel\\.app"}],
       "destination": "https://decode-fashioown.chrbuilds.dev/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "decodeee\\.vercel\\.app"}],
+      "destination": "https://decodeee.chrbuilds.dev/",
       "permanent": true
     },
     {

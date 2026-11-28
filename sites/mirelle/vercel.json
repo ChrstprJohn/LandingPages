@@ -2,6 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "decodeeestudiooo\\.vercel\\.app"}],
+      "destination": "https://decodeeestudiooo.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "decodeeestudiooo\\.vercel\\.app"}],
       "destination": "https://decodeeestudiooo.chrbuilds.dev/:path*",

@@ -5,6 +5,12 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "photostudio-live\\.vercel\\.app"}],
+      "destination": "https://photostudio-live.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "photostudio-live\\.vercel\\.app"}],
       "destination": "https://photostudio-live.chrbuilds.dev/:path*",

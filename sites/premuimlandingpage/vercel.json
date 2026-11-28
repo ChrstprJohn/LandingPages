@@ -6,6 +6,12 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "decooddee\\.vercel\\.app"}],
+      "destination": "https://decooddee.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "decooddee\\.vercel\\.app"}],
       "destination": "https://decooddee.chrbuilds.dev/:path*",

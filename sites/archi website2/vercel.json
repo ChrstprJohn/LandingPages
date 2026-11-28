@@ -5,6 +5,12 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "dcd-arch-studio\\.vercel\\.app"}],
+      "destination": "https://dcd-arch-studio.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "dcd-arch-studio\\.vercel\\.app"}],
       "destination": "https://dcd-arch-studio.chrbuilds.dev/:path*",

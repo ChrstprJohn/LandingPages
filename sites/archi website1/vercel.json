@@ -5,6 +5,12 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "archi-tau\\.vercel\\.app"}],
+      "destination": "https://archi-tau.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "archi-tau\\.vercel\\.app"}],
       "destination": "https://archi-tau.chrbuilds.dev/:path*",

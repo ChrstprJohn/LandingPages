@@ -5,6 +5,12 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "brewday-delta\\.vercel\\.app"}],
+      "destination": "https://brewday-delta.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "brewday-delta\\.vercel\\.app"}],
       "destination": "https://brewday-delta.chrbuilds.dev/:path*",

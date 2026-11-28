@@ -2,6 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/",
+      "has": [{"type": "host", "value": "deco-weld\\.vercel\\.app"}],
+      "destination": "https://deco-weld.chrbuilds.dev/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "deco-weld\\.vercel\\.app"}],
       "destination": "https://deco-weld.chrbuilds.dev/:path*",
