@@ -5,7 +5,8 @@
   "buildCommand": "npx --yes pnpm@11.24.0 --filter agency1 build",
   "outputDirectory": "dist",
   "redirects": [
-    { "source": "/home", "destination": "/", "permanent": true }
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/home/", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
